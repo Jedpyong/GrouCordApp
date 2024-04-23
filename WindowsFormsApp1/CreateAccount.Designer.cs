@@ -37,6 +37,7 @@
             this.EmailTxtbx = new Guna.UI.WinForms.GunaLineTextBox();
             this.PasswordTxtbx = new Guna.UI.WinForms.GunaLineTextBox();
             this.createAccountButton = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.close = new Guna.UI.WinForms.GunaImageButton();
             this.SuspendLayout();
             // 
             // gunaLabel1
@@ -152,11 +153,25 @@
             this.createAccountButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.createAccountButton.Click += new System.EventHandler(this.createAccountButton_Click);
             // 
+            // close
+            // 
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.Image = global::WindowsFormsApp1.Properties.Resources.close_4361951;
+            this.close.ImageSize = new System.Drawing.Size(25, 25);
+            this.close.Location = new System.Drawing.Point(419, -1);
+            this.close.Name = "close";
+            this.close.OnHoverImage = null;
+            this.close.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.close.Size = new System.Drawing.Size(27, 27);
+            this.close.TabIndex = 11;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // CreateAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(447, 285);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.createAccountButton);
             this.Controls.Add(this.PasswordTxtbx);
             this.Controls.Add(this.EmailTxtbx);
@@ -165,6 +180,7 @@
             this.Controls.Add(this.Email);
             this.Controls.Add(this.username);
             this.Controls.Add(this.gunaLabel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "CreateAccount";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CreateAccount";
@@ -184,5 +200,6 @@
         private Guna.UI.WinForms.GunaLineTextBox EmailTxtbx;
         private Guna.UI.WinForms.GunaLineTextBox PasswordTxtbx;
         private Guna.UI.WinForms.GunaAdvenceButton createAccountButton;
+        private Guna.UI.WinForms.GunaImageButton close;
     }
 }

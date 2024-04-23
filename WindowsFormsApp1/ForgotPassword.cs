@@ -43,8 +43,9 @@ namespace WindowsFormsApp1
                 to = EmailTxtbx.Text;
                 LoginForm.account.email = to;
                 UpdatePassword up = new UpdatePassword();
-                this.Hide();
+                
                 up.Show();
+                this.Close();
 
             }
             else
@@ -130,6 +131,11 @@ namespace WindowsFormsApp1
             }
 
            
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

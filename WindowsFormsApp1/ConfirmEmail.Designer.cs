@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmEmail));
             this.OTPTxtbx = new Guna.UI.WinForms.GunaTextBox();
+            this.close = new Guna.UI.WinForms.GunaImageButton();
             this.confirmbutn = new Guna.UI.WinForms.GunaAdvenceButton();
             this.SuspendLayout();
             // 
@@ -47,6 +48,19 @@
             this.OTPTxtbx.PasswordChar = '\0';
             this.OTPTxtbx.Size = new System.Drawing.Size(160, 30);
             this.OTPTxtbx.TabIndex = 8;
+            // 
+            // close
+            // 
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.Image = global::WindowsFormsApp1.Properties.Resources.close_4361951;
+            this.close.ImageSize = new System.Drawing.Size(25, 25);
+            this.close.Location = new System.Drawing.Point(419, -1);
+            this.close.Name = "close";
+            this.close.OnHoverImage = null;
+            this.close.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.close.Size = new System.Drawing.Size(27, 27);
+            this.close.TabIndex = 10;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // confirmbutn
             // 
@@ -84,8 +98,10 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(447, 285);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.confirmbutn);
             this.Controls.Add(this.OTPTxtbx);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConfirmEmail";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ConfirmEmail";
@@ -97,5 +113,6 @@
         #endregion
         private Guna.UI.WinForms.GunaTextBox OTPTxtbx;
         private Guna.UI.WinForms.GunaAdvenceButton confirmbutn;
+        private Guna.UI.WinForms.GunaImageButton close;
     }
 }

@@ -29,42 +29,28 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateGroupUC));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.GroupTxtBx = new Guna.UI.WinForms.GunaTextBox();
             this.memberTxtBx = new Guna.UI.WinForms.GunaTextBox();
             this.CreateGroupBtn = new Guna.UI.WinForms.GunaButton();
             this.CancelGroup = new Guna.UI.WinForms.GunaButton();
-            this.gunaCircleButton1 = new Guna.UI.WinForms.GunaCircleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.initMembFlow = new System.Windows.Forms.FlowLayoutPanel();
+            this.gunaCircleButton1 = new Guna.UI.WinForms.GunaCircleButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Blue;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(320, 14);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(97, 93);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             // 
             // GroupTxtBx
             // 
             this.GroupTxtBx.BaseColor = System.Drawing.Color.SkyBlue;
-            this.GroupTxtBx.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.GroupTxtBx.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.GroupTxtBx.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.GroupTxtBx.FocusedBaseColor = System.Drawing.Color.White;
-            this.GroupTxtBx.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.GroupTxtBx.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.GroupTxtBx.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.GroupTxtBx.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.GroupTxtBx.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.GroupTxtBx.ForeColor = System.Drawing.Color.DimGray;
             this.GroupTxtBx.Location = new System.Drawing.Point(35, 14);
             this.GroupTxtBx.Name = "GroupTxtBx";
             this.GroupTxtBx.PasswordChar = '\0';
@@ -79,13 +65,13 @@
             // memberTxtBx
             // 
             this.memberTxtBx.BaseColor = System.Drawing.Color.SkyBlue;
-            this.memberTxtBx.BorderColor = System.Drawing.Color.RoyalBlue;
+            this.memberTxtBx.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.memberTxtBx.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.memberTxtBx.FocusedBaseColor = System.Drawing.Color.White;
             this.memberTxtBx.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.memberTxtBx.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.memberTxtBx.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.memberTxtBx.ForeColor = System.Drawing.Color.RoyalBlue;
+            this.memberTxtBx.ForeColor = System.Drawing.Color.DimGray;
             this.memberTxtBx.Location = new System.Drawing.Point(35, 86);
             this.memberTxtBx.Name = "memberTxtBx";
             this.memberTxtBx.PasswordChar = '\0';
@@ -145,6 +131,35 @@
             this.CancelGroup.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.CancelGroup.Click += new System.EventHandler(this.CancelGroup_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.label1.Location = new System.Drawing.Point(32, 65);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(116, 18);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Add Members:";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(35, 130);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(196, 21);
+            this.comboBox1.TabIndex = 12;
+            // 
+            // initMembFlow
+            // 
+            this.initMembFlow.AutoScroll = true;
+            this.initMembFlow.Location = new System.Drawing.Point(35, 121);
+            this.initMembFlow.Name = "initMembFlow";
+            this.initMembFlow.Size = new System.Drawing.Size(207, 96);
+            this.initMembFlow.TabIndex = 12;
+            this.initMembFlow.Paint += new System.Windows.Forms.PaintEventHandler(this.initMembFlow_Paint);
+            // 
             // gunaCircleButton1
             // 
             this.gunaCircleButton1.AnimationHoverSpeed = 0.07F;
@@ -166,39 +181,26 @@
             this.gunaCircleButton1.TabIndex = 10;
             this.gunaCircleButton1.Click += new System.EventHandler(this.gunaCircleButton1_Click);
             // 
-            // label1
+            // pictureBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(32, 65);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 18);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Add Members:";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(35, 130);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(196, 21);
-            this.comboBox1.TabIndex = 12;
-            // 
-            // initMembFlow
-            // 
-            this.initMembFlow.AutoScroll = true;
-            this.initMembFlow.Location = new System.Drawing.Point(35, 121);
-            this.initMembFlow.Name = "initMembFlow";
-            this.initMembFlow.Size = new System.Drawing.Size(207, 96);
-            this.initMembFlow.TabIndex = 12;
-            this.initMembFlow.Paint += new System.Windows.Forms.PaintEventHandler(this.initMembFlow_Paint);
+            this.pictureBox1.BackColor = System.Drawing.Color.Blue;
+            this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.capture;
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(320, 14);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(97, 93);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
+            this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             // 
             // CreateGroupUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.initMembFlow);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gunaCircleButton1);
@@ -209,7 +211,8 @@
             this.Controls.Add(this.pictureBox1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "CreateGroupUC";
-            this.Size = new System.Drawing.Size(448, 243);
+            this.Size = new System.Drawing.Size(448, 257);
+            this.Load += new System.EventHandler(this.CreateGroupUC_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

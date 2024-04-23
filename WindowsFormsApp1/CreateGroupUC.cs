@@ -22,6 +22,7 @@ namespace WindowsFormsApp1
     {
 
        public static List<Account> accs = new List<Account>();
+      
        
            
         public CreateGroupUC()
@@ -56,22 +57,30 @@ namespace WindowsFormsApp1
                     path = pictureBox1.ImageLocation.ToString();
                 }
                 path = pictureBox1.ImageLocation.ToString();
-                groupz group = new groupz();
-                group.groupButton.Text = GroupTxtBx.Text;
-                group.GroupPic.Image = pictureBox1.Image;
-                string Name = group.groupButton.Text;
+                groupz groupdisp = new groupz();
+                groupdisp.groupButton.Text = GroupTxtBx.Text;
+                groupdisp.GroupPic.Image = pictureBox1.Image;
+                string Name = groupdisp.groupButton.Text;
+                
                 Account acc = LoginForm.account;
 
                 //if wala sa database ang member
                 //if daghan members
+                groupdisp.group = handler.InsertGroup(path, Name, acc, accs);
+                groupdisp.group.groupLeader = acc.email;
+                groupdisp.group.group_name = Name;
+                groupdisp.group.members = accs;
+                groupdisp.group.groupImageObj = pictureBox1.Image;
+                
 
-                handler.InsertGroup(path, Name, acc, accs);
+            
+               
 
                 //remove all from accs if ma create na ang group
 
                 //ug mag error dili mupadayun anhi
 
-                LoginForm.hp.addToFPL(group);
+                LoginForm.hp.addToFPL(groupdisp);
                 
                 this.Hide();
                 accs.Clear();
@@ -129,12 +138,18 @@ namespace WindowsFormsApp1
 
         private void gunaCircleButton1_Click(object sender, EventArgs e)
         {
-            if (memberTxtBx.Text == "Email Address" || memberTxtBx.Text == "")
+
+
+
+
+
+          /*  if (memberTxtBx.Text == "Email Address" || memberTxtBx.Text == "")
             {
                 MessageBox.Show("Input a member");
             }
             else
-            {
+            {*/
+
                 try
                 {
                     bool flag = false, exist = false;
@@ -162,10 +177,11 @@ namespace WindowsFormsApp1
                         }
                         if (flag == false)
                         {
+
                             accs.Add(account);
 
                             InitialMembers Mem = new InitialMembers();
-                            Mem.initialMemberBtn.Text = memberTxtBx.Text;
+                            Mem.initialMemberBtn.Text = account.username;
 
                             initMembFlow.Controls.Add(Mem);
 
@@ -185,7 +201,7 @@ namespace WindowsFormsApp1
                     MessageBox.Show($"Error: {ex.Message}");
                 }
 
-            }
+           // }
 
 
 
@@ -203,6 +219,16 @@ namespace WindowsFormsApp1
             {
                 pictureBox1.ImageLocation = openFile.FileName;
             }
+        }
+
+        private void pictureBox1_MouseEnter(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void CreateGroupUC_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

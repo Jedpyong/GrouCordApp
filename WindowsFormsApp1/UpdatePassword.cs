@@ -61,8 +61,9 @@ namespace WindowsFormsApp1
                 LoginForm.account.password = confirmtxtbx.Text;
 
                 HomePage hp = new HomePage();
-                this.Hide();
+                
                 hp.Show();
+                this.Hide();
                 connection.Close();
                 
             }
@@ -70,6 +71,11 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Mismatching Passwords!");
             }
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

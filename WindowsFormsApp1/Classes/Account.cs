@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,7 +13,9 @@ namespace WindowsFormsApp1.Classes
         public string email { get; set; }
         public string password {private get; set; }
         public string username { get; set; }
-        public int contactNumber { get; set; }
+        public string contactNumber { get; set; }
+        public byte[] accountImage { get; set; }
+        public Image accountProfile { get; set; }
 
         public CurrStatus status { get; set; }
         public Account ()

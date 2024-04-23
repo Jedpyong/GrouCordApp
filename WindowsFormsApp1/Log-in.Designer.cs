@@ -33,10 +33,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.forgotpass = new System.Windows.Forms.LinkLabel();
-            this.loginButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.gunaLinkLabel1 = new Guna.UI.WinForms.GunaLinkLabel();
             this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.usernameTextBox = new System.Windows.Forms.TextBox();
+            this.loginButton = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.close = new Guna.UI.WinForms.GunaImageButton();
             this.SuspendLayout();
             // 
             // label1
@@ -82,6 +83,34 @@
             this.forgotpass.Text = "forgot password";
             this.forgotpass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgotpass_LinkClicked);
             // 
+            // gunaLinkLabel1
+            // 
+            this.gunaLinkLabel1.AutoSize = true;
+            this.gunaLinkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLinkLabel1.Location = new System.Drawing.Point(166, 247);
+            this.gunaLinkLabel1.Name = "gunaLinkLabel1";
+            this.gunaLinkLabel1.Size = new System.Drawing.Size(116, 15);
+            this.gunaLinkLabel1.TabIndex = 10;
+            this.gunaLinkLabel1.TabStop = true;
+            this.gunaLinkLabel1.Text = "Create New Account";
+            this.gunaLinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.gunaLinkLabel1_LinkClicked);
+            // 
+            // passwordTextBox
+            // 
+            this.passwordTextBox.Location = new System.Drawing.Point(169, 113);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.PasswordChar = 'O';
+            this.passwordTextBox.Size = new System.Drawing.Size(186, 20);
+            this.passwordTextBox.TabIndex = 15;
+            this.passwordTextBox.Tag = "";
+            // 
+            // usernameTextBox
+            // 
+            this.usernameTextBox.Location = new System.Drawing.Point(169, 67);
+            this.usernameTextBox.Name = "usernameTextBox";
+            this.usernameTextBox.Size = new System.Drawing.Size(186, 20);
+            this.usernameTextBox.TabIndex = 16;
+            // 
             // loginButton
             // 
             this.loginButton.AnimationHoverSpeed = 0.07F;
@@ -113,33 +142,18 @@
             this.loginButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
-            // gunaLinkLabel1
+            // close
             // 
-            this.gunaLinkLabel1.AutoSize = true;
-            this.gunaLinkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLinkLabel1.Location = new System.Drawing.Point(166, 247);
-            this.gunaLinkLabel1.Name = "gunaLinkLabel1";
-            this.gunaLinkLabel1.Size = new System.Drawing.Size(116, 15);
-            this.gunaLinkLabel1.TabIndex = 10;
-            this.gunaLinkLabel1.TabStop = true;
-            this.gunaLinkLabel1.Text = "Create New Account";
-            this.gunaLinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.gunaLinkLabel1_LinkClicked);
-            // 
-            // passwordTextBox
-            // 
-            this.passwordTextBox.Location = new System.Drawing.Point(169, 113);
-            this.passwordTextBox.Name = "passwordTextBox";
-            this.passwordTextBox.PasswordChar = 'O';
-            this.passwordTextBox.Size = new System.Drawing.Size(186, 20);
-            this.passwordTextBox.TabIndex = 15;
-            this.passwordTextBox.Tag = "";
-            // 
-            // usernameTextBox
-            // 
-            this.usernameTextBox.Location = new System.Drawing.Point(169, 67);
-            this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(186, 20);
-            this.usernameTextBox.TabIndex = 16;
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.Image = global::WindowsFormsApp1.Properties.Resources.close_4361951;
+            this.close.ImageSize = new System.Drawing.Size(25, 25);
+            this.close.Location = new System.Drawing.Point(419, -1);
+            this.close.Name = "close";
+            this.close.OnHoverImage = null;
+            this.close.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.close.Size = new System.Drawing.Size(27, 27);
+            this.close.TabIndex = 17;
+            this.close.Click += new System.EventHandler(this.close_Click);
             // 
             // LoginForm
             // 
@@ -147,6 +161,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(447, 285);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.gunaLinkLabel1);
@@ -156,7 +171,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.Color.Blue;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Log-in";
@@ -176,6 +191,7 @@
         private Guna.UI.WinForms.GunaLinkLabel gunaLinkLabel1;
         private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.TextBox usernameTextBox;
+        private Guna.UI.WinForms.GunaImageButton close;
     }
 }
 

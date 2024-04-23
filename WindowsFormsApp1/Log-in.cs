@@ -25,6 +25,7 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
             hp = new HomePage();
+            this.DoubleBuffered = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -111,8 +112,10 @@ namespace WindowsFormsApp1
                     account.password = passwordTextBox.Text;
 
                     hp = new HomePage();
-                    this.Hide();
+                   
                     hp.Show();
+                    //this.Close();
+                    this.Hide();
                 } 
             }
             catch (Exception ex)
@@ -153,6 +156,12 @@ namespace WindowsFormsApp1
             CreateAccount ca = new CreateAccount();
             this.Hide();
             ca.Show();
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
         }
     }
 }

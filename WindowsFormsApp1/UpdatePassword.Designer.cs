@@ -33,6 +33,7 @@
             this.confirmtxtbx = new Guna.UI.WinForms.GunaTextBox();
             this.newpasstxtbx = new Guna.UI.WinForms.GunaTextBox();
             this.savebutton = new Guna.UI.WinForms.GunaButton();
+            this.close = new Guna.UI.WinForms.GunaImageButton();
             this.SuspendLayout();
             // 
             // gunaLabel1
@@ -109,16 +110,31 @@
             this.savebutton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.savebutton.Click += new System.EventHandler(this.savebutton_Click);
             // 
+            // close
+            // 
+            this.close.BackColor = System.Drawing.Color.Transparent;
+            this.close.Image = global::WindowsFormsApp1.Properties.Resources.close_4361951;
+            this.close.ImageSize = new System.Drawing.Size(25, 25);
+            this.close.Location = new System.Drawing.Point(419, -1);
+            this.close.Name = "close";
+            this.close.OnHoverImage = null;
+            this.close.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.close.Size = new System.Drawing.Size(27, 27);
+            this.close.TabIndex = 12;
+            this.close.Click += new System.EventHandler(this.close_Click);
+            // 
             // UpdatePassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(447, 285);
+            this.Controls.Add(this.close);
             this.Controls.Add(this.savebutton);
             this.Controls.Add(this.newpasstxtbx);
             this.Controls.Add(this.confirmtxtbx);
             this.Controls.Add(this.gunaLabel2);
             this.Controls.Add(this.gunaLabel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdatePassword";
             this.Text = "UpdatePassword";
             this.Load += new System.EventHandler(this.UpdatePassword_Load);
@@ -134,5 +150,6 @@
         private Guna.UI.WinForms.GunaTextBox confirmtxtbx;
         private Guna.UI.WinForms.GunaTextBox newpasstxtbx;
         private Guna.UI.WinForms.GunaButton savebutton;
+        private Guna.UI.WinForms.GunaImageButton close;
     }
 }

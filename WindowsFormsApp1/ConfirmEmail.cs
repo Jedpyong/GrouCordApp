@@ -47,9 +47,11 @@ namespace WindowsFormsApp1
                 LoginForm.account.email = email;
                 LoginForm.account.password = password;
                 
-                this.Hide();
+                
                 LoginForm.hp.Show();
+
                 connection.Close();
+                this.Close();
 
             }
             else
@@ -62,6 +64,11 @@ namespace WindowsFormsApp1
         private void ConfirmEmail_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

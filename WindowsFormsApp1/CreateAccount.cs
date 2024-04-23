@@ -117,8 +117,9 @@ namespace WindowsFormsApp1
                         smtp.Send(message);
                         MessageBox.Show("code sent succesfully");
                         ConfirmEmail ce = new ConfirmEmail();
-                        this.Hide();
+                        
                         ce.Show();
+                        this.Close();
                     }
                     catch (Exception ex)
                     {
@@ -143,6 +144,11 @@ namespace WindowsFormsApp1
         private void CreateAccount_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -37,14 +37,14 @@
             // 
             this.removeBtn.AnimationHoverSpeed = 0.07F;
             this.removeBtn.AnimationSpeed = 0.03F;
-            this.removeBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.removeBtn.BaseColor = System.Drawing.Color.Red;
             this.removeBtn.BorderColor = System.Drawing.Color.Black;
             this.removeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.removeBtn.ForeColor = System.Drawing.Color.White;
-            this.removeBtn.Image = ((System.Drawing.Image)(resources.GetObject("removeBtn.Image")));
+            this.removeBtn.Image = global::WindowsFormsApp1.Properties.Resources.close_4361951;
             this.removeBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.removeBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.removeBtn.Location = new System.Drawing.Point(158, 0);
+            this.removeBtn.Location = new System.Drawing.Point(149, 0);
             this.removeBtn.Name = "removeBtn";
             this.removeBtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.removeBtn.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -79,7 +79,7 @@
             this.initialMemberBtn.OnHoverImage = null;
             this.initialMemberBtn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.initialMemberBtn.OnPressedColor = System.Drawing.Color.Black;
-            this.initialMemberBtn.Size = new System.Drawing.Size(152, 22);
+            this.initialMemberBtn.Size = new System.Drawing.Size(140, 22);
             this.initialMemberBtn.TabIndex = 1;
             this.initialMemberBtn.Text = "gunaAdvenceButton1";
             // 
@@ -91,7 +91,7 @@
             this.Controls.Add(this.initialMemberBtn);
             this.Controls.Add(this.removeBtn);
             this.Name = "InitialMembers";
-            this.Size = new System.Drawing.Size(190, 22);
+            this.Size = new System.Drawing.Size(183, 22);
             this.ResumeLayout(false);
 
         }

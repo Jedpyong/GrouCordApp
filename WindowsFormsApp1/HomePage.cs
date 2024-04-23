@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
+using System.Security.Principal;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,7 +20,8 @@ namespace WindowsFormsApp1
         public HomePage()
         {
             InitializeComponent();  
-
+            this.DoubleBuffered = true;
+            
             
         }
 
@@ -51,33 +53,9 @@ namespace WindowsFormsApp1
 
         private void gunaComboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+  
         }
         
-        /*private void addGroup(Group group)
-        {
-            Panel panel = new Panel();
-            panel.Name = string.Format("PnlGroup{0}", group.group_ID);
-            panel.Size = new Size(445, 70);
-            panel.BackColor = Color.White;
-            panel.Margin = new Padding(10);
-            panel.Tag = group.group_ID;
-
-            PictureBox picBox;
-            picBox = new PictureBox();
-            picBox.Name = String.Format("PbGroupImage{0}", group.group_ID);
-            picBox.Size = new Size(69, 70);
-            picBox.Location = new Point(12, 10);
-            picBox.SizeMode = PictureBoxSizeMode.AutoSize;
-
-            
-
-            picBox.Tag = group.group_ID;
-
-            Label labelTitle;
-            labelTitle = new Label();
-            labelTitle.Name = String
-        }*/
 
         private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
@@ -99,31 +77,25 @@ namespace WindowsFormsApp1
 
         }
 
-        private void AddGroupBtn_Click(object sender, EventArgs e)
-        {
-            CreateGroupUC createGroup = new CreateGroupUC();
-           
-            CombPnl.Controls.Add(createGroup);
-            createGroup.BringToFront();
-            createGroup.Show();
-
-            
-        }
-
-        
+       
 
     
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-            /*if(groupzs != null) 
-            {
-                foreach (groupz group in groupzs)
-                {
-                    FLPPnl.Controls.Add(group);
-                }
-            }*/
+            GroupHandler handler = new GroupHandler();
+            List<Group> groups = handler.GetGroupByLeader(LoginForm.account.email);
 
+            foreach(Group g in groups)
+            {
+                groupz groupo = new groupz();
+                groupo.groupButton.Text = g.group_name;
+                groupo.GroupPic.Image = g.groupImageObj;
+                groupo.group = g;
+                FLPPnl.Controls.Add(groupo);
+            }
+            DBManager manager = new DBManager();
+            
          
             
            
@@ -135,6 +107,63 @@ namespace WindowsFormsApp1
             
         }
 
-      
+       
+
+        private void DemoPnl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void searchTxtBx_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchTxtBx_Enter(object sender, EventArgs e)
+        {
+            if(searchTxtBx.Text == "Search")
+                searchTxtBx.Text = "";
+        }
+
+        private void searchTxtBx_Leave(object sender, EventArgs e)
+        {
+            if (searchTxtBx.Text == "")
+                searchTxtBx.Text = "Search";
+        }
+
+        private void gunaCircleButton2_Click(object sender, EventArgs e)
+        {
+            DBManager manage = new DBManager();
+            manage.GroupSearch(searchTxtBx.Text);
+            //wapa matiwas himo pa user control
+        }
+
+
+        private void close_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void AddGroupBtn_Click(object sender, EventArgs e)
+        {
+            CreateGroupUC createGroup = new CreateGroupUC();
+
+            CombPnl.Controls.Add(createGroup);
+            createGroup.BringToFront();
+            createGroup.Show();
+            //this.Close();
+        }
+
+        private void gunaComboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+            string stat = gunaComboBox1.GetItemText(gunaComboBox1.SelectedItem.ToString());
+
+            DBManager manage = new DBManager();
+            LoginForm.account.status = manage.GetStatusFromString(stat);
+            manage.updateStatus(stat, LoginForm.account);
+
+        }
     }
 }

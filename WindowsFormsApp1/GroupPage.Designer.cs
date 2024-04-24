@@ -204,6 +204,7 @@
             this.addMember.TabIndex = 0;
             this.addMember.Text = "Add Member";
             this.addMember.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.addMember.Click += new System.EventHandler(this.addMember_Click);
             // 
             // upperPanel
             // 

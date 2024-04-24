@@ -152,5 +152,15 @@ namespace WindowsFormsApp1
             }
            
         }
+
+        private void addMember_Click(object sender, EventArgs e)
+        {
+            AddMember add = new AddMember();
+            add.grop = this;
+            add.group = this.group;
+            outpnl.Controls.Add(add);
+            add.BringToFront();
+            add.Show();
+        }
     }
 }

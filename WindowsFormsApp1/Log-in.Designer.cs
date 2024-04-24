@@ -33,12 +33,12 @@
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.close = new Guna.UI.WinForms.GunaImageButton();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.gunaLinkLabel1 = new Guna.UI.WinForms.GunaLinkLabel();
+            this.forgotpass = new System.Windows.Forms.LinkLabel();
             this.loginButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.forgotpass = new System.Windows.Forms.LinkLabel();
-            this.gunaLinkLabel1 = new Guna.UI.WinForms.GunaLinkLabel();
             this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +48,7 @@
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = 'O';
             this.passwordTextBox.Size = new System.Drawing.Size(186, 20);
-            this.passwordTextBox.TabIndex = 15;
+            this.passwordTextBox.TabIndex = 16;
             this.passwordTextBox.Tag = "";
             // 
             // usernameTextBox
@@ -57,7 +57,6 @@
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(186, 20);
             this.usernameTextBox.TabIndex = 16;
-            this.usernameTextBox.TextChanged += new System.EventHandler(this.usernameTextBox_TextChanged_1);
             // 
             // close
             // 
@@ -92,6 +91,33 @@
             this.gunaGradientPanel1.Size = new System.Drawing.Size(447, 285);
             this.gunaGradientPanel1.TabIndex = 18;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
+            this.gunaGradientPanel1.Click += new System.EventHandler(this.gunaGradientPanel1_Click);
+            // 
+            // gunaLinkLabel1
+            // 
+            this.gunaLinkLabel1.AutoSize = true;
+            this.gunaLinkLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLinkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLinkLabel1.Location = new System.Drawing.Point(150, 251);
+            this.gunaLinkLabel1.Name = "gunaLinkLabel1";
+            this.gunaLinkLabel1.Size = new System.Drawing.Size(116, 15);
+            this.gunaLinkLabel1.TabIndex = 19;
+            this.gunaLinkLabel1.TabStop = true;
+            this.gunaLinkLabel1.Text = "Create New Account";
+            this.gunaLinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.gunaLinkLabel1_LinkClicked_1);
+            // 
+            // forgotpass
+            // 
+            this.forgotpass.AutoSize = true;
+            this.forgotpass.BackColor = System.Drawing.Color.Transparent;
+            this.forgotpass.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgotpass.Location = new System.Drawing.Point(159, 191);
+            this.forgotpass.Name = "forgotpass";
+            this.forgotpass.Size = new System.Drawing.Size(99, 16);
+            this.forgotpass.TabIndex = 19;
+            this.forgotpass.TabStop = true;
+            this.forgotpass.Text = "forgot password?\r\n";
+            this.forgotpass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgotpass_LinkClicked_1);
             // 
             // loginButton
             // 
@@ -157,32 +183,6 @@
             this.label2.Size = new System.Drawing.Size(144, 37);
             this.label2.TabIndex = 2;
             this.label2.Text = "GrouCord";
-            // 
-            // forgotpass
-            // 
-            this.forgotpass.AutoSize = true;
-            this.forgotpass.BackColor = System.Drawing.Color.Transparent;
-            this.forgotpass.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.forgotpass.Location = new System.Drawing.Point(159, 191);
-            this.forgotpass.Name = "forgotpass";
-            this.forgotpass.Size = new System.Drawing.Size(99, 16);
-            this.forgotpass.TabIndex = 19;
-            this.forgotpass.TabStop = true;
-            this.forgotpass.Text = "forgot password?\r\n";
-            this.forgotpass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgotpass_LinkClicked_1);
-            // 
-            // gunaLinkLabel1
-            // 
-            this.gunaLinkLabel1.AutoSize = true;
-            this.gunaLinkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLinkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLinkLabel1.Location = new System.Drawing.Point(150, 251);
-            this.gunaLinkLabel1.Name = "gunaLinkLabel1";
-            this.gunaLinkLabel1.Size = new System.Drawing.Size(116, 15);
-            this.gunaLinkLabel1.TabIndex = 19;
-            this.gunaLinkLabel1.TabStop = true;
-            this.gunaLinkLabel1.Text = "Create New Account";
-            this.gunaLinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.gunaLinkLabel1_LinkClicked_1);
             // 
             // LoginForm
             // 

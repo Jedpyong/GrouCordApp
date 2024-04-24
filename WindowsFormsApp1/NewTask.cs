@@ -58,7 +58,7 @@ namespace WindowsFormsApp1
 
             MailMessage message = new MailMessage();
 
-            messageBody = "\tGood day! This is "+page.group.group_name+" You are assigned to the following task:\n\nTask: "+name+"\n\tDescription: "+description+"\n\nFile link to work with: "+link;
+            messageBody = "Good day! This is "+page.group.group_name+" You are assigned to the following task:\n\nTask: "+name+"\n\nDescription: "+description+"\n\nFile link to work with: "+link;
             message.To.Add(email);
             message.From = new MailAddress(from);
             message.Body = messageBody;

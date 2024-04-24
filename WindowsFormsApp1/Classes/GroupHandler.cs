@@ -156,9 +156,18 @@ namespace WindowsFormsApp1.Classes
         }
 
 
-        public void insertMember(Group group, Account member)
+        public void insertMember(int groupID, string email)
         {
-
+            using(MySqlConnection conneection = new MySqlConnection(connect))
+            {
+                conneection.Open();
+                string query = "INSERT INTO `groucord`.`groupmember` (`group_ID`,`groupMemberEmail`) VALUES (@id,@email);"; 
+                MySqlCommand command = new MySqlCommand(query, conneection);
+                command.Parameters.AddWithValue("@id", groupID);
+                command.Parameters.AddWithValue("@email",email);
+                command.ExecuteNonQuery();
+                conneection.Close();    
+            }
         }
 
        // public bool searchMember()
@@ -177,6 +186,7 @@ namespace WindowsFormsApp1.Classes
                     
                     string query = "SELECT `groupMemberEmail` FROM `groupmember` WHERE `group_ID` = @ID;";
                     MySqlCommand command = new MySqlCommand(query, connection);
+                    MessageBox.Show(group.group_ID.ToString());
                     command.Parameters.AddWithValue("@ID", group.group_ID);
 
                     using (MySqlDataReader reader = command.ExecuteReader())

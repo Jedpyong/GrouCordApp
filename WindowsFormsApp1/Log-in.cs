@@ -93,10 +93,6 @@ namespace WindowsFormsApp1
             
         }
 
-        private void usernameTextBox_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void loginButton_Click_1(object sender, EventArgs e)
         {
@@ -149,6 +145,9 @@ namespace WindowsFormsApp1
             }
         }
 
-  
+        private void gunaGradientPanel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

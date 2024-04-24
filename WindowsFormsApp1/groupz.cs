@@ -51,9 +51,10 @@ namespace WindowsFormsApp1
 
         private void groupButton_Click(object sender, EventArgs e)
         {
-         
+
             //LoginForm.hp.Controls.Clear();
             //grop.group = group;
+            grop.FLPGroupPage.Controls.Clear();
             GroupHandler handler = new GroupHandler();
             List<Account> members = handler.getMembers(group);
             foreach(Account mem in members)

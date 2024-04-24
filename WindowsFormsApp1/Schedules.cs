@@ -27,7 +27,7 @@ namespace WindowsFormsApp1
         {
             DBManager manager = new DBManager();
             DateTime date = dateTimePicker1.Value;
-            manager.InsertDate(40, description.Text, date);
+            manager.InsertDate(31, description.Text, date);
         }
 
 

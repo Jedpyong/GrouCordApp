@@ -115,6 +115,7 @@
     <Compile Include="Classes\GroupMember.cs" />
     <Compile Include="Classes\GroupHandler.cs" />
     <Compile Include="Classes\ADStatus.cs" />
+    <Compile Include="Classes\Taskc.cs" />
     <Compile Include="ConfirmEmail.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -333,6 +334,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\double-click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add-group %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employees.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

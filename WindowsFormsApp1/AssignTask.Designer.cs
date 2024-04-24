@@ -35,6 +35,7 @@
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.back = new Guna.UI.WinForms.GunaImageButton();
+            this.ExistingFLP = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaGradientPanel2.SuspendLayout();
             this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -45,6 +46,7 @@
             this.gunaGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gunaGradientPanel2.Controls.Add(this.existingtask);
             this.gunaGradientPanel2.Controls.Add(this.newtask);
+            this.gunaGradientPanel2.Controls.Add(this.ExistingFLP);
             this.gunaGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaGradientPanel2.GradiantColor1 = System.Drawing.Color.DarkBlue;
             this.gunaGradientPanel2.GradiantColor2 = System.Drawing.Color.DarkBlue;
@@ -52,9 +54,10 @@
             this.gunaGradientPanel2.GradiantColor4 = System.Drawing.Color.Navy;
             this.gunaGradientPanel2.Location = new System.Drawing.Point(0, 41);
             this.gunaGradientPanel2.Name = "gunaGradientPanel2";
-            this.gunaGradientPanel2.Size = new System.Drawing.Size(378, 267);
+            this.gunaGradientPanel2.Size = new System.Drawing.Size(378, 289);
             this.gunaGradientPanel2.TabIndex = 1;
             this.gunaGradientPanel2.Text = "gunaGradientPanel2";
+            this.gunaGradientPanel2.Click += new System.EventHandler(this.gunaGradientPanel2_Click);
             // 
             // existingtask
             // 
@@ -77,6 +80,7 @@
             this.existingtask.TabIndex = 1;
             this.existingtask.Text = "EXISTING TASK";
             this.existingtask.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.existingtask.Click += new System.EventHandler(this.existingtask_Click);
             // 
             // newtask
             // 
@@ -143,6 +147,17 @@
             this.back.TabIndex = 0;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
+            // ExistingFLP
+            // 
+            this.ExistingFLP.AutoScroll = true;
+            this.ExistingFLP.BackColor = System.Drawing.Color.Transparent;
+            this.ExistingFLP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ExistingFLP.Location = new System.Drawing.Point(0, 0);
+            this.ExistingFLP.Name = "ExistingFLP";
+            this.ExistingFLP.Size = new System.Drawing.Size(378, 289);
+            this.ExistingFLP.TabIndex = 2;
+            this.ExistingFLP.Visible = false;
+            // 
             // AssignTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -150,7 +165,7 @@
             this.Controls.Add(this.gunaGradientPanel2);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Name = "AssignTask";
-            this.Size = new System.Drawing.Size(378, 308);
+            this.Size = new System.Drawing.Size(378, 330);
             this.gunaGradientPanel2.ResumeLayout(false);
             this.gunaGradientPanel1.ResumeLayout(false);
             this.gunaGradientPanel1.PerformLayout();
@@ -166,5 +181,6 @@
         private Guna.UI.WinForms.GunaGradiantButton existingtask;
         private Guna.UI.WinForms.GunaGradiantButton newtask;
         public Guna.UI.WinForms.GunaImageButton back;
+        public System.Windows.Forms.FlowLayoutPanel ExistingFLP;
     }
 }

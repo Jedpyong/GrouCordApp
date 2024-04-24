@@ -29,22 +29,145 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewTask));
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.gunaGradientPanel2 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.descriptiontxtbx = new System.Windows.Forms.RichTextBox();
+            this.assignBtn = new Guna.UI.WinForms.GunaGradiantButton();
+            this.fileLinktxtbx = new Guna.UI.WinForms.GunaLineTextBox();
+            this.taskNametxtbx = new Guna.UI.WinForms.GunaLineTextBox();
+            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.back = new Guna.UI.WinForms.GunaImageButton();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.gunaGradientPanel2 = new Guna.UI.WinForms.GunaGradientPanel();
-            this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaLineTextBox1 = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaLineTextBox3 = new Guna.UI.WinForms.GunaLineTextBox();
-            this.gunaGradiantButton1 = new Guna.UI.WinForms.GunaGradiantButton();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.gunaGradientPanel1.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.gunaGradientPanel2.SuspendLayout();
+            this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Controls.Add(this.gunaGradientPanel2);
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 41);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(378, 289);
+            this.flowLayoutPanel1.TabIndex = 3;
+            // 
+            // gunaGradientPanel2
+            // 
+            this.gunaGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel2.BackgroundImage")));
+            this.gunaGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel2.Controls.Add(this.descriptiontxtbx);
+            this.gunaGradientPanel2.Controls.Add(this.assignBtn);
+            this.gunaGradientPanel2.Controls.Add(this.fileLinktxtbx);
+            this.gunaGradientPanel2.Controls.Add(this.taskNametxtbx);
+            this.gunaGradientPanel2.Controls.Add(this.gunaLabel4);
+            this.gunaGradientPanel2.Controls.Add(this.gunaLabel3);
+            this.gunaGradientPanel2.Controls.Add(this.gunaLabel2);
+            this.gunaGradientPanel2.GradiantColor1 = System.Drawing.Color.MediumPurple;
+            this.gunaGradientPanel2.GradiantColor2 = System.Drawing.Color.MediumBlue;
+            this.gunaGradientPanel2.GradiantColor3 = System.Drawing.Color.White;
+            this.gunaGradientPanel2.GradiantColor4 = System.Drawing.Color.Navy;
+            this.gunaGradientPanel2.Location = new System.Drawing.Point(3, 3);
+            this.gunaGradientPanel2.Name = "gunaGradientPanel2";
+            this.gunaGradientPanel2.Size = new System.Drawing.Size(375, 286);
+            this.gunaGradientPanel2.TabIndex = 0;
+            this.gunaGradientPanel2.Text = "gunaGradientPanel2";
+            this.gunaGradientPanel2.Click += new System.EventHandler(this.gunaGradientPanel2_Click);
+            // 
+            // descriptiontxtbx
+            // 
+            this.descriptiontxtbx.Location = new System.Drawing.Point(118, 69);
+            this.descriptiontxtbx.Name = "descriptiontxtbx";
+            this.descriptiontxtbx.Size = new System.Drawing.Size(239, 76);
+            this.descriptiontxtbx.TabIndex = 7;
+            this.descriptiontxtbx.Text = "";
+            // 
+            // assignBtn
+            // 
+            this.assignBtn.AnimationHoverSpeed = 0.07F;
+            this.assignBtn.AnimationSpeed = 0.03F;
+            this.assignBtn.BackColor = System.Drawing.Color.Transparent;
+            this.assignBtn.BaseColor1 = System.Drawing.Color.SlateBlue;
+            this.assignBtn.BaseColor2 = System.Drawing.Color.Indigo;
+            this.assignBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.assignBtn.ForeColor = System.Drawing.Color.White;
+            this.assignBtn.Image = null;
+            this.assignBtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.assignBtn.Location = new System.Drawing.Point(138, 214);
+            this.assignBtn.Name = "assignBtn";
+            this.assignBtn.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.assignBtn.OnHoverBaseColor2 = System.Drawing.Color.Black;
+            this.assignBtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.assignBtn.OnHoverImage = null;
+            this.assignBtn.OnPressedColor = System.Drawing.Color.Black;
+            this.assignBtn.Radius = 10;
+            this.assignBtn.Size = new System.Drawing.Size(98, 38);
+            this.assignBtn.TabIndex = 6;
+            this.assignBtn.Text = "ASSIGN TASK";
+            this.assignBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.assignBtn.Click += new System.EventHandler(this.assignBtn_Click);
+            // 
+            // fileLinktxtbx
+            // 
+            this.fileLinktxtbx.BackColor = System.Drawing.Color.White;
+            this.fileLinktxtbx.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.fileLinktxtbx.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.fileLinktxtbx.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.fileLinktxtbx.LineColor = System.Drawing.Color.DarkGray;
+            this.fileLinktxtbx.Location = new System.Drawing.Point(118, 158);
+            this.fileLinktxtbx.Name = "fileLinktxtbx";
+            this.fileLinktxtbx.PasswordChar = '\0';
+            this.fileLinktxtbx.Size = new System.Drawing.Size(239, 27);
+            this.fileLinktxtbx.TabIndex = 5;
+            // 
+            // taskNametxtbx
+            // 
+            this.taskNametxtbx.BackColor = System.Drawing.Color.White;
+            this.taskNametxtbx.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.taskNametxtbx.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.taskNametxtbx.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.taskNametxtbx.LineColor = System.Drawing.Color.DarkGray;
+            this.taskNametxtbx.Location = new System.Drawing.Point(118, 25);
+            this.taskNametxtbx.Name = "taskNametxtbx";
+            this.taskNametxtbx.PasswordChar = '\0';
+            this.taskNametxtbx.Size = new System.Drawing.Size(239, 27);
+            this.taskNametxtbx.TabIndex = 3;
+            // 
+            // gunaLabel4
+            // 
+            this.gunaLabel4.AutoSize = true;
+            this.gunaLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel4.Location = new System.Drawing.Point(43, 158);
+            this.gunaLabel4.Name = "gunaLabel4";
+            this.gunaLabel4.Size = new System.Drawing.Size(56, 15);
+            this.gunaLabel4.TabIndex = 2;
+            this.gunaLabel4.Text = "File Link :";
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel3.Location = new System.Drawing.Point(29, 71);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(73, 15);
+            this.gunaLabel3.TabIndex = 1;
+            this.gunaLabel3.Text = "Description :";
+            // 
+            // gunaLabel2
+            // 
+            this.gunaLabel2.AutoSize = true;
+            this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel2.Location = new System.Drawing.Point(29, 25);
+            this.gunaLabel2.Name = "gunaLabel2";
+            this.gunaLabel2.Size = new System.Drawing.Size(70, 15);
+            this.gunaLabel2.TabIndex = 0;
+            this.gunaLabel2.Text = "Task Name :\r\n";
             // 
             // gunaGradientPanel1
             // 
@@ -88,127 +211,6 @@
             this.back.TabIndex = 0;
             this.back.Click += new System.EventHandler(this.back_Click);
             // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Controls.Add(this.gunaGradientPanel2);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 41);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(378, 267);
-            this.flowLayoutPanel1.TabIndex = 3;
-            // 
-            // gunaGradientPanel2
-            // 
-            this.gunaGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel2.BackgroundImage")));
-            this.gunaGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaGradientPanel2.Controls.Add(this.richTextBox1);
-            this.gunaGradientPanel2.Controls.Add(this.gunaGradiantButton1);
-            this.gunaGradientPanel2.Controls.Add(this.gunaLineTextBox3);
-            this.gunaGradientPanel2.Controls.Add(this.gunaLineTextBox1);
-            this.gunaGradientPanel2.Controls.Add(this.gunaLabel4);
-            this.gunaGradientPanel2.Controls.Add(this.gunaLabel3);
-            this.gunaGradientPanel2.Controls.Add(this.gunaLabel2);
-            this.gunaGradientPanel2.GradiantColor1 = System.Drawing.Color.MediumPurple;
-            this.gunaGradientPanel2.GradiantColor2 = System.Drawing.Color.MediumBlue;
-            this.gunaGradientPanel2.GradiantColor3 = System.Drawing.Color.White;
-            this.gunaGradientPanel2.GradiantColor4 = System.Drawing.Color.Navy;
-            this.gunaGradientPanel2.Location = new System.Drawing.Point(3, 3);
-            this.gunaGradientPanel2.Name = "gunaGradientPanel2";
-            this.gunaGradientPanel2.Size = new System.Drawing.Size(375, 264);
-            this.gunaGradientPanel2.TabIndex = 0;
-            this.gunaGradientPanel2.Text = "gunaGradientPanel2";
-            // 
-            // gunaLabel2
-            // 
-            this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(29, 25);
-            this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(70, 15);
-            this.gunaLabel2.TabIndex = 0;
-            this.gunaLabel2.Text = "Task Name :\r\n";
-            // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(29, 71);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(73, 15);
-            this.gunaLabel3.TabIndex = 1;
-            this.gunaLabel3.Text = "Description :";
-            // 
-            // gunaLabel4
-            // 
-            this.gunaLabel4.AutoSize = true;
-            this.gunaLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.Location = new System.Drawing.Point(43, 158);
-            this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(56, 15);
-            this.gunaLabel4.TabIndex = 2;
-            this.gunaLabel4.Text = "File Link :";
-            // 
-            // gunaLineTextBox1
-            // 
-            this.gunaLineTextBox1.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox1.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaLineTextBox1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLineTextBox1.LineColor = System.Drawing.Color.DarkGray;
-            this.gunaLineTextBox1.Location = new System.Drawing.Point(118, 25);
-            this.gunaLineTextBox1.Name = "gunaLineTextBox1";
-            this.gunaLineTextBox1.PasswordChar = '\0';
-            this.gunaLineTextBox1.Size = new System.Drawing.Size(239, 27);
-            this.gunaLineTextBox1.TabIndex = 3;
-            // 
-            // gunaLineTextBox3
-            // 
-            this.gunaLineTextBox3.BackColor = System.Drawing.Color.White;
-            this.gunaLineTextBox3.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.gunaLineTextBox3.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaLineTextBox3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLineTextBox3.LineColor = System.Drawing.Color.DarkGray;
-            this.gunaLineTextBox3.Location = new System.Drawing.Point(118, 158);
-            this.gunaLineTextBox3.Name = "gunaLineTextBox3";
-            this.gunaLineTextBox3.PasswordChar = '\0';
-            this.gunaLineTextBox3.Size = new System.Drawing.Size(239, 27);
-            this.gunaLineTextBox3.TabIndex = 5;
-            // 
-            // gunaGradiantButton1
-            // 
-            this.gunaGradiantButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaGradiantButton1.AnimationSpeed = 0.03F;
-            this.gunaGradiantButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaGradiantButton1.BaseColor1 = System.Drawing.Color.SlateBlue;
-            this.gunaGradiantButton1.BaseColor2 = System.Drawing.Color.Indigo;
-            this.gunaGradiantButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaGradiantButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaGradiantButton1.Image = null;
-            this.gunaGradiantButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaGradiantButton1.Location = new System.Drawing.Point(138, 191);
-            this.gunaGradiantButton1.Name = "gunaGradiantButton1";
-            this.gunaGradiantButton1.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.gunaGradiantButton1.OnHoverBaseColor2 = System.Drawing.Color.Black;
-            this.gunaGradiantButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaGradiantButton1.OnHoverImage = null;
-            this.gunaGradiantButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaGradiantButton1.Radius = 10;
-            this.gunaGradiantButton1.Size = new System.Drawing.Size(98, 38);
-            this.gunaGradiantButton1.TabIndex = 6;
-            this.gunaGradiantButton1.Text = "ASSIGN TASK";
-            this.gunaGradiantButton1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(118, 69);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(239, 76);
-            this.richTextBox1.TabIndex = 7;
-            this.richTextBox1.Text = "";
-            // 
             // NewTask
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,12 +219,12 @@
             this.Controls.Add(this.gunaGradientPanel1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "NewTask";
-            this.Size = new System.Drawing.Size(378, 308);
-            this.gunaGradientPanel1.ResumeLayout(false);
-            this.gunaGradientPanel1.PerformLayout();
+            this.Size = new System.Drawing.Size(378, 330);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.gunaGradientPanel2.ResumeLayout(false);
             this.gunaGradientPanel2.PerformLayout();
+            this.gunaGradientPanel1.ResumeLayout(false);
+            this.gunaGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -237,9 +239,9 @@
         private Guna.UI.WinForms.GunaLabel gunaLabel2;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
-        private Guna.UI.WinForms.GunaGradiantButton gunaGradiantButton1;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox3;
-        private Guna.UI.WinForms.GunaLineTextBox gunaLineTextBox1;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private Guna.UI.WinForms.GunaGradiantButton assignBtn;
+        private Guna.UI.WinForms.GunaLineTextBox fileLinktxtbx;
+        private Guna.UI.WinForms.GunaLineTextBox taskNametxtbx;
+        private System.Windows.Forms.RichTextBox descriptiontxtbx;
     }
 }

@@ -32,6 +32,7 @@
             this.outpnl = new Guna.UI.WinForms.GunaGradientPanel();
             this.FLPGroupPage = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.Schedules = new Guna.UI.WinForms.GunaGradiantButton();
             this.mainPanel = new Guna.UI.WinForms.GunaGradientPanel();
             this.Announcements = new Guna.UI.WinForms.GunaGradiantButton();
             this.Tasks = new Guna.UI.WinForms.GunaGradiantButton();
@@ -41,7 +42,6 @@
             this.gunaImageButton2 = new Guna.UI.WinForms.GunaImageButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
-            this.Schedules = new Guna.UI.WinForms.GunaGradiantButton();
             this.outpnl.SuspendLayout();
             this.gunaGradientPanel1.SuspendLayout();
             this.upperPanel.SuspendLayout();
@@ -63,6 +63,7 @@
             this.outpnl.Size = new System.Drawing.Size(379, 328);
             this.outpnl.TabIndex = 0;
             this.outpnl.Text = "gunaGradientPanel2";
+            this.outpnl.Click += new System.EventHandler(this.outpnl_Click);
             // 
             // FLPGroupPage
             // 
@@ -71,8 +72,9 @@
             this.FLPGroupPage.Location = new System.Drawing.Point(0, -3);
             this.FLPGroupPage.Margin = new System.Windows.Forms.Padding(0);
             this.FLPGroupPage.Name = "FLPGroupPage";
-            this.FLPGroupPage.Size = new System.Drawing.Size(378, 308);
+            this.FLPGroupPage.Size = new System.Drawing.Size(378, 330);
             this.FLPGroupPage.TabIndex = 2;
+            this.FLPGroupPage.Paint += new System.Windows.Forms.PaintEventHandler(this.FLPGroupPage_Paint_1);
             // 
             // gunaGradientPanel1
             // 
@@ -93,6 +95,30 @@
             this.gunaGradientPanel1.Size = new System.Drawing.Size(141, 327);
             this.gunaGradientPanel1.TabIndex = 0;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
+            // 
+            // Schedules
+            // 
+            this.Schedules.AnimationHoverSpeed = 0.07F;
+            this.Schedules.AnimationSpeed = 0.03F;
+            this.Schedules.BaseColor1 = System.Drawing.Color.Navy;
+            this.Schedules.BaseColor2 = System.Drawing.Color.SlateBlue;
+            this.Schedules.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.Schedules.ForeColor = System.Drawing.Color.White;
+            this.Schedules.Image = global::WindowsFormsApp1.Properties.Resources.schedule_2669764;
+            this.Schedules.ImageSize = new System.Drawing.Size(20, 20);
+            this.Schedules.Location = new System.Drawing.Point(3, 102);
+            this.Schedules.Name = "Schedules";
+            this.Schedules.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
+            this.Schedules.OnHoverBaseColor2 = System.Drawing.Color.Black;
+            this.Schedules.OnHoverForeColor = System.Drawing.Color.White;
+            this.Schedules.OnHoverImage = null;
+            this.Schedules.OnPressedColor = System.Drawing.Color.Black;
+            this.Schedules.Radius = 1;
+            this.Schedules.Size = new System.Drawing.Size(141, 42);
+            this.Schedules.TabIndex = 8;
+            this.Schedules.Text = " Schedules  ";
+            this.Schedules.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Schedules.Click += new System.EventHandler(this.Schedules_Click);
             // 
             // mainPanel
             // 
@@ -154,6 +180,7 @@
             this.Tasks.TabIndex = 4;
             this.Tasks.Text = "Tasks";
             this.Tasks.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.Tasks.Click += new System.EventHandler(this.Tasks_Click);
             // 
             // addMember
             // 
@@ -250,30 +277,6 @@
             this.gunaImageButton1.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaImageButton1_Paint);
             this.gunaImageButton1.MouseEnter += new System.EventHandler(this.gunaImageButton1_MouseEnter);
             this.gunaImageButton1.MouseLeave += new System.EventHandler(this.gunaImageButton1_MouseLeave);
-            // 
-            // Schedules
-            // 
-            this.Schedules.AnimationHoverSpeed = 0.07F;
-            this.Schedules.AnimationSpeed = 0.03F;
-            this.Schedules.BaseColor1 = System.Drawing.Color.Navy;
-            this.Schedules.BaseColor2 = System.Drawing.Color.SlateBlue;
-            this.Schedules.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.Schedules.ForeColor = System.Drawing.Color.White;
-            this.Schedules.Image = global::WindowsFormsApp1.Properties.Resources.schedule_2669764;
-            this.Schedules.ImageSize = new System.Drawing.Size(20, 20);
-            this.Schedules.Location = new System.Drawing.Point(3, 102);
-            this.Schedules.Name = "Schedules";
-            this.Schedules.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.Schedules.OnHoverBaseColor2 = System.Drawing.Color.Black;
-            this.Schedules.OnHoverForeColor = System.Drawing.Color.White;
-            this.Schedules.OnHoverImage = null;
-            this.Schedules.OnPressedColor = System.Drawing.Color.Black;
-            this.Schedules.Radius = 1;
-            this.Schedules.Size = new System.Drawing.Size(141, 42);
-            this.Schedules.TabIndex = 8;
-            this.Schedules.Text = " Schedules  ";
-            this.Schedules.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Schedules.Click += new System.EventHandler(this.Schedules_Click);
             // 
             // GroupPage
             // 

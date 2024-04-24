@@ -51,6 +51,7 @@ namespace WindowsFormsApp1
 
         private void groupButton_Click(object sender, EventArgs e)
         {
+         
             //LoginForm.hp.Controls.Clear();
             //grop.group = group;
             GroupHandler handler = new GroupHandler();
@@ -64,8 +65,13 @@ namespace WindowsFormsApp1
                 panel.Role.Text = "MEMBER";
                 panel.memberPic.Image = mem.accountProfile;
                 panel.page = grop;
+                panel.memberID = handler.getMemberID_BYEmail(mem.email, group.group_ID);
+                panel.name = mem.username;
+                panel.group = this.group;
                 grop.FLPGroupPage.Controls.Add(panel);
+                
             }
+           
             grop.group = this.group;
             LoginForm.hp.MainPnl.Controls.Add(grop);
             grop.FLPGroupPage.BringToFront();

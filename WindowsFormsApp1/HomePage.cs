@@ -121,24 +121,19 @@ namespace WindowsFormsApp1
 
         }
 
-        private void searchTxtBx_Enter(object sender, EventArgs e)
+        private void searchTxtBx_Enter_1(object sender, EventArgs e)
         {
             if(searchTxtBx.Text == "Search")
                 searchTxtBx.Text = "";
         }
 
-        private void searchTxtBx_Leave(object sender, EventArgs e)
+        private void searchTxtBx_Leave_1(object sender, EventArgs e)
         {
             if (searchTxtBx.Text == "")
                 searchTxtBx.Text = "Search";
         }
 
-        private void gunaCircleButton2_Click(object sender, EventArgs e)
-        {
-            DBManager manage = new DBManager();
-            manage.GroupSearch(searchTxtBx.Text);
-            //wapa matiwas himo pa user control
-        }
+ 
 
 
         private void close_Click_1(object sender, EventArgs e)
@@ -163,6 +158,21 @@ namespace WindowsFormsApp1
             DBManager manage = new DBManager();
             LoginForm.account.status = manage.GetStatusFromString(stat);
             manage.updateStatus(stat, LoginForm.account);
+
+        }
+
+        private void MainPnl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchTxtBx_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaCircleButton2_Click_1(object sender, EventArgs e)
+        {
 
         }
     }

@@ -28,18 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(groupz));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
-            this.GroupPic = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.groupButton = new Guna.UI.WinForms.GunaButton();
+            this.GroupPic = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.DeleteGroup = new Guna.UI.WinForms.GunaImageButton();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GroupPic)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaPanel1
             // 
-            this.gunaPanel1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.gunaPanel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaPanel1.Controls.Add(this.GroupPic);
             this.gunaPanel1.Controls.Add(this.groupButton);
             this.gunaPanel1.Location = new System.Drawing.Point(0, 5);
@@ -47,6 +49,31 @@
             this.gunaPanel1.Size = new System.Drawing.Size(374, 38);
             this.gunaPanel1.TabIndex = 3;
             this.gunaPanel1.Click += new System.EventHandler(this.gunaPanel1_Click);
+            // 
+            // groupButton
+            // 
+            this.groupButton.AnimationHoverSpeed = 0.07F;
+            this.groupButton.AnimationSpeed = 0.03F;
+            this.groupButton.BackColor = System.Drawing.Color.Transparent;
+            this.groupButton.BaseColor = System.Drawing.Color.Transparent;
+            this.groupButton.BorderColor = System.Drawing.Color.Black;
+            this.groupButton.BorderSize = 1;
+            this.groupButton.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Italic);
+            this.groupButton.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.groupButton.Image = null;
+            this.groupButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.groupButton.Location = new System.Drawing.Point(0, 0);
+            this.groupButton.Name = "groupButton";
+            this.groupButton.OnHoverBaseColor = System.Drawing.Color.MediumBlue;
+            this.groupButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.groupButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.groupButton.OnHoverImage = null;
+            this.groupButton.OnPressedColor = System.Drawing.Color.Black;
+            this.groupButton.Size = new System.Drawing.Size(374, 38);
+            this.groupButton.TabIndex = 4;
+            this.groupButton.Text = "Handsome Group";
+            this.groupButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.groupButton.Click += new System.EventHandler(this.groupButton_Click);
             // 
             // GroupPic
             // 
@@ -63,29 +90,6 @@
             this.GroupPic.UseTransfarantBackground = false;
             this.GroupPic.Click += new System.EventHandler(this.GroupPic_Click_2);
             // 
-            // groupButton
-            // 
-            this.groupButton.AnimationHoverSpeed = 0.07F;
-            this.groupButton.AnimationSpeed = 0.03F;
-            this.groupButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.groupButton.BorderColor = System.Drawing.Color.Black;
-            this.groupButton.Font = new System.Drawing.Font("Cooper Black", 18F, System.Drawing.FontStyle.Italic);
-            this.groupButton.ForeColor = System.Drawing.Color.Black;
-            this.groupButton.Image = null;
-            this.groupButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.groupButton.Location = new System.Drawing.Point(0, 0);
-            this.groupButton.Name = "groupButton";
-            this.groupButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.groupButton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.groupButton.OnHoverForeColor = System.Drawing.Color.White;
-            this.groupButton.OnHoverImage = null;
-            this.groupButton.OnPressedColor = System.Drawing.Color.Black;
-            this.groupButton.Size = new System.Drawing.Size(374, 38);
-            this.groupButton.TabIndex = 4;
-            this.groupButton.Text = "Handsome Group";
-            this.groupButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.groupButton.Click += new System.EventHandler(this.groupButton_Click);
-            // 
             // DeleteGroup
             // 
             this.DeleteGroup.BackColor = System.Drawing.Color.Red;
@@ -101,11 +105,16 @@
             this.DeleteGroup.MouseEnter += new System.EventHandler(this.DeleteGroup_MouseEnter);
             this.DeleteGroup.MouseLeave += new System.EventHandler(this.DeleteGroup_MouseLeave);
             // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 7;
+            this.gunaElipse1.TargetControl = this;
+            // 
             // groupz
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.gunaPanel1);
             this.Controls.Add(this.DeleteGroup);
             this.DoubleBuffered = true;
@@ -126,5 +135,6 @@
         private Guna.UI.WinForms.GunaPanel gunaPanel1;
         public Guna.UI.WinForms.GunaCirclePictureBox GroupPic;
         public Guna.UI.WinForms.GunaButton groupButton;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
     }
 }

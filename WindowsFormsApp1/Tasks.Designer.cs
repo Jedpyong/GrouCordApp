@@ -29,12 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tasks));
+            this.TaskFlowchart = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
-            this.back = new Guna.UI.WinForms.GunaImageButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.back = new Guna.UI.WinForms.GunaImageButton();
             this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // TaskFlowchart
+            // 
+            this.TaskFlowchart.AutoScroll = true;
+            this.TaskFlowchart.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TaskFlowchart.Location = new System.Drawing.Point(0, 41);
+            this.TaskFlowchart.Margin = new System.Windows.Forms.Padding(0);
+            this.TaskFlowchart.Name = "TaskFlowchart";
+            this.TaskFlowchart.Size = new System.Drawing.Size(378, 289);
+            this.TaskFlowchart.TabIndex = 4;
+            this.TaskFlowchart.Paint += new System.Windows.Forms.PaintEventHandler(this.TaskFlowchart_Paint);
             // 
             // gunaGradientPanel1
             // 
@@ -53,18 +64,6 @@
             this.gunaGradientPanel1.TabIndex = 3;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
-            // back
-            // 
-            this.back.BackColor = System.Drawing.Color.Transparent;
-            this.back.Image = global::WindowsFormsApp1.Properties.Resources.turn_back;
-            this.back.ImageSize = new System.Drawing.Size(30, 30);
-            this.back.Location = new System.Drawing.Point(0, 0);
-            this.back.Name = "back";
-            this.back.OnHoverImage = null;
-            this.back.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.back.Size = new System.Drawing.Size(40, 41);
-            this.back.TabIndex = 0;
-            // 
             // gunaLabel1
             // 
             this.gunaLabel1.AutoSize = true;
@@ -77,23 +76,28 @@
             this.gunaLabel1.Text = " TASKS";
             this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // flowLayoutPanel1
+            // back
             // 
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 41);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(0);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(378, 267);
-            this.flowLayoutPanel1.TabIndex = 4;
+            this.back.BackColor = System.Drawing.Color.Transparent;
+            this.back.Image = global::WindowsFormsApp1.Properties.Resources.turn_back;
+            this.back.ImageSize = new System.Drawing.Size(30, 30);
+            this.back.Location = new System.Drawing.Point(0, 0);
+            this.back.Name = "back";
+            this.back.OnHoverImage = null;
+            this.back.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.back.Size = new System.Drawing.Size(40, 41);
+            this.back.TabIndex = 0;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // Tasks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.TaskFlowchart);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Name = "Tasks";
-            this.Size = new System.Drawing.Size(378, 308);
+            this.Size = new System.Drawing.Size(378, 330);
+            this.Load += new System.EventHandler(this.Tasks_Load);
             this.gunaGradientPanel1.ResumeLayout(false);
             this.gunaGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
@@ -105,6 +109,6 @@
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
         public Guna.UI.WinForms.GunaImageButton back;
         private Guna.UI.WinForms.GunaLabel gunaLabel1;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        public System.Windows.Forms.FlowLayoutPanel TaskFlowchart;
     }
 }

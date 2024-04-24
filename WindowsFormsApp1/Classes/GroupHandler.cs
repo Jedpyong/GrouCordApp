@@ -246,7 +246,39 @@ namespace WindowsFormsApp1.Classes
 
 
 
+        public int getMemberID_BYEmail(string email, int groupID)
+        {
+            int memberID = -1;
+            
+            using(MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+                string query = "SELECT `groupMemberID` FROM `groucord`.`groupmember` WHERE `groupMemberEmail` = @email AND `group_ID` = @id;";
 
+                try
+                {
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@email", email);
+                    command.Parameters.AddWithValue("@id", groupID);
+
+                    using(MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            memberID = reader.GetInt32("groupMemberID");
+                        }
+                        
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+                
+            }
+            return memberID;
+        }
 
 
 

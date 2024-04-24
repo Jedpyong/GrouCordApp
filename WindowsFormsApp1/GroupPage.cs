@@ -106,5 +106,51 @@ namespace WindowsFormsApp1
             sched.BringToFront();
             
         }
+
+        private void FLPGroupPage_Paint_1(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void outpnl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Tasks_Click(object sender, EventArgs e)
+        {
+            Tasks tasks = new Tasks();
+            tasks.page = this;
+            outpnl.Controls.Add(tasks);
+            try
+            {
+                DBManager manage = new DBManager();
+               
+                List<Taskc> Tasks = manage.getTasks(group.group_ID);
+
+                foreach (Taskc Task in Tasks)
+                {
+                    task panel = new task();
+                    panel.taskName.Text = Task.taskname;
+                    panel.remarkss.Text = Task.remarks;
+                   
+                    foreach(string ass in Task.assigned)
+                    {
+                        panel.assigned.Items.Add(ass);
+                    }
+                   
+
+                    tasks.TaskFlowchart.Controls.Add(panel);
+                }
+
+                tasks.BringToFront();
+                tasks.Show();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error:" + ex.Message);
+            }
+           
+        }
     }
 }

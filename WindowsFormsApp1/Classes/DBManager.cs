@@ -172,38 +172,46 @@ namespace WindowsFormsApp1.Classes
                 
             }
         }
-        public string checkStatus(Account acc)
+        public CurrStatus checkStatus(string email)
         {
-            string stat = null;
+            CurrStatus status = new CurrStatus();
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connect))
                 {
                     connection.Open();
-                    string query = "SELECT 'status' FROM `groucord`.`account` WHERE (`email` = @email);";
+                    string query = "SELECT * FROM `account` WHERE `email` = @email;";
                     
-                    string email = acc.email.ToString();
+                    
                     MySqlCommand cmd = new MySqlCommand(query, connection);
                
                     cmd.Parameters.AddWithValue("@email", email);
 
-                    MySqlDataReader reader =  cmd.ExecuteReader();
-                    
-                    if (reader.Read())
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
                     {
-                      stat = reader.GetString("status");
+
+                        string stat = reader.GetString("status");
+                       
+                        status = this.GetStatusFromString(stat);
+
                     }
-                    
-                    connection.Close();
+                }
+
+                   
+               
+
+                connection.Close();
                    
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: mao ni?? " + ex.Message);
                 
             }
-            return stat;
+            return status;
         }
         public string getUsername(string email)
         {
@@ -327,11 +335,206 @@ namespace WindowsFormsApp1.Classes
                 }
             }
             
+
+        }
+
+
+
+        public void insertTask(int ID, string description, string name,string link)
+        {
+           using(MySqlConnection connection = new MySqlConnection(connect))
+            {
+                int id = ID;
+                string des = description;
+
+                connection.Open();
+                string query = "INSERT INTO `groucord`.`task`(`groupMemberID`,`description`,`taskName`,`remarks`,`link`) VALUES (@id,@des,@name,@remarks,@link);";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", ID);
+                command.Parameters.AddWithValue("@des", des);
+                command.Parameters.AddWithValue("@name", name);
+                command.Parameters.AddWithValue("@remarks", "ON-GOING");
+                command.Parameters.AddWithValue("@link", link);
+
+                command.ExecuteNonQuery();  
+                connection.Close() ;
+
+
+            }
+           
+        }
+
+
+
+        public List<Taskc> getTasks(int groupID)
+        {
+            List<Taskc> tasks = new List<Taskc>();
+            try
+            {
+                using(MySqlConnection connection = new MySqlConnection(connect))
+                {
+                    connection.Open();
+                    string query = "SELECT `account`.`username`, `task`.`taskName`,`task`.`remarks`,`task`.`description`, `task`.`link` FROM `account` INNER JOIN `groupmember`  ON `account`.`email` = `groupmember`.`groupMemberEmail` INNER JOIN `task` ON `groupmember`.`groupMemberID` = `task`.`groupMemberID` WHERE `groupmember`.`group_ID` = @id;";
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@id", groupID);
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        
+                        
+                        while (reader.Read())
+                        {
+                            int count = 0;
+                            string Tnames = reader.GetString("taskName");
+                            string uname = reader.GetString("username");
+                            string rmrks = reader.GetString("remarks");
+                            string des = reader.GetString("description");
+                            string link = reader.GetString("link");
+
+                            if(tasks.Count == 0)
+                            {
+                                Taskc Task1 = new Taskc();
+                                Task1.taskname = Tnames;
+                                Task1.remarks = rmrks;
+                                Task1.description = des;
+                                Task1.link = link;
+                                Task1.assigned.Add(uname);
+
+                                tasks.Add(Task1);
+                                continue;
+                            }
+
+                            if (tasks.Count >= 1)
+                            {
+                                List<Taskc> modifiedtasks = new List<Taskc>();
+                                
+                                foreach (Taskc name in tasks)
+                                {
+                                    Taskc modtask = name;
+                                    if (name.taskname == Tnames )
+                                    {
+                                        modtask.assigned.Add(uname);
+                                        count++;
+                                       
+                                    }
+ 
+                                    modifiedtasks.Add(modtask);
+                                  
+                                }
+                                tasks = modifiedtasks;
+
+                            }
+
+                           if(count == 0)
+                            {
+
+                                Taskc Task = new Taskc();
+                                Task.taskname = Tnames;
+                                Task.remarks = rmrks;
+                                Task.assigned.Add(uname);
+                                Task.description = des;
+                                Task.link = link;
+                                tasks.Add(Task);
+                            }
+                               
+                           
+                        }
+                    }
+                   
+
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            return tasks;
+        }
+
+
+
+        public Taskc retrieveTask(string name)
+        {
+            Taskc task = new Taskc();
+            using (MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+
+                string query = "SELECT `description`, `remarks`,`link` FROM `task` WHERE `taskName` = @name;";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@name", name);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    //caution
+                    if (reader.Read())
+                    {
+                        
+                        task.description = reader.GetString("description");
+                        task.remarks = reader.GetString("remarks");
+                        task.link = reader.GetString("link");
+                    }
+                }
+                connection.Close();
+            }
+            return task;
+        }
+
+
+
+        public string emailQuerythroughID(int id)
+        {
+            string output ="";
+            string query = "SELECT `groupMemberEmail` FROM `groupmember` WHERE `groupMemberID`= @id;";
+
+            using(MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(query,connection);
+                command.Parameters.AddWithValue("@id", id);
+
+                using(MySqlDataReader reader = command.ExecuteReader())
+                { if (reader.Read())
+                    {
+                        output = reader.GetString("groupMemberEmail");
+                    } 
+                }
+            }
+            return output;
         }
 
 
 
 
+
+
+        public Taskc retrieveTaskbyID(int id)
+        {
+            Taskc task = new Taskc();
+            using (MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+
+                string query = "SELECT `description`, `taskName`,`link` FROM `task` WHERE `groupMemberID` = @id;";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", id);
+
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    //caution
+                    while (reader.Read())
+                    {
+
+                        task.description = reader.GetString("description");
+                        task.taskname = reader.GetString("taskName");
+                        task.link = reader.GetString("link");
+                    }
+                }
+                connection.Close();
+            }
+            return task;
+        }
 
 
     }

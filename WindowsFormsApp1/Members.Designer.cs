@@ -100,8 +100,8 @@
             // 
             this.assignBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("assignBtn.BackgroundImage")));
             this.assignBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.assignBtn.Controls.Add(this.gunaLabel3);
             this.assignBtn.Controls.Add(this.Assign);
+            this.assignBtn.Controls.Add(this.gunaLabel3);
             this.assignBtn.GradiantColor1 = System.Drawing.Color.Lime;
             this.assignBtn.GradiantColor2 = System.Drawing.Color.ForestGreen;
             this.assignBtn.GradiantColor3 = System.Drawing.Color.LimeGreen;
@@ -123,9 +123,10 @@
             this.gunaLabel3.ForeColor = System.Drawing.Color.Transparent;
             this.gunaLabel3.Location = new System.Drawing.Point(-52, 6);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(42, 15);
+            this.gunaLabel3.Size = new System.Drawing.Size(62, 15);
             this.gunaLabel3.TabIndex = 5;
-            this.gunaLabel3.Text = "Assign";
+            this.gunaLabel3.Text = "ON_LEAVE";
+            this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Assign
             // 
@@ -218,6 +219,7 @@
             this.gunaGradientPanel1.Size = new System.Drawing.Size(71, 70);
             this.gunaGradientPanel1.TabIndex = 16;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
+            this.gunaGradientPanel1.Click += new System.EventHandler(this.gunaGradientPanel1_Click);
             // 
             // status
             // 

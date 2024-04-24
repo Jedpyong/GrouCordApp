@@ -68,7 +68,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void forgotpass_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        private void forgotpass_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ForgotPassword fp = new ForgotPassword();
             this.Hide();
@@ -77,7 +77,28 @@ namespace WindowsFormsApp1
 
 
 
-        private void loginButton_Click(object sender, EventArgs e)
+        
+        
+
+        private void gunaLinkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CreateAccount ca = new CreateAccount();
+            this.Hide();
+            ca.Show();
+        }
+
+        private void close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            
+        }
+
+        private void usernameTextBox_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void loginButton_Click_1(object sender, EventArgs e)
         {
             string con = "server=127.0.0.1;uid=root;pwd=July072004;database=groucord;";
             MySqlConnection connection = new MySqlConnection(con);
@@ -90,8 +111,8 @@ namespace WindowsFormsApp1
             try
             {
                 connection.Open();
-                
-              
+
+
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 cmd.Parameters.AddWithValue("@email", email);
                 cmd.Parameters.AddWithValue("@password", password);
@@ -107,16 +128,16 @@ namespace WindowsFormsApp1
                 }
                 else if (dataTable.Rows.Count == 1)
                 {
-                    MessageBox.Show("Login successful!");
+
                     account.email = usernameTextBox.Text;
                     account.password = passwordTextBox.Text;
 
                     hp = new HomePage();
-                   
+
                     hp.Show();
                     //this.Close();
                     this.Hide();
-                } 
+                }
             }
             catch (Exception ex)
             {
@@ -126,42 +147,8 @@ namespace WindowsFormsApp1
             {
                 connection.Close();
             }
-
-
-            /*
-            string user = usernameTextBox.Text;
-            string pass = passwordTextBox.Text;
-
-            usernameTextBox.Text = "";
-            passwordTextBox.Text = "";
-            string con = "server=127.0.0.1;uid=root;pwd=July072004;database=groucord;";
-            MySqlConnection conConn = new MySqlConnection(con);
-            conConn.Open();
-
-            string insertSql = "INSERT INTO groucord.account (email, password) VALUES (?, ?)";
-            MySqlCommand insertCmd = new MySqlCommand(insertSql, conConn);
-
-
-            insertCmd.Parameters.AddWithValue("@email", user);
-            insertCmd.Parameters.AddWithValue("@password", pass);
-
-            insertCmd.ExecuteNonQuery();
-
-            conConn.Close();
-*/
         }
 
-        private void gunaLinkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            CreateAccount ca = new CreateAccount();
-            this.Hide();
-            ca.Show();
-        }
-
-        private void close_Click(object sender, EventArgs e)
-        {
-            this.Close();
-            
-        }
+  
     }
 }

@@ -37,14 +37,14 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Please input a password!");
             }
 
-            bool letter1 = newpasstxtbx.Text.All(Char.IsLetter);
+           /* bool letter1 = newpasstxtbx.Text.All(Char.IsLetter);
             bool letter2 = confirmtxtbx.Text.All(Char.IsLetter);
 
             if (!letter1 || !letter2 )
             {
                 MessageBox.Show("Please Use Characters as Password");
                 newpasstxtbx.Text = confirmtxtbx.Text = "";
-            }
+            }*/
 
             if (newpasstxtbx.Text == confirmtxtbx.Text && newpasstxtbx.Text != "" && confirmtxtbx.Text != "")
             {

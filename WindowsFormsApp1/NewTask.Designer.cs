@@ -66,10 +66,10 @@
             this.gunaGradientPanel2.Controls.Add(this.gunaLabel4);
             this.gunaGradientPanel2.Controls.Add(this.gunaLabel3);
             this.gunaGradientPanel2.Controls.Add(this.gunaLabel2);
-            this.gunaGradientPanel2.GradiantColor1 = System.Drawing.Color.MediumPurple;
-            this.gunaGradientPanel2.GradiantColor2 = System.Drawing.Color.MediumBlue;
-            this.gunaGradientPanel2.GradiantColor3 = System.Drawing.Color.White;
-            this.gunaGradientPanel2.GradiantColor4 = System.Drawing.Color.Navy;
+            this.gunaGradientPanel2.GradiantColor1 = System.Drawing.Color.Black;
+            this.gunaGradientPanel2.GradiantColor2 = System.Drawing.Color.Blue;
+            this.gunaGradientPanel2.GradiantColor3 = System.Drawing.Color.Black;
+            this.gunaGradientPanel2.GradiantColor4 = System.Drawing.Color.Black;
             this.gunaGradientPanel2.Location = new System.Drawing.Point(3, 3);
             this.gunaGradientPanel2.Name = "gunaGradientPanel2";
             this.gunaGradientPanel2.Size = new System.Drawing.Size(375, 286);
@@ -90,16 +90,17 @@
             this.assignBtn.AnimationHoverSpeed = 0.07F;
             this.assignBtn.AnimationSpeed = 0.03F;
             this.assignBtn.BackColor = System.Drawing.Color.Transparent;
-            this.assignBtn.BaseColor1 = System.Drawing.Color.SlateBlue;
-            this.assignBtn.BaseColor2 = System.Drawing.Color.Indigo;
+            this.assignBtn.BaseColor1 = System.Drawing.Color.Navy;
+            this.assignBtn.BaseColor2 = System.Drawing.Color.Black;
             this.assignBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.assignBtn.ForeColor = System.Drawing.Color.White;
+            this.assignBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.assignBtn.Image = null;
             this.assignBtn.ImageSize = new System.Drawing.Size(20, 20);
             this.assignBtn.Location = new System.Drawing.Point(138, 214);
             this.assignBtn.Name = "assignBtn";
-            this.assignBtn.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.assignBtn.OnHoverBaseColor2 = System.Drawing.Color.Black;
+            this.assignBtn.OnHoverBaseColor1 = System.Drawing.Color.Black;
+            this.assignBtn.OnHoverBaseColor2 = System.Drawing.Color.Blue;
             this.assignBtn.OnHoverForeColor = System.Drawing.Color.White;
             this.assignBtn.OnHoverImage = null;
             this.assignBtn.OnPressedColor = System.Drawing.Color.Black;
@@ -140,10 +141,11 @@
             // 
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel4.Location = new System.Drawing.Point(43, 158);
+            this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI Variable Small Semibol", 9F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel4.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel4.Location = new System.Drawing.Point(58, 158);
             this.gunaLabel4.Name = "gunaLabel4";
-            this.gunaLabel4.Size = new System.Drawing.Size(56, 15);
+            this.gunaLabel4.Size = new System.Drawing.Size(58, 16);
             this.gunaLabel4.TabIndex = 2;
             this.gunaLabel4.Text = "File Link :";
             // 
@@ -151,10 +153,11 @@
             // 
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.Location = new System.Drawing.Point(29, 71);
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI Variable Small Semibol", 9F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel3.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel3.Location = new System.Drawing.Point(39, 69);
             this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(73, 15);
+            this.gunaLabel3.Size = new System.Drawing.Size(77, 16);
             this.gunaLabel3.TabIndex = 1;
             this.gunaLabel3.Text = "Description :";
             // 
@@ -162,10 +165,11 @@
             // 
             this.gunaLabel2.AutoSize = true;
             this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel2.Location = new System.Drawing.Point(29, 25);
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Variable Small Semibol", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel2.Location = new System.Drawing.Point(43, 25);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(70, 15);
+            this.gunaLabel2.Size = new System.Drawing.Size(73, 16);
             this.gunaLabel2.TabIndex = 0;
             this.gunaLabel2.Text = "Task Name :\r\n";
             // 
@@ -176,10 +180,10 @@
             this.gunaGradientPanel1.Controls.Add(this.gunaLabel1);
             this.gunaGradientPanel1.Controls.Add(this.back);
             this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.DarkBlue;
+            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Navy;
-            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.RoyalBlue;
-            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.GhostWhite;
+            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.Blue;
+            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
             this.gunaGradientPanel1.Size = new System.Drawing.Size(378, 41);
@@ -191,6 +195,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
             this.gunaLabel1.Location = new System.Drawing.Point(137, 9);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(90, 21);

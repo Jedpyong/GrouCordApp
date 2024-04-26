@@ -52,11 +52,11 @@ namespace WindowsFormsApp1
             password = PasswordTxtbx.Text;
             name = usernameTxtbx.Text;
 
-            bool letters = password.All(Char.IsLetter);
+            //bool letters = password.All(Char.IsLetter);
 
             string queryemail = "SELECT * FROM account WHERE email = @email";
             string queryusername = "SELECT * FROM account WHERE username = @username";
-
+            this.createAccountButton.Cursor = Cursors.WaitCursor;
             try
             {
                 connection.Open();
@@ -83,12 +83,12 @@ namespace WindowsFormsApp1
                     usernameTxtbx.Text = "";
                     // connection.Close();
                 }
-                if(!letters)
+                /*if(!letters)
                 {
                     MessageBox.Show("Use characters as Password");
                     PasswordTxtbx.Text = "";
-                }
-                else if(dt1.Rows.Count < 1 && dt2.Rows.Count < 1 && letters) 
+                }*/
+                else if(dt1.Rows.Count < 1 && dt2.Rows.Count < 1 /*&& letters*/) 
                 {
                     string from, pass, messageBody;
                     Random rand = new Random();
@@ -106,15 +106,16 @@ namespace WindowsFormsApp1
 
                     MailMessage message = new MailMessage();
 
-                    messageBody = "Your reset code is " + randomCode;
+                    messageBody = "Your OTP code is " + randomCode;
                     message.To.Add(email);
                     message.From = new MailAddress(from);
                     message.Body = messageBody;
-                    message.Subject = "Password Update Code";
+                    message.Subject = "Email Confirmation Code";
 
                     try
                     {
                         smtp.Send(message);
+                        
                         MessageBox.Show("code sent succesfully");
                         ConfirmEmail ce = new ConfirmEmail();
                         
@@ -136,6 +137,7 @@ namespace WindowsFormsApp1
             }
             finally
             {
+                this.createAccountButton.Cursor = Cursors.Default;
                 connection.Close();
             }
 
@@ -149,6 +151,11 @@ namespace WindowsFormsApp1
         private void close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void EmailTxtbx_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

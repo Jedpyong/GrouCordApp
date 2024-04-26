@@ -16,7 +16,8 @@ namespace WindowsFormsApp1
     public partial class HomePage : Form
     {
         //List<groupz> groupzs = CreateGroup.groups;
-       
+        public static DBManager manage = new DBManager();
+
         public HomePage()
         {
             InitializeComponent();  
@@ -85,7 +86,7 @@ namespace WindowsFormsApp1
         {
             GroupHandler handler = new GroupHandler();
             List<Group> groups = handler.GetGroupByLeader(LoginForm.account.email);
-
+            MessageBox.Show("naabot ta diri na part? homepage load?");
             foreach(Group g in groups)
             {
                 groupz groupo = new groupz();
@@ -94,7 +95,8 @@ namespace WindowsFormsApp1
                 groupo.group = g;
                 FLPPnl.Controls.Add(groupo);
             }
-            DBManager manager = new DBManager();
+           
+            //load natu unya
             
          
             
@@ -155,9 +157,9 @@ namespace WindowsFormsApp1
         {
             string stat = gunaComboBox1.GetItemText(gunaComboBox1.SelectedItem.ToString());
 
-            DBManager manage = new DBManager();
+           
             LoginForm.account.status = manage.GetStatusFromString(stat);
-            manage.updateStatus(stat, LoginForm.account);
+            manage.updateStatus(stat, LoginForm.account.email.ToString());
 
         }
 
@@ -166,14 +168,21 @@ namespace WindowsFormsApp1
 
         }
 
-        private void searchTxtBx_Click_1(object sender, EventArgs e)
-        {
-
-        }
 
         private void gunaCircleButton2_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void profileButton_Click(object sender, EventArgs e)
+        {
+            Profile profile = new Profile();
+            this.MainPnl.Controls.Add(profile);
+            //profile.hp = this;
+            profile.BringToFront();
+           
+            profile.Show();
+            //this.Controls.Clear();
         }
     }
 }

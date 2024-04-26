@@ -54,10 +54,10 @@
             this.gunaGradientPanel1.Controls.Add(this.gunaLabel1);
             this.gunaGradientPanel1.Controls.Add(this.back);
             this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.DarkBlue;
-            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Navy;
-            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.RoyalBlue;
-            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.GhostWhite;
+            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.Black;
+            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Blue;
+            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.Blue;
+            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
             this.gunaGradientPanel1.Size = new System.Drawing.Size(378, 41);

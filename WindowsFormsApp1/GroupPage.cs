@@ -1,4 +1,5 @@
 ﻿using MySqlX.XDevAPI;
+using Org.BouncyCastle.Asn1.Anssi;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Classes;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
 {
@@ -17,6 +19,7 @@ namespace WindowsFormsApp1
         
 
         public Group group;
+        public NotifAnnouncement notif = new NotifAnnouncement();   
         public GroupPage()
         {
             InitializeComponent();
@@ -26,25 +29,9 @@ namespace WindowsFormsApp1
 
         private void GroupPage_Load(object sender, EventArgs e)
         {
-           
-           
-            /* this.DoubleBuffered = true;
-             if (group.groupLeader == LoginForm.account.email)
-             {
-                 List<Account> members = group.members;
-                 foreach(Account m in members)
-                 {
-                     Members member = new Members();
-                     member.Role.Text = "MEMBER";
-                     member.status.Text = m.status.ToString();
-                     member.emailLabel.Text = m.email;
-                     member.memberName.Text = m.username;
-                     FLPGroupPage.Controls.Add(member);
-                 }
-             }
 
-             Members member2 = new Members();
-             FLPGroupPage.Controls.Add(member2);*/
+           /* */
+
 
 
         }
@@ -54,40 +41,24 @@ namespace WindowsFormsApp1
 
         }
 
-        private void gunaImageButton1_Click(object sender, EventArgs e)
-        {
-            // LoginForm.hp.DemoPnl.Visible = true;
-            //outpnl.Hide();
-            //this.outpnl.Controls.Clear();
-            outpnl.SendToBack();
-            FLPGroupPage.Show();
-            FLPGroupPage.BringToFront();
-            LoginForm.hp.BringToFront();
-            LoginForm.hp.Show();
-            this.Hide();
-        }
+
+
+        
 
 
         private void gunaImageButton1_MouseEnter(object sender, EventArgs e)
         {
-            gunaImageButton1.ImageSize = new Size(40, 40);
+            gunaImageButton1.ImageSize = new Size(36, 36);
             
         }
 
         private void gunaImageButton1_MouseLeave(object sender, EventArgs e)
         {
-            gunaImageButton1.ImageSize = new Size(35, 35);
+            gunaImageButton1.ImageSize = new Size(30, 30);
         }
 
-        private void gunaImageButton2_MouseEnter(object sender, EventArgs e)
-        {
-            gunaImageButton2.ImageSize = new Size(40, 40);
-        }
 
-        private void gunaImageButton2_MouseLeave(object sender, EventArgs e)
-        {
-            gunaImageButton2.ImageSize = new Size(35, 35);
-        }
+       
 
         private void gunaImageButton1_Paint(object sender, PaintEventArgs e)
         {
@@ -161,6 +132,71 @@ namespace WindowsFormsApp1
             outpnl.Controls.Add(add);
             add.BringToFront();
             add.Show();
+        }
+
+        private void Announcements_Click(object sender, EventArgs e)
+        {
+            Announcement anns = new Announcement();
+
+            outpnl.Controls.Add(anns);
+            anns.page = this;
+            anns.group = this.group;
+
+            DBManager manager = new DBManager();
+           
+            List<string> ahead = manager.getALLAnnouncementHeads(this.group.group_ID);
+
+            foreach (string a in ahead)
+            {
+                anns.checkedListBox1.Items.Add(a);
+            }
+
+            anns.BringToFront();
+            anns.Show();
+        }
+
+
+        private void upperPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Notif2_Click(object sender, EventArgs e)
+        {
+
+            DBManager manager = new DBManager();
+            AnnouncementC ann = manager.getAnnouncement(group.group_ID);
+            notif.Announcement.Clear();
+
+            if (ann.announcedDate.ToString() != "01/01/0001 12:00:00 am")
+                    notif.Announcement.Text = "\n" + ann.announcementHead + "\n" + ann.announcedDate.ToString() + "\n\n" + ann.announcementBody;
+
+            outpnl.Controls.Add(notif);
+            notif.BringToFront();
+            notif.Show();
+        }
+
+        private void Notif2_MouseEnter(object sender, EventArgs e)
+        {
+            Notif2.ImageSize = new Size(40, 40);
+        }
+
+        private void Notif2_MouseLeave(object sender, EventArgs e)
+        {
+            Notif2.ImageSize = new Size(36, 36);
+        }
+
+        private void gunaImageButton1_Click_1(object sender, EventArgs e)
+        {
+            //naunsa ko ani?
+            /*
+            outpnl.SendToBack();
+            FLPGroupPage.BringToFront();
+            FLPGroupPage.Show();
+          */
+            LoginForm.hp.BringToFront();
+            LoginForm.hp.Show();
+            this.Hide();
         }
     }
 }

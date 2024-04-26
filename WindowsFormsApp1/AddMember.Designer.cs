@@ -30,14 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddMember));
             this.mainPanel = new Guna.UI.WinForms.GunaGradientPanel();
+            this.AddButton = new Guna.UI.WinForms.GunaButton();
+            this.AddMemFLP = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaCircleButton1 = new Guna.UI.WinForms.GunaCircleButton();
             this.EmailTxtbx = new Guna.UI.WinForms.GunaTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.back = new Guna.UI.WinForms.GunaImageButton();
-            this.AddMemFLP = new System.Windows.Forms.FlowLayoutPanel();
-            this.AddButton = new Guna.UI.WinForms.GunaButton();
             this.mainPanel.SuspendLayout();
             this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -63,12 +63,47 @@
             this.mainPanel.Text = "gunaGradientPanel2";
             this.mainPanel.Click += new System.EventHandler(this.mainPanel_Click);
             // 
+            // AddButton
+            // 
+            this.AddButton.AnimationHoverSpeed = 0.07F;
+            this.AddButton.AnimationSpeed = 0.03F;
+            this.AddButton.BackColor = System.Drawing.Color.Transparent;
+            this.AddButton.BaseColor = System.Drawing.Color.Navy;
+            this.AddButton.BorderColor = System.Drawing.Color.Black;
+            this.AddButton.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddButton.ForeColor = System.Drawing.Color.White;
+            this.AddButton.Image = null;
+            this.AddButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.AddButton.Location = new System.Drawing.Point(132, 219);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.AddButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.AddButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.AddButton.OnHoverImage = null;
+            this.AddButton.OnPressedColor = System.Drawing.Color.Black;
+            this.AddButton.Radius = 10;
+            this.AddButton.Size = new System.Drawing.Size(116, 39);
+            this.AddButton.TabIndex = 24;
+            this.AddButton.Text = "ADD";
+            this.AddButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
+            // 
+            // AddMemFLP
+            // 
+            this.AddMemFLP.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.AddMemFLP.AutoScroll = true;
+            this.AddMemFLP.BackColor = System.Drawing.Color.Transparent;
+            this.AddMemFLP.Location = new System.Drawing.Point(91, 94);
+            this.AddMemFLP.Name = "AddMemFLP";
+            this.AddMemFLP.Size = new System.Drawing.Size(199, 100);
+            this.AddMemFLP.TabIndex = 23;
+            // 
             // gunaCircleButton1
             // 
             this.gunaCircleButton1.AnimationHoverSpeed = 0.07F;
             this.gunaCircleButton1.AnimationSpeed = 0.03F;
             this.gunaCircleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaCircleButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.gunaCircleButton1.BorderColor = System.Drawing.Color.Black;
             this.gunaCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaCircleButton1.ForeColor = System.Drawing.Color.White;
@@ -155,41 +190,6 @@
             this.back.OnHoverImageOffset = new System.Drawing.Point(0, 0);
             this.back.Size = new System.Drawing.Size(40, 41);
             this.back.TabIndex = 0;
-            // 
-            // AddMemFLP
-            // 
-            this.AddMemFLP.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.AddMemFLP.AutoScroll = true;
-            this.AddMemFLP.BackColor = System.Drawing.Color.Transparent;
-            this.AddMemFLP.Location = new System.Drawing.Point(91, 94);
-            this.AddMemFLP.Name = "AddMemFLP";
-            this.AddMemFLP.Size = new System.Drawing.Size(199, 100);
-            this.AddMemFLP.TabIndex = 23;
-            // 
-            // AddButton
-            // 
-            this.AddButton.AnimationHoverSpeed = 0.07F;
-            this.AddButton.AnimationSpeed = 0.03F;
-            this.AddButton.BackColor = System.Drawing.Color.Transparent;
-            this.AddButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.AddButton.BorderColor = System.Drawing.Color.Black;
-            this.AddButton.Font = new System.Drawing.Font("Segoe UI Variable Display", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.AddButton.ForeColor = System.Drawing.Color.White;
-            this.AddButton.Image = null;
-            this.AddButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.AddButton.Location = new System.Drawing.Point(132, 219);
-            this.AddButton.Name = "AddButton";
-            this.AddButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.AddButton.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.AddButton.OnHoverForeColor = System.Drawing.Color.White;
-            this.AddButton.OnHoverImage = null;
-            this.AddButton.OnPressedColor = System.Drawing.Color.Black;
-            this.AddButton.Radius = 10;
-            this.AddButton.Size = new System.Drawing.Size(116, 39);
-            this.AddButton.TabIndex = 24;
-            this.AddButton.Text = "ADD";
-            this.AddButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // AddMember
             // 

@@ -28,32 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(InitialMembers));
-            this.removeBtn = new Guna.UI.WinForms.GunaButton();
             this.initialMemberBtn = new Guna.UI.WinForms.GunaAdvenceButton();
+            this.removeBtn = new Guna.UI.WinForms.GunaButton();
             this.SuspendLayout();
-            // 
-            // removeBtn
-            // 
-            this.removeBtn.AnimationHoverSpeed = 0.07F;
-            this.removeBtn.AnimationSpeed = 0.03F;
-            this.removeBtn.BaseColor = System.Drawing.Color.Red;
-            this.removeBtn.BorderColor = System.Drawing.Color.Black;
-            this.removeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.removeBtn.ForeColor = System.Drawing.Color.White;
-            this.removeBtn.Image = global::WindowsFormsApp1.Properties.Resources.close_4361951;
-            this.removeBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.removeBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.removeBtn.Location = new System.Drawing.Point(149, 0);
-            this.removeBtn.Name = "removeBtn";
-            this.removeBtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.removeBtn.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.removeBtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.removeBtn.OnHoverImage = null;
-            this.removeBtn.OnPressedColor = System.Drawing.Color.Black;
-            this.removeBtn.Size = new System.Drawing.Size(29, 22);
-            this.removeBtn.TabIndex = 0;
-            this.removeBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // initialMemberBtn
             // 
@@ -64,11 +41,11 @@
             this.initialMemberBtn.CheckedBaseColor = System.Drawing.Color.Gray;
             this.initialMemberBtn.CheckedBorderColor = System.Drawing.Color.Black;
             this.initialMemberBtn.CheckedForeColor = System.Drawing.Color.White;
-            this.initialMemberBtn.CheckedImage = ((System.Drawing.Image)(resources.GetObject("initialMemberBtn.CheckedImage")));
+            this.initialMemberBtn.CheckedImage = null;
             this.initialMemberBtn.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.initialMemberBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.initialMemberBtn.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Bold);
             this.initialMemberBtn.ForeColor = System.Drawing.Color.White;
-            this.initialMemberBtn.Image = ((System.Drawing.Image)(resources.GetObject("initialMemberBtn.Image")));
+            this.initialMemberBtn.Image = null;
             this.initialMemberBtn.ImageSize = new System.Drawing.Size(20, 20);
             this.initialMemberBtn.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.initialMemberBtn.Location = new System.Drawing.Point(3, 0);
@@ -79,9 +56,33 @@
             this.initialMemberBtn.OnHoverImage = null;
             this.initialMemberBtn.OnHoverLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
             this.initialMemberBtn.OnPressedColor = System.Drawing.Color.Black;
+            this.initialMemberBtn.Radius = 7;
             this.initialMemberBtn.Size = new System.Drawing.Size(140, 22);
             this.initialMemberBtn.TabIndex = 1;
             this.initialMemberBtn.Text = "gunaAdvenceButton1";
+            this.initialMemberBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // removeBtn
+            // 
+            this.removeBtn.AnimationHoverSpeed = 0.07F;
+            this.removeBtn.AnimationSpeed = 0.03F;
+            this.removeBtn.BaseColor = System.Drawing.Color.Transparent;
+            this.removeBtn.BorderColor = System.Drawing.Color.Black;
+            this.removeBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.removeBtn.ForeColor = System.Drawing.Color.White;
+            this.removeBtn.Image = global::WindowsFormsApp1.Properties.Resources.close;
+            this.removeBtn.ImageAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.removeBtn.ImageSize = new System.Drawing.Size(15, 15);
+            this.removeBtn.Location = new System.Drawing.Point(146, 1);
+            this.removeBtn.Name = "removeBtn";
+            this.removeBtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.removeBtn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.removeBtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.removeBtn.OnHoverImage = null;
+            this.removeBtn.OnPressedColor = System.Drawing.Color.Black;
+            this.removeBtn.Size = new System.Drawing.Size(29, 22);
+            this.removeBtn.TabIndex = 0;
+            this.removeBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // InitialMembers
             // 

@@ -186,7 +186,7 @@ namespace WindowsFormsApp1.Classes
                     
                     string query = "SELECT `groupMemberEmail` FROM `groupmember` WHERE `group_ID` = @ID;";
                     MySqlCommand command = new MySqlCommand(query, connection);
-                    MessageBox.Show(group.group_ID.ToString());
+                   
                     command.Parameters.AddWithValue("@ID", group.group_ID);
 
                     using (MySqlDataReader reader = command.ExecuteReader())

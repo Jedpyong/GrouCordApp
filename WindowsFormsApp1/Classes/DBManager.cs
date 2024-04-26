@@ -1,15 +1,18 @@
 ﻿using Guna.UI.WinForms;
 using MySql.Data.MySqlClient;
 using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Security.Principal;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace WindowsFormsApp1.Classes
 {
@@ -121,7 +124,8 @@ namespace WindowsFormsApp1.Classes
                     {
                         account.accountID = Convert.ToInt32(reader["idAccount"]);
                         account.username = reader.GetString("username");
-                        //account.contactNumber = reader.GetInt32("contactNumber");
+                       // accoount. = reader["GroupImage"] == DBNull.Value ? null : (byte[])reader["groupImage"]
+                        account.contactNumber = reader.GetString("contactNumber");
                         account.password = reader.GetString("password");
                         string enumstatus = reader.GetString("status");
                         account.status = this.GetStatusFromString(enumstatus);
@@ -148,7 +152,7 @@ namespace WindowsFormsApp1.Classes
            
         }
 
-        public void updateStatus(string status, Account acc)
+        public void updateStatus(string status, string email)
         {
             try
             {
@@ -157,7 +161,7 @@ namespace WindowsFormsApp1.Classes
                     connection.Open();
                     string query = "UPDATE `groucord`.`account` SET `status` = @status WHERE (`email` = @email);";
                     
-                    string email = acc.email.ToString();
+                    //string email = acc.email.ToString();
                     MySqlCommand cmd = new MySqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@status", status);
                     cmd.Parameters.AddWithValue("@email", email);
@@ -535,6 +539,232 @@ namespace WindowsFormsApp1.Classes
             }
             return task;
         }
+
+
+        public void insertUpdateAnnouncement(string ahead, string abody, int id, DateTime date)
+        {
+            bool exist = false;
+            using (MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+
+                string query = "UPDATE `groucord`.`announcement` SET `isLatest` = '0' WHERE (`AGroup_ID` = @id);";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", id);
+                command.ExecuteNonQuery();
+
+
+
+                 query = "SELECT * FROM `groucord`.`announcement` WHERE `announcementHead`=@ah AND `AGroup_ID`=@id;";
+                command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@ah", ahead);
+                command.Parameters.AddWithValue("@id", id);
+               
+                MySqlDataAdapter adapter = new MySqlDataAdapter(command);
+                DataTable data = new DataTable();
+                adapter.Fill(data);
+
+                if (data.Rows.Count > 0)
+                {
+                    exist = true;
+                    query = "UPDATE `groucord`.`announcement` SET `isLatest` = '1' WHERE (`AGroup_ID` = @id AND `announcementHead`=@ah);";
+                    command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@ah", ahead);
+                    command.ExecuteNonQuery();
+
+                }
+  
+                if (!exist)
+                {
+                     query = "INSERT INTO `groucord`.`announcement` (`announcementHead`, `announcementBody`, `AGroup_ID`, `isLatest`,`datePosted`) VALUES (@ah, @ab, @id, '1',@date);";
+                    command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@ah", ahead);
+                    command.Parameters.AddWithValue("@ab", abody);
+                    command.Parameters.AddWithValue("@id", id);
+                    command.Parameters.AddWithValue("@date", date);
+                    command.ExecuteNonQuery();
+                    
+                }
+                connection.Close();
+
+            }
+        }
+
+        public AnnouncementC getAnnouncement(int id)
+        {
+            AnnouncementC ann = new AnnouncementC();
+            
+            using (MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+                string query = "SELECT * FROM `announcement` WHERE `AGroup_ID`=@id AND `isLatest` = '1';";
+
+                MySqlCommand command = new MySqlCommand(query,connection);
+                command.Parameters.AddWithValue("@id", id);
+                using(MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while(reader.Read())
+                    {
+                        ann.announcementID = reader.GetInt32("announcementID");
+                        ann.announcementHead = reader.GetString("announcementHead");
+                        ann.announcementBody = reader.GetString("announcementBody");
+                        ann.AGroup_ID = reader.GetInt32("AGroup_ID");
+                        ann.announcedDate = reader.GetDateTime("datePosted");
+                    }
+                }
+
+                connection.Close();
+                return ann;
+               
+            }
+           
+        }
+
+
+        public string getAnnouncementBody(string ahead,int id)
+        {
+            string body = "";
+            using (MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+
+                string query = "SELECT `announcementBody` FROM `groucord`.`announcement` WHERE `announcementHead`=@ah AND `AGroup_ID`=@id;";
+                MySqlCommand command = new MySqlCommand(query,connection);
+                command.Parameters.AddWithValue("@ah", ahead);
+                command.Parameters.AddWithValue("@id",id);
+                using(MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if(reader.Read())
+                    {
+                        body = reader.GetString("announcementBody");
+                    }
+                }
+                connection.Close();
+                return body;
+
+            }
+        }
+
+
+
+        public void deleteAnnouncement(string ahead, int id)
+        {
+            using(MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+
+                string query = "DELETE FROM `groucord`.`announcement` WHERE (`announcementHead`=@ah AND `AGroup_ID`=@id);";
+                MySqlCommand command = new MySqlCommand( query,connection);
+                command.Parameters.AddWithValue("@ah", ahead);
+                command.Parameters.AddWithValue("@id", id);
+                command.ExecuteNonQuery();
+            }
+        }
+
+
+
+
+        public List<string> getALLAnnouncementHeads(int id)
+        {
+            List<string> ahead = new List<string>();
+            using (MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+                string query = "SELECT `announcementHead` FROM `announcement` WHERE `AGroup_ID`=@id ;";
+
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", id);
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        ahead.Add(reader.GetString("announcementHead")); 
+                    }
+                }
+
+                connection.Close();
+                return ahead;
+
+            }
+
+
+
+
+        }
+
+
+
+        public void updateEmail(string oldEmail, string newEmail)
+        {
+            using(MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+                string query = "UPDATE `account` SET `email`=@new WHERE `email`=@old;";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@new", newEmail);
+                command.Parameters.AddWithValue("@old", oldEmail);
+                command.ExecuteNonQuery();
+                connection.Close(); 
+            }
+        }
+
+
+        public void updateNumber(string oldNum, string newNum)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+                string query = "UPDATE `account` SET `contactNumber`=@new WHERE `contactNumber`=@old;";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@new", newNum);
+                command.Parameters.AddWithValue("@old", oldNum);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+        public void updateProfilePic(string path, string email)
+        {
+          
+            using(MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+
+                string query = "UPDATE `account` SET `accountProfile` = @image WHERE `email`=@email;";
+                byte[] imageData = File.ReadAllBytes(path);
+                       
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@Image", imageData);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+        public void updateUsername(string name, string email)
+        {
+
+            using (MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+
+                string query = "UPDATE `account` SET `username` = @name WHERE `email`=@email;";
+                
+
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@name", name);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
+
+
+
 
 
     }

@@ -134,8 +134,8 @@
             this.searchTxtBx.BaseColor = System.Drawing.Color.WhiteSmoke;
             this.searchTxtBx.BorderColor = System.Drawing.Color.Transparent;
             this.searchTxtBx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.searchTxtBx.FocusedBaseColor = System.Drawing.Color.Black;
-            this.searchTxtBx.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.searchTxtBx.FocusedBaseColor = System.Drawing.Color.MidnightBlue;
+            this.searchTxtBx.FocusedBorderColor = System.Drawing.Color.Black;
             this.searchTxtBx.FocusedForeColor = System.Drawing.Color.WhiteSmoke;
             this.searchTxtBx.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.searchTxtBx.ForeColor = System.Drawing.Color.Black;
@@ -146,7 +146,6 @@
             this.searchTxtBx.Size = new System.Drawing.Size(160, 35);
             this.searchTxtBx.TabIndex = 5;
             this.searchTxtBx.Text = "Search";
-            this.searchTxtBx.Click += new System.EventHandler(this.searchTxtBx_Click_1);
             this.searchTxtBx.Enter += new System.EventHandler(this.searchTxtBx_Enter_1);
             this.searchTxtBx.Leave += new System.EventHandler(this.searchTxtBx_Leave_1);
             // 
@@ -209,7 +208,7 @@
             // 
             this.gunaCirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.forbidden_2822029;
+            this.gunaCirclePictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.sunbed__1_;
             this.gunaCirclePictureBox1.Location = new System.Drawing.Point(418, 4);
             this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
             this.gunaCirclePictureBox1.Size = new System.Drawing.Size(35, 35);
@@ -271,7 +270,7 @@
             // 
             this.profileButton.BackColor = System.Drawing.Color.Transparent;
             this.profileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.profileButton.Image = ((System.Drawing.Image)(resources.GetObject("profileButton.Image")));
+            this.profileButton.Image = global::WindowsFormsApp1.Properties.Resources.add;
             this.profileButton.ImageSize = new System.Drawing.Size(65, 65);
             this.profileButton.Location = new System.Drawing.Point(0, -8);
             this.profileButton.Name = "profileButton";
@@ -279,6 +278,7 @@
             this.profileButton.OnHoverImageOffset = new System.Drawing.Point(0, 0);
             this.profileButton.Size = new System.Drawing.Size(93, 97);
             this.profileButton.TabIndex = 0;
+            this.profileButton.Click += new System.EventHandler(this.profileButton_Click);
             // 
             // accName
             // 
@@ -298,6 +298,7 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(520, 384);
             this.Controls.Add(this.MainPnl);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "HomePage";
             this.ShowInTaskbar = false;

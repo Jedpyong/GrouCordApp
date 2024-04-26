@@ -12,6 +12,7 @@ using MySql.Data;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using Org.BouncyCastle.Asn1.Mozilla;
 using WindowsFormsApp1.Classes;
+using Microsoft.VisualBasic.Devices;
 
 
 namespace WindowsFormsApp1
@@ -21,16 +22,27 @@ namespace WindowsFormsApp1
         public static HomePage hp;
 
         public static Account account = new Account();
+        DBManager manager = new DBManager();
         public LoginForm()
         {
             InitializeComponent();
+            
             hp = new HomePage();
             this.DoubleBuffered = true;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            /*List<Form> openForms = new List<Form>(Application.OpenForms);
 
+            // Loop through the copy and close other forms
+            foreach (Form form in openForms)
+            {
+                if (form != this)
+                {
+                    form.Close();
+                }
+            }*/
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -124,9 +136,11 @@ namespace WindowsFormsApp1
                 }
                 else if (dataTable.Rows.Count == 1)
                 {
-
+                    account = manager.readAccountByEmail(usernameTextBox.Text);
                     account.email = usernameTextBox.Text;
                     account.password = passwordTextBox.Text;
+
+                   
 
                     hp = new HomePage();
 

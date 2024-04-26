@@ -136,6 +136,7 @@
             this.Controls.Add(this.gunaLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "UpdatePassword";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UpdatePassword";
             this.Load += new System.EventHandler(this.UpdatePassword_Load);
             this.ResumeLayout(false);

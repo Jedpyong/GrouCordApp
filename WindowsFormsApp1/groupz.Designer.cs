@@ -32,9 +32,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(groupz));
             this.gunaPanel1 = new Guna.UI.WinForms.GunaPanel();
             this.groupButton = new Guna.UI.WinForms.GunaButton();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.GroupPic = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.DeleteGroup = new Guna.UI.WinForms.GunaImageButton();
-            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.GroupPic)).BeginInit();
             this.SuspendLayout();
@@ -64,7 +64,7 @@
             this.groupButton.ImageSize = new System.Drawing.Size(20, 20);
             this.groupButton.Location = new System.Drawing.Point(0, 0);
             this.groupButton.Name = "groupButton";
-            this.groupButton.OnHoverBaseColor = System.Drawing.Color.MediumBlue;
+            this.groupButton.OnHoverBaseColor = System.Drawing.Color.Blue;
             this.groupButton.OnHoverBorderColor = System.Drawing.Color.Black;
             this.groupButton.OnHoverForeColor = System.Drawing.Color.White;
             this.groupButton.OnHoverImage = null;
@@ -74,6 +74,11 @@
             this.groupButton.Text = "Handsome Group";
             this.groupButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.groupButton.Click += new System.EventHandler(this.groupButton_Click);
+            // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 7;
+            this.gunaElipse1.TargetControl = this;
             // 
             // GroupPic
             // 
@@ -92,9 +97,9 @@
             // 
             // DeleteGroup
             // 
-            this.DeleteGroup.BackColor = System.Drawing.Color.Red;
-            this.DeleteGroup.Image = ((System.Drawing.Image)(resources.GetObject("DeleteGroup.Image")));
-            this.DeleteGroup.ImageSize = new System.Drawing.Size(20, 20);
+            this.DeleteGroup.BackColor = System.Drawing.Color.Transparent;
+            this.DeleteGroup.Image = global::WindowsFormsApp1.Properties.Resources.delete__1_;
+            this.DeleteGroup.ImageSize = new System.Drawing.Size(35, 35);
             this.DeleteGroup.Location = new System.Drawing.Point(380, 5);
             this.DeleteGroup.Name = "DeleteGroup";
             this.DeleteGroup.OnHoverImage = null;
@@ -102,13 +107,6 @@
             this.DeleteGroup.Size = new System.Drawing.Size(38, 38);
             this.DeleteGroup.TabIndex = 0;
             this.DeleteGroup.Click += new System.EventHandler(this.DeleteGroup_Click);
-            this.DeleteGroup.MouseEnter += new System.EventHandler(this.DeleteGroup_MouseEnter);
-            this.DeleteGroup.MouseLeave += new System.EventHandler(this.DeleteGroup_MouseLeave);
-            // 
-            // gunaElipse1
-            // 
-            this.gunaElipse1.Radius = 7;
-            this.gunaElipse1.TargetControl = this;
             // 
             // groupz
             // 

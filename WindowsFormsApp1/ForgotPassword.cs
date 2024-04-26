@@ -108,6 +108,8 @@ namespace WindowsFormsApp1
                     {
                         smtp.Send(message);
                         MessageBox.Show("code sent succesfully");
+                        this.confirmbutn.Visible = true;
+                        this.gunaAdvenceButton1.Visible = false;
                     }
                     catch (Exception ex)
                     {
@@ -136,6 +138,11 @@ namespace WindowsFormsApp1
         private void close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void gunaAdvenceButton1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

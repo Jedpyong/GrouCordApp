@@ -43,15 +43,15 @@
             // 
             // GroupTxtBx
             // 
-            this.GroupTxtBx.BaseColor = System.Drawing.Color.SkyBlue;
-            this.GroupTxtBx.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.GroupTxtBx.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.GroupTxtBx.BorderColor = System.Drawing.Color.Transparent;
             this.GroupTxtBx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.GroupTxtBx.FocusedBaseColor = System.Drawing.Color.White;
-            this.GroupTxtBx.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.GroupTxtBx.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.GroupTxtBx.FocusedBaseColor = System.Drawing.Color.MidnightBlue;
+            this.GroupTxtBx.FocusedBorderColor = System.Drawing.Color.Black;
+            this.GroupTxtBx.FocusedForeColor = System.Drawing.Color.WhiteSmoke;
             this.GroupTxtBx.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.GroupTxtBx.ForeColor = System.Drawing.Color.DimGray;
-            this.GroupTxtBx.Location = new System.Drawing.Point(35, 14);
+            this.GroupTxtBx.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.GroupTxtBx.Location = new System.Drawing.Point(32, 14);
             this.GroupTxtBx.Name = "GroupTxtBx";
             this.GroupTxtBx.PasswordChar = '\0';
             this.GroupTxtBx.Radius = 10;
@@ -64,19 +64,19 @@
             // 
             // memberTxtBx
             // 
-            this.memberTxtBx.BaseColor = System.Drawing.Color.SkyBlue;
-            this.memberTxtBx.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.memberTxtBx.BaseColor = System.Drawing.Color.WhiteSmoke;
+            this.memberTxtBx.BorderColor = System.Drawing.Color.Transparent;
             this.memberTxtBx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.memberTxtBx.FocusedBaseColor = System.Drawing.Color.White;
-            this.memberTxtBx.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.memberTxtBx.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.memberTxtBx.FocusedBaseColor = System.Drawing.Color.MidnightBlue;
+            this.memberTxtBx.FocusedBorderColor = System.Drawing.Color.Black;
+            this.memberTxtBx.FocusedForeColor = System.Drawing.Color.WhiteSmoke;
             this.memberTxtBx.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.memberTxtBx.ForeColor = System.Drawing.Color.DimGray;
-            this.memberTxtBx.Location = new System.Drawing.Point(35, 86);
+            this.memberTxtBx.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.memberTxtBx.Location = new System.Drawing.Point(34, 86);
             this.memberTxtBx.Name = "memberTxtBx";
             this.memberTxtBx.PasswordChar = '\0';
             this.memberTxtBx.Radius = 10;
-            this.memberTxtBx.Size = new System.Drawing.Size(207, 29);
+            this.memberTxtBx.Size = new System.Drawing.Size(208, 35);
             this.memberTxtBx.TabIndex = 7;
             this.memberTxtBx.Text = "Email Address";
             this.memberTxtBx.Click += new System.EventHandler(this.memberTxtBx_Click);
@@ -87,21 +87,21 @@
             // 
             this.CreateGroupBtn.AnimationHoverSpeed = 0.07F;
             this.CreateGroupBtn.AnimationSpeed = 0.03F;
-            this.CreateGroupBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.CreateGroupBtn.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.CreateGroupBtn.BorderColor = System.Drawing.Color.Black;
-            this.CreateGroupBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.CreateGroupBtn.Font = new System.Drawing.Font("Segoe UI Variable Display", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CreateGroupBtn.ForeColor = System.Drawing.Color.White;
             this.CreateGroupBtn.Image = null;
-            this.CreateGroupBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.CreateGroupBtn.Location = new System.Drawing.Point(348, 175);
+            this.CreateGroupBtn.ImageSize = new System.Drawing.Size(23, 23);
+            this.CreateGroupBtn.Location = new System.Drawing.Point(351, 180);
             this.CreateGroupBtn.Name = "CreateGroupBtn";
-            this.CreateGroupBtn.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.CreateGroupBtn.OnHoverBaseColor = System.Drawing.Color.SlateBlue;
             this.CreateGroupBtn.OnHoverBorderColor = System.Drawing.Color.Black;
             this.CreateGroupBtn.OnHoverForeColor = System.Drawing.Color.White;
             this.CreateGroupBtn.OnHoverImage = null;
             this.CreateGroupBtn.OnPressedColor = System.Drawing.Color.Black;
-            this.CreateGroupBtn.Radius = 10;
-            this.CreateGroupBtn.Size = new System.Drawing.Size(81, 42);
+            this.CreateGroupBtn.Radius = 15;
+            this.CreateGroupBtn.Size = new System.Drawing.Size(85, 42);
             this.CreateGroupBtn.TabIndex = 8;
             this.CreateGroupBtn.Text = "Create Group";
             this.CreateGroupBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -113,18 +113,18 @@
             this.CancelGroup.AnimationSpeed = 0.03F;
             this.CancelGroup.BaseColor = System.Drawing.Color.Maroon;
             this.CancelGroup.BorderColor = System.Drawing.Color.Black;
-            this.CancelGroup.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.CancelGroup.Font = new System.Drawing.Font("Segoe UI Variable Display", 8.25F, System.Drawing.FontStyle.Bold);
             this.CancelGroup.ForeColor = System.Drawing.Color.White;
             this.CancelGroup.Image = null;
             this.CancelGroup.ImageSize = new System.Drawing.Size(20, 20);
-            this.CancelGroup.Location = new System.Drawing.Point(261, 175);
+            this.CancelGroup.Location = new System.Drawing.Point(261, 181);
             this.CancelGroup.Name = "CancelGroup";
-            this.CancelGroup.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.CancelGroup.OnHoverBaseColor = System.Drawing.Color.OrangeRed;
             this.CancelGroup.OnHoverBorderColor = System.Drawing.Color.Black;
             this.CancelGroup.OnHoverForeColor = System.Drawing.Color.White;
             this.CancelGroup.OnHoverImage = null;
             this.CancelGroup.OnPressedColor = System.Drawing.Color.Black;
-            this.CancelGroup.Radius = 10;
+            this.CancelGroup.Radius = 15;
             this.CancelGroup.Size = new System.Drawing.Size(81, 42);
             this.CancelGroup.TabIndex = 9;
             this.CancelGroup.Text = "Cancel";
@@ -136,8 +136,8 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.label1.Location = new System.Drawing.Point(32, 65);
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(32, 63);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 18);
             this.label1.TabIndex = 11;
@@ -154,7 +154,7 @@
             // initMembFlow
             // 
             this.initMembFlow.AutoScroll = true;
-            this.initMembFlow.Location = new System.Drawing.Point(35, 121);
+            this.initMembFlow.Location = new System.Drawing.Point(35, 132);
             this.initMembFlow.Name = "initMembFlow";
             this.initMembFlow.Size = new System.Drawing.Size(207, 96);
             this.initMembFlow.TabIndex = 12;
@@ -164,15 +164,15 @@
             // 
             this.gunaCircleButton1.AnimationHoverSpeed = 0.07F;
             this.gunaCircleButton1.AnimationSpeed = 0.03F;
-            this.gunaCircleButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.gunaCircleButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.gunaCircleButton1.BorderColor = System.Drawing.Color.Black;
             this.gunaCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.gunaCircleButton1.ForeColor = System.Drawing.Color.White;
             this.gunaCircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaCircleButton1.Image")));
             this.gunaCircleButton1.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaCircleButton1.Location = new System.Drawing.Point(248, 86);
+            this.gunaCircleButton1.Location = new System.Drawing.Point(253, 89);
             this.gunaCircleButton1.Name = "gunaCircleButton1";
-            this.gunaCircleButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaCircleButton1.OnHoverBaseColor = System.Drawing.Color.SlateBlue;
             this.gunaCircleButton1.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaCircleButton1.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaCircleButton1.OnHoverImage = null;
@@ -183,7 +183,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Blue;
+            this.pictureBox1.BackColor = System.Drawing.Color.White;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.capture;
             this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
             this.pictureBox1.Location = new System.Drawing.Point(320, 14);
@@ -195,12 +196,13 @@
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
+            this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             // 
             // CreateGroupUC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
+            this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.initMembFlow);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.gunaCircleButton1);

@@ -45,9 +45,6 @@ namespace WindowsFormsApp1
           if(GroupTxtBx.Text != "Group Name" && initMembFlow.Controls.Count > 0 )
             {
                 GroupHandler handler = new GroupHandler();
-
-
-
                 string path;
                 //if empty ang pic
                 if (pictureBox1.ImageLocation == null)
@@ -223,12 +220,17 @@ namespace WindowsFormsApp1
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
-           
+            pictureBox1.BackColor = Color.DimGray;
         }
 
         private void CreateGroupUC_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_MouseLeave(object sender, EventArgs e)
+        {
+            pictureBox1.BackColor = Color.White;
         }
     }
 }

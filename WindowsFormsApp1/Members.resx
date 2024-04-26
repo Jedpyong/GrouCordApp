@@ -121,8 +121,8 @@
   <data name="Member.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAsSURBVChTY2BgcPvPwOADxEFAHAHE8UCcBsQ5QFwExBVA
-        XA/EowrpqLD+PwCJHYn564I/DwAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVChTjcShEYAwAMDAOByurg6HQqK6/1YlG5DcfbAd
+        Ha7gdAXDFUxXcLmC2xU8ruB1Bcv9WfsDZ7tv16IGsk0AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="assignBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -152,4 +152,7 @@
         WZP/s7Bk/WdiKvzPyFjxf1QhXRVW/AcAvteLV3fHSHsAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="gunaElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

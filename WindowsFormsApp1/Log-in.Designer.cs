@@ -83,7 +83,7 @@
             this.gunaGradientPanel1.Controls.Add(this.label2);
             this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.Black;
-            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Navy;
+            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Blue;
             this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
@@ -98,12 +98,15 @@
             this.gunaLinkLabel1.AutoSize = true;
             this.gunaLinkLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLinkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLinkLabel1.ForeColor = System.Drawing.Color.White;
+            this.gunaLinkLabel1.LinkColor = System.Drawing.Color.White;
             this.gunaLinkLabel1.Location = new System.Drawing.Point(150, 251);
             this.gunaLinkLabel1.Name = "gunaLinkLabel1";
             this.gunaLinkLabel1.Size = new System.Drawing.Size(116, 15);
             this.gunaLinkLabel1.TabIndex = 19;
             this.gunaLinkLabel1.TabStop = true;
             this.gunaLinkLabel1.Text = "Create New Account";
+            this.gunaLinkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.gunaLinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.gunaLinkLabel1_LinkClicked_1);
             // 
             // forgotpass
@@ -111,12 +114,15 @@
             this.forgotpass.AutoSize = true;
             this.forgotpass.BackColor = System.Drawing.Color.Transparent;
             this.forgotpass.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.forgotpass.ForeColor = System.Drawing.Color.White;
+            this.forgotpass.LinkColor = System.Drawing.Color.White;
             this.forgotpass.Location = new System.Drawing.Point(159, 191);
             this.forgotpass.Name = "forgotpass";
             this.forgotpass.Size = new System.Drawing.Size(99, 16);
             this.forgotpass.TabIndex = 19;
             this.forgotpass.TabStop = true;
             this.forgotpass.Text = "forgot password?\r\n";
+            this.forgotpass.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.forgotpass.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.forgotpass_LinkClicked_1);
             // 
             // loginButton
@@ -129,9 +135,9 @@
             this.loginButton.CheckedBaseColor = System.Drawing.Color.Gray;
             this.loginButton.CheckedBorderColor = System.Drawing.Color.Black;
             this.loginButton.CheckedForeColor = System.Drawing.Color.White;
-            this.loginButton.CheckedImage = ((System.Drawing.Image)(resources.GetObject("loginButton.CheckedImage")));
+            this.loginButton.CheckedImage = null;
             this.loginButton.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.loginButton.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.loginButton.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
             this.loginButton.ForeColor = System.Drawing.Color.White;
             this.loginButton.Image = null;
             this.loginButton.ImageSize = new System.Drawing.Size(20, 20);
@@ -194,6 +200,7 @@
             this.Controls.Add(this.usernameTextBox);
             this.Controls.Add(this.passwordTextBox);
             this.Controls.Add(this.gunaGradientPanel1);
+            this.DoubleBuffered = true;
             this.ForeColor = System.Drawing.Color.Blue;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";

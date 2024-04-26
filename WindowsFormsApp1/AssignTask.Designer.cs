@@ -32,10 +32,10 @@
             this.gunaGradientPanel2 = new Guna.UI.WinForms.GunaGradientPanel();
             this.existingtask = new Guna.UI.WinForms.GunaGradiantButton();
             this.newtask = new Guna.UI.WinForms.GunaGradiantButton();
+            this.ExistingFLP = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.back = new Guna.UI.WinForms.GunaImageButton();
-            this.ExistingFLP = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaGradientPanel2.SuspendLayout();
             this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -48,10 +48,10 @@
             this.gunaGradientPanel2.Controls.Add(this.newtask);
             this.gunaGradientPanel2.Controls.Add(this.ExistingFLP);
             this.gunaGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gunaGradientPanel2.GradiantColor1 = System.Drawing.Color.DarkBlue;
-            this.gunaGradientPanel2.GradiantColor2 = System.Drawing.Color.DarkBlue;
-            this.gunaGradientPanel2.GradiantColor3 = System.Drawing.Color.White;
-            this.gunaGradientPanel2.GradiantColor4 = System.Drawing.Color.Navy;
+            this.gunaGradientPanel2.GradiantColor1 = System.Drawing.Color.Black;
+            this.gunaGradientPanel2.GradiantColor2 = System.Drawing.Color.Blue;
+            this.gunaGradientPanel2.GradiantColor3 = System.Drawing.Color.Black;
+            this.gunaGradientPanel2.GradiantColor4 = System.Drawing.Color.Black;
             this.gunaGradientPanel2.Location = new System.Drawing.Point(0, 41);
             this.gunaGradientPanel2.Name = "gunaGradientPanel2";
             this.gunaGradientPanel2.Size = new System.Drawing.Size(378, 289);
@@ -63,19 +63,22 @@
             // 
             this.existingtask.AnimationHoverSpeed = 0.07F;
             this.existingtask.AnimationSpeed = 0.03F;
-            this.existingtask.BaseColor1 = System.Drawing.Color.SlateBlue;
-            this.existingtask.BaseColor2 = System.Drawing.Color.Indigo;
+            this.existingtask.BackColor = System.Drawing.Color.Transparent;
+            this.existingtask.BaseColor1 = System.Drawing.Color.Navy;
+            this.existingtask.BaseColor2 = System.Drawing.Color.Black;
             this.existingtask.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.existingtask.ForeColor = System.Drawing.Color.White;
-            this.existingtask.Image = ((System.Drawing.Image)(resources.GetObject("existingtask.Image")));
+            this.existingtask.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.existingtask.Image = null;
             this.existingtask.ImageSize = new System.Drawing.Size(20, 20);
             this.existingtask.Location = new System.Drawing.Point(118, 151);
             this.existingtask.Name = "existingtask";
-            this.existingtask.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.existingtask.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.existingtask.OnHoverBaseColor1 = System.Drawing.Color.Black;
+            this.existingtask.OnHoverBaseColor2 = System.Drawing.Color.Blue;
             this.existingtask.OnHoverForeColor = System.Drawing.Color.White;
             this.existingtask.OnHoverImage = null;
             this.existingtask.OnPressedColor = System.Drawing.Color.Black;
+            this.existingtask.Radius = 10;
             this.existingtask.Size = new System.Drawing.Size(160, 42);
             this.existingtask.TabIndex = 1;
             this.existingtask.Text = "EXISTING TASK";
@@ -86,24 +89,38 @@
             // 
             this.newtask.AnimationHoverSpeed = 0.07F;
             this.newtask.AnimationSpeed = 0.03F;
-            this.newtask.BaseColor1 = System.Drawing.Color.SlateBlue;
-            this.newtask.BaseColor2 = System.Drawing.Color.Indigo;
+            this.newtask.BackColor = System.Drawing.Color.Transparent;
+            this.newtask.BaseColor1 = System.Drawing.Color.Navy;
+            this.newtask.BaseColor2 = System.Drawing.Color.Black;
             this.newtask.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.newtask.ForeColor = System.Drawing.Color.White;
-            this.newtask.Image = ((System.Drawing.Image)(resources.GetObject("newtask.Image")));
+            this.newtask.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
+            this.newtask.Image = null;
             this.newtask.ImageSize = new System.Drawing.Size(20, 20);
             this.newtask.Location = new System.Drawing.Point(118, 62);
             this.newtask.Name = "newtask";
-            this.newtask.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
-            this.newtask.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(85)))), ((int)(((byte)(255)))));
+            this.newtask.OnHoverBaseColor1 = System.Drawing.Color.Black;
+            this.newtask.OnHoverBaseColor2 = System.Drawing.Color.Blue;
             this.newtask.OnHoverForeColor = System.Drawing.Color.White;
             this.newtask.OnHoverImage = null;
             this.newtask.OnPressedColor = System.Drawing.Color.Black;
+            this.newtask.Radius = 10;
             this.newtask.Size = new System.Drawing.Size(160, 42);
             this.newtask.TabIndex = 0;
             this.newtask.Text = "NEW TASK";
             this.newtask.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.newtask.Click += new System.EventHandler(this.newtask_Click);
+            // 
+            // ExistingFLP
+            // 
+            this.ExistingFLP.AutoScroll = true;
+            this.ExistingFLP.BackColor = System.Drawing.Color.Transparent;
+            this.ExistingFLP.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ExistingFLP.Location = new System.Drawing.Point(0, 0);
+            this.ExistingFLP.Name = "ExistingFLP";
+            this.ExistingFLP.Size = new System.Drawing.Size(378, 289);
+            this.ExistingFLP.TabIndex = 2;
+            this.ExistingFLP.Visible = false;
             // 
             // gunaGradientPanel1
             // 
@@ -112,10 +129,10 @@
             this.gunaGradientPanel1.Controls.Add(this.gunaLabel1);
             this.gunaGradientPanel1.Controls.Add(this.back);
             this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.DarkBlue;
-            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Navy;
-            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.RoyalBlue;
-            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.GhostWhite;
+            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.Blue;
+            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Black;
+            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.Blue;
+            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
             this.gunaGradientPanel1.Size = new System.Drawing.Size(378, 41);
@@ -146,17 +163,6 @@
             this.back.Size = new System.Drawing.Size(40, 41);
             this.back.TabIndex = 0;
             this.back.Click += new System.EventHandler(this.back_Click);
-            // 
-            // ExistingFLP
-            // 
-            this.ExistingFLP.AutoScroll = true;
-            this.ExistingFLP.BackColor = System.Drawing.Color.Transparent;
-            this.ExistingFLP.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ExistingFLP.Location = new System.Drawing.Point(0, 0);
-            this.ExistingFLP.Name = "ExistingFLP";
-            this.ExistingFLP.Size = new System.Drawing.Size(378, 289);
-            this.ExistingFLP.TabIndex = 2;
-            this.ExistingFLP.Visible = false;
             // 
             // AssignTask
             // 

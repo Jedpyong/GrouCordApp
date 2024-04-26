@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Members));
             this.Member = new Guna.UI.WinForms.GunaGradientPanel();
             this.memberPic = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.emailLabel = new Guna.UI.WinForms.GunaLabel();
             this.assignBtn = new Guna.UI.WinForms.GunaGradientPanel();
-            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.Assign = new Guna.UI.WinForms.GunaImageButton();
+            this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.removeBtn = new Guna.UI.WinForms.GunaGradientPanel();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.remove = new Guna.UI.WinForms.GunaImageButton();
@@ -42,6 +43,7 @@
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
             this.status = new Guna.UI.WinForms.GunaLabel();
             this.Role = new Guna.UI.WinForms.GunaLabel();
+            this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.Member.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memberPic)).BeginInit();
             this.assignBtn.SuspendLayout();
@@ -63,11 +65,11 @@
             this.Member.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Member.GradiantColor1 = System.Drawing.Color.Black;
             this.Member.GradiantColor2 = System.Drawing.Color.DarkBlue;
-            this.Member.GradiantColor3 = System.Drawing.Color.DarkBlue;
-            this.Member.GradiantColor4 = System.Drawing.Color.Navy;
+            this.Member.GradiantColor3 = System.Drawing.Color.Black;
+            this.Member.GradiantColor4 = System.Drawing.Color.Black;
             this.Member.Location = new System.Drawing.Point(0, 0);
             this.Member.Name = "Member";
-            this.Member.Size = new System.Drawing.Size(350, 70);
+            this.Member.Size = new System.Drawing.Size(352, 70);
             this.Member.TabIndex = 0;
             this.Member.Text = "gunaGradientPanel1";
             this.Member.Click += new System.EventHandler(this.Member_Click);
@@ -114,20 +116,6 @@
             this.assignBtn.Text = "gunaGradientPanel1";
             this.assignBtn.Click += new System.EventHandler(this.assignBtn_Click);
             // 
-            // gunaLabel3
-            // 
-            this.gunaLabel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.gunaLabel3.AutoSize = true;
-            this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLabel3.ForeColor = System.Drawing.Color.Transparent;
-            this.gunaLabel3.Location = new System.Drawing.Point(-52, 6);
-            this.gunaLabel3.Name = "gunaLabel3";
-            this.gunaLabel3.Size = new System.Drawing.Size(62, 15);
-            this.gunaLabel3.TabIndex = 5;
-            this.gunaLabel3.Text = "ON_LEAVE";
-            this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // Assign
             // 
             this.Assign.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -144,6 +132,20 @@
             this.Assign.Click += new System.EventHandler(this.Assign_Click_1);
             this.Assign.MouseEnter += new System.EventHandler(this.Assign_MouseEnter_1);
             this.Assign.MouseLeave += new System.EventHandler(this.Assign_MouseLeave_1);
+            // 
+            // gunaLabel3
+            // 
+            this.gunaLabel3.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.gunaLabel3.AutoSize = true;
+            this.gunaLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaLabel3.ForeColor = System.Drawing.Color.Transparent;
+            this.gunaLabel3.Location = new System.Drawing.Point(-52, 6);
+            this.gunaLabel3.Name = "gunaLabel3";
+            this.gunaLabel3.Size = new System.Drawing.Size(62, 15);
+            this.gunaLabel3.TabIndex = 5;
+            this.gunaLabel3.Text = "ON_LEAVE";
+            this.gunaLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // removeBtn
             // 
@@ -247,13 +249,18 @@
             this.Role.TabIndex = 15;
             this.Role.Text = "LEADER";
             // 
+            // gunaElipse1
+            // 
+            this.gunaElipse1.Radius = 5;
+            this.gunaElipse1.TargetControl = this;
+            // 
             // Members
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Member);
             this.Name = "Members";
-            this.Size = new System.Drawing.Size(350, 70);
+            this.Size = new System.Drawing.Size(352, 70);
             this.Member.ResumeLayout(false);
             this.Member.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memberPic)).EndInit();
@@ -281,5 +288,6 @@
         public Guna.UI.WinForms.GunaLabel Role;
         public Guna.UI.WinForms.GunaLabel emailLabel;
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
+        private Guna.UI.WinForms.GunaElipse gunaElipse1;
     }
 }

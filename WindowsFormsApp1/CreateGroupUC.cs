@@ -21,7 +21,7 @@ namespace WindowsFormsApp1
     public partial class CreateGroupUC : UserControl
     {
 
-       public static List<Account> accs = new List<Account>();
+       public List<Account> accs = new List<Account>();
       
        
            
@@ -32,7 +32,11 @@ namespace WindowsFormsApp1
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-
+            OpenFileDialog openFile = new OpenFileDialog();
+            if (openFile.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.ImageLocation = openFile.FileName;
+            }
         }
 
         private void CreateGroupBtn_Click(object sender, EventArgs e)
@@ -179,6 +183,8 @@ namespace WindowsFormsApp1
 
                             InitialMembers Mem = new InitialMembers();
                             Mem.initialMemberBtn.Text = account.username;
+                            Mem.acc = account;
+                            Mem.panel = this;
 
                             initMembFlow.Controls.Add(Mem);
 
@@ -211,11 +217,7 @@ namespace WindowsFormsApp1
 
         private void pictureBox1_DoubleClick(object sender, EventArgs e)
         {
-            OpenFileDialog openFile = new OpenFileDialog();
-            if (openFile.ShowDialog() == DialogResult.OK)
-            {
-                pictureBox1.ImageLocation = openFile.FileName;
-            }
+           
         }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)

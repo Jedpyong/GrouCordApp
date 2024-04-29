@@ -293,9 +293,31 @@ namespace WindowsFormsApp1.Classes
 
 
 
+        public void removeMember(int memberID)
+        {
+            using(MySqlConnection connection = new MySqlConnection(connect))
+            {
+                string query = "DELETE FROM `groucord`.`groupmember` WHERE (`groupMemberID` = @id);";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", memberID);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
 
-
-
+        public void removeGroup(int groupID)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connect))
+            {
+                string query = "DELETE FROM `groucord`.`group` WHERE (`group_ID` = @id);";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", groupID);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
 
     }
 }

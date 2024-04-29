@@ -98,12 +98,12 @@
             this.usernameTxtbx.BackColor = System.Drawing.Color.White;
             this.usernameTxtbx.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.usernameTxtbx.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.usernameTxtbx.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.usernameTxtbx.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
             this.usernameTxtbx.LineColor = System.Drawing.Color.Gainsboro;
             this.usernameTxtbx.Location = new System.Drawing.Point(113, 90);
             this.usernameTxtbx.Name = "usernameTxtbx";
             this.usernameTxtbx.PasswordChar = '\0';
-            this.usernameTxtbx.Size = new System.Drawing.Size(255, 26);
+            this.usernameTxtbx.Size = new System.Drawing.Size(255, 27);
             this.usernameTxtbx.TabIndex = 4;
             this.usernameTxtbx.Click += new System.EventHandler(this.usernameTxtbx_Click);
             // 
@@ -112,12 +112,12 @@
             this.EmailTxtbx.BackColor = System.Drawing.Color.White;
             this.EmailTxtbx.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.EmailTxtbx.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.EmailTxtbx.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.EmailTxtbx.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
             this.EmailTxtbx.LineColor = System.Drawing.Color.Gainsboro;
             this.EmailTxtbx.Location = new System.Drawing.Point(113, 131);
             this.EmailTxtbx.Name = "EmailTxtbx";
             this.EmailTxtbx.PasswordChar = '\0';
-            this.EmailTxtbx.Size = new System.Drawing.Size(255, 26);
+            this.EmailTxtbx.Size = new System.Drawing.Size(255, 27);
             this.EmailTxtbx.TabIndex = 5;
             this.EmailTxtbx.Click += new System.EventHandler(this.EmailTxtbx_Click);
             // 
@@ -126,12 +126,12 @@
             this.PasswordTxtbx.BackColor = System.Drawing.Color.White;
             this.PasswordTxtbx.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.PasswordTxtbx.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.PasswordTxtbx.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.PasswordTxtbx.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
             this.PasswordTxtbx.LineColor = System.Drawing.Color.Gainsboro;
             this.PasswordTxtbx.Location = new System.Drawing.Point(113, 174);
             this.PasswordTxtbx.Name = "PasswordTxtbx";
             this.PasswordTxtbx.PasswordChar = '\0';
-            this.PasswordTxtbx.Size = new System.Drawing.Size(255, 26);
+            this.PasswordTxtbx.Size = new System.Drawing.Size(255, 27);
             this.PasswordTxtbx.TabIndex = 6;
             // 
             // close

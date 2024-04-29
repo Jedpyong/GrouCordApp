@@ -58,7 +58,7 @@
             this.mainPanel.GradiantColor4 = System.Drawing.Color.Black;
             this.mainPanel.Location = new System.Drawing.Point(0, 41);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(378, 289);
+            this.mainPanel.Size = new System.Drawing.Size(375, 274);
             this.mainPanel.TabIndex = 2;
             this.mainPanel.Text = "gunaGradientPanel2";
             this.mainPanel.Click += new System.EventHandler(this.mainPanel_Click);
@@ -93,7 +93,7 @@
             this.AddMemFLP.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.AddMemFLP.AutoScroll = true;
             this.AddMemFLP.BackColor = System.Drawing.Color.Transparent;
-            this.AddMemFLP.Location = new System.Drawing.Point(91, 94);
+            this.AddMemFLP.Location = new System.Drawing.Point(89, 94);
             this.AddMemFLP.Name = "AddMemFLP";
             this.AddMemFLP.Size = new System.Drawing.Size(199, 100);
             this.AddMemFLP.TabIndex = 23;
@@ -162,7 +162,7 @@
             this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(378, 41);
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(375, 41);
             this.gunaGradientPanel1.TabIndex = 1;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
@@ -172,7 +172,8 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.Location = new System.Drawing.Point(110, 8);
+            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel1.Location = new System.Drawing.Point(108, 8);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(159, 21);
             this.gunaLabel1.TabIndex = 1;
@@ -190,6 +191,7 @@
             this.back.OnHoverImageOffset = new System.Drawing.Point(0, 0);
             this.back.Size = new System.Drawing.Size(40, 41);
             this.back.TabIndex = 0;
+            this.back.Click += new System.EventHandler(this.back_Click);
             // 
             // AddMember
             // 
@@ -198,7 +200,7 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Name = "AddMember";
-            this.Size = new System.Drawing.Size(378, 330);
+            this.Size = new System.Drawing.Size(375, 315);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             this.gunaGradientPanel1.ResumeLayout(false);
@@ -216,7 +218,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaCircleButton gunaCircleButton1;
         private Guna.UI.WinForms.GunaTextBox EmailTxtbx;
-        private System.Windows.Forms.FlowLayoutPanel AddMemFLP;
         private Guna.UI.WinForms.GunaButton AddButton;
+        public System.Windows.Forms.FlowLayoutPanel AddMemFLP;
     }
 }

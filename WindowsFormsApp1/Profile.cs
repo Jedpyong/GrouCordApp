@@ -69,8 +69,9 @@ namespace WindowsFormsApp1
                 path = ProfilePic.ImageLocation.ToString();
             }
             path = ProfilePic.ImageLocation.ToString();
-            ProfilePic.Image = Image.FromFile(path);
-            manager.updateProfilePic(path, LoginForm.account.email);
+             ProfilePic.Image = Image.FromFile(path);
+             manager.updateProfilePic(path, LoginForm.account.email);
+
            
 
         }
@@ -90,6 +91,7 @@ namespace WindowsFormsApp1
         {
             STATUS.Text = "AVAILABLE";
             manager.updateStatus(STATUS.Text, LoginForm.account.email);
+            LoginForm.hp.statuspic.Image = manager.getStatusPic(LoginForm.account.status.ToString());
             statuspnl.Visible = false;
            
         }
@@ -117,6 +119,7 @@ namespace WindowsFormsApp1
         {
             STATUS.Text = "BUSY";
             manager.updateStatus(STATUS.Text, LoginForm.account.email);
+            LoginForm.hp.statuspic.Image = manager.getStatusPic(LoginForm.account.status.ToString());
             statuspnl.Visible=false;
             
         }
@@ -126,6 +129,7 @@ namespace WindowsFormsApp1
 
             STATUS.Text = "ON_LEAVE";
             manager.updateStatus(STATUS.Text, LoginForm.account.email);
+            LoginForm.hp.statuspic.Image = manager.getStatusPic(LoginForm.account.status.ToString());
             statuspnl.Visible = false;
            
         }
@@ -137,7 +141,12 @@ namespace WindowsFormsApp1
 
         private void Profile_Load(object sender, EventArgs e)
         {
-            Account account = new Account();
+            this.ProfilePic.Image = LoginForm.account.accountProfile;
+            this.USERNAME.Text = LoginForm.account.username;
+            this.STATUS.Text = LoginForm.account.status.ToString();
+            this.EMAIL.Text = LoginForm.account.email;
+            this.NUMBER.Text = LoginForm.account.contactNumber;
+            this.currpass.Text = LoginForm.account.password;
             
         }
 
@@ -190,14 +199,7 @@ namespace WindowsFormsApp1
             statuspnl.Visible = false;
         }
 
-        private void gunaImageButton1_Click(object sender, EventArgs e)
-        {
-            LoginForm.hp.BringToFront();
-            LoginForm.hp.Show();
-            this.Hide();
-            statuspnl.Visible=false;
-            numpanel.Visible=false;
-        }
+        
 
         private void Profile_Click(object sender, EventArgs e)
         {
@@ -236,6 +238,42 @@ namespace WindowsFormsApp1
             }
 
           
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gunaCircleButton5_Click(object sender, EventArgs e)
+        {
+            UpdatePassword up = new UpdatePassword();
+            up.currpass.Visible = true;
+            up.currpasslabel.Visible = true;
+
+            up.Show();
+
+            //LoginForm.hp.Close();
+        }
+
+        private void HomeButton_Click(object sender, EventArgs e)
+        {
+            DBManager manage = new DBManager();
+            // HomePage hop = new HomePage();
+            // hop = LoginForm.hp;
+            // hp.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
+
+            //LoginForm.hp = hop;
+            LoginForm.account = manage.readAccountByEmail(LoginForm.account.email);
+            LoginForm.hp.profileButton.Image = LoginForm.account.accountProfile;
+            LoginForm.hp.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
+            LoginForm.hp.setStat.Text = LoginForm.account.status.ToString();
+            
+            this.Hide();
+
+
+            statuspnl.Visible = false;
+            numpanel.Visible = false;
         }
     }
 }

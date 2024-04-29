@@ -23,6 +23,8 @@ namespace WindowsFormsApp1
 
         private void back_Click(object sender, EventArgs e)
         {
+            page.FLPGroupPage.BringToFront();
+            page.FLPGroupPage.Show();
             this.Hide();
         }
 

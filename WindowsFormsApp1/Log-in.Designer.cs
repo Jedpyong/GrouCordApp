@@ -44,18 +44,20 @@
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold);
             this.passwordTextBox.Location = new System.Drawing.Point(169, 113);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = 'O';
-            this.passwordTextBox.Size = new System.Drawing.Size(186, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(186, 23);
             this.passwordTextBox.TabIndex = 16;
             this.passwordTextBox.Tag = "";
             // 
             // usernameTextBox
             // 
+            this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold);
             this.usernameTextBox.Location = new System.Drawing.Point(169, 67);
             this.usernameTextBox.Name = "usernameTextBox";
-            this.usernameTextBox.Size = new System.Drawing.Size(186, 20);
+            this.usernameTextBox.Size = new System.Drawing.Size(186, 23);
             this.usernameTextBox.TabIndex = 16;
             // 
             // close

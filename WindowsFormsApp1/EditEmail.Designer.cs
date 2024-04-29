@@ -161,7 +161,7 @@
             this.OTPTxtbx.FocusedBaseColor = System.Drawing.Color.White;
             this.OTPTxtbx.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.OTPTxtbx.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.OTPTxtbx.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.OTPTxtbx.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold);
             this.OTPTxtbx.Location = new System.Drawing.Point(144, 203);
             this.OTPTxtbx.Name = "OTPTxtbx";
             this.OTPTxtbx.PasswordChar = '\0';
@@ -188,7 +188,7 @@
             this.EmailTxtbx.FocusedBaseColor = System.Drawing.Color.White;
             this.EmailTxtbx.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.EmailTxtbx.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.EmailTxtbx.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.EmailTxtbx.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold);
             this.EmailTxtbx.Location = new System.Drawing.Point(144, 77);
             this.EmailTxtbx.Name = "EmailTxtbx";
             this.EmailTxtbx.PasswordChar = '\0';

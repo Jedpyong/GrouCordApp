@@ -39,13 +39,13 @@
             this.addMember = new Guna.UI.WinForms.GunaGradiantButton();
             this.upperPanel = new Guna.UI.WinForms.GunaGradientPanel();
             this.Notif2 = new Guna.UI.WinForms.GunaImageButton();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.groupPic = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.groupName = new Guna.UI.WinForms.GunaLabel();
             this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
             this.outpnl.SuspendLayout();
             this.gunaGradientPanel1.SuspendLayout();
             this.upperPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPic)).BeginInit();
             this.SuspendLayout();
             // 
             // outpnl
@@ -57,10 +57,10 @@
             this.outpnl.GradiantColor2 = System.Drawing.Color.Black;
             this.outpnl.GradiantColor3 = System.Drawing.Color.Blue;
             this.outpnl.GradiantColor4 = System.Drawing.Color.Black;
-            this.outpnl.Location = new System.Drawing.Point(141, 56);
-            this.outpnl.Margin = new System.Windows.Forms.Padding(0);
+            this.outpnl.Location = new System.Drawing.Point(142, 56);
+            this.outpnl.Margin = new System.Windows.Forms.Padding(0, 7, 0, 0);
             this.outpnl.Name = "outpnl";
-            this.outpnl.Size = new System.Drawing.Size(379, 328);
+            this.outpnl.Size = new System.Drawing.Size(378, 328);
             this.outpnl.TabIndex = 0;
             this.outpnl.Text = "gunaGradientPanel2";
             this.outpnl.Click += new System.EventHandler(this.outpnl_Click);
@@ -70,10 +70,10 @@
             this.FLPGroupPage.AutoScroll = true;
             this.FLPGroupPage.BackColor = System.Drawing.Color.Transparent;
             this.FLPGroupPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.FLPGroupPage.Location = new System.Drawing.Point(0, 6);
+            this.FLPGroupPage.Location = new System.Drawing.Point(-1, 6);
             this.FLPGroupPage.Margin = new System.Windows.Forms.Padding(0);
             this.FLPGroupPage.Name = "FLPGroupPage";
-            this.FLPGroupPage.Size = new System.Drawing.Size(378, 321);
+            this.FLPGroupPage.Size = new System.Drawing.Size(378, 317);
             this.FLPGroupPage.TabIndex = 2;
             this.FLPGroupPage.Paint += new System.Windows.Forms.PaintEventHandler(this.FLPGroupPage_Paint_1);
             // 
@@ -96,6 +96,7 @@
             this.gunaGradientPanel1.Size = new System.Drawing.Size(141, 327);
             this.gunaGradientPanel1.TabIndex = 0;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
+            this.gunaGradientPanel1.Click += new System.EventHandler(this.gunaGradientPanel1_Click);
             // 
             // Schedules
             // 
@@ -213,8 +214,8 @@
             this.upperPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("upperPanel.BackgroundImage")));
             this.upperPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.upperPanel.Controls.Add(this.Notif2);
-            this.upperPanel.Controls.Add(this.gunaCirclePictureBox1);
-            this.upperPanel.Controls.Add(this.gunaLabel1);
+            this.upperPanel.Controls.Add(this.groupPic);
+            this.upperPanel.Controls.Add(this.groupName);
             this.upperPanel.Controls.Add(this.gunaImageButton1);
             this.upperPanel.GradiantColor1 = System.Drawing.Color.Blue;
             this.upperPanel.GradiantColor2 = System.Drawing.Color.Black;
@@ -242,30 +243,30 @@
             this.Notif2.MouseEnter += new System.EventHandler(this.Notif2_MouseEnter);
             this.Notif2.MouseLeave += new System.EventHandler(this.Notif2_MouseLeave);
             // 
-            // gunaCirclePictureBox1
+            // groupPic
             // 
-            this.gunaCirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("gunaCirclePictureBox1.Image")));
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(82, 3);
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(56, 53);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox1.TabIndex = 4;
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
+            this.groupPic.BackColor = System.Drawing.Color.Transparent;
+            this.groupPic.BaseColor = System.Drawing.Color.White;
+            this.groupPic.Image = ((System.Drawing.Image)(resources.GetObject("groupPic.Image")));
+            this.groupPic.Location = new System.Drawing.Point(82, 3);
+            this.groupPic.Name = "groupPic";
+            this.groupPic.Size = new System.Drawing.Size(56, 53);
+            this.groupPic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.groupPic.TabIndex = 4;
+            this.groupPic.TabStop = false;
+            this.groupPic.UseTransfarantBackground = false;
             // 
-            // gunaLabel1
+            // groupName
             // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.gunaLabel1.Location = new System.Drawing.Point(176, -1);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(211, 50);
-            this.gunaLabel1.TabIndex = 2;
-            this.gunaLabel1.Text = "gunaLabel1";
+            this.groupName.AutoSize = true;
+            this.groupName.BackColor = System.Drawing.Color.Transparent;
+            this.groupName.Font = new System.Drawing.Font("Segoe UI Black", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.groupName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.groupName.Location = new System.Drawing.Point(176, 1);
+            this.groupName.Name = "groupName";
+            this.groupName.Size = new System.Drawing.Size(237, 48);
+            this.groupName.TabIndex = 2;
+            this.groupName.Text = "GroupName";
             // 
             // gunaImageButton1
             // 
@@ -300,7 +301,7 @@
             this.gunaGradientPanel1.ResumeLayout(false);
             this.upperPanel.ResumeLayout(false);
             this.upperPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.groupPic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -309,8 +310,8 @@
 
         private Guna.UI.WinForms.GunaGradientPanel upperPanel;
         private Guna.UI.WinForms.GunaImageButton gunaImageButton1;
-        public Guna.UI.WinForms.GunaLabel gunaLabel1;
-        public Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
+        public Guna.UI.WinForms.GunaLabel groupName;
+        public Guna.UI.WinForms.GunaCirclePictureBox groupPic;
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
         private Guna.UI.WinForms.GunaGradiantButton addMember;
         private Guna.UI.WinForms.GunaGradiantButton Announcements;

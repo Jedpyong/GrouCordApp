@@ -194,7 +194,6 @@
             this.pictureBox1.TabIndex = 5;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            this.pictureBox1.DoubleClick += new System.EventHandler(this.pictureBox1_DoubleClick);
             this.pictureBox1.MouseEnter += new System.EventHandler(this.pictureBox1_MouseEnter);
             this.pictureBox1.MouseLeave += new System.EventHandler(this.pictureBox1_MouseLeave);
             // 
@@ -232,6 +231,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox membersbox;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.FlowLayoutPanel initMembFlow;
+        public System.Windows.Forms.FlowLayoutPanel initMembFlow;
     }
 }

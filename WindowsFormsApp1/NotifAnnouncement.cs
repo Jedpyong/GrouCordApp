@@ -12,6 +12,7 @@ namespace WindowsFormsApp1
 {
     public partial class NotifAnnouncement : UserControl
     {
+        public GroupPage page = new GroupPage();
         public NotifAnnouncement()
         {
             InitializeComponent();
@@ -19,6 +20,8 @@ namespace WindowsFormsApp1
 
         private void back_Click(object sender, EventArgs e)
         {
+            page.FLPGroupPage.BringToFront();
+            page.FLPGroupPage.Show();
             this.Hide();
         }
 

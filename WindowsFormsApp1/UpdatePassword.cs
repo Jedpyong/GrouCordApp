@@ -46,36 +46,95 @@ namespace WindowsFormsApp1
                 newpasstxtbx.Text = confirmtxtbx.Text = "";
             }*/
 
-            if (newpasstxtbx.Text == confirmtxtbx.Text && newpasstxtbx.Text != "" && confirmtxtbx.Text != "")
+            if(currpass.Visible)
             {
-                string con = "server=127.0.0.1;uid=root;pwd=July072004;database=groucord;";
-                MySqlConnection connection = new MySqlConnection(con);
+                string eMail = LoginForm.account.email;
+                if (newpasstxtbx.Text == confirmtxtbx.Text && newpasstxtbx.Text != "" && confirmtxtbx.Text != "" && currpass.Text == LoginForm.account.password)
+                {
+                    string con = "server=127.0.0.1;uid=root;pwd=July072004;database=groucord;";
+                    MySqlConnection connection = new MySqlConnection(con);
 
-                string query = "UPDATE `groucord`.`account` SET `password` = '"+confirmtxtbx.Text+"' WHERE(email ='"+email+"')";
-                connection.Open();
-                MySqlCommand cmd = new MySqlCommand(query, connection);
-                cmd.ExecuteNonQuery();
-                connection.Close();
-                MessageBox.Show("Password Updated Successfully");
+                    string query = "UPDATE `groucord`.`account` SET `password` = '" + confirmtxtbx.Text + "' WHERE(email ='" + eMail + "')";
+                    connection.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Password Updated Successfully");
 
-                LoginForm.account.password = confirmtxtbx.Text;
+                  /*  GroupHandler handler = new GroupHandler();
+                    List<Group> groups = handler.GetGroupByLeader(LoginForm.account.email);
+                    foreach (Group g in groups)
+                    {
+                        groupz groupo = new groupz();
+                        groupo.groupButton.Text = g.group_name;
+                        groupo.GroupPic.Image = g.groupImageObj;
+                        groupo.group = g;
+                        LoginForm.hp.FLPPnl.Controls.Add(groupo);
+                    }*/
+                    DBManager manage = new DBManager();
+                    LoginForm.account = manage.readAccountByEmail(LoginForm.account.email);
 
-                HomePage hp = new HomePage();
-                
-                hp.Show();
-                this.Hide();
-                connection.Close();
-                
+                    LoginForm.account.password = confirmtxtbx.Text;
+                    LoginForm.hp.profileButton.Image = LoginForm.account.accountProfile;
+                    LoginForm.hp.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
+                    LoginForm.hp.setStat.Text = LoginForm.account.status.ToString();
+                    LoginForm.hp.Show();
+                    this.Hide();
+                   
+
+                }
+                else if (newpasstxtbx.Text != confirmtxtbx.Text || LoginForm.account.password != currpass.Text)
+                {
+                    MessageBox.Show("Mismatching Passwords!");
+                }
+
             }
-            else if(newpasstxtbx.Text != confirmtxtbx.Text)
+            else if(!currpass.Visible)
             {
-                MessageBox.Show("Mismatching Passwords!");
+                if (newpasstxtbx.Text == confirmtxtbx.Text && newpasstxtbx.Text != "" && confirmtxtbx.Text != "")
+                {
+                    string con = "server=127.0.0.1;uid=root;pwd=July072004;database=groucord;";
+                    MySqlConnection connection = new MySqlConnection(con);
+
+                    string query = "UPDATE `groucord`.`account` SET `password` = '" + confirmtxtbx.Text + "' WHERE(email ='" + email + "')";
+                    connection.Open();
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.ExecuteNonQuery();
+                    connection.Close();
+                    MessageBox.Show("Password Updated Successfully");
+
+
+                    DBManager manage = new DBManager();
+                    LoginForm.account = manage.readAccountByEmail(LoginForm.account.email);
+
+                   // LoginForm.account.password = confirmtxtbx.Text;
+                    LoginForm.hp.profileButton.Image = LoginForm.account.accountProfile;
+                    LoginForm.hp.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
+                    LoginForm.hp.setStat.Text = LoginForm.account.status.ToString();
+                    LoginForm.hp.Show();
+
+                    this.Hide();
+                    this.Close();
+                    connection.Close();
+
+                }
+                else if (newpasstxtbx.Text != confirmtxtbx.Text)
+                {
+                    MessageBox.Show("Mismatching Passwords!");
+                }
             }
+           
+           
         }
 
         private void close_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void gunaLabel3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

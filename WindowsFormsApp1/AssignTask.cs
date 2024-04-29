@@ -53,34 +53,40 @@ namespace WindowsFormsApp1
             DBManager manage = new DBManager();
             List<Taskc> Tasks = manage.getTasks(this.page.group.group_ID);
 
-            foreach (Taskc Task in Tasks)
+            if (Tasks.Count > 0)
             {
-                task panel = new task();
-               // panel.taskName.Text = Task.taskname;
-                //panel.remarkss.Text = Task.remarks;
-                panel.memberID = this.memberID;
-                panel.page = this.page;
-                panel.isAssign = true;
-
-               // panel.Remarks.Visible = false;
-               // panel.gunaLabel2.Visible = false;
-                //panel.assigned.Visible = false;
-                //panel.taskName.Width = 348;
-                panel.buttonTask.Text = Task.taskname;
-                panel.buttonTask.BringToFront();
-                panel.buttonTask.Visible = true;
-
-               /* foreach (string ass in Task.assigned)
+                foreach (Taskc Task in Tasks)
                 {
-                    panel.assigned.Items.Add(ass);
-                }*/
+                    task panel = new task();
+                    // panel.taskName.Text = Task.taskname;
+                    //panel.remarkss.Text = Task.remarks;
+                    panel.memberID = this.memberID;
+                    panel.page = this.page;
+                    panel.isAssign = true;
+
+                    // panel.Remarks.Visible = false;
+                    // panel.gunaLabel2.Visible = false;
+                    //panel.assigned.Visible = false;
+                    //panel.taskName.Width = 348;
+                    panel.buttonTask.Text = Task.taskname;
+                    panel.buttonTask.BringToFront();
+                    panel.buttonTask.Visible = true;
+
+                    /* foreach (string ass in Task.assigned)
+                     {
+                         panel.assigned.Items.Add(ass);
+                     }*/
 
 
-                this.ExistingFLP.Controls.Add(panel);
+                    this.ExistingFLP.Controls.Add(panel);
+                }
+
+                this.ExistingFLP.BringToFront();
+                this.ExistingFLP.Show();
             }
-
-            this.ExistingFLP.BringToFront();
-            this.ExistingFLP.Show();
+            else
+                MessageBox.Show("Currently no Tasks Exists");
+           
 
 
 

@@ -191,6 +191,7 @@
             this.remove.OnHoverImageOffset = new System.Drawing.Point(0, 0);
             this.remove.Size = new System.Drawing.Size(35, 30);
             this.remove.TabIndex = 4;
+            this.remove.Click += new System.EventHandler(this.remove_Click);
             this.remove.MouseEnter += new System.EventHandler(this.remove_MouseEnter);
             this.remove.MouseLeave += new System.EventHandler(this.remove_MouseLeave);
             // 
@@ -198,11 +199,11 @@
             // 
             this.memberName.AutoSize = true;
             this.memberName.BackColor = System.Drawing.Color.Transparent;
-            this.memberName.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.memberName.Font = new System.Drawing.Font("Segoe UI Variable Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memberName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.memberName.Location = new System.Drawing.Point(65, 8);
             this.memberName.Name = "memberName";
-            this.memberName.Size = new System.Drawing.Size(140, 32);
+            this.memberName.Size = new System.Drawing.Size(152, 32);
             this.memberName.TabIndex = 1;
             this.memberName.Text = "Jade Jaballa";
             // 
@@ -227,11 +228,11 @@
             // 
             this.status.AutoSize = true;
             this.status.BackColor = System.Drawing.Color.Transparent;
-            this.status.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.status.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.status.Location = new System.Drawing.Point(2, 37);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(69, 15);
+            this.status.Size = new System.Drawing.Size(65, 16);
             this.status.TabIndex = 5;
             this.status.Text = "AVAILABLE";
             this.status.Click += new System.EventHandler(this.status_Click);
@@ -241,11 +242,11 @@
             // 
             this.Role.AutoSize = true;
             this.Role.BackColor = System.Drawing.Color.Transparent;
-            this.Role.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.Role.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Role.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Role.Location = new System.Drawing.Point(2, 16);
             this.Role.Name = "Role";
-            this.Role.Size = new System.Drawing.Size(50, 15);
+            this.Role.Size = new System.Drawing.Size(49, 16);
             this.Role.TabIndex = 15;
             this.Role.Text = "LEADER";
             // 

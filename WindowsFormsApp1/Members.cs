@@ -241,5 +241,12 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void remove_Click(object sender, EventArgs e)
+        {
+            GroupHandler handler = new GroupHandler();
+            handler.removeMember(memberID);
+            page.FLPGroupPage.Controls.Remove(this);
+        }
     }
 }

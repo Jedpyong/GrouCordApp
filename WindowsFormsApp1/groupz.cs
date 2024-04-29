@@ -22,9 +22,9 @@ namespace WindowsFormsApp1
 
         private void DeleteGroup_Click(object sender, EventArgs e)
         {
-            LoginForm login = new LoginForm();
-            login.Show();
-            this.Hide();
+           GroupHandler handler = new GroupHandler();
+            LoginForm.hp.FLPPnl.Controls.Remove(this);
+            handler.removeGroup(group.group_ID);
 
         }
 
@@ -42,14 +42,12 @@ namespace WindowsFormsApp1
 
         private void GroupPic_Click_2(object sender, EventArgs e)
         {
-            LoginForm login = new LoginForm();
-            login.Show();
-            this.Hide();
+       
         }
 
 
 
-        private void groupButton_Click(object sender, EventArgs e)
+        public void groupButton_Click(object sender, EventArgs e)
         {
 
             //LoginForm.hp.Controls.Clear();
@@ -76,6 +74,7 @@ namespace WindowsFormsApp1
             grop.group = this.group;
             LoginForm.hp.MainPnl.Controls.Add(grop);
             grop.FLPGroupPage.BringToFront();
+            grop.FLPGroupPage.Show();
             grop.Show();
             grop.BringToFront();
 
@@ -96,6 +95,16 @@ namespace WindowsFormsApp1
         private void groupz_Load(object sender, EventArgs e)
         {
             //kuha nalang sa database
+        }
+
+        private void DeleteGroup_MouseEnter_1(object sender, EventArgs e)
+        {
+            DeleteGroup.ImageSize = new Size(40, 40);
+        }
+
+        private void DeleteGroup_MouseLeave_1(object sender, EventArgs e)
+        {
+            DeleteGroup.ImageSize = new Size(30, 30);
         }
     }
 }

@@ -11,7 +11,7 @@ namespace WindowsFormsApp1.Classes
     {
         public int accountID {  get; set; }
         public string email { get; set; }
-        public string password {private get; set; }
+        public string password { get; set; }
         public string username { get; set; }
         public string contactNumber { get; set; }
         public byte[] accountImage { get; set; }

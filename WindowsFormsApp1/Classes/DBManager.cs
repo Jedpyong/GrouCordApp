@@ -1,6 +1,7 @@
 ﻿using Guna.UI.WinForms;
 using MySql.Data.MySqlClient;
 using System;
+using System.Drawing;
 using System.IO;
 using System.Collections.Generic;
 using System.Data;
@@ -124,20 +125,19 @@ namespace WindowsFormsApp1.Classes
                     {
                         account.accountID = Convert.ToInt32(reader["idAccount"]);
                         account.username = reader.GetString("username");
-                       // accoount. = reader["GroupImage"] == DBNull.Value ? null : (byte[])reader["groupImage"]
                         account.contactNumber = reader.GetString("contactNumber");
                         account.password = reader.GetString("password");
                         string enumstatus = reader.GetString("status");
                         account.status = this.GetStatusFromString(enumstatus);
-                        
-                       /* try
+                        account.accountImage = reader["accountProfile"] == DBNull.Value ? null : (byte[])reader["accountProfile"];
+
+                       if (account.accountImage != null)
                         {
-                            account.status = (CurrStatus)Enum.Parse(typeof(CurrStatus), enumstatus);
+                            using (var ms = new MemoryStream(account.accountImage))
+                            {
+                                account.accountProfile = Image.FromStream(ms);
+                            }
                         }
-                        catch (ArgumentException)
-                        {
-                           MessageBox.Show($"Invalid enum value: {enumstatus}");
-                        }*/
                     }
                     
 
@@ -763,8 +763,54 @@ namespace WindowsFormsApp1.Classes
         }
 
 
+        public void insertPicStatus(string path, string state)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
 
+                string query = "INSERT INTO `groucord`.`status` (`state`,`statPic`) VALUES (@state,@image);";
+                byte[] imageData = File.ReadAllBytes(path);
 
+                MySqlCommand command = new MySqlCommand(query, connection);
+
+                command.Parameters.AddWithValue("@state", state);
+                command.Parameters.AddWithValue("@image", imageData);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+        public Image getStatusPic(string status)
+        {
+            byte[] imageData = null;
+            Image image = null;
+            using(MySqlConnection connection = new MySqlConnection(connect) )
+            {
+                connection.Open();
+                string query = "SELECT * FROM `groucord`.`status` WHERE `state`=@status; ";
+                MySqlCommand command = new MySqlCommand(query,connection);
+                command.Parameters.AddWithValue("@status", status);
+                
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if(reader.Read())
+                    {
+                       imageData = reader["statPic"] == DBNull.Value ? null : (byte[])reader["statPic"];
+                    }
+                    if (imageData != null)
+                    {
+                        using (var ms = new MemoryStream(imageData))
+                        {
+                           image = Image.FromStream(ms);
+                        }
+                    }
+
+                }
+                connection.Close();
+            }
+
+            return image;
+        }
 
 
     }

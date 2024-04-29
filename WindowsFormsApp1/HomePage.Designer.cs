@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.MainPnl = new Guna.UI.WinForms.GunaGradientPanel();
+            this.statuspnl = new Guna.UI.WinForms.GunaElipsePanel();
+            this.busybtn = new Guna.UI.WinForms.GunaGradiantButton();
+            this.onleavebtn = new Guna.UI.WinForms.GunaGradiantButton();
+            this.AVbtn = new Guna.UI.WinForms.GunaGradiantButton();
             this.CombPnl = new Guna.UI.WinForms.GunaPanel();
             this.FLPPnl = new System.Windows.Forms.FlowLayoutPanel();
             this.AddSearchPnl = new Guna.UI.WinForms.GunaPanel();
@@ -38,23 +42,26 @@
             this.gunaCircleButton2 = new Guna.UI.WinForms.GunaCircleButton();
             this.groupLabel = new Guna.UI.WinForms.GunaLabel();
             this.DemoPnl = new Guna.UI.WinForms.GunaGradientPanel();
-            this.gunaCirclePictureBox1 = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.setStat = new Guna.UI.WinForms.GunaGradiantButton();
+            this.profileButton = new Guna.UI.WinForms.GunaCirclePictureBox();
+            this.statuspic = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.close = new Guna.UI.WinForms.GunaImageButton();
-            this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
             this.statlabel = new System.Windows.Forms.Label();
-            this.profileButton = new Guna.UI.WinForms.GunaImageButton();
             this.accName = new Guna.UI.WinForms.GunaLabel();
             this.MainPnl.SuspendLayout();
+            this.statuspnl.SuspendLayout();
             this.CombPnl.SuspendLayout();
             this.AddSearchPnl.SuspendLayout();
             this.DemoPnl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileButton)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statuspic)).BeginInit();
             this.SuspendLayout();
             // 
             // MainPnl
             // 
             this.MainPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPnl.BackgroundImage")));
             this.MainPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.MainPnl.Controls.Add(this.statuspnl);
             this.MainPnl.Controls.Add(this.CombPnl);
             this.MainPnl.Controls.Add(this.groupLabel);
             this.MainPnl.Controls.Add(this.DemoPnl);
@@ -69,6 +76,91 @@
             this.MainPnl.TabIndex = 0;
             this.MainPnl.Text = "gunaGradientPanel1";
             this.MainPnl.Click += new System.EventHandler(this.MainPnl_Click);
+            // 
+            // statuspnl
+            // 
+            this.statuspnl.BackColor = System.Drawing.Color.Black;
+            this.statuspnl.BaseColor = System.Drawing.Color.Black;
+            this.statuspnl.Controls.Add(this.busybtn);
+            this.statuspnl.Controls.Add(this.onleavebtn);
+            this.statuspnl.Controls.Add(this.AVbtn);
+            this.statuspnl.Location = new System.Drawing.Point(330, 86);
+            this.statuspnl.Margin = new System.Windows.Forms.Padding(0);
+            this.statuspnl.Name = "statuspnl";
+            this.statuspnl.Size = new System.Drawing.Size(189, 132);
+            this.statuspnl.TabIndex = 33;
+            this.statuspnl.Visible = false;
+            // 
+            // busybtn
+            // 
+            this.busybtn.AnimationHoverSpeed = 0.07F;
+            this.busybtn.AnimationSpeed = 0.03F;
+            this.busybtn.BaseColor1 = System.Drawing.Color.MediumBlue;
+            this.busybtn.BaseColor2 = System.Drawing.Color.Black;
+            this.busybtn.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.busybtn.ForeColor = System.Drawing.Color.White;
+            this.busybtn.Image = null;
+            this.busybtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.busybtn.Location = new System.Drawing.Point(1, 44);
+            this.busybtn.Margin = new System.Windows.Forms.Padding(0);
+            this.busybtn.Name = "busybtn";
+            this.busybtn.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.busybtn.OnHoverBaseColor2 = System.Drawing.Color.Black;
+            this.busybtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.busybtn.OnHoverImage = null;
+            this.busybtn.OnPressedColor = System.Drawing.Color.Black;
+            this.busybtn.Size = new System.Drawing.Size(160, 42);
+            this.busybtn.TabIndex = 3;
+            this.busybtn.Text = "BUSY";
+            this.busybtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.busybtn.Click += new System.EventHandler(this.busybtn_Click);
+            // 
+            // onleavebtn
+            // 
+            this.onleavebtn.AnimationHoverSpeed = 0.07F;
+            this.onleavebtn.AnimationSpeed = 0.03F;
+            this.onleavebtn.BaseColor1 = System.Drawing.Color.MediumBlue;
+            this.onleavebtn.BaseColor2 = System.Drawing.Color.Black;
+            this.onleavebtn.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.onleavebtn.ForeColor = System.Drawing.Color.White;
+            this.onleavebtn.Image = null;
+            this.onleavebtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.onleavebtn.Location = new System.Drawing.Point(1, 87);
+            this.onleavebtn.Margin = new System.Windows.Forms.Padding(0);
+            this.onleavebtn.Name = "onleavebtn";
+            this.onleavebtn.OnHoverBaseColor1 = System.Drawing.Color.Yellow;
+            this.onleavebtn.OnHoverBaseColor2 = System.Drawing.Color.Black;
+            this.onleavebtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.onleavebtn.OnHoverImage = null;
+            this.onleavebtn.OnPressedColor = System.Drawing.Color.Black;
+            this.onleavebtn.Size = new System.Drawing.Size(159, 42);
+            this.onleavebtn.TabIndex = 4;
+            this.onleavebtn.Text = "ON_LEAVE";
+            this.onleavebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.onleavebtn.Click += new System.EventHandler(this.onleavebtn_Click);
+            // 
+            // AVbtn
+            // 
+            this.AVbtn.AnimationHoverSpeed = 0.07F;
+            this.AVbtn.AnimationSpeed = 0.03F;
+            this.AVbtn.BaseColor1 = System.Drawing.Color.MediumBlue;
+            this.AVbtn.BaseColor2 = System.Drawing.Color.Black;
+            this.AVbtn.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.AVbtn.ForeColor = System.Drawing.Color.White;
+            this.AVbtn.Image = null;
+            this.AVbtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.AVbtn.Location = new System.Drawing.Point(1, 1);
+            this.AVbtn.Name = "AVbtn";
+            this.AVbtn.OnHoverBaseColor1 = System.Drawing.Color.Green;
+            this.AVbtn.OnHoverBaseColor2 = System.Drawing.Color.Black;
+            this.AVbtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.AVbtn.OnHoverImage = null;
+            this.AVbtn.OnPressedColor = System.Drawing.Color.Black;
+            this.AVbtn.Size = new System.Drawing.Size(160, 42);
+            this.AVbtn.TabIndex = 0;
+            this.AVbtn.Text = "AVAILABLE";
+            this.AVbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AVbtn.Click += new System.EventHandler(this.AVbtn_Click);
             // 
             // CombPnl
             // 
@@ -182,16 +274,17 @@
             this.groupLabel.Size = new System.Drawing.Size(89, 29);
             this.groupLabel.TabIndex = 8;
             this.groupLabel.Text = "Groups";
+            this.groupLabel.Click += new System.EventHandler(this.groupLabel_Click);
             // 
             // DemoPnl
             // 
             this.DemoPnl.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("DemoPnl.BackgroundImage")));
             this.DemoPnl.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.DemoPnl.Controls.Add(this.gunaCirclePictureBox1);
-            this.DemoPnl.Controls.Add(this.close);
-            this.DemoPnl.Controls.Add(this.gunaComboBox1);
-            this.DemoPnl.Controls.Add(this.statlabel);
+            this.DemoPnl.Controls.Add(this.setStat);
             this.DemoPnl.Controls.Add(this.profileButton);
+            this.DemoPnl.Controls.Add(this.statuspic);
+            this.DemoPnl.Controls.Add(this.close);
+            this.DemoPnl.Controls.Add(this.statlabel);
             this.DemoPnl.Controls.Add(this.accName);
             this.DemoPnl.Dock = System.Windows.Forms.DockStyle.Top;
             this.DemoPnl.GradiantColor1 = System.Drawing.Color.Navy;
@@ -203,19 +296,57 @@
             this.DemoPnl.Size = new System.Drawing.Size(520, 89);
             this.DemoPnl.TabIndex = 10;
             this.DemoPnl.Text = "gunaGradientPanel1";
+            this.DemoPnl.Click += new System.EventHandler(this.DemoPnl_Click_1);
             // 
-            // gunaCirclePictureBox1
+            // setStat
             // 
-            this.gunaCirclePictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCirclePictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCirclePictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.sunbed__1_;
-            this.gunaCirclePictureBox1.Location = new System.Drawing.Point(418, 4);
-            this.gunaCirclePictureBox1.Name = "gunaCirclePictureBox1";
-            this.gunaCirclePictureBox1.Size = new System.Drawing.Size(35, 35);
-            this.gunaCirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaCirclePictureBox1.TabIndex = 3;
-            this.gunaCirclePictureBox1.TabStop = false;
-            this.gunaCirclePictureBox1.UseTransfarantBackground = false;
+            this.setStat.AnimationHoverSpeed = 0.07F;
+            this.setStat.AnimationSpeed = 0.03F;
+            this.setStat.BaseColor1 = System.Drawing.Color.MediumBlue;
+            this.setStat.BaseColor2 = System.Drawing.Color.Black;
+            this.setStat.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.setStat.ForeColor = System.Drawing.Color.White;
+            this.setStat.Image = null;
+            this.setStat.ImageSize = new System.Drawing.Size(20, 20);
+            this.setStat.Location = new System.Drawing.Point(330, 44);
+            this.setStat.Name = "setStat";
+            this.setStat.OnHoverBaseColor1 = System.Drawing.Color.Green;
+            this.setStat.OnHoverBaseColor2 = System.Drawing.Color.Black;
+            this.setStat.OnHoverForeColor = System.Drawing.Color.White;
+            this.setStat.OnHoverImage = null;
+            this.setStat.OnPressedColor = System.Drawing.Color.Black;
+            this.setStat.Size = new System.Drawing.Size(190, 42);
+            this.setStat.TabIndex = 14;
+            this.setStat.Text = "AVAILABLE";
+            this.setStat.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.setStat.Click += new System.EventHandler(this.setStat_Click);
+            // 
+            // profileButton
+            // 
+            this.profileButton.BackColor = System.Drawing.Color.Transparent;
+            this.profileButton.BaseColor = System.Drawing.Color.White;
+            this.profileButton.Location = new System.Drawing.Point(1, 2);
+            this.profileButton.Name = "profileButton";
+            this.profileButton.Size = new System.Drawing.Size(83, 86);
+            this.profileButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.profileButton.TabIndex = 13;
+            this.profileButton.TabStop = false;
+            this.profileButton.UseTransfarantBackground = false;
+            this.profileButton.Click += new System.EventHandler(this.profileButton_Click_1);
+            // 
+            // statuspic
+            // 
+            this.statuspic.BackColor = System.Drawing.Color.Transparent;
+            this.statuspic.BaseColor = System.Drawing.Color.White;
+            this.statuspic.Image = global::WindowsFormsApp1.Properties.Resources.sunbed__1_;
+            this.statuspic.Location = new System.Drawing.Point(418, 4);
+            this.statuspic.Name = "statuspic";
+            this.statuspic.Size = new System.Drawing.Size(35, 35);
+            this.statuspic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.statuspic.TabIndex = 3;
+            this.statuspic.TabStop = false;
+            this.statuspic.UseTransfarantBackground = false;
+            this.statuspic.Click += new System.EventHandler(this.statuspic_Click);
             // 
             // close
             // 
@@ -230,30 +361,6 @@
             this.close.TabIndex = 12;
             this.close.Click += new System.EventHandler(this.close_Click_1);
             // 
-            // gunaComboBox1
-            // 
-            this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gunaComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox1.FormattingEnabled = true;
-            this.gunaComboBox1.IntegralHeight = false;
-            this.gunaComboBox1.Items.AddRange(new object[] {
-            "BUSY",
-            "AVAILABLE",
-            "ON_LEAVE"});
-            this.gunaComboBox1.Location = new System.Drawing.Point(363, 45);
-            this.gunaComboBox1.Name = "gunaComboBox1";
-            this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox1.Size = new System.Drawing.Size(121, 26);
-            this.gunaComboBox1.TabIndex = 2;
-            this.gunaComboBox1.Tag = "";
-            this.gunaComboBox1.SelectedIndexChanged += new System.EventHandler(this.gunaComboBox1_SelectedIndexChanged_1);
-            // 
             // statlabel
             // 
             this.statlabel.AutoSize = true;
@@ -266,20 +373,6 @@
             this.statlabel.TabIndex = 2;
             this.statlabel.Text = "Status: ";
             // 
-            // profileButton
-            // 
-            this.profileButton.BackColor = System.Drawing.Color.Transparent;
-            this.profileButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.profileButton.Image = global::WindowsFormsApp1.Properties.Resources.add;
-            this.profileButton.ImageSize = new System.Drawing.Size(65, 65);
-            this.profileButton.Location = new System.Drawing.Point(0, -8);
-            this.profileButton.Name = "profileButton";
-            this.profileButton.OnHoverImage = null;
-            this.profileButton.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.profileButton.Size = new System.Drawing.Size(93, 97);
-            this.profileButton.TabIndex = 0;
-            this.profileButton.Click += new System.EventHandler(this.profileButton_Click);
-            // 
             // accName
             // 
             this.accName.AutoSize = true;
@@ -291,6 +384,7 @@
             this.accName.Size = new System.Drawing.Size(185, 37);
             this.accName.TabIndex = 1;
             this.accName.Text = "Jade Jaballa";
+            this.accName.Click += new System.EventHandler(this.accName_Click_1);
             // 
             // HomePage
             // 
@@ -305,11 +399,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.MainPnl.ResumeLayout(false);
+            this.statuspnl.ResumeLayout(false);
             this.CombPnl.ResumeLayout(false);
             this.AddSearchPnl.ResumeLayout(false);
             this.DemoPnl.ResumeLayout(false);
             this.DemoPnl.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gunaCirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.profileButton)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.statuspic)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,18 +413,22 @@
         #endregion
         public Guna.UI.WinForms.GunaGradientPanel DemoPnl;
         private Guna.UI.WinForms.GunaImageButton close;
-        private Guna.UI.WinForms.GunaCirclePictureBox gunaCirclePictureBox1;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox1;
         private System.Windows.Forms.Label statlabel;
         private Guna.UI.WinForms.GunaLabel accName;
-        private Guna.UI.WinForms.GunaImageButton profileButton;
         public Guna.UI.WinForms.GunaPanel CombPnl;
-        private System.Windows.Forms.FlowLayoutPanel FLPPnl;
         private Guna.UI.WinForms.GunaPanel AddSearchPnl;
         private Guna.UI.WinForms.GunaTextBox searchTxtBx;
         private Guna.UI.WinForms.GunaCircleButton AddGroupBtn;
         private Guna.UI.WinForms.GunaCircleButton gunaCircleButton2;
         public Guna.UI.WinForms.GunaLabel groupLabel;
         public Guna.UI.WinForms.GunaGradientPanel MainPnl;
+        public Guna.UI.WinForms.GunaCirclePictureBox statuspic;
+        public Guna.UI.WinForms.GunaCirclePictureBox profileButton;
+        private Guna.UI.WinForms.GunaElipsePanel statuspnl;
+        private Guna.UI.WinForms.GunaGradiantButton busybtn;
+        private Guna.UI.WinForms.GunaGradiantButton onleavebtn;
+        private Guna.UI.WinForms.GunaGradiantButton AVbtn;
+        public Guna.UI.WinForms.GunaGradiantButton setStat;
+        public System.Windows.Forms.FlowLayoutPanel FLPPnl;
     }
 }

@@ -83,6 +83,7 @@
             this.removeBtn.Size = new System.Drawing.Size(29, 22);
             this.removeBtn.TabIndex = 0;
             this.removeBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.removeBtn.Click += new System.EventHandler(this.removeBtn_Click);
             // 
             // InitialMembers
             // 

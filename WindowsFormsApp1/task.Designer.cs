@@ -76,7 +76,7 @@
             // Remarks
             // 
             this.Remarks.BackColor = System.Drawing.Color.Black;
-            this.Remarks.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Remarks.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remarks.ForeColor = System.Drawing.Color.White;
             this.Remarks.Location = new System.Drawing.Point(243, 28);
             this.Remarks.Name = "Remarks";
@@ -95,7 +95,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel2.Location = new System.Drawing.Point(115, 28);
             this.gunaLabel2.Name = "gunaLabel2";
@@ -124,7 +124,7 @@
             // taskName
             // 
             this.taskName.BackColor = System.Drawing.Color.Transparent;
-            this.taskName.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.taskName.Font = new System.Drawing.Font("Segoe UI Variable Display", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.taskName.Location = new System.Drawing.Point(6, 15);
             this.taskName.Name = "taskName";
             this.taskName.Size = new System.Drawing.Size(100, 55);

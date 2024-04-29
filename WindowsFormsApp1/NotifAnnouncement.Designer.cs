@@ -101,6 +101,7 @@
             // 
             this.Announcement.AcceptsTab = true;
             this.Announcement.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Announcement.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Announcement.ForeColor = System.Drawing.Color.White;
             this.Announcement.Location = new System.Drawing.Point(16, 3);
             this.Announcement.Name = "Announcement";

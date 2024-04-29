@@ -85,7 +85,7 @@ namespace WindowsFormsApp1
                 Tasks tasks = new Tasks();
                 tasks.page = page;
                 this.page.outpnl.Controls.Add(tasks);
-
+                
                 try
                 {
 

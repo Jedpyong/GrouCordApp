@@ -19,7 +19,7 @@ namespace WindowsFormsApp1
         
 
         public Group group;
-        public NotifAnnouncement notif = new NotifAnnouncement();   
+        public NotifAnnouncement notif ;   
         public GroupPage()
         {
             InitializeComponent();
@@ -30,7 +30,8 @@ namespace WindowsFormsApp1
         private void GroupPage_Load(object sender, EventArgs e)
         {
 
-           /* */
+            this.groupPic.Image = this.group.groupImageObj;
+            this.groupName.Text = this.group.group_name;
 
 
 
@@ -69,7 +70,7 @@ namespace WindowsFormsApp1
 
         private void Schedules_Click(object sender, EventArgs e)
         {
-           //outpnl.Controls.Clear();
+          
             Schedules sched = new Schedules();
             sched.groupID = this.group.group_ID;
             outpnl.Controls.Add(sched);
@@ -90,6 +91,7 @@ namespace WindowsFormsApp1
 
         private void Tasks_Click(object sender, EventArgs e)
         {
+         
             Tasks tasks = new Tasks();
             tasks.page = this;
             outpnl.Controls.Add(tasks);
@@ -126,16 +128,22 @@ namespace WindowsFormsApp1
 
         private void addMember_Click(object sender, EventArgs e)
         {
+            //FLPGroupPage.Controls.Clear();
+            //outpnl.Controls.Clear();
             AddMember add = new AddMember();
             add.grop = this;
             add.group = this.group;
             outpnl.Controls.Add(add);
+            //FLPGroupPage.Controls.Add(outpnl);
+            //outpnl.BringToFront();
+            //outpnl.Show();
             add.BringToFront();
             add.Show();
         }
 
         private void Announcements_Click(object sender, EventArgs e)
         {
+           
             Announcement anns = new Announcement();
 
             outpnl.Controls.Add(anns);
@@ -166,6 +174,8 @@ namespace WindowsFormsApp1
 
             DBManager manager = new DBManager();
             AnnouncementC ann = manager.getAnnouncement(group.group_ID);
+            notif = new NotifAnnouncement();
+            notif.page = this;
             notif.Announcement.Clear();
 
             if (ann.announcedDate.ToString() != "01/01/0001 12:00:00 am")
@@ -197,6 +207,11 @@ namespace WindowsFormsApp1
             LoginForm.hp.BringToFront();
             LoginForm.hp.Show();
             this.Hide();
+        }
+
+        private void gunaGradientPanel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

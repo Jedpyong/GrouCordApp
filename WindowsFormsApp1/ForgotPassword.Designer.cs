@@ -76,7 +76,7 @@
             this.EmailTxtbx.FocusedBaseColor = System.Drawing.Color.White;
             this.EmailTxtbx.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.EmailTxtbx.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.EmailTxtbx.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.EmailTxtbx.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold);
             this.EmailTxtbx.Location = new System.Drawing.Point(71, 99);
             this.EmailTxtbx.Name = "EmailTxtbx";
             this.EmailTxtbx.PasswordChar = '\0';
@@ -92,7 +92,7 @@
             this.OTPTxtbx.FocusedBaseColor = System.Drawing.Color.White;
             this.OTPTxtbx.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.OTPTxtbx.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.OTPTxtbx.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.OTPTxtbx.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold);
             this.OTPTxtbx.Location = new System.Drawing.Point(71, 183);
             this.OTPTxtbx.Name = "OTPTxtbx";
             this.OTPTxtbx.PasswordChar = '\0';
@@ -137,7 +137,7 @@
             this.confirmbutn.CheckedForeColor = System.Drawing.Color.White;
             this.confirmbutn.CheckedImage = ((System.Drawing.Image)(resources.GetObject("confirmbutn.CheckedImage")));
             this.confirmbutn.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.confirmbutn.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
+            this.confirmbutn.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.confirmbutn.ForeColor = System.Drawing.Color.White;
             this.confirmbutn.Image = null;
             this.confirmbutn.ImageSize = new System.Drawing.Size(20, 20);

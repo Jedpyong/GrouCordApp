@@ -61,7 +61,7 @@
             this.mainPanel.GradiantColor4 = System.Drawing.Color.Black;
             this.mainPanel.Location = new System.Drawing.Point(0, 41);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(378, 289);
+            this.mainPanel.Size = new System.Drawing.Size(378, 281);
             this.mainPanel.TabIndex = 5;
             this.mainPanel.Text = "gunaGradientPanel2";
             // 
@@ -219,9 +219,9 @@
             this.gunaGradientPanel1.Controls.Add(this.annLabel);
             this.gunaGradientPanel1.Controls.Add(this.back);
             this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.Black;
-            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Blue;
-            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.Navy;
+            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.DarkBlue;
+            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Navy;
+            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.RoyalBlue;
             this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
@@ -262,7 +262,7 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Name = "Announcement";
-            this.Size = new System.Drawing.Size(378, 330);
+            this.Size = new System.Drawing.Size(378, 322);
             this.Load += new System.EventHandler(this.Announcement_Load);
             this.mainPanel.ResumeLayout(false);
             this.gunaGradientPanel2.ResumeLayout(false);

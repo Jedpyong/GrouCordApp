@@ -20,9 +20,9 @@ namespace WindowsFormsApp1.Classes
         public CurrStatus status { get; set; }
         public Account ()
         {
+            this.accountProfile = Image.FromFile(@"C:\Users\USER\Desktop\GrouCord\WindowsFormsApp1\WindowsFormsApp1\Resources\user (1).png");
+            this.status = CurrStatus.AVAILABLE;
             
-            this.email = string.Empty;
-            this.password = string.Empty;
         }
         public Account ( string email, string password)
         {

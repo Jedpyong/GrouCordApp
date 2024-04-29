@@ -15,14 +15,15 @@ namespace WindowsFormsApp1
 {
     public partial class ConfirmEmail : Form
     {
-        
-         
+
+
         string email = CreateAccount.email;
         string password = CreateAccount.password;
         string name = CreateAccount.name;
         string code = CreateAccount.randomCode;
-       
-        public ConfirmEmail()
+        DBManager manager = new DBManager();
+
+    public ConfirmEmail()
         {
             InitializeComponent();
         }
@@ -34,7 +35,7 @@ namespace WindowsFormsApp1
                 string con = "server=127.0.0.1;uid=root;pwd=July072004;database=groucord;";
                 MySqlConnection connection = new MySqlConnection(con);
 
-                string query1 = "insert into account(email,password,username) values('"+email+"','"+password+"','"+name+"')";
+                string query1 = "insert into account(email,password,username,contactNumber) values('"+email+"','"+password+"','"+name+"','N/A')";
                // string query2 = "INSERT INTO profile SET username = '" + name + "',idAccount = (SELECT idAccount FROM account WHERE email = '" + email + "')";
                 connection.Open();
                 MySqlCommand cmd1 = new MySqlCommand(query1, connection);
@@ -44,10 +45,20 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Account Created Successfully");
                 connection.Close();
 
+
+                //sheeehshhsshs wapani ma sud sa database diay
+
+                LoginForm.account = new Account();
                 LoginForm.account.email = email;
                 LoginForm.account.password = password;
+                LoginForm.account.username = name;
                 
+                string path = @"C:\Users\USER\Desktop\GrouCord\WindowsFormsApp1\WindowsFormsApp1\Resources\user (1).png";
+                manager.updateProfilePic(path, LoginForm.account.email);
                 
+                LoginForm.account.status = Classes.CurrStatus.AVAILABLE;
+                manager.updateStatus(LoginForm.account.status.ToString(), LoginForm.account.email);
+
                 LoginForm.hp.Show();
 
                 connection.Close();

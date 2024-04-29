@@ -73,7 +73,6 @@
             this.gunaGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gunaGradientPanel2.Controls.Add(this.gunaCircleButton3);
             this.gunaGradientPanel2.Controls.Add(this.currpass);
-            this.gunaGradientPanel2.Controls.Add(this.numpanel);
             this.gunaGradientPanel2.Controls.Add(this.gunaCircleButton5);
             this.gunaGradientPanel2.Controls.Add(this.label1);
             this.gunaGradientPanel2.Controls.Add(this.gunaCircleButton4);
@@ -90,6 +89,7 @@
             this.gunaGradientPanel2.Controls.Add(this.ProfilePic);
             this.gunaGradientPanel2.Controls.Add(this.statuspnl);
             this.gunaGradientPanel2.Controls.Add(this.userpanel);
+            this.gunaGradientPanel2.Controls.Add(this.numpanel);
             this.gunaGradientPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaGradientPanel2.GradiantColor1 = System.Drawing.Color.Black;
             this.gunaGradientPanel2.GradiantColor2 = System.Drawing.Color.Black;
@@ -383,7 +383,7 @@
             this.NUMBER.BackColor = System.Drawing.Color.Transparent;
             this.NUMBER.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NUMBER.ForeColor = System.Drawing.Color.DeepSkyBlue;
-            this.NUMBER.Location = new System.Drawing.Point(279, 165);
+            this.NUMBER.Location = new System.Drawing.Point(280, 155);
             this.NUMBER.Name = "NUMBER";
             this.NUMBER.Size = new System.Drawing.Size(198, 20);
             this.NUMBER.TabIndex = 11;

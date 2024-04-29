@@ -36,7 +36,11 @@
             this.addDB = new Guna.UI.WinForms.GunaButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.description = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
+            this.back = new Guna.UI.WinForms.GunaImageButton();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
+            this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // data
@@ -67,7 +71,7 @@
             this.data.DefaultCellStyle = dataGridViewCellStyle3;
             this.data.EnableHeadersVisualStyles = false;
             this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.data.Location = new System.Drawing.Point(3, 89);
+            this.data.Location = new System.Drawing.Point(3, 160);
             this.data.Name = "data";
             this.data.ReadOnly = true;
             this.data.RowHeadersVisible = false;
@@ -109,7 +113,7 @@
             this.addDB.ForeColor = System.Drawing.Color.White;
             this.addDB.Image = ((System.Drawing.Image)(resources.GetObject("addDB.Image")));
             this.addDB.ImageSize = new System.Drawing.Size(20, 20);
-            this.addDB.Location = new System.Drawing.Point(227, 27);
+            this.addDB.Location = new System.Drawing.Point(218, 100);
             this.addDB.Name = "addDB";
             this.addDB.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.addDB.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -124,7 +128,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.CustomFormat = "";
-            this.dateTimePicker1.Location = new System.Drawing.Point(21, 27);
+            this.dateTimePicker1.Location = new System.Drawing.Point(12, 77);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 0;
@@ -139,25 +143,72 @@
             this.description.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.description.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.description.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.description.Location = new System.Drawing.Point(42, 53);
+            this.description.Location = new System.Drawing.Point(39, 112);
             this.description.Name = "description";
             this.description.PasswordChar = '\0';
             this.description.Size = new System.Drawing.Size(160, 30);
             this.description.TabIndex = 2;
             this.description.Text = "gunaTextBox1";
             // 
+            // gunaGradientPanel1
+            // 
+            this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
+            this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel1.Controls.Add(this.gunaLabel1);
+            this.gunaGradientPanel1.Controls.Add(this.back);
+            this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.DarkBlue;
+            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Navy;
+            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.RoyalBlue;
+            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
+            this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
+            this.gunaGradientPanel1.Name = "gunaGradientPanel1";
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(378, 41);
+            this.gunaGradientPanel1.TabIndex = 5;
+            this.gunaGradientPanel1.Text = "gunaGradientPanel1";
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel1.Location = new System.Drawing.Point(119, 8);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(136, 21);
+            this.gunaLabel1.TabIndex = 1;
+            this.gunaLabel1.Text = "BUSY SCHEDULE";
+            this.gunaLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // back
+            // 
+            this.back.BackColor = System.Drawing.Color.Transparent;
+            this.back.Image = global::WindowsFormsApp1.Properties.Resources.turn_back;
+            this.back.ImageSize = new System.Drawing.Size(30, 30);
+            this.back.Location = new System.Drawing.Point(0, 0);
+            this.back.Name = "back";
+            this.back.OnHoverImage = null;
+            this.back.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.back.Size = new System.Drawing.Size(40, 41);
+            this.back.TabIndex = 0;
+            // 
             // Schedules
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Transparent;
+            this.Controls.Add(this.gunaGradientPanel1);
             this.Controls.Add(this.data);
             this.Controls.Add(this.description);
             this.Controls.Add(this.addDB);
             this.Controls.Add(this.dateTimePicker1);
             this.Name = "Schedules";
-            this.Size = new System.Drawing.Size(378, 308);
+            this.Size = new System.Drawing.Size(378, 322);
             this.Load += new System.EventHandler(this.Schedules_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
+            this.gunaGradientPanel1.ResumeLayout(false);
+            this.gunaGradientPanel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -167,5 +218,8 @@
         private Guna.UI.WinForms.GunaButton addDB;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private Guna.UI.WinForms.GunaTextBox description;
+        private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        public Guna.UI.WinForms.GunaImageButton back;
     }
 }

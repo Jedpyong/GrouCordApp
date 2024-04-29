@@ -57,10 +57,10 @@
             this.Member.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Member.BackgroundImage")));
             this.Member.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Member.Controls.Add(this.memberPic);
-            this.Member.Controls.Add(this.emailLabel);
             this.Member.Controls.Add(this.assignBtn);
             this.Member.Controls.Add(this.removeBtn);
             this.Member.Controls.Add(this.memberName);
+            this.Member.Controls.Add(this.emailLabel);
             this.Member.Controls.Add(this.gunaGradientPanel1);
             this.Member.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Member.GradiantColor1 = System.Drawing.Color.Black;
@@ -88,13 +88,12 @@
             // 
             // emailLabel
             // 
-            this.emailLabel.AutoSize = true;
             this.emailLabel.BackColor = System.Drawing.Color.Transparent;
             this.emailLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.emailLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.emailLabel.Location = new System.Drawing.Point(68, 37);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(131, 15);
+            this.emailLabel.Size = new System.Drawing.Size(148, 16);
             this.emailLabel.TabIndex = 14;
             this.emailLabel.Text = "jadejaballa@gmail.com";
             // 

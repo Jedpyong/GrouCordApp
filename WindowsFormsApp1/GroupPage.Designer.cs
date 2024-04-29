@@ -57,10 +57,10 @@
             this.outpnl.GradiantColor2 = System.Drawing.Color.Black;
             this.outpnl.GradiantColor3 = System.Drawing.Color.Blue;
             this.outpnl.GradiantColor4 = System.Drawing.Color.Black;
-            this.outpnl.Location = new System.Drawing.Point(142, 56);
-            this.outpnl.Margin = new System.Windows.Forms.Padding(0, 7, 0, 0);
+            this.outpnl.Location = new System.Drawing.Point(142, 62);
+            this.outpnl.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
             this.outpnl.Name = "outpnl";
-            this.outpnl.Size = new System.Drawing.Size(378, 328);
+            this.outpnl.Size = new System.Drawing.Size(378, 322);
             this.outpnl.TabIndex = 0;
             this.outpnl.Text = "gunaGradientPanel2";
             this.outpnl.Click += new System.EventHandler(this.outpnl_Click);
@@ -70,10 +70,10 @@
             this.FLPGroupPage.AutoScroll = true;
             this.FLPGroupPage.BackColor = System.Drawing.Color.Transparent;
             this.FLPGroupPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.FLPGroupPage.Location = new System.Drawing.Point(-1, 6);
+            this.FLPGroupPage.Location = new System.Drawing.Point(-1, 0);
             this.FLPGroupPage.Margin = new System.Windows.Forms.Padding(0);
             this.FLPGroupPage.Name = "FLPGroupPage";
-            this.FLPGroupPage.Size = new System.Drawing.Size(378, 317);
+            this.FLPGroupPage.Size = new System.Drawing.Size(378, 323);
             this.FLPGroupPage.TabIndex = 2;
             this.FLPGroupPage.Paint += new System.Windows.Forms.PaintEventHandler(this.FLPGroupPage_Paint_1);
             // 
@@ -258,15 +258,15 @@
             // 
             // groupName
             // 
-            this.groupName.AutoSize = true;
             this.groupName.BackColor = System.Drawing.Color.Transparent;
-            this.groupName.Font = new System.Drawing.Font("Segoe UI Black", 27F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.groupName.Font = new System.Drawing.Font("Segoe UI Black", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.groupName.Location = new System.Drawing.Point(176, 1);
+            this.groupName.Location = new System.Drawing.Point(144, 3);
             this.groupName.Name = "groupName";
-            this.groupName.Size = new System.Drawing.Size(237, 48);
+            this.groupName.Size = new System.Drawing.Size(321, 48);
             this.groupName.TabIndex = 2;
             this.groupName.Text = "GroupName";
+            this.groupName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // gunaImageButton1
             // 
@@ -300,7 +300,6 @@
             this.outpnl.ResumeLayout(false);
             this.gunaGradientPanel1.ResumeLayout(false);
             this.upperPanel.ResumeLayout(false);
-            this.upperPanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupPic)).EndInit();
             this.ResumeLayout(false);
 

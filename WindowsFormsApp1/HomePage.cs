@@ -85,24 +85,34 @@ namespace WindowsFormsApp1
 
         private void HomePage_Load(object sender, EventArgs e)
         {
-
-            GroupHandler handler = new GroupHandler();
-            List<Group> groups = handler.GetGroupByLeader(LoginForm.account.email);
-            foreach(Group g in groups)
+            try
             {
-                groupz groupo = new groupz();
-                groupo.groupButton.Text = g.group_name;
-                groupo.GroupPic.Image = g.groupImageObj;
-                groupo.group = g;
-                FLPPnl.Controls.Add(groupo);
+                GroupHandler handler = new GroupHandler();
+                List<Group> groups = handler.GetGroupByLeader(LoginForm.account.email);
+                foreach (Group g in groups)
+                {
+                    groupz groupo = new groupz();
+                    groupo.groupButton.Text = g.group_name;
+                    groupo.GroupPic.Image = g.groupImageObj;
+                    groupo.group = g;
+                    FLPPnl.Controls.Add(groupo);
+                }
+
+                LoginForm.account = manage.readAccountByEmail(LoginForm.account.email);
+
+                MessageBox.Show("ka proceed ta ani?");
+
+                this.profileButton.Image = LoginForm.account.accountProfile;
+                this.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
+                this.setStat.Text = LoginForm.account.status.ToString();
+                statuspnl.Visible = false;
+                this.Refresh();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
             }
            
-            LoginForm.account = manage.readAccountByEmail(LoginForm.account.email);
-            this.profileButton.Image = LoginForm.account.accountProfile;
-            this.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
-            this.setStat.Text = LoginForm.account.status.ToString();
-            statuspnl.Visible = false;
-            this.Refresh();
             
          
             
@@ -286,6 +296,11 @@ namespace WindowsFormsApp1
         private void groupLabel_Click(object sender, EventArgs e)
         {
             statuspnl.Visible = false;
+        }
+
+        private void searchTxtBx_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

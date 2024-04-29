@@ -238,6 +238,7 @@
             this.searchTxtBx.Size = new System.Drawing.Size(160, 35);
             this.searchTxtBx.TabIndex = 5;
             this.searchTxtBx.Text = "Search";
+            this.searchTxtBx.Click += new System.EventHandler(this.searchTxtBx_Click_1);
             this.searchTxtBx.Enter += new System.EventHandler(this.searchTxtBx_Enter_1);
             this.searchTxtBx.Leave += new System.EventHandler(this.searchTxtBx_Leave_1);
             // 

@@ -125,14 +125,14 @@
         zADvanis4LaCaQWXFZxWcFjBbgWbFQz7M9YHsv9/CTSi914AAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="numpanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="userpanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAsSURBVChTY2BgaPjPwFAMxGlAHAnEPkDsAMTGQKwGxFJA
         zAvEowrpqJD3PwDCLX8Jy7UT/AAAAABJRU5ErkJggg==
 </value>
   </data>
-  <data name="userpanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+  <data name="numpanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
         YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAsSURBVChTY2BgaPjPwFAMxGlAHAnEPkDsAMTGQKwGxFJA

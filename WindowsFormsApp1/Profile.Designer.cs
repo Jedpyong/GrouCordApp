@@ -32,9 +32,6 @@
             this.gunaGradientPanel2 = new Guna.UI.WinForms.GunaGradientPanel();
             this.gunaCircleButton3 = new Guna.UI.WinForms.GunaCircleButton();
             this.currpass = new Guna.UI.WinForms.GunaTextBox();
-            this.numpanel = new Guna.UI.WinForms.GunaGradientPanel();
-            this.numtxtbx = new Guna.UI.WinForms.GunaTextBox();
-            this.confirm = new Guna.UI.WinForms.GunaCircleButton();
             this.gunaCircleButton5 = new Guna.UI.WinForms.GunaCircleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaCircleButton4 = new Guna.UI.WinForms.GunaCircleButton();
@@ -56,14 +53,17 @@
             this.userpanel = new Guna.UI.WinForms.GunaGradientPanel();
             this.confirmUsername = new Guna.UI.WinForms.GunaCircleButton();
             this.usernametxtbx = new Guna.UI.WinForms.GunaTextBox();
+            this.numpanel = new Guna.UI.WinForms.GunaGradientPanel();
+            this.numtxtbx = new Guna.UI.WinForms.GunaTextBox();
+            this.confirm = new Guna.UI.WinForms.GunaCircleButton();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
             this.label2 = new System.Windows.Forms.Label();
             this.HomeButton = new Guna.UI.WinForms.GunaImageButton();
             this.gunaGradientPanel2.SuspendLayout();
-            this.numpanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePic)).BeginInit();
             this.statuspnl.SuspendLayout();
             this.userpanel.SuspendLayout();
+            this.numpanel.SuspendLayout();
             this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -142,63 +142,6 @@
             this.currpass.Size = new System.Drawing.Size(160, 30);
             this.currpass.TabIndex = 40;
             this.currpass.Text = "password";
-            // 
-            // numpanel
-            // 
-            this.numpanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("numpanel.BackgroundImage")));
-            this.numpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.numpanel.Controls.Add(this.numtxtbx);
-            this.numpanel.Controls.Add(this.confirm);
-            this.numpanel.GradiantColor1 = System.Drawing.Color.Blue;
-            this.numpanel.GradiantColor2 = System.Drawing.Color.Black;
-            this.numpanel.GradiantColor3 = System.Drawing.Color.Black;
-            this.numpanel.GradiantColor4 = System.Drawing.Color.Black;
-            this.numpanel.Location = new System.Drawing.Point(319, 156);
-            this.numpanel.Name = "numpanel";
-            this.numpanel.Size = new System.Drawing.Size(189, 40);
-            this.numpanel.TabIndex = 34;
-            this.numpanel.Text = "gunaGradientPanel3";
-            this.numpanel.Visible = false;
-            this.numpanel.Leave += new System.EventHandler(this.numpanel_Leave);
-            // 
-            // numtxtbx
-            // 
-            this.numtxtbx.BaseColor = System.Drawing.Color.White;
-            this.numtxtbx.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.numtxtbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.numtxtbx.FocusedBaseColor = System.Drawing.Color.White;
-            this.numtxtbx.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.numtxtbx.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.numtxtbx.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.numtxtbx.Location = new System.Drawing.Point(3, 5);
-            this.numtxtbx.Name = "numtxtbx";
-            this.numtxtbx.PasswordChar = '\0';
-            this.numtxtbx.Size = new System.Drawing.Size(152, 30);
-            this.numtxtbx.TabIndex = 32;
-            // 
-            // confirm
-            // 
-            this.confirm.AnimationHoverSpeed = 0.07F;
-            this.confirm.AnimationSpeed = 0.03F;
-            this.confirm.BackColor = System.Drawing.Color.Transparent;
-            this.confirm.BaseColor = System.Drawing.Color.Transparent;
-            this.confirm.BorderColor = System.Drawing.Color.Black;
-            this.confirm.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.confirm.ForeColor = System.Drawing.Color.White;
-            this.confirm.Image = global::WindowsFormsApp1.Properties.Resources.check_mark;
-            this.confirm.ImageSize = new System.Drawing.Size(25, 25);
-            this.confirm.Location = new System.Drawing.Point(161, 8);
-            this.confirm.Name = "confirm";
-            this.confirm.OnHoverBaseColor = System.Drawing.Color.Black;
-            this.confirm.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.confirm.OnHoverForeColor = System.Drawing.Color.White;
-            this.confirm.OnHoverImage = null;
-            this.confirm.OnPressedColor = System.Drawing.Color.Black;
-            this.confirm.Size = new System.Drawing.Size(25, 25);
-            this.confirm.TabIndex = 31;
-            this.confirm.Click += new System.EventHandler(this.confirm_Click);
-            this.confirm.MouseEnter += new System.EventHandler(this.confirm_MouseEnter);
-            this.confirm.MouseLeave += new System.EventHandler(this.confirm_MouseLeave);
             // 
             // gunaCircleButton5
             // 
@@ -572,6 +515,63 @@
             this.usernametxtbx.Size = new System.Drawing.Size(192, 30);
             this.usernametxtbx.TabIndex = 32;
             // 
+            // numpanel
+            // 
+            this.numpanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("numpanel.BackgroundImage")));
+            this.numpanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.numpanel.Controls.Add(this.numtxtbx);
+            this.numpanel.Controls.Add(this.confirm);
+            this.numpanel.GradiantColor1 = System.Drawing.Color.Blue;
+            this.numpanel.GradiantColor2 = System.Drawing.Color.Black;
+            this.numpanel.GradiantColor3 = System.Drawing.Color.Black;
+            this.numpanel.GradiantColor4 = System.Drawing.Color.Black;
+            this.numpanel.Location = new System.Drawing.Point(319, 156);
+            this.numpanel.Name = "numpanel";
+            this.numpanel.Size = new System.Drawing.Size(189, 40);
+            this.numpanel.TabIndex = 34;
+            this.numpanel.Text = "gunaGradientPanel3";
+            this.numpanel.Visible = false;
+            this.numpanel.Leave += new System.EventHandler(this.numpanel_Leave);
+            // 
+            // numtxtbx
+            // 
+            this.numtxtbx.BaseColor = System.Drawing.Color.White;
+            this.numtxtbx.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.numtxtbx.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.numtxtbx.FocusedBaseColor = System.Drawing.Color.White;
+            this.numtxtbx.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.numtxtbx.FocusedForeColor = System.Drawing.SystemColors.ControlText;
+            this.numtxtbx.Font = new System.Drawing.Font("Segoe UI Black", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.numtxtbx.Location = new System.Drawing.Point(3, 5);
+            this.numtxtbx.Name = "numtxtbx";
+            this.numtxtbx.PasswordChar = '\0';
+            this.numtxtbx.Size = new System.Drawing.Size(152, 30);
+            this.numtxtbx.TabIndex = 32;
+            // 
+            // confirm
+            // 
+            this.confirm.AnimationHoverSpeed = 0.07F;
+            this.confirm.AnimationSpeed = 0.03F;
+            this.confirm.BackColor = System.Drawing.Color.Transparent;
+            this.confirm.BaseColor = System.Drawing.Color.Transparent;
+            this.confirm.BorderColor = System.Drawing.Color.Black;
+            this.confirm.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.confirm.ForeColor = System.Drawing.Color.White;
+            this.confirm.Image = global::WindowsFormsApp1.Properties.Resources.check_mark;
+            this.confirm.ImageSize = new System.Drawing.Size(25, 25);
+            this.confirm.Location = new System.Drawing.Point(161, 8);
+            this.confirm.Name = "confirm";
+            this.confirm.OnHoverBaseColor = System.Drawing.Color.Black;
+            this.confirm.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.confirm.OnHoverForeColor = System.Drawing.Color.White;
+            this.confirm.OnHoverImage = null;
+            this.confirm.OnPressedColor = System.Drawing.Color.Black;
+            this.confirm.Size = new System.Drawing.Size(25, 25);
+            this.confirm.TabIndex = 31;
+            this.confirm.Click += new System.EventHandler(this.confirm_Click);
+            this.confirm.MouseEnter += new System.EventHandler(this.confirm_MouseEnter);
+            this.confirm.MouseLeave += new System.EventHandler(this.confirm_MouseLeave);
+            // 
             // gunaGradientPanel1
             // 
             this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
@@ -613,6 +613,8 @@
             this.HomeButton.Size = new System.Drawing.Size(36, 35);
             this.HomeButton.TabIndex = 2;
             this.HomeButton.Click += new System.EventHandler(this.HomeButton_Click);
+            this.HomeButton.MouseEnter += new System.EventHandler(this.HomeButton_MouseEnter);
+            this.HomeButton.MouseLeave += new System.EventHandler(this.HomeButton_MouseLeave);
             // 
             // Profile
             // 
@@ -627,10 +629,10 @@
             this.Click += new System.EventHandler(this.Profile_Click);
             this.gunaGradientPanel2.ResumeLayout(false);
             this.gunaGradientPanel2.PerformLayout();
-            this.numpanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePic)).EndInit();
             this.statuspnl.ResumeLayout(false);
             this.userpanel.ResumeLayout(false);
+            this.numpanel.ResumeLayout(false);
             this.gunaGradientPanel1.ResumeLayout(false);
             this.gunaGradientPanel1.PerformLayout();
             this.ResumeLayout(false);

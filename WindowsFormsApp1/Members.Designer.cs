@@ -32,7 +32,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Members));
             this.Member = new Guna.UI.WinForms.GunaGradientPanel();
             this.memberPic = new Guna.UI.WinForms.GunaCirclePictureBox();
-            this.emailLabel = new Guna.UI.WinForms.GunaLabel();
             this.assignBtn = new Guna.UI.WinForms.GunaGradientPanel();
             this.Assign = new Guna.UI.WinForms.GunaImageButton();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
@@ -40,6 +39,7 @@
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.remove = new Guna.UI.WinForms.GunaImageButton();
             this.memberName = new Guna.UI.WinForms.GunaLabel();
+            this.emailLabel = new Guna.UI.WinForms.GunaLabel();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
             this.status = new Guna.UI.WinForms.GunaLabel();
             this.Role = new Guna.UI.WinForms.GunaLabel();
@@ -85,17 +85,6 @@
             this.memberPic.TabIndex = 0;
             this.memberPic.TabStop = false;
             this.memberPic.UseTransfarantBackground = false;
-            // 
-            // emailLabel
-            // 
-            this.emailLabel.BackColor = System.Drawing.Color.Transparent;
-            this.emailLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.emailLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.emailLabel.Location = new System.Drawing.Point(68, 37);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(148, 16);
-            this.emailLabel.TabIndex = 14;
-            this.emailLabel.Text = "jadejaballa@gmail.com";
             // 
             // assignBtn
             // 
@@ -196,15 +185,26 @@
             // 
             // memberName
             // 
-            this.memberName.AutoSize = true;
             this.memberName.BackColor = System.Drawing.Color.Transparent;
             this.memberName.Font = new System.Drawing.Font("Segoe UI Variable Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.memberName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.memberName.Location = new System.Drawing.Point(65, 8);
             this.memberName.Name = "memberName";
-            this.memberName.Size = new System.Drawing.Size(152, 32);
+            this.memberName.Size = new System.Drawing.Size(164, 32);
             this.memberName.TabIndex = 1;
             this.memberName.Text = "Jade Jaballa";
+            this.memberName.Click += new System.EventHandler(this.memberName_Click);
+            // 
+            // emailLabel
+            // 
+            this.emailLabel.BackColor = System.Drawing.Color.Transparent;
+            this.emailLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.emailLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.emailLabel.Location = new System.Drawing.Point(68, 37);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(161, 21);
+            this.emailLabel.TabIndex = 14;
+            this.emailLabel.Text = "jadejaballa@gmail.com";
             // 
             // gunaGradientPanel1
             // 
@@ -216,7 +216,7 @@
             this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Blue;
-            this.gunaGradientPanel1.Location = new System.Drawing.Point(222, 0);
+            this.gunaGradientPanel1.Location = new System.Drawing.Point(235, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
             this.gunaGradientPanel1.Size = new System.Drawing.Size(71, 70);
             this.gunaGradientPanel1.TabIndex = 16;
@@ -227,11 +227,11 @@
             // 
             this.status.AutoSize = true;
             this.status.BackColor = System.Drawing.Color.Transparent;
-            this.status.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.status.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Bold);
             this.status.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.status.Location = new System.Drawing.Point(2, 37);
             this.status.Name = "status";
-            this.status.Size = new System.Drawing.Size(65, 16);
+            this.status.Size = new System.Drawing.Size(67, 16);
             this.status.TabIndex = 5;
             this.status.Text = "AVAILABLE";
             this.status.Click += new System.EventHandler(this.status_Click);
@@ -241,11 +241,11 @@
             // 
             this.Role.AutoSize = true;
             this.Role.BackColor = System.Drawing.Color.Transparent;
-            this.Role.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Role.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Bold);
             this.Role.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Role.Location = new System.Drawing.Point(2, 16);
             this.Role.Name = "Role";
-            this.Role.Size = new System.Drawing.Size(49, 16);
+            this.Role.Size = new System.Drawing.Size(50, 16);
             this.Role.TabIndex = 15;
             this.Role.Text = "LEADER";
             // 
@@ -261,8 +261,8 @@
             this.Controls.Add(this.Member);
             this.Name = "Members";
             this.Size = new System.Drawing.Size(352, 70);
+            this.Load += new System.EventHandler(this.Members_Load);
             this.Member.ResumeLayout(false);
-            this.Member.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.memberPic)).EndInit();
             this.assignBtn.ResumeLayout(false);
             this.assignBtn.PerformLayout();

@@ -19,7 +19,8 @@ namespace WindowsFormsApp1
         
 
         public Group group;
-        public NotifAnnouncement notif ;   
+        public NotifAnnouncement notif ;
+        public bool isMember;
         public GroupPage()
         {
             InitializeComponent();
@@ -29,7 +30,11 @@ namespace WindowsFormsApp1
 
         private void GroupPage_Load(object sender, EventArgs e)
         {
-
+            if(isMember)
+            {
+                Announcements.Visible = false;
+                addMember.Visible = false;
+            }
             this.groupPic.Image = this.group.groupImageObj;
             this.groupName.Text = this.group.group_name;
 
@@ -73,6 +78,9 @@ namespace WindowsFormsApp1
           
             Schedules sched = new Schedules();
             sched.groupID = this.group.group_ID;
+            sched.group = this.group;
+            sched.isMember = this.isMember;
+            sched.grop = this;
             outpnl.Controls.Add(sched);
             //sched.SendToBack();
             sched.BringToFront();
@@ -95,9 +103,52 @@ namespace WindowsFormsApp1
             Tasks tasks = new Tasks();
             tasks.page = this;
             outpnl.Controls.Add(tasks);
+            DBManager manage = new DBManager();
+
+            if(isMember)
+            {
+                
+                try
+                {
+                    GroupHandler handler = new GroupHandler();
+                    int id = handler.getMemberID_BYEmail(LoginForm.account.email, group.group_ID);
+                    List<Taskc> Tasks = manage.getMemberTasks(id);
+                   
+                    foreach (Taskc Task in Tasks)
+                    {
+                        task panel = new task();
+                        panel.taskName.Text = Task.taskname;
+                        panel.assigned.Visible = false;
+                       
+                        panel.gunaLabel2.Visible = false;
+                        panel.open.Visible = true;
+                        panel.remarkss.Text = Task.remarks;
+                        panel.thisTask = Task;
+                        panel.page = this;
+                        panel.isMember = true;
+                        if(Task.remarks == "ON-GOING")
+                        {
+                            panel.submit.Visible = true;
+                            panel.Remarks.Visible = false;
+                        }
+                       
+
+                        tasks.TaskFlowchart.Controls.Add(panel);
+                    }
+
+                    tasks.BringToFront();
+                    tasks.Show();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error:" + ex.Message);
+                }
+            }
+            else
+
             try
             {
-                DBManager manage = new DBManager();
+               
                
                 List<Taskc> Tasks = manage.getTasks(group.group_ID);
 
@@ -106,8 +157,10 @@ namespace WindowsFormsApp1
                     task panel = new task();
                     panel.taskName.Text = Task.taskname;
                     panel.remarkss.Text = Task.remarks;
-                   
-                    foreach(string ass in Task.assigned)
+                    panel.thisTask = Task;
+                    panel.page = this;
+
+                        foreach (string ass in Task.assigned)
                     {
                         panel.assigned.Items.Add(ass);
                     }
@@ -204,6 +257,8 @@ namespace WindowsFormsApp1
             FLPGroupPage.BringToFront();
             FLPGroupPage.Show();
           */
+
+            LoginForm.hp.ReloadHomeFLP();
             LoginForm.hp.BringToFront();
             LoginForm.hp.Show();
             this.Hide();

@@ -74,7 +74,7 @@ namespace WindowsFormsApp1
                 groupdisp.group.groupImageObj = pictureBox1.Image;
                 
 
-            
+                 LoginForm.hp.ReloadHomeFLP();
                
 
                 //remove all from accs if ma create na ang group
@@ -95,6 +95,7 @@ namespace WindowsFormsApp1
 
         private void CancelGroup_Click(object sender, EventArgs e)
         {
+            LoginForm.hp.ReloadHomeFLP();
             this.Hide();
         }
 

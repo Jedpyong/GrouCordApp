@@ -1,4 +1,5 @@
-﻿using System;
+﻿using K4os.Compression.LZ4.Internal;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,28 +51,60 @@ namespace WindowsFormsApp1
         public void groupButton_Click(object sender, EventArgs e)
         {
 
+
             //LoginForm.hp.Controls.Clear();
             //grop.group = group;
+            bool isMember = false;
             grop.FLPGroupPage.Controls.Clear();
             GroupHandler handler = new GroupHandler();
+
+            Account Leader = handler.getGroupLeader(group.group_ID);
+            if(Leader.email != LoginForm.account.email)
+            {
+                isMember = true;
+                Members panel = new Members(isMember);
+                panel.memberName.Text = Leader.username;
+                panel.emailLabel.Text = Leader.email;
+                panel.status.Text = Leader.status.ToString();
+                panel.Role.Text = "LEADER";
+                panel.memberPic.Image = Leader.accountProfile;
+                panel.page = grop;
+               // panel.memberID = handler.getMemberID_BYEmail(mem.email, group.group_ID);
+                panel.name = Leader.username;
+                panel.group = this.group;
+               
+                grop.FLPGroupPage.Controls.Add(panel);
+            }
+
             List<Account> members = handler.getMembers(group);
             foreach(Account mem in members)
             {
-                Members panel = new Members();
-                panel.memberName.Text = mem.username;
-                panel.emailLabel.Text = mem.email;
-                panel.status.Text = mem.status.ToString();
-                panel.Role.Text = "MEMBER";
-                panel.memberPic.Image = mem.accountProfile;
-                panel.page = grop;
-                panel.memberID = handler.getMemberID_BYEmail(mem.email, group.group_ID);
-                panel.name = mem.username;
-                panel.group = this.group;
-                grop.FLPGroupPage.Controls.Add(panel);
+                if(mem.email != LoginForm.account.email)
+                {
+                     isMember = false;
+                    if (Leader.email != LoginForm.account.email)
+                            isMember = true;
+
+                    Members panel = new Members(isMember);
+                    panel.memberName.Text = mem.username;
+                    panel.emailLabel.Text = mem.email;
+                    panel.status.Text = mem.status.ToString();
+                    panel.Role.Text = "MEMBER";
+                    panel.memberPic.Image = mem.accountProfile;
+                    panel.page = grop;
+                    panel.memberID = handler.getMemberID_BYEmail(mem.email, group.group_ID);
+                    panel.name = mem.username;
+                    panel.group = this.group;
+                  
+                    grop.FLPGroupPage.Controls.Add(panel);
+                }
+               
                 
             }
            
             grop.group = this.group;
+            if (LoginForm.account.email != Leader.email)
+                grop.isMember = true;
             LoginForm.hp.MainPnl.Controls.Add(grop);
             grop.FLPGroupPage.BringToFront();
             grop.FLPGroupPage.Show();

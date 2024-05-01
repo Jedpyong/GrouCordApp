@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
+using System.Security.Cryptography;
 
 namespace WindowsFormsApp1.Classes
 {
@@ -48,7 +49,7 @@ namespace WindowsFormsApp1.Classes
                 }
             }
             catch (Exception ex)
-            {
+            { 
                 MessageBox.Show("Error: " + ex.Message);
                 return false;
             }
@@ -343,8 +344,44 @@ namespace WindowsFormsApp1.Classes
         }
 
 
+        public DataTable LoadMemberData(int memberID)
+        {
+            string sql = @"
+             SELECT `account`.`username` AS `NAME`, `busysched`.`date` AS `DATE`, `busysched`.`description` AS `DESCRIPTION`
+                FROM `busysched`
+                INNER JOIN `groupmember` ON `busysched`.`groupMemberID` = `groupmember`.`groupMemberID`
+                INNER JOIN `account`  ON `groupmember`.`groupMemberEmail` = `account`.`email`
+                WHERE `groupmember`.`groupMemberID` = @ID";
 
-        public void insertTask(int ID, string description, string name,string link)
+            using (MySqlConnection conn = new MySqlConnection(connect))
+            {
+                conn.Open();
+                using (MySqlCommand cmd = new MySqlCommand(sql, conn))
+                {
+                    cmd.Parameters.AddWithValue("@ID", memberID);
+
+                    using (MySqlDataAdapter adapter = new MySqlDataAdapter(cmd))
+                    {
+                        DataTable dt = new DataTable();
+                        adapter.Fill(dt);
+                        return dt;
+                    }
+                }
+            }
+
+
+        }
+
+
+
+
+
+
+
+
+
+
+        public void insertTask(int ID, string description, string name,string link, DateTime due)
         {
            using(MySqlConnection connection = new MySqlConnection(connect))
             {
@@ -352,11 +389,12 @@ namespace WindowsFormsApp1.Classes
                 string des = description;
 
                 connection.Open();
-                string query = "INSERT INTO `groucord`.`task`(`groupMemberID`,`description`,`taskName`,`remarks`,`link`) VALUES (@id,@des,@name,@remarks,@link);";
+                string query = "INSERT INTO `groucord`.`task`(`groupMemberID`,`description`,`taskName`, `dueDate`, `remarks`,`link`) VALUES (@id,@des,@name,@due,@remarks,@link);";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@id", ID);
                 command.Parameters.AddWithValue("@des", des);
                 command.Parameters.AddWithValue("@name", name);
+                command.Parameters.AddWithValue("@due", due);
                 command.Parameters.AddWithValue("@remarks", "ON-GOING");
                 command.Parameters.AddWithValue("@link", link);
 
@@ -458,6 +496,75 @@ namespace WindowsFormsApp1.Classes
 
 
 
+
+        public List<Taskc> getMemberTasks(int memberID)
+        {
+           
+            List<Taskc> tasks = new List<Taskc>();
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connect))
+                {
+                    connection.Open();
+                   
+                    string query = "SELECT `taskID`,`description`, `taskName`, `dueDate`, `Remarks`, `link` FROM `task` WHERE `groupMemberID` = @id;";
+                    MySqlCommand command = new MySqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@id", memberID);
+                    
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+
+
+                        while (reader.Read())
+                        {
+                           
+                            
+                            string Tnames = reader.GetString("taskName");
+                            DateTime due = reader.GetDateTime("dueDate");
+                            string rmrks = reader.GetString("remarks");
+                            string des = reader.GetString("description");
+                            string link = reader.GetString("link");
+                            int id = reader.GetInt32("taskID");
+                            
+                                Taskc Task1 = new Taskc();
+                                Task1.taskID = id;
+                                Task1.taskname = Tnames;
+                                Task1.remarks = rmrks;
+                                Task1.description = des;
+                                Task1.link = link;
+                                Task1.dueDate = due;
+                              
+
+                                tasks.Add(Task1);
+                          
+                           
+                        }
+                    }
+
+
+                    connection.Close();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            return tasks;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         public Taskc retrieveTask(string name)
         {
             Taskc task = new Taskc();
@@ -465,7 +572,7 @@ namespace WindowsFormsApp1.Classes
             {
                 connection.Open();
 
-                string query = "SELECT `description`, `remarks`,`link` FROM `task` WHERE `taskName` = @name;";
+                string query = "SELECT `taskID`,`description`, `dueDate`,`remarks`,`link` FROM `task` WHERE `taskName` = @name;";
                 MySqlCommand command = new MySqlCommand(query, connection);
                 command.Parameters.AddWithValue("@name", name);
 
@@ -474,7 +581,8 @@ namespace WindowsFormsApp1.Classes
                     //caution
                     if (reader.Read())
                     {
-                        
+                        task.taskID = reader.GetInt32("taskID");
+                        task.dueDate = reader.GetDateTime("dueDate");
                         task.description = reader.GetString("description");
                         task.remarks = reader.GetString("remarks");
                         task.link = reader.GetString("link");
@@ -484,6 +592,28 @@ namespace WindowsFormsApp1.Classes
             }
             return task;
         }
+
+
+        public Taskc updateTaskRemarks(int id)
+        {
+            Taskc task = new Taskc();
+            using (MySqlConnection connection = new MySqlConnection(connect))
+            {
+                connection.Open();
+
+                string query = "UPDATE `groucord`.`task` SET `remarks` = 'SUBMITTED' WHERE (`taskID` = @id);";
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", id);
+                command.ExecuteNonQuery();
+               
+                connection.Close();
+            }
+            return task;
+        }
+
+
+
+
 
 
 
@@ -811,6 +941,123 @@ namespace WindowsFormsApp1.Classes
 
             return image;
         }
+
+       
+
+
+        public void insertTaskSubmitted(string link, string description, DateTime date, int taskID)
+        {
+            MySqlConnection connection = new MySqlConnection(connect);
+            string query = "INSERT INTO `submittedTask`(`fileLink`,`description`,`taskID`,`dateSubmitted`) VALUES (@link,@des,@id,@date);";
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@link", link);
+            command.Parameters.AddWithValue("@des", description);
+            command.Parameters.AddWithValue("@id", taskID);
+            command.Parameters.AddWithValue("@date", date);
+            command.ExecuteNonQuery();
+
+            connection.Close();
+            
+        }
+
+
+
+
+
+
+        public void updateTaskSubmitted(string link, string description, DateTime date, int taskID)
+        {
+            MySqlConnection connection = new MySqlConnection(connect);
+            string query = "UPDATE `groucord`.`submittedtask` SET `fileLink` = @link, `description` = @des, `dateSubmitted` = @date WHERE (`taskID` = @id);";
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@link", link);
+            command.Parameters.AddWithValue("@des", description);
+            command.Parameters.AddWithValue("@date", date);
+            command.Parameters.AddWithValue("@id", taskID);
+            command.ExecuteNonQuery();
+
+            connection.Close();
+
+        }
+
+
+        public Taskc retrieveTaskSubmitted(int taskID)
+        {
+            Taskc task = new Taskc();
+            MySqlConnection connection = new MySqlConnection(connect);
+            string query = "SELECT * FROM `submittedtask` WHERE `taskID` = @id;";
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@id", taskID);
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    task.taskID = reader.GetInt32("taskID");
+                    task.link = reader.GetString("fileLink");
+                    task.description = reader.GetString("description");
+                    task.dueDate = reader.GetDateTime("dateSubmitted");                    
+                }
+            }
+            return task;
+        }
+
+
+
+
+        public List<Taskc> retrieveTaskSubmittedByLeader(string description, string name, string link )
+        {
+            List<Taskc> tasks = new List<Taskc>();
+            List<int> taskID = new List<int>();
+            MySqlConnection connection = new MySqlConnection(connect);
+            string query = "SELECT taskID FROM groucord.task WHERE `description` = @des AND `taskName` = @name AND `link` = @link;";
+            connection.Open();
+            MySqlCommand command = new MySqlCommand(query, connection);
+            command.Parameters.AddWithValue("@des", description);
+            command.Parameters.AddWithValue("@name", name);
+            command.Parameters.AddWithValue("@link", link);
+            using (MySqlDataReader reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    taskID.Add(reader.GetInt32("taskID"));
+                }
+            }
+
+            query = "SELECT fileLink, description, dateSubmitted FROM groucord.submittedtask WHERE taskID = @id;";
+
+            foreach (int id in taskID)
+            {
+                command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", id);
+                using (MySqlDataReader reader = command.ExecuteReader())
+                {
+                    while(reader.Read())
+                    {
+                        Taskc task = new Taskc
+                        {
+                            link = reader.GetString("fileLink"),
+                            description = reader.GetString("description"),
+                            dueDate = reader.GetDateTime("dateSubmitted")
+                        };
+                        tasks.Add(task);
+                    }
+                }
+            }
+
+            return tasks;
+        }
+
+
+
+
+
+
+
+       
+
 
 
     }

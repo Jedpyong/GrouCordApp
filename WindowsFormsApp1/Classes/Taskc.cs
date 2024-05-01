@@ -15,6 +15,7 @@ namespace WindowsFormsApp1.Classes
         
         public string description { get; set; }
         public string link { get; set; }
+        public DateTime dueDate { get; set; }  
 
         public Taskc()
         {

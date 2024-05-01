@@ -107,7 +107,7 @@
             this.Announcement.Name = "Announcement";
             this.Announcement.ReadOnly = true;
             this.Announcement.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.Announcement.Size = new System.Drawing.Size(346, 283);
+            this.Announcement.Size = new System.Drawing.Size(346, 273);
             this.Announcement.TabIndex = 26;
             this.Announcement.Text = "";
             this.Announcement.TextChanged += new System.EventHandler(this.Announcement_TextChanged);

@@ -10,12 +10,16 @@ using System.Windows.Forms;
 using System.Xml.Linq;
 using System.Security.Principal;
 using System.Diagnostics.Metrics;
+using System.Data;
+using WindowsFormsApp1.Classes;
 
 
 namespace WindowsFormsApp1.Classes
 {
+    
     public class GroupHandler
     {
+        DBManager manager = new DBManager();
         private const string connect = "server=127.0.0.1;uid=root;pwd=July072004;database=groucord;";
 
         public Group InsertGroup(string imagePath,string groupName, Account groupLeader, List<Account> member)
@@ -154,6 +158,82 @@ namespace WindowsFormsApp1.Classes
             }
             return groupList;
         }
+
+
+
+
+        public List<Group> GetGroupByEmail(string Email)
+        {
+            List<Group> groupList = new List<Group>();
+            try
+            {
+                using (MySqlConnection connection = new MySqlConnection(connect))
+                {
+                    connection.Open();
+
+                    List<int> id = new List<int>();
+                    string query1 = "SELECT `group_ID` FROM `groupmember` WHERE `groupMemberEmail` = @email;";
+                    string query2 = "SELECT  `groupName`, `groupLeader`,`groupImage` FROM `group` WHERE `group_ID` = @gid;";
+                    MySqlCommand command = new MySqlCommand(query1, connection);
+                    command.Parameters.AddWithValue("@email", Email);
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while(reader.Read())
+                        {
+                            id.Add(reader.GetInt32("group_ID"));
+                        }
+                    }
+                   
+
+                    foreach(int i in id)
+                    {
+                        command = new MySqlCommand(query2, connection);
+                        command.Parameters.AddWithValue("@gid", i);
+                       
+                        using (MySqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                Group group = new Group
+                                {
+                                    group_ID = i,
+                                    group_name = reader.GetString("groupName"),
+                                    groupImage = reader["GroupImage"] == DBNull.Value ? null : (byte[])reader["groupImage"],
+                                    groupLeader = reader.GetString("groupLeader")
+
+                                };
+                                if (group.groupImage != null)
+                                {
+                                    using (var ms = new MemoryStream(group.groupImage))
+                                    {
+                                        group.groupImageObj = Image.FromStream(ms);
+                                    }
+                                }
+
+                                groupList.Add(group);
+                            }
+                        }
+                    }
+
+                   connection.Close();
+
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error: " + ex.Message);
+            }
+            return groupList;
+        }
+
+
+
+
+
+
+
 
 
         public void insertMember(int groupID, string email)
@@ -318,6 +398,61 @@ namespace WindowsFormsApp1.Classes
                 connection.Close();
             }
         }
+
+
+
+
+        public Account getGroupLeader(int groupID)
+        {
+            Account leader = new Account();
+           using(MySqlConnection connection = new MySqlConnection(connect))
+            {
+                string email = null;
+                string query = "SELECT `groupLeader` FROM `group` WHERE `group_ID` = @id;";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@id", groupID);
+
+                using(MySqlDataReader reader = command.ExecuteReader())
+                {
+                    if (reader.Read())
+                        email = reader.GetString("groupLeader");
+                }
+
+                if(email!= null)
+                {
+                    query = "SELECT * FROM `account` WHERE `email`='" + email + "';";
+                    command = new MySqlCommand(query, connection);
+                    using(MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        while(reader.Read())
+                        {
+                            leader = new Account
+                            {
+                                accountID = reader.GetInt32("idAccount"),
+                                email = reader.GetString("email"),
+                                username = reader.GetString("username"),
+                                contactNumber = reader.GetString("contactNumber"),
+                                status = manager.GetStatusFromString(reader.GetString("status")),
+                                accountImage = reader["accountProfile"] == DBNull.Value ? null : (byte[])reader["accountProfile"],
+
+                            };
+                            if (leader.accountImage != null)
+                            {
+                                using (var ms = new MemoryStream(leader.accountImage))
+                                {
+                                    leader.accountProfile = Image.FromStream(ms);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            return leader;
+            
+
+        }
+
 
     }
 }

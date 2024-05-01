@@ -108,7 +108,7 @@
             this.Schedules.ForeColor = System.Drawing.Color.White;
             this.Schedules.Image = global::WindowsFormsApp1.Properties.Resources.schedule_2669764;
             this.Schedules.ImageSize = new System.Drawing.Size(20, 20);
-            this.Schedules.Location = new System.Drawing.Point(3, 102);
+            this.Schedules.Location = new System.Drawing.Point(0, 54);
             this.Schedules.Name = "Schedules";
             this.Schedules.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.Schedules.OnHoverBaseColor2 = System.Drawing.Color.Black;
@@ -147,7 +147,7 @@
             this.Announcements.ForeColor = System.Drawing.Color.White;
             this.Announcements.Image = global::WindowsFormsApp1.Properties.Resources.megaphone_2907972;
             this.Announcements.ImageSize = new System.Drawing.Size(20, 20);
-            this.Announcements.Location = new System.Drawing.Point(0, 150);
+            this.Announcements.Location = new System.Drawing.Point(0, 102);
             this.Announcements.Name = "Announcements";
             this.Announcements.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.Announcements.OnHoverBaseColor2 = System.Drawing.Color.Black;
@@ -171,7 +171,7 @@
             this.Tasks.ForeColor = System.Drawing.Color.White;
             this.Tasks.Image = global::WindowsFormsApp1.Properties.Resources.task_10074264;
             this.Tasks.ImageSize = new System.Drawing.Size(20, 20);
-            this.Tasks.Location = new System.Drawing.Point(0, 54);
+            this.Tasks.Location = new System.Drawing.Point(0, 6);
             this.Tasks.Name = "Tasks";
             this.Tasks.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.Tasks.OnHoverBaseColor2 = System.Drawing.Color.Black;
@@ -195,7 +195,7 @@
             this.addMember.ForeColor = System.Drawing.Color.White;
             this.addMember.Image = global::WindowsFormsApp1.Properties.Resources.add_user_456320;
             this.addMember.ImageSize = new System.Drawing.Size(20, 20);
-            this.addMember.Location = new System.Drawing.Point(0, 6);
+            this.addMember.Location = new System.Drawing.Point(0, 150);
             this.addMember.Name = "addMember";
             this.addMember.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(155)))), ((int)(((byte)(145)))), ((int)(((byte)(221)))));
             this.addMember.OnHoverBaseColor2 = System.Drawing.Color.Black;

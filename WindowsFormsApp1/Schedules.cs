@@ -11,12 +11,16 @@ using WindowsFormsApp1.Classes;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.ListView;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using System.Text.RegularExpressions;
 
 namespace WindowsFormsApp1
 {
     public partial class Schedules : UserControl
     {
         public int groupID ;
+        public Classes.Group group;
+        public bool isMember;
+        public GroupPage grop;
         public Schedules()
         {
             InitializeComponent();
@@ -27,7 +31,20 @@ namespace WindowsFormsApp1
         {
             DBManager manager = new DBManager();
             DateTime date = dateTimePicker1.Value;
-            manager.InsertDate(31, description.Text, date);
+            GroupHandler handler = new GroupHandler();
+            int id = handler.getMemberID_BYEmail(LoginForm.account.email, group.group_ID);
+            manager.InsertDate(id, description.Text, date);
+            try
+            {
+                DataTable dt = manager.LoadMemberData(id);
+                data.DataSource = dt;
+                description.Text = "Description...";
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+            }
         }
 
 
@@ -40,17 +57,34 @@ namespace WindowsFormsApp1
         private void Schedules_Load(object sender, EventArgs e)
         {
             DBManager manage = new DBManager();
-           
-            try
+            GroupHandler handler = new GroupHandler();
+            int id = handler.getMemberID_BYEmail(LoginForm.account.email,group.group_ID);
+            if(isMember)
             {
-                DataTable dt = manage.LoadData(groupID);
-                data.DataSource = dt;
+                try
+                {
+                    DataTable dt = manage.LoadMemberData(id);
+                    data.DataSource = dt;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message.ToString());
+                }
+
 
             }
-         catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message.ToString());
-            }
+            else
+                 try
+                 {
+                    gunaGradientPanel2.Size = new Size(378, 5);
+                        DataTable dt = manage.LoadData(groupID);
+                        data.DataSource = dt;
+
+                 }
+                catch (Exception ex)
+                 {
+                         MessageBox.Show(ex.Message.ToString());
+                 }
                 
            
 
@@ -66,6 +100,39 @@ namespace WindowsFormsApp1
                     e.FormattingApplied = true; // Mark formatting applied
                 }
             }
+        }
+
+        private void description_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void description_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void description_MouseEnter(object sender, EventArgs e)
+        {
+            if(description.Text == "Description..." )
+            {
+                description.Text = "";
+            }
+        }
+
+        private void description_MouseLeave(object sender, EventArgs e)
+        {
+            if(description.Text == "" || description.Text == " ")
+            {
+                description.Text = "Description...";
+            }
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            grop.FLPGroupPage.BringToFront();
+            grop.FLPGroupPage.Show();
+            this.Hide();
         }
     }
 }

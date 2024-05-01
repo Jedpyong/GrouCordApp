@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewTask));
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.gunaGradientPanel2 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.descriptiontxtbx = new System.Windows.Forms.RichTextBox();
             this.assignBtn = new Guna.UI.WinForms.GunaGradiantButton();
             this.fileLinktxtbx = new Guna.UI.WinForms.GunaLineTextBox();
@@ -59,6 +61,8 @@
             // 
             this.gunaGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel2.BackgroundImage")));
             this.gunaGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel2.Controls.Add(this.gunaLabel5);
+            this.gunaGradientPanel2.Controls.Add(this.dateTimePicker1);
             this.gunaGradientPanel2.Controls.Add(this.descriptiontxtbx);
             this.gunaGradientPanel2.Controls.Add(this.assignBtn);
             this.gunaGradientPanel2.Controls.Add(this.fileLinktxtbx);
@@ -70,12 +74,34 @@
             this.gunaGradientPanel2.GradiantColor2 = System.Drawing.Color.Blue;
             this.gunaGradientPanel2.GradiantColor3 = System.Drawing.Color.Black;
             this.gunaGradientPanel2.GradiantColor4 = System.Drawing.Color.Black;
-            this.gunaGradientPanel2.Location = new System.Drawing.Point(3, 3);
+            this.gunaGradientPanel2.Location = new System.Drawing.Point(0, 0);
+            this.gunaGradientPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.gunaGradientPanel2.Name = "gunaGradientPanel2";
-            this.gunaGradientPanel2.Size = new System.Drawing.Size(375, 286);
+            this.gunaGradientPanel2.Size = new System.Drawing.Size(378, 289);
             this.gunaGradientPanel2.TabIndex = 0;
             this.gunaGradientPanel2.Text = "gunaGradientPanel2";
             this.gunaGradientPanel2.Click += new System.EventHandler(this.gunaGradientPanel2_Click);
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI Variable Small Semibol", 9F, System.Drawing.FontStyle.Bold);
+            this.gunaLabel5.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel5.Location = new System.Drawing.Point(53, 195);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(63, 16);
+            this.gunaLabel5.TabIndex = 9;
+            this.gunaLabel5.Text = "Due Date:";
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Segoe UI Variable Small Semibol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(138, 191);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 8;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // descriptiontxtbx
             // 
@@ -97,7 +123,7 @@
             this.assignBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.assignBtn.Image = null;
             this.assignBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.assignBtn.Location = new System.Drawing.Point(138, 214);
+            this.assignBtn.Location = new System.Drawing.Point(138, 230);
             this.assignBtn.Name = "assignBtn";
             this.assignBtn.OnHoverBaseColor1 = System.Drawing.Color.Black;
             this.assignBtn.OnHoverBaseColor2 = System.Drawing.Color.Blue;
@@ -136,6 +162,7 @@
             this.taskNametxtbx.PasswordChar = '\0';
             this.taskNametxtbx.Size = new System.Drawing.Size(239, 27);
             this.taskNametxtbx.TabIndex = 3;
+            this.taskNametxtbx.Click += new System.EventHandler(this.taskNametxtbx_Click);
             // 
             // gunaLabel4
             // 
@@ -248,5 +275,7 @@
         private Guna.UI.WinForms.GunaLineTextBox fileLinktxtbx;
         private Guna.UI.WinForms.GunaLineTextBox taskNametxtbx;
         private System.Windows.Forms.RichTextBox descriptiontxtbx;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel5;
     }
 }

@@ -33,11 +33,13 @@
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
             this.Remarks = new Guna.UI.WinForms.GunaLabel();
+            this.remarkss = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.assigned = new Guna.UI.WinForms.GunaComboBox();
             this.taskName = new Guna.UI.WinForms.GunaLabel();
-            this.remarkss = new Guna.UI.WinForms.GunaLabel();
             this.buttonTask = new Guna.UI.WinForms.GunaButton();
+            this.submit = new Guna.UI.WinForms.GunaButton();
+            this.open = new Guna.UI.WinForms.GunaButton();
             this.gunaGradientPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,11 +54,13 @@
             this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
             this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gunaGradientPanel1.Controls.Add(this.Remarks);
+            this.gunaGradientPanel1.Controls.Add(this.remarkss);
             this.gunaGradientPanel1.Controls.Add(this.gunaLabel2);
             this.gunaGradientPanel1.Controls.Add(this.assigned);
             this.gunaGradientPanel1.Controls.Add(this.taskName);
-            this.gunaGradientPanel1.Controls.Add(this.remarkss);
             this.gunaGradientPanel1.Controls.Add(this.buttonTask);
+            this.gunaGradientPanel1.Controls.Add(this.submit);
+            this.gunaGradientPanel1.Controls.Add(this.open);
             this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunaGradientPanel1.ForeColor = System.Drawing.Color.White;
             this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.Navy;
@@ -78,7 +82,7 @@
             this.Remarks.BackColor = System.Drawing.Color.Black;
             this.Remarks.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Remarks.ForeColor = System.Drawing.Color.White;
-            this.Remarks.Location = new System.Drawing.Point(243, 28);
+            this.Remarks.Location = new System.Drawing.Point(243, 32);
             this.Remarks.Name = "Remarks";
             this.Remarks.Size = new System.Drawing.Size(100, 23);
             this.Remarks.TabIndex = 3;
@@ -89,6 +93,21 @@
             this.Remarks.MouseEnter += new System.EventHandler(this.Remarks_MouseEnter);
             this.Remarks.MouseLeave += new System.EventHandler(this.Remarks_MouseLeave);
             // 
+            // remarkss
+            // 
+            this.remarkss.BackColor = System.Drawing.Color.Transparent;
+            this.remarkss.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.remarkss.ForeColor = System.Drawing.Color.White;
+            this.remarkss.Location = new System.Drawing.Point(243, 28);
+            this.remarkss.Name = "remarkss";
+            this.remarkss.Size = new System.Drawing.Size(100, 23);
+            this.remarkss.TabIndex = 4;
+            this.remarkss.Text = "FINISH";
+            this.remarkss.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.remarkss.Visible = false;
+            this.remarkss.Click += new System.EventHandler(this.remarkss_Click);
+            this.remarkss.MouseLeave += new System.EventHandler(this.remarkss_MouseLeave);
+            // 
             // gunaLabel2
             // 
             this.gunaLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -97,7 +116,7 @@
             this.gunaLabel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel2.Location = new System.Drawing.Point(115, 28);
+            this.gunaLabel2.Location = new System.Drawing.Point(115, 32);
             this.gunaLabel2.Name = "gunaLabel2";
             this.gunaLabel2.Size = new System.Drawing.Size(97, 23);
             this.gunaLabel2.TabIndex = 2;
@@ -111,10 +130,10 @@
             this.assigned.BorderColor = System.Drawing.Color.Silver;
             this.assigned.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.assigned.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.assigned.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.assigned.Font = new System.Drawing.Font("Segoe UI Variable Display", 10F, System.Drawing.FontStyle.Bold);
             this.assigned.ForeColor = System.Drawing.Color.Black;
             this.assigned.FormattingEnabled = true;
-            this.assigned.Location = new System.Drawing.Point(113, 27);
+            this.assigned.Location = new System.Drawing.Point(113, 31);
             this.assigned.Name = "assigned";
             this.assigned.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.assigned.OnHoverItemForeColor = System.Drawing.Color.White;
@@ -132,20 +151,6 @@
             this.taskName.Text = "PANGAN NI\r\n SA TASK";
             this.taskName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.taskName.Click += new System.EventHandler(this.taskName_Click);
-            // 
-            // remarkss
-            // 
-            this.remarkss.BackColor = System.Drawing.Color.Transparent;
-            this.remarkss.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.remarkss.ForeColor = System.Drawing.Color.White;
-            this.remarkss.Location = new System.Drawing.Point(243, 28);
-            this.remarkss.Name = "remarkss";
-            this.remarkss.Size = new System.Drawing.Size(100, 23);
-            this.remarkss.TabIndex = 4;
-            this.remarkss.Text = "FINISH";
-            this.remarkss.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.remarkss.Visible = false;
-            this.remarkss.MouseLeave += new System.EventHandler(this.remarkss_MouseLeave);
             // 
             // buttonTask
             // 
@@ -173,6 +178,58 @@
             this.buttonTask.Visible = false;
             this.buttonTask.Click += new System.EventHandler(this.buttonTask_Click);
             // 
+            // submit
+            // 
+            this.submit.AnimationHoverSpeed = 0.07F;
+            this.submit.AnimationSpeed = 0.03F;
+            this.submit.BackColor = System.Drawing.Color.Transparent;
+            this.submit.BaseColor = System.Drawing.Color.Green;
+            this.submit.BorderColor = System.Drawing.Color.Transparent;
+            this.submit.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Bold);
+            this.submit.ForeColor = System.Drawing.Color.White;
+            this.submit.Image = null;
+            this.submit.ImageSize = new System.Drawing.Size(20, 20);
+            this.submit.Location = new System.Drawing.Point(243, 25);
+            this.submit.Name = "submit";
+            this.submit.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.submit.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.submit.OnHoverForeColor = System.Drawing.Color.White;
+            this.submit.OnHoverImage = null;
+            this.submit.OnPressedColor = System.Drawing.Color.Black;
+            this.submit.Radius = 10;
+            this.submit.Size = new System.Drawing.Size(100, 35);
+            this.submit.TabIndex = 7;
+            this.submit.Text = "Submit";
+            this.submit.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.submit.Visible = false;
+            this.submit.Click += new System.EventHandler(this.submit_Click);
+            // 
+            // open
+            // 
+            this.open.AnimationHoverSpeed = 0.07F;
+            this.open.AnimationSpeed = 0.03F;
+            this.open.BackColor = System.Drawing.Color.Transparent;
+            this.open.BaseColor = System.Drawing.Color.Black;
+            this.open.BorderColor = System.Drawing.Color.Transparent;
+            this.open.Font = new System.Drawing.Font("Segoe UI Variable Display", 9F, System.Drawing.FontStyle.Bold);
+            this.open.ForeColor = System.Drawing.Color.White;
+            this.open.Image = null;
+            this.open.ImageSize = new System.Drawing.Size(20, 20);
+            this.open.Location = new System.Drawing.Point(134, 25);
+            this.open.Name = "open";
+            this.open.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.open.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.open.OnHoverForeColor = System.Drawing.Color.White;
+            this.open.OnHoverImage = null;
+            this.open.OnPressedColor = System.Drawing.Color.Black;
+            this.open.Radius = 10;
+            this.open.Size = new System.Drawing.Size(100, 35);
+            this.open.TabIndex = 6;
+            this.open.Text = "Open";
+            this.open.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.open.Visible = false;
+            this.open.Click += new System.EventHandler(this.open_Click);
+            // 
             // task
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -196,5 +253,7 @@
         public Guna.UI.WinForms.GunaLabel remarkss;
         public Guna.UI.WinForms.GunaLabel gunaLabel2;
         public Guna.UI.WinForms.GunaButton buttonTask;
+        public Guna.UI.WinForms.GunaButton open;
+        public Guna.UI.WinForms.GunaButton submit;
     }
 }

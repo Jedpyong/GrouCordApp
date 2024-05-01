@@ -20,9 +20,20 @@ namespace WindowsFormsApp1
         public GroupPage page;
         public int memberID;
         public string name;
-        public Members()
+       
+        public Members(bool isMember)
         {
             InitializeComponent();
+            if(isMember)
+            {
+                assignBtn.Visible = false;
+                Assign.Visible = false;
+                remove.Visible = false;
+                removeBtn.Visible = false;
+                
+
+            }
+           
         }
 
         private void Member_Click(object sender, EventArgs e)
@@ -247,6 +258,22 @@ namespace WindowsFormsApp1
             GroupHandler handler = new GroupHandler();
             handler.removeMember(memberID);
             page.FLPGroupPage.Controls.Remove(this);
+        }
+
+        private void memberName_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Members_Load(object sender, EventArgs e)
+        {
+            if (Role.Text == "LEADER")
+            {
+                gunaGradientPanel1.GradiantColor1 = Color.Black;
+                gunaGradientPanel1.GradiantColor2 = Color.Black;
+                gunaGradientPanel1.GradiantColor3 = Color.Black;
+                gunaGradientPanel1.GradiantColor4 = Color.Red;
+            }
         }
     }
 }

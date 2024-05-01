@@ -92,5 +92,15 @@ namespace WindowsFormsApp1
 
        
         }
+
+        private void back_MouseEnter(object sender, EventArgs e)
+        {
+            back.ImageSize = new Size(35, 35);
+        }
+
+        private void back_MouseLeave(object sender, EventArgs e)
+        {
+            back.ImageSize = new Size(30, 30);
+        }
     }
 }

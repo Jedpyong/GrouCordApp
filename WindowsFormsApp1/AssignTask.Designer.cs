@@ -164,6 +164,8 @@
             this.back.Size = new System.Drawing.Size(40, 41);
             this.back.TabIndex = 0;
             this.back.Click += new System.EventHandler(this.back_Click);
+            this.back.MouseEnter += new System.EventHandler(this.back_MouseEnter);
+            this.back.MouseLeave += new System.EventHandler(this.back_MouseLeave);
             // 
             // AssignTask
             // 

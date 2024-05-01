@@ -44,7 +44,7 @@
             this.TaskFlowchart.Location = new System.Drawing.Point(0, 41);
             this.TaskFlowchart.Margin = new System.Windows.Forms.Padding(0);
             this.TaskFlowchart.Name = "TaskFlowchart";
-            this.TaskFlowchart.Size = new System.Drawing.Size(378, 276);
+            this.TaskFlowchart.Size = new System.Drawing.Size(378, 281);
             this.TaskFlowchart.TabIndex = 4;
             this.TaskFlowchart.Paint += new System.Windows.Forms.PaintEventHandler(this.TaskFlowchart_Paint);
             // 
@@ -99,7 +99,7 @@
             this.Controls.Add(this.TaskFlowchart);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Name = "Tasks";
-            this.Size = new System.Drawing.Size(378, 317);
+            this.Size = new System.Drawing.Size(378, 322);
             this.Load += new System.EventHandler(this.Tasks_Load);
             this.gunaGradientPanel1.ResumeLayout(false);
             this.gunaGradientPanel1.PerformLayout();

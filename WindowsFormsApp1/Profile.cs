@@ -264,16 +264,27 @@ namespace WindowsFormsApp1
             // hp.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
 
             //LoginForm.hp = hop;
+            
             LoginForm.account = manage.readAccountByEmail(LoginForm.account.email);
             LoginForm.hp.profileButton.Image = LoginForm.account.accountProfile;
             LoginForm.hp.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
             LoginForm.hp.setStat.Text = LoginForm.account.status.ToString();
-            
+            LoginForm.hp.ReloadHomeFLP();
             this.Hide();
 
 
             statuspnl.Visible = false;
             numpanel.Visible = false;
+        }
+
+        private void HomeButton_MouseEnter(object sender, EventArgs e)
+        {
+            HomeButton.ImageSize = new Size(35, 35);
+        }
+
+        private void HomeButton_MouseLeave(object sender, EventArgs e)
+        {
+            HomeButton.ImageSize = new Size(30, 30);
         }
     }
 }

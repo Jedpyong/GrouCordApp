@@ -114,6 +114,12 @@
     <Compile Include="Announcement.Designer.cs">
       <DependentUpon>Announcement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Assignment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Assignment.Designer.cs">
+      <DependentUpon>Assignment.cs</DependentUpon>
+    </Compile>
     <Compile Include="AssignTask.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -222,6 +228,18 @@
     <Compile Include="Schedules.Designer.cs">
       <DependentUpon>Schedules.cs</DependentUpon>
     </Compile>
+    <Compile Include="Submission.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Submission.Designer.cs">
+      <DependentUpon>Submission.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Submissions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Submissions.Designer.cs">
+      <DependentUpon>Submissions.cs</DependentUpon>
+    </Compile>
     <Compile Include="task.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -251,6 +269,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Announcement.resx">
       <DependentUpon>Announcement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assignment.resx">
+      <DependentUpon>Assignment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AssignTask.resx">
       <DependentUpon>AssignTask.cs</DependentUpon>
@@ -309,6 +330,12 @@
     </Compile>
     <EmbeddedResource Include="Schedules.resx">
       <DependentUpon>Schedules.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submission.resx">
+      <DependentUpon>Submission.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Submissions.resx">
+      <DependentUpon>Submissions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="task.resx">
       <DependentUpon>task.cs</DependentUpon>

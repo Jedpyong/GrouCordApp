@@ -99,7 +99,7 @@ namespace WindowsFormsApp1
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            int count = 0;
+             int count = 0;
             if (AddMemFLP.Controls.Count == 0)
                 MessageBox.Show("Please add some members");
 
@@ -115,7 +115,7 @@ namespace WindowsFormsApp1
                 List<Account> members = handler.getMembers(group);
                 foreach (Account mem in members)
                 {
-                    Members panel = new Members();
+                    Members panel = new Members(false);
                     panel.memberName.Text = mem.username;
                     panel.emailLabel.Text = mem.email;
                     panel.status.Text = mem.status.ToString();
@@ -134,7 +134,7 @@ namespace WindowsFormsApp1
                 grop.FLPGroupPage.BringToFront();
                 grop.Show();
                 grop.BringToFront();
-
+          
 
 
             }
@@ -168,6 +168,16 @@ namespace WindowsFormsApp1
             grop.FLPGroupPage.BringToFront();
             grop.FLPGroupPage.Show();
             this.Hide();
+        }
+
+        private void back_MouseEnter(object sender, EventArgs e)
+        {
+            back.ImageSize = new Size(35, 35);
+        }
+
+        private void back_MouseLeave(object sender, EventArgs e)
+        {
+            back.ImageSize = new Size(30, 30);
         }
     }
 }

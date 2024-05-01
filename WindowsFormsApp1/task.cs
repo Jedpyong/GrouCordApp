@@ -19,8 +19,10 @@ namespace WindowsFormsApp1
     public partial class task : UserControl
     {
         public bool isAssign=false;
+        public bool isMember = false;
         public int memberID;
         public GroupPage page;
+        public Taskc thisTask;
         public task()
         {
             InitializeComponent();
@@ -29,7 +31,8 @@ namespace WindowsFormsApp1
 
         private void Remarks_Click(object sender, EventArgs e)
         {
-            if(remarkss.Text == "FINISHED")
+          
+            if(remarkss.Text == "SUBMITTED")
             {
                 remarkss.BackColor = Color.Green;
                 remarkss.BringToFront();
@@ -101,7 +104,7 @@ namespace WindowsFormsApp1
                 task.taskname = buttonTask.Text;
                // MessageBox.Show(task.taskname + task.description + task.remarks + memberID,task.link);
 
-                manage.insertTask(memberID, task.description, task.taskname, task.link);
+                manage.insertTask(memberID, task.description, task.taskname, task.link, task.dueDate);
 
                 //emailing
 
@@ -178,6 +181,82 @@ namespace WindowsFormsApp1
                 this.Hide();
 
             }
+        }
+
+        private void submit_Click(object sender, EventArgs e)
+        {
+            Submission submit = new Submission();
+            submit.thisTask = thisTask;
+            submit.panel = this;
+            page.outpnl.Controls.Add(submit);
+            submit.BringToFront();
+            page.Show();
+           
+
+        }
+
+        private void open_Click(object sender, EventArgs e)
+        {
+            
+           
+            try
+            {
+                Assignment open = new Assignment();
+                open.thisTask = thisTask;
+                page.outpnl.Controls.Add(open);
+                open.BringToFront();
+                page.Show();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show($"error: {ex.Message}");
+            }
+           
+        }
+
+        private void remarkss_Click(object sender, EventArgs e)
+        {
+            if(remarkss.Text == "SUBMITTED")
+            {
+                DBManager manager = new DBManager();
+                Submissions submissions = new Submissions();
+                if (isMember)
+                {
+                    Taskc task = manager.retrieveTaskSubmitted(thisTask.taskID);
+                    submissions.assignedTask = thisTask;
+                    submissions.subTask = task;
+                    submissions.page = page;
+                    submissions.isMember = true;
+                   
+                }
+                else if (!isMember)
+                {
+                    submissions.edit.Visible = false;
+                    submissions.descriptiontxtbx.Size = new Size(342, 267);
+                    submissions.subtasks = manager.retrieveTaskSubmittedByLeader(thisTask.description, thisTask.taskname, thisTask.link);
+                   
+                }
+
+                // dapat naa koy condition ari nig leader na pov kanang makita tanan nagsubmit ana na task.
+                try {
+                   
+                    page.outpnl.Controls.Add(submissions);
+                    submissions.BringToFront();
+                    submissions.Show();
+                }
+                catch( Exception ex )
+                {
+                    MessageBox.Show($"Error{ex.Message}");
+                }
+               
+
+
+            }
+
+
+
+
+
         }
     }
 }

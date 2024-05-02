@@ -24,13 +24,6 @@ namespace WindowsFormsApp1.Classes
             groupLeader = null;
             members = new List<Account>();
         }
-        public Group( string group_name, byte[] groupImage, string groupLeader)
-        {
-           
-            this.group_name = group_name;
-            this.groupImage = groupImage;
-            this.groupLeader = groupLeader;
-            this.members = new List<Account>();
-        }
+ 
     }
 }

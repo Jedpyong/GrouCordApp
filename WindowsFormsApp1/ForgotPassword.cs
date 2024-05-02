@@ -38,7 +38,8 @@ namespace WindowsFormsApp1
 
         private void nextbutton_Click(object sender, EventArgs e)
         {
-            if(randomCode == (OTPTxtbx.Text).ToString())
+            Cursor.Current = Cursors.WaitCursor;
+            if (randomCode == (OTPTxtbx.Text).ToString())
             {
                 to = EmailTxtbx.Text;
                 LoginForm.account.email = to;
@@ -52,6 +53,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Incorrect OTP code");
             }
+            Cursor.Current = Cursors.Default;
         }
 
 
@@ -62,6 +64,7 @@ namespace WindowsFormsApp1
 
         private void sendotpbutn_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             string con = "server=127.0.0.1;uid=root;pwd=July072004;database=groucord;";
             MySqlConnection connection = new MySqlConnection(con);
 
@@ -92,7 +95,6 @@ namespace WindowsFormsApp1
 
                     SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
                     smtp.EnableSsl = true;
-                    //smtp.Port = 587;
                     smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                     smtp.Credentials = new NetworkCredential(from, pass);
 
@@ -129,6 +131,7 @@ namespace WindowsFormsApp1
             }
             finally
             {
+                Cursor.Current = Cursors.Default;
                 connection.Close();
             }
 

@@ -33,7 +33,7 @@
             this.gunaGradientPanel2 = new Guna.UI.WinForms.GunaGradientPanel();
             this.Repost = new Guna.UI.WinForms.GunaCircleButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.gunaCircleButton1 = new Guna.UI.WinForms.GunaCircleButton();
+            this.deleteAnn = new Guna.UI.WinForms.GunaCircleButton();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.Atitle = new Guna.UI.WinForms.GunaTextBox();
             this.Bodytxtbx = new System.Windows.Forms.RichTextBox();
@@ -71,7 +71,7 @@
             this.gunaGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gunaGradientPanel2.Controls.Add(this.Repost);
             this.gunaGradientPanel2.Controls.Add(this.label1);
-            this.gunaGradientPanel2.Controls.Add(this.gunaCircleButton1);
+            this.gunaGradientPanel2.Controls.Add(this.deleteAnn);
             this.gunaGradientPanel2.Controls.Add(this.checkedListBox1);
             this.gunaGradientPanel2.GradiantColor1 = System.Drawing.Color.Black;
             this.gunaGradientPanel2.GradiantColor2 = System.Drawing.Color.Black;
@@ -117,27 +117,27 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "       Previous\r\n Announcements";
             // 
-            // gunaCircleButton1
+            // deleteAnn
             // 
-            this.gunaCircleButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaCircleButton1.AnimationSpeed = 0.03F;
-            this.gunaCircleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton1.BaseColor = System.Drawing.Color.White;
-            this.gunaCircleButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaCircleButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton1.Image = global::WindowsFormsApp1.Properties.Resources.delete;
-            this.gunaCircleButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.gunaCircleButton1.Location = new System.Drawing.Point(16, 222);
-            this.gunaCircleButton1.Name = "gunaCircleButton1";
-            this.gunaCircleButton1.OnHoverBaseColor = System.Drawing.Color.Black;
-            this.gunaCircleButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaCircleButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton1.OnHoverImage = null;
-            this.gunaCircleButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaCircleButton1.Size = new System.Drawing.Size(40, 40);
-            this.gunaCircleButton1.TabIndex = 28;
-            this.gunaCircleButton1.Click += new System.EventHandler(this.gunaCircleButton1_Click);
+            this.deleteAnn.AnimationHoverSpeed = 0.07F;
+            this.deleteAnn.AnimationSpeed = 0.03F;
+            this.deleteAnn.BackColor = System.Drawing.Color.Transparent;
+            this.deleteAnn.BaseColor = System.Drawing.Color.White;
+            this.deleteAnn.BorderColor = System.Drawing.Color.Black;
+            this.deleteAnn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.deleteAnn.ForeColor = System.Drawing.Color.White;
+            this.deleteAnn.Image = global::WindowsFormsApp1.Properties.Resources.delete;
+            this.deleteAnn.ImageSize = new System.Drawing.Size(30, 30);
+            this.deleteAnn.Location = new System.Drawing.Point(16, 222);
+            this.deleteAnn.Name = "deleteAnn";
+            this.deleteAnn.OnHoverBaseColor = System.Drawing.Color.Black;
+            this.deleteAnn.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.deleteAnn.OnHoverForeColor = System.Drawing.Color.White;
+            this.deleteAnn.OnHoverImage = null;
+            this.deleteAnn.OnPressedColor = System.Drawing.Color.Black;
+            this.deleteAnn.Size = new System.Drawing.Size(40, 40);
+            this.deleteAnn.TabIndex = 28;
+            this.deleteAnn.Click += new System.EventHandler(this.gunaCircleButton1_Click);
             // 
             // checkedListBox1
             // 
@@ -286,7 +286,7 @@
         private Guna.UI.WinForms.GunaTextBox Atitle;
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel2;
         public System.Windows.Forms.CheckedListBox checkedListBox1;
-        private Guna.UI.WinForms.GunaCircleButton gunaCircleButton1;
+        private Guna.UI.WinForms.GunaCircleButton deleteAnn;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaCircleButton Repost;
     }

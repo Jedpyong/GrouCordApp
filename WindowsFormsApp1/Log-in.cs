@@ -33,70 +33,16 @@ namespace WindowsFormsApp1
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            /*List<Form> openForms = new List<Form>(Application.OpenForms);
-
-            // Loop through the copy and close other forms
-            foreach (Form form in openForms)
-            {
-                if (form != this)
-                {
-                    form.Close();
-                }
-            }*/
+          
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usernameTextBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void usernameTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gunaAdvenceButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void passwordTextBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
+      
 
         private void forgotpass_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
             ForgotPassword fp = new ForgotPassword();
             this.Hide();
             fp.Show();
-        }
-
-
-
-        
-        
-
-        private void gunaLinkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            CreateAccount ca = new CreateAccount();
-            this.Hide();
-            ca.Show();
         }
 
         private void close_Click(object sender, EventArgs e)
@@ -108,6 +54,8 @@ namespace WindowsFormsApp1
 
         private void loginButton_Click_1(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+
             string con = "server=127.0.0.1;uid=root;pwd=July072004;database=groucord;";
             MySqlConnection connection = new MySqlConnection(con);
 
@@ -145,7 +93,6 @@ namespace WindowsFormsApp1
                     hp = new HomePage();
 
                     hp.Show();
-                    //this.Close();
                     this.Hide();
                 }
             }
@@ -155,6 +102,7 @@ namespace WindowsFormsApp1
             }
             finally
             {
+                Cursor.Current = Cursors.Default;
                 connection.Close();
             }
         }
@@ -162,6 +110,13 @@ namespace WindowsFormsApp1
         private void gunaGradientPanel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void createAcc_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            CreateAccount ca = new CreateAccount();
+            this.Hide();
+            ca.Show();
         }
     }
 }

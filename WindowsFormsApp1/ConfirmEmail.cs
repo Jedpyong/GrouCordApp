@@ -30,23 +30,22 @@ namespace WindowsFormsApp1
 
         private void confirmbutn_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+
             if (code == (OTPTxtbx.Text).ToString())
             {
                 string con = "server=127.0.0.1;uid=root;pwd=July072004;database=groucord;";
                 MySqlConnection connection = new MySqlConnection(con);
 
                 string query1 = "insert into account(email,password,username,contactNumber) values('"+email+"','"+password+"','"+name+"','N/A')";
-               // string query2 = "INSERT INTO profile SET username = '" + name + "',idAccount = (SELECT idAccount FROM account WHERE email = '" + email + "')";
+              
                 connection.Open();
                 MySqlCommand cmd1 = new MySqlCommand(query1, connection);
                 cmd1.ExecuteNonQuery();
-                //cmd1 = new MySqlCommand(query2, connection);
-                //cmd1.ExecuteNonQuery();
+                
                 MessageBox.Show("Account Created Successfully");
                 connection.Close();
 
-
-                //sheeehshhsshs wapani ma sud sa database diay
 
                 LoginForm.account = new Account();
                 LoginForm.account.email = email;
@@ -58,7 +57,6 @@ namespace WindowsFormsApp1
                 
                 LoginForm.account.status = Classes.CurrStatus.AVAILABLE;
                 manager.updateStatus(LoginForm.account.status.ToString(), LoginForm.account.email);
-
                 LoginForm.hp.Show();
 
                 connection.Close();
@@ -70,6 +68,7 @@ namespace WindowsFormsApp1
                 MessageBox.Show("Incorrect OTP code");
             }
 
+            Cursor.Current = Cursors.Default;
         }
 
         private void ConfirmEmail_Load(object sender, EventArgs e)

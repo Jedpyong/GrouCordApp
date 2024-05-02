@@ -33,6 +33,8 @@ namespace WindowsFormsApp1
 
         private void assignBtn_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+
             if (!string.IsNullOrEmpty(taskNametxtbx.Text.Trim()) && !string.IsNullOrEmpty(fileLinktxtbx.Text.Trim()) && !string.IsNullOrEmpty(descriptiontxtbx.Text.Trim()))
             {
                 //insertion
@@ -49,7 +51,6 @@ namespace WindowsFormsApp1
                     //email or message
                     string email = manage.emailQuerythroughID(memberID);
                     string from, pass, messageBody;
-                    //Taskc task = manage.retrieveTaskbyID(memberID);
 
 
                     from = "jadejaballa3@gmail.com";
@@ -57,7 +58,6 @@ namespace WindowsFormsApp1
 
                     SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
                     smtp.EnableSsl = true;
-                    //smtp.Port = 587;
                     smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                     smtp.Credentials = new NetworkCredential(from, pass);
 
@@ -125,8 +125,8 @@ namespace WindowsFormsApp1
             }
             else
                 MessageBox.Show("You Lack Information to Assign");
+            Cursor.Current = Cursors.Default;
 
-           
         }
 
         private void gunaGradientPanel2_Click(object sender, EventArgs e)

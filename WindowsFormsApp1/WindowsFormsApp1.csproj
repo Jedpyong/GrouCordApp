@@ -131,9 +131,7 @@
     <Compile Include="Classes\CurrStatus.cs" />
     <Compile Include="Classes\DBManager.cs" />
     <Compile Include="Classes\Group.cs" />
-    <Compile Include="Classes\GroupMember.cs" />
     <Compile Include="Classes\GroupHandler.cs" />
-    <Compile Include="Classes\ADStatus.cs" />
     <Compile Include="Classes\Taskc.cs" />
     <Compile Include="ConfirmEmail.cs">
       <SubType>Form</SubType>
@@ -153,7 +151,6 @@
     <Compile Include="CreateGroupUC.Designer.cs">
       <DependentUpon>CreateGroupUC.cs</DependentUpon>
     </Compile>
-    <Compile Include="CurrStatus.cs" />
     <Compile Include="EditEmail.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -258,12 +255,6 @@
     <Compile Include="UpdatePassword.Designer.cs">
       <DependentUpon>UpdatePassword.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl1.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="AddMember.resx">
       <DependentUpon>AddMember.cs</DependentUpon>
     </EmbeddedResource>
@@ -345,9 +336,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdatePassword.resx">
       <DependentUpon>UpdatePassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

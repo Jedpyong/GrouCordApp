@@ -35,8 +35,12 @@ namespace WindowsFormsApp1
                 Apanel.accs.Remove(acc);
             }
             
-            
-            //this.Hide();    
+   
+        }
+
+        private void initialMemberBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

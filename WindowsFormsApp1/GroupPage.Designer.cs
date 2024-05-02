@@ -41,7 +41,7 @@
             this.Notif2 = new Guna.UI.WinForms.GunaImageButton();
             this.groupPic = new Guna.UI.WinForms.GunaCirclePictureBox();
             this.groupName = new Guna.UI.WinForms.GunaLabel();
-            this.gunaImageButton1 = new Guna.UI.WinForms.GunaImageButton();
+            this.HomeBtn = new Guna.UI.WinForms.GunaImageButton();
             this.outpnl.SuspendLayout();
             this.gunaGradientPanel1.SuspendLayout();
             this.upperPanel.SuspendLayout();
@@ -216,7 +216,7 @@
             this.upperPanel.Controls.Add(this.Notif2);
             this.upperPanel.Controls.Add(this.groupPic);
             this.upperPanel.Controls.Add(this.groupName);
-            this.upperPanel.Controls.Add(this.gunaImageButton1);
+            this.upperPanel.Controls.Add(this.HomeBtn);
             this.upperPanel.GradiantColor1 = System.Drawing.Color.Blue;
             this.upperPanel.GradiantColor2 = System.Drawing.Color.Black;
             this.upperPanel.GradiantColor3 = System.Drawing.Color.Blue;
@@ -268,21 +268,21 @@
             this.groupName.Text = "GroupName";
             this.groupName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // gunaImageButton1
+            // HomeBtn
             // 
-            this.gunaImageButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaImageButton1.Image = global::WindowsFormsApp1.Properties.Resources.home;
-            this.gunaImageButton1.ImageSize = new System.Drawing.Size(30, 30);
-            this.gunaImageButton1.Location = new System.Drawing.Point(12, 9);
-            this.gunaImageButton1.Name = "gunaImageButton1";
-            this.gunaImageButton1.OnHoverImage = null;
-            this.gunaImageButton1.OnHoverImageOffset = new System.Drawing.Point(0, 0);
-            this.gunaImageButton1.Size = new System.Drawing.Size(36, 35);
-            this.gunaImageButton1.TabIndex = 1;
-            this.gunaImageButton1.Click += new System.EventHandler(this.gunaImageButton1_Click_1);
-            this.gunaImageButton1.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaImageButton1_Paint);
-            this.gunaImageButton1.MouseEnter += new System.EventHandler(this.gunaImageButton1_MouseEnter);
-            this.gunaImageButton1.MouseLeave += new System.EventHandler(this.gunaImageButton1_MouseLeave);
+            this.HomeBtn.BackColor = System.Drawing.Color.Transparent;
+            this.HomeBtn.Image = global::WindowsFormsApp1.Properties.Resources.home;
+            this.HomeBtn.ImageSize = new System.Drawing.Size(30, 30);
+            this.HomeBtn.Location = new System.Drawing.Point(12, 9);
+            this.HomeBtn.Name = "HomeBtn";
+            this.HomeBtn.OnHoverImage = null;
+            this.HomeBtn.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.HomeBtn.Size = new System.Drawing.Size(36, 35);
+            this.HomeBtn.TabIndex = 1;
+            this.HomeBtn.Click += new System.EventHandler(this.HomeBtn_Click);
+            this.HomeBtn.Paint += new System.Windows.Forms.PaintEventHandler(this.gunaImageButton1_Paint);
+            this.HomeBtn.MouseEnter += new System.EventHandler(this.gunaImageButton1_MouseEnter);
+            this.HomeBtn.MouseLeave += new System.EventHandler(this.gunaImageButton1_MouseLeave);
             // 
             // GroupPage
             // 
@@ -308,7 +308,7 @@
         #endregion
 
         private Guna.UI.WinForms.GunaGradientPanel upperPanel;
-        private Guna.UI.WinForms.GunaImageButton gunaImageButton1;
+        private Guna.UI.WinForms.GunaImageButton HomeBtn;
         public Guna.UI.WinForms.GunaLabel groupName;
         public Guna.UI.WinForms.GunaCirclePictureBox groupPic;
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;

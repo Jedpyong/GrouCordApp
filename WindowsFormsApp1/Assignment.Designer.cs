@@ -65,6 +65,7 @@
             this.descriptiontxtbx.Size = new System.Drawing.Size(342, 273);
             this.descriptiontxtbx.TabIndex = 7;
             this.descriptiontxtbx.Text = "";
+            this.descriptiontxtbx.TextChanged += new System.EventHandler(this.descriptiontxtbx_TextChanged);
             // 
             // back
             // 

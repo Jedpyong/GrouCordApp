@@ -42,6 +42,10 @@ namespace WindowsFormsApp1
                 this.Hide();
                 
             }
+            else
+            {
+                MessageBox.Show("Task deadline was on " + assignedTask.dueDate.ToString("f") + "\nCannot be edited.");
+            }
            
         }
 
@@ -62,9 +66,6 @@ namespace WindowsFormsApp1
             }
         }
 
-        private void submitBtn_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

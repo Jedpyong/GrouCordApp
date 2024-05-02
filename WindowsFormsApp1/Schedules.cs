@@ -29,6 +29,8 @@ namespace WindowsFormsApp1
 
         private void addDB_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+
             DBManager manager = new DBManager();
             DateTime date = dateTimePicker1.Value;
             GroupHandler handler = new GroupHandler();
@@ -45,6 +47,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(ex.Message.ToString());
             }
+            Cursor.Current = Cursors.Default;
         }
 
 
@@ -92,20 +95,16 @@ namespace WindowsFormsApp1
 
         private void data_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (e.ColumnIndex == 1) // Replace with your date column index
+            if (e.ColumnIndex == 1) 
             {
                 if (e.Value is DateTime)
                 {
-                    e.Value = ((DateTime)e.Value).ToString("M"); // Customize format as needed
-                    e.FormattingApplied = true; // Mark formatting applied
+                    e.Value = ((DateTime)e.Value).ToString("M"); 
+                    e.FormattingApplied = true; 
                 }
             }
         }
 
-        private void description_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void description_TextChanged(object sender, EventArgs e)
         {

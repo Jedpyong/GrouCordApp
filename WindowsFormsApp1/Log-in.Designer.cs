@@ -33,7 +33,7 @@
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.close = new Guna.UI.WinForms.GunaImageButton();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
-            this.gunaLinkLabel1 = new Guna.UI.WinForms.GunaLinkLabel();
+            this.createAcc = new Guna.UI.WinForms.GunaLinkLabel();
             this.forgotpass = new System.Windows.Forms.LinkLabel();
             this.loginButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@
             // 
             this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
             this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaGradientPanel1.Controls.Add(this.gunaLinkLabel1);
+            this.gunaGradientPanel1.Controls.Add(this.createAcc);
             this.gunaGradientPanel1.Controls.Add(this.forgotpass);
             this.gunaGradientPanel1.Controls.Add(this.loginButton);
             this.gunaGradientPanel1.Controls.Add(this.label3);
@@ -95,21 +95,21 @@
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             this.gunaGradientPanel1.Click += new System.EventHandler(this.gunaGradientPanel1_Click);
             // 
-            // gunaLinkLabel1
+            // createAcc
             // 
-            this.gunaLinkLabel1.AutoSize = true;
-            this.gunaLinkLabel1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaLinkLabel1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaLinkLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLinkLabel1.LinkColor = System.Drawing.Color.White;
-            this.gunaLinkLabel1.Location = new System.Drawing.Point(150, 251);
-            this.gunaLinkLabel1.Name = "gunaLinkLabel1";
-            this.gunaLinkLabel1.Size = new System.Drawing.Size(116, 15);
-            this.gunaLinkLabel1.TabIndex = 19;
-            this.gunaLinkLabel1.TabStop = true;
-            this.gunaLinkLabel1.Text = "Create New Account";
-            this.gunaLinkLabel1.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.gunaLinkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.gunaLinkLabel1_LinkClicked_1);
+            this.createAcc.AutoSize = true;
+            this.createAcc.BackColor = System.Drawing.Color.Transparent;
+            this.createAcc.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.createAcc.ForeColor = System.Drawing.Color.White;
+            this.createAcc.LinkColor = System.Drawing.Color.White;
+            this.createAcc.Location = new System.Drawing.Point(150, 251);
+            this.createAcc.Name = "createAcc";
+            this.createAcc.Size = new System.Drawing.Size(116, 15);
+            this.createAcc.TabIndex = 19;
+            this.createAcc.TabStop = true;
+            this.createAcc.Text = "Create New Account";
+            this.createAcc.VisitedLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.createAcc.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.createAcc_LinkClicked);
             // 
             // forgotpass
             // 
@@ -226,7 +226,7 @@
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaAdvenceButton loginButton;
         private System.Windows.Forms.LinkLabel forgotpass;
-        private Guna.UI.WinForms.GunaLinkLabel gunaLinkLabel1;
+        private Guna.UI.WinForms.GunaLinkLabel createAcc;
     }
 }
 

@@ -25,13 +25,11 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-        private void gunaTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void sendotpbutn_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+
             string con = "server=127.0.0.1;uid=root;pwd=July072004;database=groucord;";
             MySqlConnection connection = new MySqlConnection(con);
 
@@ -62,7 +60,6 @@ namespace WindowsFormsApp1
 
                     SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
                     smtp.EnableSsl = true;
-                    //smtp.Port = 587;
                     smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                     smtp.Credentials = new NetworkCredential(from, pass);
 
@@ -99,12 +96,14 @@ namespace WindowsFormsApp1
             }
             finally
             {
+                Cursor.Current = Cursors.Default;
                 connection.Close();
             }
         }
 
         private void confirmbutn_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             if (randomCode == (OTPTxtbx.Text).ToString())
 
             {
@@ -136,6 +135,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show("Incorrect OTP code");
             }
+            Cursor.Current = Cursors.Default;
         }
 
         private void gunaAdvenceButton1_Click(object sender, EventArgs e)

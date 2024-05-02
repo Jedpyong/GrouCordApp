@@ -30,7 +30,6 @@ namespace WindowsFormsApp1
                 Assign.Visible = false;
                 remove.Visible = false;
                 removeBtn.Visible = false;
-                
 
             }
            
@@ -40,12 +39,6 @@ namespace WindowsFormsApp1
         {
 
         }
-
-        private void Assign_Click(object sender, EventArgs e)
-        {
-
-        }
-
 
 
         private void remove_MouseEnter(object sender, EventArgs e)
@@ -75,25 +68,6 @@ namespace WindowsFormsApp1
                 removeBtn.Width -= 5;
             }
         }
-
-        private void gunaGradientPanel1_Resize(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void gunaPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-       
-
-
 
         private void removeBtn_MouseEnter(object sender, EventArgs e)
         {
@@ -212,7 +186,6 @@ namespace WindowsFormsApp1
 
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
                 smtp.EnableSsl = true;
-                //smtp.Port = 587;
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.Credentials = new NetworkCredential(from, pass);
 
@@ -256,8 +229,13 @@ namespace WindowsFormsApp1
         private void remove_Click(object sender, EventArgs e)
         {
             GroupHandler handler = new GroupHandler();
-            handler.removeMember(memberID);
-            page.FLPGroupPage.Controls.Remove(this);
+            if (MessageBox.Show("Are you sure you want to remove this person from this group?", "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                handler.removeMember(memberID);
+                page.FLPGroupPage.Controls.Remove(this);
+            }
+
+           
         }
 
         private void memberName_Click(object sender, EventArgs e)

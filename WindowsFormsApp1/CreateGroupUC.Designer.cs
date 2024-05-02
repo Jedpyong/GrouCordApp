@@ -36,7 +36,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.initMembFlow = new System.Windows.Forms.FlowLayoutPanel();
-            this.gunaCircleButton1 = new Guna.UI.WinForms.GunaCircleButton();
+            this.add = new Guna.UI.WinForms.GunaCircleButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -160,26 +160,26 @@
             this.initMembFlow.TabIndex = 12;
             this.initMembFlow.Paint += new System.Windows.Forms.PaintEventHandler(this.initMembFlow_Paint);
             // 
-            // gunaCircleButton1
+            // add
             // 
-            this.gunaCircleButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaCircleButton1.AnimationSpeed = 0.03F;
-            this.gunaCircleButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.gunaCircleButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaCircleButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton1.Image = ((System.Drawing.Image)(resources.GetObject("gunaCircleButton1.Image")));
-            this.gunaCircleButton1.ImageSize = new System.Drawing.Size(25, 25);
-            this.gunaCircleButton1.Location = new System.Drawing.Point(253, 89);
-            this.gunaCircleButton1.Name = "gunaCircleButton1";
-            this.gunaCircleButton1.OnHoverBaseColor = System.Drawing.Color.SlateBlue;
-            this.gunaCircleButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaCircleButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton1.OnHoverImage = null;
-            this.gunaCircleButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaCircleButton1.Size = new System.Drawing.Size(29, 29);
-            this.gunaCircleButton1.TabIndex = 10;
-            this.gunaCircleButton1.Click += new System.EventHandler(this.gunaCircleButton1_Click);
+            this.add.AnimationHoverSpeed = 0.07F;
+            this.add.AnimationSpeed = 0.03F;
+            this.add.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.add.BorderColor = System.Drawing.Color.Black;
+            this.add.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.add.ForeColor = System.Drawing.Color.White;
+            this.add.Image = ((System.Drawing.Image)(resources.GetObject("add.Image")));
+            this.add.ImageSize = new System.Drawing.Size(25, 25);
+            this.add.Location = new System.Drawing.Point(253, 89);
+            this.add.Name = "add";
+            this.add.OnHoverBaseColor = System.Drawing.Color.SlateBlue;
+            this.add.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.add.OnHoverForeColor = System.Drawing.Color.White;
+            this.add.OnHoverImage = null;
+            this.add.OnPressedColor = System.Drawing.Color.Black;
+            this.add.Size = new System.Drawing.Size(29, 29);
+            this.add.TabIndex = 10;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // pictureBox1
             // 
@@ -204,7 +204,7 @@
             this.BackColor = System.Drawing.Color.Transparent;
             this.Controls.Add(this.initMembFlow);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.gunaCircleButton1);
+            this.Controls.Add(this.add);
             this.Controls.Add(this.CancelGroup);
             this.Controls.Add(this.CreateGroupBtn);
             this.Controls.Add(this.memberTxtBx);
@@ -227,9 +227,9 @@
         private Guna.UI.WinForms.GunaTextBox memberTxtBx;
         private Guna.UI.WinForms.GunaButton CreateGroupBtn;
         private Guna.UI.WinForms.GunaButton CancelGroup;
-        private Guna.UI.WinForms.GunaCircleButton gunaCircleButton1;
+        private Guna.UI.WinForms.GunaCircleButton add;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox membersbox;
+       // private System.Windows.Forms.ComboBox membersbox;
         private System.Windows.Forms.ComboBox comboBox1;
         public System.Windows.Forms.FlowLayoutPanel initMembFlow;
     }

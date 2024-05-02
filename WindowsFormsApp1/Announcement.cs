@@ -35,7 +35,7 @@ namespace WindowsFormsApp1
 
         private void PostButton_Click(object sender, EventArgs e)
         {
-
+            Cursor.Current = Cursors.WaitCursor;
             if (Atitle.Text != "Announcement Head" && Bodytxtbx.Text != "                             Text Body")
             {
                 AnnouncementC announcement = new AnnouncementC();
@@ -64,10 +64,7 @@ namespace WindowsFormsApp1
             else
                 MessageBox.Show("Please enter some inputs");
 
-            // page.Show();
-
-            // this.Hide();
-
+            Cursor.Current = Cursors.Default;
 
         }
 
@@ -84,10 +81,6 @@ namespace WindowsFormsApp1
                     checkedListBox1.Items.Remove(item);
                 }
             }
-           
-
-
-
 
 
         }
@@ -106,10 +99,6 @@ namespace WindowsFormsApp1
         {
 
         }
-
-
-
-
 
         private void Bodytxtbx_Enter(object sender, EventArgs e)
         {

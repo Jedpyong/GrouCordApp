@@ -42,25 +42,16 @@ namespace WindowsFormsApp1
 
         }
 
-        private void FLPGroupPage_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-
-
-        
-
 
         private void gunaImageButton1_MouseEnter(object sender, EventArgs e)
         {
-            gunaImageButton1.ImageSize = new Size(36, 36);
+            HomeBtn.ImageSize = new Size(36, 36);
             
         }
 
         private void gunaImageButton1_MouseLeave(object sender, EventArgs e)
         {
-            gunaImageButton1.ImageSize = new Size(30, 30);
+            HomeBtn.ImageSize = new Size(30, 30);
         }
 
 
@@ -181,15 +172,11 @@ namespace WindowsFormsApp1
 
         private void addMember_Click(object sender, EventArgs e)
         {
-            //FLPGroupPage.Controls.Clear();
-            //outpnl.Controls.Clear();
             AddMember add = new AddMember();
             add.grop = this;
             add.group = this.group;
             outpnl.Controls.Add(add);
-            //FLPGroupPage.Controls.Add(outpnl);
-            //outpnl.BringToFront();
-            //outpnl.Show();
+
             add.BringToFront();
             add.Show();
         }
@@ -249,24 +236,21 @@ namespace WindowsFormsApp1
             Notif2.ImageSize = new Size(36, 36);
         }
 
-        private void gunaImageButton1_Click_1(object sender, EventArgs e)
+
+        private void gunaGradientPanel1_Click(object sender, EventArgs e)
         {
-            //naunsa ko ani?
-            /*
-            outpnl.SendToBack();
-            FLPGroupPage.BringToFront();
-            FLPGroupPage.Show();
-          */
+
+        }
+
+        private void HomeBtn_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
 
             LoginForm.hp.ReloadHomeFLP();
             LoginForm.hp.BringToFront();
             LoginForm.hp.Show();
             this.Hide();
-        }
-
-        private void gunaGradientPanel1_Click(object sender, EventArgs e)
-        {
-
+            Cursor.Current = Cursors.Default;
         }
     }
 }

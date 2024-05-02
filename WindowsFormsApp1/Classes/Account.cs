@@ -24,12 +24,7 @@ namespace WindowsFormsApp1.Classes
             this.status = CurrStatus.AVAILABLE;
             
         }
-        public Account ( string email, string password)
-        {
-           // this.accountID = accountID;
-            this.email = email;
-            this.password = password;
-        }
+       
 
         public override bool Equals(object obj)
         {

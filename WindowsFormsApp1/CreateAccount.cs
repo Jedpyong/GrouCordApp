@@ -45,6 +45,8 @@ namespace WindowsFormsApp1
 
         private void createAccountButton_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+
             string con = "server=127.0.0.1;uid=root;pwd=July072004;database=groucord;";
             MySqlConnection connection = new MySqlConnection(con);
 
@@ -52,7 +54,7 @@ namespace WindowsFormsApp1
             password = PasswordTxtbx.Text;
             name = usernameTxtbx.Text;
 
-            //bool letters = password.All(Char.IsLetter);
+          
 
             string queryemail = "SELECT * FROM account WHERE email = @email";
             string queryusername = "SELECT * FROM account WHERE username = @username";
@@ -75,20 +77,14 @@ namespace WindowsFormsApp1
                 {
                     MessageBox.Show("Email Address already used");
                     EmailTxtbx.Text = "";
-                   // connection.Close();
                 }
                 if(dt2.Rows.Count >= 1)
                 {
                     MessageBox.Show("Username already taken");
                     usernameTxtbx.Text = "";
-                    // connection.Close();
                 }
-                /*if(!letters)
-                {
-                    MessageBox.Show("Use characters as Password");
-                    PasswordTxtbx.Text = "";
-                }*/
-                else if(dt1.Rows.Count < 1 && dt2.Rows.Count < 1 /*&& letters*/) 
+               
+                else if(dt1.Rows.Count < 1 && dt2.Rows.Count < 1 ) 
                 {
                     string from, pass, messageBody;
                     Random rand = new Random();
@@ -100,7 +96,6 @@ namespace WindowsFormsApp1
 
                     SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
                     smtp.EnableSsl = true;
-                    //smtp.Port = 587;
                     smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                     smtp.Credentials = new NetworkCredential(from, pass);
 
@@ -140,6 +135,8 @@ namespace WindowsFormsApp1
                 this.createAccountButton.Cursor = Cursors.Default;
                 connection.Close();
             }
+
+      
 
         }
 

@@ -27,16 +27,9 @@ namespace WindowsFormsApp1
             InitializeComponent();
         }
 
-
-
-       
-
-
-
-
-
         private void submitBtn_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             if (!string.IsNullOrEmpty(fileLinktxtbx.Text.Trim()))
             {
 
@@ -62,14 +55,12 @@ namespace WindowsFormsApp1
                     this.Hide();
                 }
 
-               
-
             }
             else
             {
                 MessageBox.Show("Please input a link to your file!");
             }
-           
+            Cursor.Current = Cursors.Default;
         }
 
         private void back_Click(object sender, EventArgs e)

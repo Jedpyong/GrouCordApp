@@ -77,16 +77,11 @@ namespace WindowsFormsApp1
 
         private void gunaGradientPanel1_MouseEnter(object sender, EventArgs e)
         {
-            /*if(this.isAssign)
-            {
-                gunaGradientPanel1.GradiantColor4 = Color.Black;
-            }*/
+     
         }
 
         private void gunaGradientPanel1_MouseLeave(object sender, EventArgs e)
-        {/*
-            if(this.isAssign)
-                gunaGradientPanel1.GradiantColor4 = Color.DodgerBlue;*/
+        {
         }
 
         private void taskName_Click(object sender, EventArgs e)
@@ -102,15 +97,12 @@ namespace WindowsFormsApp1
                 DBManager manage = new DBManager();
                 Taskc task = manage.retrieveTask(buttonTask.Text);
                 task.taskname = buttonTask.Text;
-               // MessageBox.Show(task.taskname + task.description + task.remarks + memberID,task.link);
-
+              
                 manage.insertTask(memberID, task.description, task.taskname, task.link, task.dueDate);
 
                 //emailing
-
                 string email = manage.emailQuerythroughID(memberID);
                 string from, pass, messageBody;
-                //Taskc task = manage.retrieveTaskbyID(memberID);
 
 
                 from = "jadejaballa3@gmail.com";
@@ -118,7 +110,6 @@ namespace WindowsFormsApp1
 
                 SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
                 smtp.EnableSsl = true;
-                //smtp.Port = 587;
                 smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
                 smtp.Credentials = new NetworkCredential(from, pass);
                 MailMessage message = new MailMessage();
@@ -216,7 +207,8 @@ namespace WindowsFormsApp1
 
         private void remarkss_Click(object sender, EventArgs e)
         {
-            if(remarkss.Text == "SUBMITTED")
+            Cursor.Current = Cursors.WaitCursor;
+            if (remarkss.Text == "SUBMITTED")
             {
                 DBManager manager = new DBManager();
                 Submissions submissions = new Submissions();
@@ -237,7 +229,7 @@ namespace WindowsFormsApp1
                    
                 }
 
-                // dapat naa koy condition ari nig leader na pov kanang makita tanan nagsubmit ana na task.
+               
                 try {
                    
                     page.outpnl.Controls.Add(submissions);
@@ -254,7 +246,7 @@ namespace WindowsFormsApp1
             }
 
 
-
+            Cursor.Current = Cursors.Default;
 
 
         }

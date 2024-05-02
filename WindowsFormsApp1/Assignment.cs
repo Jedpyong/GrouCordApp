@@ -44,5 +44,10 @@ namespace WindowsFormsApp1
         {
             back.ImageSize = new Size(30, 30);
         }
+
+        private void descriptiontxtbx_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

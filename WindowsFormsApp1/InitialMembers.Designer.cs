@@ -61,6 +61,7 @@
             this.initialMemberBtn.TabIndex = 1;
             this.initialMemberBtn.Text = "gunaAdvenceButton1";
             this.initialMemberBtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.initialMemberBtn.Click += new System.EventHandler(this.initialMemberBtn_Click);
             // 
             // removeBtn
             // 

@@ -32,7 +32,7 @@
             this.mainPanel = new Guna.UI.WinForms.GunaGradientPanel();
             this.AddButton = new Guna.UI.WinForms.GunaButton();
             this.AddMemFLP = new System.Windows.Forms.FlowLayoutPanel();
-            this.gunaCircleButton1 = new Guna.UI.WinForms.GunaCircleButton();
+            this.add = new Guna.UI.WinForms.GunaCircleButton();
             this.EmailTxtbx = new Guna.UI.WinForms.GunaTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
@@ -48,7 +48,7 @@
             this.mainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.mainPanel.Controls.Add(this.AddButton);
             this.mainPanel.Controls.Add(this.AddMemFLP);
-            this.mainPanel.Controls.Add(this.gunaCircleButton1);
+            this.mainPanel.Controls.Add(this.add);
             this.mainPanel.Controls.Add(this.EmailTxtbx);
             this.mainPanel.Controls.Add(this.label1);
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -98,27 +98,27 @@
             this.AddMemFLP.Size = new System.Drawing.Size(199, 100);
             this.AddMemFLP.TabIndex = 23;
             // 
-            // gunaCircleButton1
+            // add
             // 
-            this.gunaCircleButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaCircleButton1.AnimationSpeed = 0.03F;
-            this.gunaCircleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
-            this.gunaCircleButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaCircleButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton1.Image = global::WindowsFormsApp1.Properties.Resources.add;
-            this.gunaCircleButton1.ImageSize = new System.Drawing.Size(37, 37);
-            this.gunaCircleButton1.Location = new System.Drawing.Point(299, 45);
-            this.gunaCircleButton1.Name = "gunaCircleButton1";
-            this.gunaCircleButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
-            this.gunaCircleButton1.OnHoverBorderColor = System.Drawing.Color.Black;
-            this.gunaCircleButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton1.OnHoverImage = null;
-            this.gunaCircleButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaCircleButton1.Size = new System.Drawing.Size(37, 37);
-            this.gunaCircleButton1.TabIndex = 22;
-            this.gunaCircleButton1.Click += new System.EventHandler(this.gunaCircleButton1_Click);
+            this.add.AnimationHoverSpeed = 0.07F;
+            this.add.AnimationSpeed = 0.03F;
+            this.add.BackColor = System.Drawing.Color.Transparent;
+            this.add.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.add.BorderColor = System.Drawing.Color.Black;
+            this.add.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.add.ForeColor = System.Drawing.Color.White;
+            this.add.Image = global::WindowsFormsApp1.Properties.Resources.add;
+            this.add.ImageSize = new System.Drawing.Size(37, 37);
+            this.add.Location = new System.Drawing.Point(299, 45);
+            this.add.Name = "add";
+            this.add.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.add.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.add.OnHoverForeColor = System.Drawing.Color.White;
+            this.add.OnHoverImage = null;
+            this.add.OnPressedColor = System.Drawing.Color.Black;
+            this.add.Size = new System.Drawing.Size(37, 37);
+            this.add.TabIndex = 22;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // EmailTxtbx
             // 
@@ -218,7 +218,7 @@
         public Guna.UI.WinForms.GunaImageButton back;
         private Guna.UI.WinForms.GunaGradientPanel mainPanel;
         private System.Windows.Forms.Label label1;
-        private Guna.UI.WinForms.GunaCircleButton gunaCircleButton1;
+        private Guna.UI.WinForms.GunaCircleButton add;
         private Guna.UI.WinForms.GunaTextBox EmailTxtbx;
         private Guna.UI.WinForms.GunaButton AddButton;
         public System.Windows.Forms.FlowLayoutPanel AddMemFLP;

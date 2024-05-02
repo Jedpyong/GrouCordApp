@@ -24,19 +24,86 @@ namespace WindowsFormsApp1
             
         }
 
-        private void gunaCircleButton1_Click(object sender, EventArgs e)
+
+        private void AddButton_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             
+            if (AddMemFLP.Controls.Count == 0)
+                MessageBox.Show("Please add some members");
+
+            else if(AddMemFLP.Controls.Count >0)
+            {
+                GroupHandler handler = new GroupHandler();
+                foreach (Account a in accs)
+                {
+                    handler.insertMember(group.group_ID, a.email);
+                }
+                grop.FLPGroupPage.Controls.Clear(); 
+
+                List<Account> members = handler.getMembers(group);
+                foreach (Account mem in members)
+                {
+                    Members panel = new Members(false);
+                    panel.memberName.Text = mem.username;
+                    panel.emailLabel.Text = mem.email;
+                    panel.status.Text = mem.status.ToString();
+                    panel.Role.Text = "MEMBER";
+                    panel.memberPic.Image = mem.accountProfile;
+                    panel.page = grop;
+                    panel.memberID = handler.getMemberID_BYEmail(mem.email, group.group_ID);
+                    panel.name = mem.username;
+                    panel.group = this.group;
+                    grop.FLPGroupPage.Controls.Add(panel);
+
+                }
+
+                grop.group = this.group;
+                LoginForm.hp.MainPnl.Controls.Add(grop);
+                grop.FLPGroupPage.BringToFront();
+                grop.Show();
+                grop.BringToFront();
+
+
+                Cursor.Current = Cursors.Default;
+            }
+        }
+
+        private void mainPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+           
+            grop.FLPGroupPage.BringToFront();
+            grop.FLPGroupPage.Show();
+            this.Hide();
+        }
+
+        private void back_MouseEnter(object sender, EventArgs e)
+        {
+            back.ImageSize = new Size(35, 35);
+        }
+
+        private void back_MouseLeave(object sender, EventArgs e)
+        {
+            back.ImageSize = new Size(30, 30);
+        }
+
+        private void add_Click(object sender, EventArgs e)
+        {
             try
             {
                 bool flag = false, exist = false;
 
                 DBManager manage = new DBManager();
-                
+
                 exist = manage.DBSearchAccount(EmailTxtbx.Text);
                 GroupHandler handler = new GroupHandler();
                 List<Account> members = handler.getMembers(group);
-                
+
 
 
                 Account account = new Account();
@@ -53,7 +120,7 @@ namespace WindowsFormsApp1
                         }
 
                     }
-                    foreach(Account check in members)
+                    foreach (Account check in members)
                     {
                         flag = check.Equals(account);
                         if (flag == true)
@@ -95,89 +162,6 @@ namespace WindowsFormsApp1
                 MessageBox.Show($"Error: {ex.Message}");
             }
 
-        }
-
-        private void AddButton_Click(object sender, EventArgs e)
-        {
-             int count = 0;
-            if (AddMemFLP.Controls.Count == 0)
-                MessageBox.Show("Please add some members");
-
-            else if(AddMemFLP.Controls.Count >0)
-            {
-                GroupHandler handler = new GroupHandler();
-                foreach (Account a in accs)
-                {
-                    handler.insertMember(group.group_ID, a.email);
-                }
-                grop.FLPGroupPage.Controls.Clear(); 
-
-                List<Account> members = handler.getMembers(group);
-                foreach (Account mem in members)
-                {
-                    Members panel = new Members(false);
-                    panel.memberName.Text = mem.username;
-                    panel.emailLabel.Text = mem.email;
-                    panel.status.Text = mem.status.ToString();
-                    panel.Role.Text = "MEMBER";
-                    panel.memberPic.Image = mem.accountProfile;
-                    panel.page = grop;
-                    panel.memberID = handler.getMemberID_BYEmail(mem.email, group.group_ID);
-                    panel.name = mem.username;
-                    panel.group = this.group;
-                    grop.FLPGroupPage.Controls.Add(panel);
-
-                }
-
-                grop.group = this.group;
-                LoginForm.hp.MainPnl.Controls.Add(grop);
-                grop.FLPGroupPage.BringToFront();
-                grop.Show();
-                grop.BringToFront();
-          
-
-
-            }
-        }
-
-        private void mainPanel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void back_Click(object sender, EventArgs e)
-        {
-            /* grop.FLPGroupPage.Controls.Clear();
-             GroupHandler handler = new GroupHandler();
-             List<Account> members = handler.getMembers(group);
-             foreach (Account mem in members)
-             {
-                 Members panel = new Members();
-                 panel.memberName.Text = mem.username;
-                 panel.emailLabel.Text = mem.email;
-                 panel.status.Text = mem.status.ToString();
-                 panel.Role.Text = "MEMBER";
-                 panel.memberPic.Image = mem.accountProfile;
-                 panel.page = grop;
-                 panel.memberID = handler.getMemberID_BYEmail(mem.email, group.group_ID);
-                 panel.name = mem.username;
-                 panel.group = this.group;
-                 grop.FLPGroupPage.Controls.Add(panel);
-
-             }*/
-            grop.FLPGroupPage.BringToFront();
-            grop.FLPGroupPage.Show();
-            this.Hide();
-        }
-
-        private void back_MouseEnter(object sender, EventArgs e)
-        {
-            back.ImageSize = new Size(35, 35);
-        }
-
-        private void back_MouseLeave(object sender, EventArgs e)
-        {
-            back.ImageSize = new Size(30, 30);
         }
     }
 }

@@ -24,8 +24,13 @@ namespace WindowsFormsApp1
         private void DeleteGroup_Click(object sender, EventArgs e)
         {
            GroupHandler handler = new GroupHandler();
-            LoginForm.hp.FLPPnl.Controls.Remove(this);
-            handler.removeGroup(group.group_ID);
+
+          
+                if (MessageBox.Show("Are you sure you want to leave and delete this group?", "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+                {
+                LoginForm.hp.FLPPnl.Controls.Remove(this);
+                handler.removeGroup(group.group_ID);
+                }
 
         }
 
@@ -50,10 +55,7 @@ namespace WindowsFormsApp1
 
         public void groupButton_Click(object sender, EventArgs e)
         {
-
-
-            //LoginForm.hp.Controls.Clear();
-            //grop.group = group;
+            Cursor.Current = Cursors.WaitCursor;
             bool isMember = false;
             grop.FLPGroupPage.Controls.Clear();
             GroupHandler handler = new GroupHandler();
@@ -69,7 +71,6 @@ namespace WindowsFormsApp1
                 panel.Role.Text = "LEADER";
                 panel.memberPic.Image = Leader.accountProfile;
                 panel.page = grop;
-               // panel.memberID = handler.getMemberID_BYEmail(mem.email, group.group_ID);
                 panel.name = Leader.username;
                 panel.group = this.group;
                
@@ -111,23 +112,12 @@ namespace WindowsFormsApp1
             grop.Show();
             grop.BringToFront();
 
-
-
-        }
-
-        private void DeleteGroup_MouseEnter(object sender, EventArgs e)
-        {
-            DeleteGroup.BackColor = Color.FromKnownColor(KnownColor.OrangeRed);
-        }
-
-        private void DeleteGroup_MouseLeave(object sender, EventArgs e)
-        {
-            DeleteGroup.BackColor = Color.Red;
+            Cursor.Current = Cursors.Default;
         }
 
         private void groupz_Load(object sender, EventArgs e)
         {
-            //kuha nalang sa database
+            
         }
 
         private void DeleteGroup_MouseEnter_1(object sender, EventArgs e)

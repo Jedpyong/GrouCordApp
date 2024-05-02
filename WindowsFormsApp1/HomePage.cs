@@ -18,7 +18,7 @@ namespace WindowsFormsApp1
 {
     public partial class HomePage : Form
     {
-        //List<groupz> groupzs = CreateGroup.groups;
+
         public static DBManager manage = new DBManager();
         public List<groupz> allGroups = new List<groupz>();
         public HomePage()
@@ -27,53 +27,6 @@ namespace WindowsFormsApp1
             this.DoubleBuffered = true;
             
             
-        }
-
-        private void gunaLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void monthCalendar1_DateChanged(object sender, DateRangeEventArgs e)
-        {
-
-        }
-
-        private void accName_Click(object sender, EventArgs e)
-        {
-          
-
-        }
-
-        private void gunaShadowPanel1_Paint(object sender, PaintEventArgs e)
-        {
-           
-        }
-
-        private void gunaComboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-  
-        }
-        
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void gunaTextBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
         }
 
         public void ReloadHomeFLP()
@@ -95,7 +48,7 @@ namespace WindowsFormsApp1
                    
                     FLPPnl.Controls.Add(groupo);
                 }
-                //members
+
                 groups = handler.GetGroupByEmail(LoginForm.account.email);
                 foreach (Group g in groups)
                 {
@@ -146,7 +99,7 @@ namespace WindowsFormsApp1
                     allGroups.Add(groupo);
                     FLPPnl.Controls.Add(groupo);
                 }
-                //members
+
                 groups = handler.GetGroupByEmail(LoginForm.account.email);
                 foreach(Group g in groups)
                 {
@@ -165,17 +118,14 @@ namespace WindowsFormsApp1
                 this.profileButton.Image = LoginForm.account.accountProfile;
                 this.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
                 this.setStat.Text = LoginForm.account.status.ToString();
+                this.accName.Text = LoginForm.account.username;
                 statuspnl.Visible = false;
                 this.Refresh();
             }
             catch(Exception ex)
             {
                 MessageBox.Show($"Error: {ex.Message}");
-            }
-           
-            
-         
-            
+            }    
            
         }
 
@@ -186,19 +136,6 @@ namespace WindowsFormsApp1
         }
 
        
-
-        private void DemoPnl_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-        private void searchTxtBx_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void searchTxtBx_Enter_1(object sender, EventArgs e)
         {
             statuspnl.Visible = false;
@@ -211,8 +148,6 @@ namespace WindowsFormsApp1
             if (searchTxtBx.Text == "")
                 searchTxtBx.Text = "Search";
         }
-
- 
 
 
         private void close_Click_1(object sender, EventArgs e)
@@ -239,20 +174,15 @@ namespace WindowsFormsApp1
         }
 
 
-       
-
-       
-
         private void profileButton_Click_1(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             Profile profile = new Profile();
             this.MainPnl.Controls.Add(profile);
-            //profile.hp = this;
             profile.BringToFront();
-
             profile.Show();
             statuspnl.Visible = false;
-            //this.Controls.Clear();
+            Cursor.Current = Cursors.Default;
         }
 
         private void statuspic_Click(object sender, EventArgs e)
@@ -264,21 +194,13 @@ namespace WindowsFormsApp1
         {
             if (LoginForm.hp.statuspnl.Visible == true)
             {
-               /* for (int i = 0; i < 12; i++)
-                {
-                    LoginForm.hp.statuspnl.Height -= 10;
-                }*/
+             
                 LoginForm.hp.statuspnl.Visible = false; 
 
             }
             else
             LoginForm.hp.statuspnl.Visible = true;
-           /* for (int i = 0; i < 12; i++)
-            {
-                LoginForm.hp.statuspnl.Height += 10;
-            }*/
-
-
+          
         }
 
         private void busybtn_Click(object sender, EventArgs e)
@@ -289,11 +211,6 @@ namespace WindowsFormsApp1
             LoginForm.hp.profileButton.Image = LoginForm.account.accountProfile;
             LoginForm.hp.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
 
-           /* for (int i = 0; i < 6; i++)
-            {
-                LoginForm.hp.statuspnl.Height -= 20;
-            }*/
-            
             statuspnl.Visible = false;
         }
 
@@ -305,10 +222,6 @@ namespace WindowsFormsApp1
             LoginForm.hp.profileButton.Image = LoginForm.account.accountProfile;
             LoginForm.hp.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
 
-            /*for (int i = 0; i < 6; i++)
-            {
-                LoginForm.hp.statuspnl.Height -= 20;
-            }*/
             statuspnl.Visible = false;
         }
 
@@ -320,10 +233,6 @@ namespace WindowsFormsApp1
             LoginForm.hp.profileButton.Image = LoginForm.account.accountProfile;
             LoginForm.hp.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
 
-            /*for (int i = 0; i < 6; i++)
-            {
-                LoginForm.hp.statuspnl.Height -= 20;
-            }*/
             statuspnl.Visible = false;
         }
 
@@ -349,6 +258,8 @@ namespace WindowsFormsApp1
 
         private void searchBtn_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+
             statuspnl.Visible = false;
 
             string searchTerm = searchTxtBx.Text;
@@ -356,7 +267,7 @@ namespace WindowsFormsApp1
             List<groupz> searched = new List<groupz>();
             foreach (groupz g in allGroups)
             {
-                if(g.groupButton.Text.Contains(searchTerm))
+                if(g.groupButton.Text.ToUpper().Contains(searchTerm.ToUpper()))
                 {
                     searched.Add(g);
                 }
@@ -370,57 +281,12 @@ namespace WindowsFormsApp1
             }
 
 
+            Cursor.Current = Cursors.Default;
 
 
-              
         }
 
 
-      /*  public void SearchData(string searchTerm)
-        {
-            string connect = "server=127.0.0.1;uid=root;pwd=July072004;database=groucord;";
-            using (MySqlConnection connection = new MySqlConnection(connect))
-            {
-                connection.Open();
-                string query = "SELECT * FROM `groucord`.`group` WHERE `groupName` = @searchTerm;";
-                MySqlCommand command = new MySqlCommand(query, connection);
-                command.Parameters.AddWithValue("@searchTerm", "%" + searchTerm + "%");
-
-                MySqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
-                {
-                    string groupName = reader.GetString("groupName");
-                    searched.Items.Add(groupName);
-                }
-                reader.Close();
-                connection.Close();
-            }
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void searched_MouseClick(object sender, MouseEventArgs e)
-        {
-           /* var listViewItem = listView1.GetItemAt(e.X, e.Y);
-            if (listViewItem != null)
-            {
-                // Get the selected item data (e.g., cast to your custom class)
-                var selectedItem = (MyItemClass)listViewItem;
-
-                // Perform navigation or open user control based on selected item data
-                if (selectedItem.Action == "Navigate")
-                {
-                    // Code to navigate to a new form or URL
-                }
-                else if (selectedItem.Action == "OpenUserControl")
-                {
-                    // Code to open a user control
-                    LoadUserControl(selectedItem.UserData);
-                }
-            }
-        }*/
+      
     }
 }

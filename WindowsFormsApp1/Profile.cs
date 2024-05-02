@@ -4,16 +4,17 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WindowsFormsApp1.Classes;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace WindowsFormsApp1
 {
     public partial class Profile : UserControl
     {
-        //public HomePage hp = new HomePage();
         public DBManager manager = new DBManager();
        
 
@@ -27,10 +28,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void gunaLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
+ 
 
         private void label1_Click(object sender, EventArgs e)
         {
@@ -40,7 +38,6 @@ namespace WindowsFormsApp1
         private void gunaCircleButton1_Click(object sender, EventArgs e)
         {
             EditEmail ee = new EditEmail();
-            //ee.hp = hp;
             this.gunaGradientPanel2.Controls.Add(ee);
             ee.BringToFront();
             ee.Show();
@@ -61,31 +58,18 @@ namespace WindowsFormsApp1
             }
 
             string path;
-            //if empty ang pic
-            if (ProfilePic.ImageLocation == null)
+           if(ProfilePic.ImageLocation!=null)
             {
-               ProfilePic.Image = Image.FromFile(@"C:\Users\USER\Desktop\GrouCord\WindowsFormsApp1\WindowsFormsApp1\Resources\user (1).png");
-                ProfilePic.ImageLocation = @"C:\Users\USER\Desktop\GrouCord\WindowsFormsApp1\WindowsFormsApp1\Resources\user (1).png";
                 path = ProfilePic.ImageLocation.ToString();
+                ProfilePic.Image = Image.FromFile(path);
+                manager.updateProfilePic(path, LoginForm.account.email);
             }
-            path = ProfilePic.ImageLocation.ToString();
-             ProfilePic.Image = Image.FromFile(path);
-             manager.updateProfilePic(path, LoginForm.account.email);
+           
 
            
 
         }
 
-        private void gunaTileButton1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-
-        private void gunaGradiantButton3_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void AVbtn_Click(object sender, EventArgs e)
         {
@@ -228,16 +212,20 @@ namespace WindowsFormsApp1
 
         private void assignBtn_Click(object sender, EventArgs e)
         {
-            LoginForm login = new LoginForm();
-            login.Show();
-
-            Form parentForm = FindForm();
-            if (parentForm != null)
+            Cursor.Current = Cursors.WaitCursor;
+            if (MessageBox.Show("Are you sure you want to Log out?", "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                parentForm.Close();
+                LoginForm login = new LoginForm();
+                login.Show();
+
+                Form parentForm = FindForm();
+                if (parentForm != null)
+                {
+                    parentForm.Close();
+                }
             }
 
-          
+            Cursor.Current = Cursors.Default;
         }
 
         private void label1_Click_1(object sender, EventArgs e)
@@ -253,18 +241,13 @@ namespace WindowsFormsApp1
 
             up.Show();
 
-            //LoginForm.hp.Close();
         }
 
         private void HomeButton_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             DBManager manage = new DBManager();
-            // HomePage hop = new HomePage();
-            // hop = LoginForm.hp;
-            // hp.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
-
-            //LoginForm.hp = hop;
-            
+           
             LoginForm.account = manage.readAccountByEmail(LoginForm.account.email);
             LoginForm.hp.profileButton.Image = LoginForm.account.accountProfile;
             LoginForm.hp.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
@@ -272,7 +255,7 @@ namespace WindowsFormsApp1
             LoginForm.hp.ReloadHomeFLP();
             this.Hide();
 
-
+            Cursor.Current = Cursors.Default;
             statuspnl.Visible = false;
             numpanel.Visible = false;
         }

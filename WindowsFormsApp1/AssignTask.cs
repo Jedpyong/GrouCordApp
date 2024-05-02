@@ -39,8 +39,7 @@ namespace WindowsFormsApp1
             page.outpnl.Controls.Add(task);
             task.BringToFront();
             page.Show();
-            // this.Hide();
-            //this.SendToBack();
+
         }
 
         private void gunaGradientPanel2_Click(object sender, EventArgs e)
@@ -58,24 +57,13 @@ namespace WindowsFormsApp1
                 foreach (Taskc Task in Tasks)
                 {
                     task panel = new task();
-                    // panel.taskName.Text = Task.taskname;
-                    //panel.remarkss.Text = Task.remarks;
                     panel.memberID = this.memberID;
                     panel.page = this.page;
                     panel.isAssign = true;
 
-                    // panel.Remarks.Visible = false;
-                    // panel.gunaLabel2.Visible = false;
-                    //panel.assigned.Visible = false;
-                    //panel.taskName.Width = 348;
                     panel.buttonTask.Text = Task.taskname;
                     panel.buttonTask.BringToFront();
                     panel.buttonTask.Visible = true;
-
-                    /* foreach (string ass in Task.assigned)
-                     {
-                         panel.assigned.Items.Add(ass);
-                     }*/
 
 
                     this.ExistingFLP.Controls.Add(panel);
@@ -86,9 +74,6 @@ namespace WindowsFormsApp1
             }
             else
                 MessageBox.Show("Currently no Tasks Exists");
-           
-
-
 
        
         }

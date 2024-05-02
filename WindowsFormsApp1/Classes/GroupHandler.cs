@@ -25,7 +25,6 @@ namespace WindowsFormsApp1.Classes
         public Group InsertGroup(string imagePath,string groupName, Account groupLeader, List<Account> member)
         {
             Group group = new Group();
-            //if same name ra ang group?
             try
             {
                 using (MySqlConnection connection = new MySqlConnection(connect))
@@ -48,10 +47,8 @@ namespace WindowsFormsApp1.Classes
 
                     foreach (Account account in member)
                     {
-
-                        // string acc = account.email.ToString();
                         string acc = account.email;
-                       // string query2 = "INSERT INTO `groucord`.`groupmember` SET `groupMemberEmail` = @acc,`group_ID` = (SELECT `group_ID` FROM `group` WHERE `groupLeader` = @email);";
+                 
                         string query2 = "INSERT INTO `groucord`.`groupmember` (`group_ID`, `groupMemberEmail`) VALUES ((SELECT `group_ID` FROM `group` WHERE `groupLeader` = @email AND `groupName` = @name),@acc);";
 
                         MySqlCommand command2 = new MySqlCommand(query2, connection);
@@ -250,10 +247,8 @@ namespace WindowsFormsApp1.Classes
             }
         }
 
-       // public bool searchMember()
 
-
-        public List<Account> getMembers(Group group/*, Account leader*/)
+        public List<Account> getMembers(Group group)
         {
             List<Account> members = new List<Account>();
             try

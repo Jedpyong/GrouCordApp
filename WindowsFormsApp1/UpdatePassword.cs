@@ -32,19 +32,11 @@ namespace WindowsFormsApp1
 
         private void savebutton_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             if (newpasstxtbx.Text == "" || confirmtxtbx.Text == "")
             {
                 MessageBox.Show("Please input a password!");
             }
-
-           /* bool letter1 = newpasstxtbx.Text.All(Char.IsLetter);
-            bool letter2 = confirmtxtbx.Text.All(Char.IsLetter);
-
-            if (!letter1 || !letter2 )
-            {
-                MessageBox.Show("Please Use Characters as Password");
-                newpasstxtbx.Text = confirmtxtbx.Text = "";
-            }*/
 
             if(currpass.Visible)
             {
@@ -61,16 +53,7 @@ namespace WindowsFormsApp1
                     connection.Close();
                     MessageBox.Show("Password Updated Successfully");
 
-                  /*  GroupHandler handler = new GroupHandler();
-                    List<Group> groups = handler.GetGroupByLeader(LoginForm.account.email);
-                    foreach (Group g in groups)
-                    {
-                        groupz groupo = new groupz();
-                        groupo.groupButton.Text = g.group_name;
-                        groupo.GroupPic.Image = g.groupImageObj;
-                        groupo.group = g;
-                        LoginForm.hp.FLPPnl.Controls.Add(groupo);
-                    }*/
+                 
                     DBManager manage = new DBManager();
                     LoginForm.account = manage.readAccountByEmail(LoginForm.account.email);
 
@@ -107,7 +90,6 @@ namespace WindowsFormsApp1
                     DBManager manage = new DBManager();
                     LoginForm.account = manage.readAccountByEmail(LoginForm.account.email);
 
-                   // LoginForm.account.password = confirmtxtbx.Text;
                     LoginForm.hp.profileButton.Image = LoginForm.account.accountProfile;
                     LoginForm.hp.statuspic.Image = manage.getStatusPic(LoginForm.account.status.ToString());
                     LoginForm.hp.setStat.Text = LoginForm.account.status.ToString();
@@ -123,8 +105,8 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Mismatching Passwords!");
                 }
             }
-           
-           
+
+            Cursor.Current = Cursors.Default;
         }
 
         private void close_Click(object sender, EventArgs e)

@@ -23,8 +23,7 @@ namespace WindowsFormsApp1
 
        public List<Account> accs = new List<Account>();
       
-       
-           
+   
         public CreateGroupUC()
         {
             InitializeComponent();
@@ -41,6 +40,8 @@ namespace WindowsFormsApp1
 
         private void CreateGroupBtn_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
+
             if (GroupTxtBx.Text == "Group Name")
                 MessageBox.Show("Please input a Group Name");
             if (initMembFlow.Controls.Count == 0)
@@ -65,8 +66,6 @@ namespace WindowsFormsApp1
                 
                 Account acc = LoginForm.account;
 
-                //if wala sa database ang member
-                //if daghan members
                 groupdisp.group = handler.InsertGroup(path, Name, acc, accs);
                 groupdisp.group.groupLeader = acc.email;
                 groupdisp.group.group_name = Name;
@@ -75,12 +74,6 @@ namespace WindowsFormsApp1
                 
 
                  LoginForm.hp.ReloadHomeFLP();
-               
-
-                //remove all from accs if ma create na ang group
-
-                //ug mag error dili mupadayun anhi
-
                 LoginForm.hp.addToFPL(groupdisp);
                 
                 this.Hide();
@@ -88,15 +81,17 @@ namespace WindowsFormsApp1
             }
 
 
-
+            Cursor.Current = Cursors.Default;
 
         }
 
 
         private void CancelGroup_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             LoginForm.hp.ReloadHomeFLP();
             this.Hide();
+            Cursor.Current = Cursors.Default;
         }
 
         private void GroupTxtBx_Click(object sender, EventArgs e)
@@ -138,88 +133,12 @@ namespace WindowsFormsApp1
 
         }
 
-        private void gunaCircleButton1_Click(object sender, EventArgs e)
-        {
-
-
-
-
-
-          /*  if (memberTxtBx.Text == "Email Address" || memberTxtBx.Text == "")
-            {
-                MessageBox.Show("Input a member");
-            }
-            else
-            {*/
-
-                try
-                {
-                    bool flag = false, exist = false;
-
-                    DBManager manage = new DBManager();
-                    exist = manage.DBSearchAccount(memberTxtBx.Text);
-                    Account account = new Account();
-                    if (exist)
-                    {
-                        account = manage.readAccountByEmail(memberTxtBx.Text);
-                        foreach (Account check in accs)
-                        {
-                            flag = check.Equals(account);
-                            if (flag == true)
-                            {
-                                MessageBox.Show("Account already added");
-                                break;
-                            }
-
-                        }
-                        if(account.Equals(LoginForm.account))
-                        {
-                            MessageBox.Show("You are already a leader of the group");
-                            flag = true;
-                        }
-                        if (flag == false)
-                        {
-
-                            accs.Add(account);
-
-                            InitialMembers Mem = new InitialMembers();
-                            Mem.initialMemberBtn.Text = account.username;
-                            Mem.acc = account;
-                            Mem.panel = this;
-
-                            initMembFlow.Controls.Add(Mem);
-
-                            memberTxtBx.Text = "";
-                        }
-                        
-                    }
-                    else if (!exist)
-                    {
-                        MessageBox.Show("Account Doesn't Exist");
-                        flag = true;
-                    }
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}");
-                }
-
-           // }
-
-
-
-        }
 
         private void initMembFlow_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void pictureBox1_DoubleClick(object sender, EventArgs e)
-        {
-           
-        }
 
         private void pictureBox1_MouseEnter(object sender, EventArgs e)
         {
@@ -234,6 +153,63 @@ namespace WindowsFormsApp1
         private void pictureBox1_MouseLeave(object sender, EventArgs e)
         {
             pictureBox1.BackColor = Color.White;
+        }
+
+        private void add_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                bool flag = false, exist = false;
+
+                DBManager manage = new DBManager();
+                exist = manage.DBSearchAccount(memberTxtBx.Text);
+                Account account = new Account();
+                if (exist)
+                {
+                    account = manage.readAccountByEmail(memberTxtBx.Text);
+                    foreach (Account check in accs)
+                    {
+                        flag = check.Equals(account);
+                        if (flag == true)
+                        {
+                            MessageBox.Show("Account already added");
+                            break;
+                        }
+
+                    }
+                    if (account.Equals(LoginForm.account))
+                    {
+                        MessageBox.Show("You are already a leader of the group");
+                        flag = true;
+                    }
+                    if (flag == false)
+                    {
+
+                        accs.Add(account);
+
+                        InitialMembers Mem = new InitialMembers();
+                        Mem.initialMemberBtn.Text = account.username;
+                        Mem.acc = account;
+                        Mem.panel = this;
+
+                        initMembFlow.Controls.Add(Mem);
+
+                        memberTxtBx.Text = "";
+                    }
+
+                }
+                else if (!exist)
+                {
+                    MessageBox.Show("Account Doesn't Exist");
+                    flag = true;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}");
+            }
+
         }
     }
 }

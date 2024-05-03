@@ -5,7 +5,9 @@ VisualStudioVersion = 17.9.34622.214
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{60D2974F-10EA-4C7C-930D-F60F9F4A00FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccountTest", "AccountTest\AccountTest.csproj", "{AA934409-0424-49B6-AB04-AAE98394F63F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AccountTest", "AccountTest\AccountTest.csproj", "{AA934409-0424-49B6-AB04-AAE98394F63F}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "InstallerGroCord", "InstallerGroCord\InstallerGroCord.vdproj", "{28D2C87C-468D-4503-A6B2-923E32646013}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,8 @@ Global
 		{AA934409-0424-49B6-AB04-AAE98394F63F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AA934409-0424-49B6-AB04-AAE98394F63F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AA934409-0424-49B6-AB04-AAE98394F63F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28D2C87C-468D-4503-A6B2-923E32646013}.Debug|Any CPU.ActiveCfg = Debug
+		{28D2C87C-468D-4503-A6B2-923E32646013}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

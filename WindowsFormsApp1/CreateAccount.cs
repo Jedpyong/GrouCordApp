@@ -154,5 +154,13 @@ namespace WindowsFormsApp1
         {
 
         }
+
+      
+        private void back_Click(object sender, EventArgs e)
+        {
+            LoginForm login = new LoginForm();
+            login.Show();
+            this.Hide();
+        }
     }
 }

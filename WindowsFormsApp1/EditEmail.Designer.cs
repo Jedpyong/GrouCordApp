@@ -37,6 +37,7 @@
             this.OTPTxtbx = new Guna.UI.WinForms.GunaTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.EmailTxtbx = new Guna.UI.WinForms.GunaTextBox();
+            this.back = new Guna.UI.WinForms.GunaImageButton();
             this.gunaGradientPanel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +84,7 @@
             // 
             this.gunaGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel2.BackgroundImage")));
             this.gunaGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel2.Controls.Add(this.back);
             this.gunaGradientPanel2.Controls.Add(this.gunaAdvenceButton1);
             this.gunaGradientPanel2.Controls.Add(this.sendotpbutn);
             this.gunaGradientPanel2.Controls.Add(this.OTPTxtbx);
@@ -195,6 +197,19 @@
             this.EmailTxtbx.Size = new System.Drawing.Size(238, 30);
             this.EmailTxtbx.TabIndex = 15;
             // 
+            // back
+            // 
+            this.back.BackColor = System.Drawing.Color.Transparent;
+            this.back.Image = global::WindowsFormsApp1.Properties.Resources.left_arrow;
+            this.back.ImageSize = new System.Drawing.Size(20, 20);
+            this.back.Location = new System.Drawing.Point(3, 3);
+            this.back.Name = "back";
+            this.back.OnHoverImage = null;
+            this.back.OnHoverImageOffset = new System.Drawing.Point(0, 0);
+            this.back.Size = new System.Drawing.Size(25, 25);
+            this.back.TabIndex = 20;
+            this.back.Click += new System.EventHandler(this.back_Click);
+            // 
             // EditEmail
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -217,5 +232,6 @@
         private Guna.UI.WinForms.GunaTextBox OTPTxtbx;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaGradiantButton gunaAdvenceButton1;
+        private Guna.UI.WinForms.GunaImageButton back;
     }
 }

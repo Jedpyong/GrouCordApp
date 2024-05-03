@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WindowsFormsApp1.Classes.Account">
+    <Position X="6" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAgASAAAggAAAAAEAABAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>Classes\Account.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="status" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.Classes.AnnouncementC">
+    <Position X="3.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACIAAAAAAAAAAAAAEAAAAAAAAIAFAAA=</HashCode>
+      <FileName>Classes\AnnouncementC.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp1.Classes.DBManager">
+    <Position X="8.5" Y="4.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AEAAIEECEAAQQAAAgAE4AAAACCAAEcQEAQUAQAFkAAM=</HashCode>
+      <FileName>Classes\DBManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WindowsFormsApp1.Classes.Group">
+    <Position X="8.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAABgIAQACAAAAAAAAAA=</HashCode>
+      <FileName>Classes\Group.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="members" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.Classes.GroupHandler">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAABAAAQAAAgAAAACAkAAAAgAAABBAAIAAAAEA=</HashCode>
+      <FileName>Classes\GroupHandler.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="manager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="WindowsFormsApp1.Classes.Taskc">
+    <Position X="3.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAIAAAAAAAAAAEAAAIAAACAAAAIEA=</HashCode>
+      <FileName>Classes\Taskc.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="WindowsFormsApp1.Classes.CurrStatus">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAAAAAAAAAACAAAEAAAAAAA=</HashCode>
+      <FileName>Classes\CurrStatus.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

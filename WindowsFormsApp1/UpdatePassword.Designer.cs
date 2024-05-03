@@ -36,9 +36,12 @@
             this.savebutton = new Guna.UI.WinForms.GunaButton();
             this.close = new Guna.UI.WinForms.GunaImageButton();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
-            this.currpass = new Guna.UI.WinForms.GunaTextBox();
             this.currpasslabel = new Guna.UI.WinForms.GunaLabel();
+            this.currpass = new Guna.UI.WinForms.GunaTextBox();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.gunaGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaLabel1
@@ -139,6 +142,8 @@
             // 
             this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
             this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel1.Controls.Add(this.gunaPictureBox1);
+            this.gunaGradientPanel1.Controls.Add(this.label2);
             this.gunaGradientPanel1.Controls.Add(this.currpasslabel);
             this.gunaGradientPanel1.Controls.Add(this.currpass);
             this.gunaGradientPanel1.Controls.Add(this.confirmtxtbx);
@@ -158,6 +163,20 @@
             this.gunaGradientPanel1.TabIndex = 13;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
+            // currpasslabel
+            // 
+            this.currpasslabel.AutoSize = true;
+            this.currpasslabel.BackColor = System.Drawing.Color.Transparent;
+            this.currpasslabel.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Bold);
+            this.currpasslabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.currpasslabel.Location = new System.Drawing.Point(44, 46);
+            this.currpasslabel.Name = "currpasslabel";
+            this.currpasslabel.Size = new System.Drawing.Size(117, 17);
+            this.currpasslabel.TabIndex = 14;
+            this.currpasslabel.Text = "Current Password";
+            this.currpasslabel.Visible = false;
+            this.currpasslabel.Click += new System.EventHandler(this.gunaLabel3_Click);
+            // 
             // currpass
             // 
             this.currpass.BackColor = System.Drawing.Color.Transparent;
@@ -175,19 +194,30 @@
             this.currpass.TabIndex = 13;
             this.currpass.Visible = false;
             // 
-            // currpasslabel
+            // gunaPictureBox1
             // 
-            this.currpasslabel.AutoSize = true;
-            this.currpasslabel.BackColor = System.Drawing.Color.Transparent;
-            this.currpasslabel.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Bold);
-            this.currpasslabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.currpasslabel.Location = new System.Drawing.Point(44, 46);
-            this.currpasslabel.Name = "currpasslabel";
-            this.currpasslabel.Size = new System.Drawing.Size(117, 17);
-            this.currpasslabel.TabIndex = 14;
-            this.currpasslabel.Text = "Current Password";
-            this.currpasslabel.Visible = false;
-            this.currpasslabel.Click += new System.EventHandler(this.gunaLabel3_Click);
+            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.GrouCord_Logo;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(128, 18);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Radius = 10;
+            this.gunaPictureBox1.Size = new System.Drawing.Size(69, 60);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox1.TabIndex = 24;
+            this.gunaPictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Blue;
+            this.label2.Location = new System.Drawing.Point(192, 26);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(144, 37);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "GrouCord";
             // 
             // UpdatePassword
             // 
@@ -202,6 +232,7 @@
             this.Load += new System.EventHandler(this.UpdatePassword_Load);
             this.gunaGradientPanel1.ResumeLayout(false);
             this.gunaGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -217,5 +248,7 @@
         private Guna.UI.WinForms.GunaGradientPanel gunaGradientPanel1;
         public Guna.UI.WinForms.GunaTextBox currpass;
         public Guna.UI.WinForms.GunaLabel currpasslabel;
+        public Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
+        public System.Windows.Forms.Label label2;
     }
 }

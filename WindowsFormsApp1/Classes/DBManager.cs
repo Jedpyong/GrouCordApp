@@ -162,7 +162,6 @@ namespace WindowsFormsApp1.Classes
                     connection.Open();
                     string query = "UPDATE `groucord`.`account` SET `status` = @status WHERE (`email` = @email);";
                     
-                    //string email = acc.email.ToString();
                     MySqlCommand cmd = new MySqlCommand(query, connection);
                     cmd.Parameters.AddWithValue("@status", status);
                     cmd.Parameters.AddWithValue("@email", email);
@@ -301,7 +300,7 @@ namespace WindowsFormsApp1.Classes
             }
             catch (Exception ex)
             {
-                // Handle connection errors or exceptions here
+
                 MessageBox.Show("Error: " + ex.Message);
             }
             finally
@@ -1049,14 +1048,6 @@ namespace WindowsFormsApp1.Classes
 
             return tasks;
         }
-
-
-
-
-
-
-
-       
 
 
 

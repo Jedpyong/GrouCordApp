@@ -95,8 +95,8 @@ namespace WindowsFormsApp1
             numpanel.Visible = false;
             userpanel.Visible = false;
 
-            gunaCircleButton2.Visible = true;
-            gunaCircleButton4.Visible = true;
+            editContactNum.Visible = true;
+            editUsername.Visible = true;
         }
 
         private void busybtn_Click(object sender, EventArgs e)
@@ -140,8 +140,8 @@ namespace WindowsFormsApp1
             userpanel.Visible = true;
             statuspnl.Visible = false;
             numpanel.Visible = false; 
-            gunaCircleButton2.Visible = true;
-            gunaCircleButton4.Visible = false;
+            editContactNum.Visible = true;
+            editUsername.Visible = false;
         }
 
         private void STATUS_Click(object sender, EventArgs e)
@@ -155,8 +155,8 @@ namespace WindowsFormsApp1
             numpanel.Visible = true;
             statuspnl.Visible = false;
             userpanel.Visible = false;
-            gunaCircleButton2.Visible = false;
-            gunaCircleButton4.Visible = true;
+            editContactNum.Visible = false;
+            editUsername.Visible = true;
 
 
         }
@@ -166,7 +166,7 @@ namespace WindowsFormsApp1
             NUMBER.Text = numtxtbx.Text;
             manager.updateNumber(LoginForm.account.contactNumber, NUMBER.Text);
             numpanel.Visible = false;
-            gunaCircleButton2.Visible = true;
+            editContactNum.Visible = true;
 
 
         }
@@ -174,7 +174,7 @@ namespace WindowsFormsApp1
         private void numpanel_Leave(object sender, EventArgs e)
         {
             numpanel.Visible = false;
-            gunaCircleButton2.Visible = true;
+            editContactNum.Visible = true;
 
         }
 
@@ -206,7 +206,7 @@ namespace WindowsFormsApp1
             USERNAME.Text = usernametxtbx.Text;
             manager.updateUsername(USERNAME.Text, LoginForm.account.email);
             userpanel.Visible = false;
-            gunaCircleButton4.Visible = true;
+            editUsername.Visible = true;
 
         }
 

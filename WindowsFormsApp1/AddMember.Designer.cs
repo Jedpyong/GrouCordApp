@@ -1,4 +1,6 @@
-﻿namespace WindowsFormsApp1
+﻿using System.Drawing;
+
+namespace WindowsFormsApp1
 {
     partial class AddMember
     {
@@ -108,6 +110,7 @@
             this.add.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.add.ForeColor = System.Drawing.Color.White;
             this.add.Image = global::WindowsFormsApp1.Properties.Resources.add;
+          
             this.add.ImageSize = new System.Drawing.Size(37, 37);
             this.add.Location = new System.Drawing.Point(299, 45);
             this.add.Name = "add";
@@ -184,6 +187,7 @@
             // 
             this.back.BackColor = System.Drawing.Color.Transparent;
             this.back.Image = global::WindowsFormsApp1.Properties.Resources.turn_back;
+                
             this.back.ImageSize = new System.Drawing.Size(30, 30);
             this.back.Location = new System.Drawing.Point(0, 0);
             this.back.Name = "back";

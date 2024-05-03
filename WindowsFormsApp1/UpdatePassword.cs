@@ -26,7 +26,11 @@ namespace WindowsFormsApp1
 
         private void UpdatePassword_Load(object sender, EventArgs e)
         {
-
+            if (currpass.Visible)
+            {
+                gunaPictureBox1.Visible = false;
+                label2.Visible = false;
+            }
         }
 
 
@@ -40,6 +44,7 @@ namespace WindowsFormsApp1
 
             if(currpass.Visible)
             {
+
                 string eMail = LoginForm.account.email;
                 if (newpasstxtbx.Text == confirmtxtbx.Text && newpasstxtbx.Text != "" && confirmtxtbx.Text != "" && currpass.Text == LoginForm.account.password)
                 {

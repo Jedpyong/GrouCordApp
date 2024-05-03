@@ -30,13 +30,13 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Profile));
             this.gunaGradientPanel2 = new Guna.UI.WinForms.GunaGradientPanel();
-            this.gunaCircleButton3 = new Guna.UI.WinForms.GunaCircleButton();
+            this.editStatus = new Guna.UI.WinForms.GunaCircleButton();
             this.currpass = new Guna.UI.WinForms.GunaTextBox();
-            this.gunaCircleButton5 = new Guna.UI.WinForms.GunaCircleButton();
+            this.editPassword = new Guna.UI.WinForms.GunaCircleButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.gunaCircleButton4 = new Guna.UI.WinForms.GunaCircleButton();
-            this.gunaCircleButton2 = new Guna.UI.WinForms.GunaCircleButton();
-            this.gunaCircleButton1 = new Guna.UI.WinForms.GunaCircleButton();
+            this.editUsername = new Guna.UI.WinForms.GunaCircleButton();
+            this.editContactNum = new Guna.UI.WinForms.GunaCircleButton();
+            this.editEmail = new Guna.UI.WinForms.GunaCircleButton();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -71,13 +71,13 @@
             // 
             this.gunaGradientPanel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel2.BackgroundImage")));
             this.gunaGradientPanel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.gunaGradientPanel2.Controls.Add(this.gunaCircleButton3);
+            this.gunaGradientPanel2.Controls.Add(this.editStatus);
             this.gunaGradientPanel2.Controls.Add(this.currpass);
-            this.gunaGradientPanel2.Controls.Add(this.gunaCircleButton5);
+            this.gunaGradientPanel2.Controls.Add(this.editPassword);
             this.gunaGradientPanel2.Controls.Add(this.label1);
-            this.gunaGradientPanel2.Controls.Add(this.gunaCircleButton4);
-            this.gunaGradientPanel2.Controls.Add(this.gunaCircleButton2);
-            this.gunaGradientPanel2.Controls.Add(this.gunaCircleButton1);
+            this.gunaGradientPanel2.Controls.Add(this.editUsername);
+            this.gunaGradientPanel2.Controls.Add(this.editContactNum);
+            this.gunaGradientPanel2.Controls.Add(this.editEmail);
             this.gunaGradientPanel2.Controls.Add(this.label4);
             this.gunaGradientPanel2.Controls.Add(this.label5);
             this.gunaGradientPanel2.Controls.Add(this.label6);
@@ -102,27 +102,27 @@
             this.gunaGradientPanel2.Text = "gunaGradientPanel2";
             this.gunaGradientPanel2.Click += new System.EventHandler(this.gunaGradientPanel2_Click);
             // 
-            // gunaCircleButton3
+            // editStatus
             // 
-            this.gunaCircleButton3.AnimationHoverSpeed = 0.07F;
-            this.gunaCircleButton3.AnimationSpeed = 0.03F;
-            this.gunaCircleButton3.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton3.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton3.BorderColor = System.Drawing.Color.Black;
-            this.gunaCircleButton3.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaCircleButton3.ForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton3.Image = global::WindowsFormsApp1.Properties.Resources.editing;
-            this.gunaCircleButton3.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaCircleButton3.Location = new System.Drawing.Point(467, 190);
-            this.gunaCircleButton3.Name = "gunaCircleButton3";
-            this.gunaCircleButton3.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton3.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton3.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton3.OnHoverImage = null;
-            this.gunaCircleButton3.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaCircleButton3.Size = new System.Drawing.Size(25, 25);
-            this.gunaCircleButton3.TabIndex = 31;
-            this.gunaCircleButton3.Click += new System.EventHandler(this.gunaCircleButton3_Click);
+            this.editStatus.AnimationHoverSpeed = 0.07F;
+            this.editStatus.AnimationSpeed = 0.03F;
+            this.editStatus.BackColor = System.Drawing.Color.Transparent;
+            this.editStatus.BaseColor = System.Drawing.Color.Transparent;
+            this.editStatus.BorderColor = System.Drawing.Color.Black;
+            this.editStatus.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.editStatus.ForeColor = System.Drawing.Color.White;
+            this.editStatus.Image = global::WindowsFormsApp1.Properties.Resources.editing;
+            this.editStatus.ImageSize = new System.Drawing.Size(20, 20);
+            this.editStatus.Location = new System.Drawing.Point(467, 190);
+            this.editStatus.Name = "editStatus";
+            this.editStatus.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.editStatus.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.editStatus.OnHoverForeColor = System.Drawing.Color.White;
+            this.editStatus.OnHoverImage = null;
+            this.editStatus.OnPressedColor = System.Drawing.Color.Black;
+            this.editStatus.Size = new System.Drawing.Size(25, 25);
+            this.editStatus.TabIndex = 31;
+            this.editStatus.Click += new System.EventHandler(this.gunaCircleButton3_Click);
             // 
             // currpass
             // 
@@ -143,27 +143,27 @@
             this.currpass.TabIndex = 40;
             this.currpass.Text = "password";
             // 
-            // gunaCircleButton5
+            // editPassword
             // 
-            this.gunaCircleButton5.AnimationHoverSpeed = 0.07F;
-            this.gunaCircleButton5.AnimationSpeed = 0.03F;
-            this.gunaCircleButton5.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton5.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton5.BorderColor = System.Drawing.Color.Black;
-            this.gunaCircleButton5.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaCircleButton5.ForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton5.Image = global::WindowsFormsApp1.Properties.Resources.editing;
-            this.gunaCircleButton5.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaCircleButton5.Location = new System.Drawing.Point(467, 92);
-            this.gunaCircleButton5.Name = "gunaCircleButton5";
-            this.gunaCircleButton5.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton5.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton5.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton5.OnHoverImage = null;
-            this.gunaCircleButton5.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaCircleButton5.Size = new System.Drawing.Size(25, 25);
-            this.gunaCircleButton5.TabIndex = 39;
-            this.gunaCircleButton5.Click += new System.EventHandler(this.gunaCircleButton5_Click);
+            this.editPassword.AnimationHoverSpeed = 0.07F;
+            this.editPassword.AnimationSpeed = 0.03F;
+            this.editPassword.BackColor = System.Drawing.Color.Transparent;
+            this.editPassword.BaseColor = System.Drawing.Color.Transparent;
+            this.editPassword.BorderColor = System.Drawing.Color.Black;
+            this.editPassword.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.editPassword.ForeColor = System.Drawing.Color.White;
+            this.editPassword.Image = global::WindowsFormsApp1.Properties.Resources.editing;
+            this.editPassword.ImageSize = new System.Drawing.Size(20, 20);
+            this.editPassword.Location = new System.Drawing.Point(467, 92);
+            this.editPassword.Name = "editPassword";
+            this.editPassword.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.editPassword.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.editPassword.OnHoverForeColor = System.Drawing.Color.White;
+            this.editPassword.OnHoverImage = null;
+            this.editPassword.OnPressedColor = System.Drawing.Color.Black;
+            this.editPassword.Size = new System.Drawing.Size(25, 25);
+            this.editPassword.TabIndex = 39;
+            this.editPassword.Click += new System.EventHandler(this.gunaCircleButton5_Click);
             // 
             // label1
             // 
@@ -178,71 +178,71 @@
             this.label1.Text = "Password:";
             this.label1.Click += new System.EventHandler(this.label1_Click_1);
             // 
-            // gunaCircleButton4
+            // editUsername
             // 
-            this.gunaCircleButton4.AnimationHoverSpeed = 0.07F;
-            this.gunaCircleButton4.AnimationSpeed = 0.03F;
-            this.gunaCircleButton4.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton4.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton4.BorderColor = System.Drawing.Color.Black;
-            this.gunaCircleButton4.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaCircleButton4.ForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton4.Image = global::WindowsFormsApp1.Properties.Resources.editing;
-            this.gunaCircleButton4.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaCircleButton4.Location = new System.Drawing.Point(114, 259);
-            this.gunaCircleButton4.Name = "gunaCircleButton4";
-            this.gunaCircleButton4.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton4.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton4.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton4.OnHoverImage = null;
-            this.gunaCircleButton4.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaCircleButton4.Size = new System.Drawing.Size(25, 25);
-            this.gunaCircleButton4.TabIndex = 33;
-            this.gunaCircleButton4.Click += new System.EventHandler(this.gunaCircleButton4_Click);
+            this.editUsername.AnimationHoverSpeed = 0.07F;
+            this.editUsername.AnimationSpeed = 0.03F;
+            this.editUsername.BackColor = System.Drawing.Color.Transparent;
+            this.editUsername.BaseColor = System.Drawing.Color.Transparent;
+            this.editUsername.BorderColor = System.Drawing.Color.Black;
+            this.editUsername.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.editUsername.ForeColor = System.Drawing.Color.White;
+            this.editUsername.Image = global::WindowsFormsApp1.Properties.Resources.editing;
+            this.editUsername.ImageSize = new System.Drawing.Size(20, 20);
+            this.editUsername.Location = new System.Drawing.Point(114, 259);
+            this.editUsername.Name = "editUsername";
+            this.editUsername.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.editUsername.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.editUsername.OnHoverForeColor = System.Drawing.Color.White;
+            this.editUsername.OnHoverImage = null;
+            this.editUsername.OnPressedColor = System.Drawing.Color.Black;
+            this.editUsername.Size = new System.Drawing.Size(25, 25);
+            this.editUsername.TabIndex = 33;
+            this.editUsername.Click += new System.EventHandler(this.gunaCircleButton4_Click);
             // 
-            // gunaCircleButton2
+            // editContactNum
             // 
-            this.gunaCircleButton2.AnimationHoverSpeed = 0.07F;
-            this.gunaCircleButton2.AnimationSpeed = 0.03F;
-            this.gunaCircleButton2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton2.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton2.BorderColor = System.Drawing.Color.Black;
-            this.gunaCircleButton2.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaCircleButton2.ForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton2.Image = global::WindowsFormsApp1.Properties.Resources.editing;
-            this.gunaCircleButton2.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaCircleButton2.Location = new System.Drawing.Point(467, 137);
-            this.gunaCircleButton2.Name = "gunaCircleButton2";
-            this.gunaCircleButton2.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton2.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton2.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton2.OnHoverImage = null;
-            this.gunaCircleButton2.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaCircleButton2.Size = new System.Drawing.Size(25, 25);
-            this.gunaCircleButton2.TabIndex = 30;
-            this.gunaCircleButton2.Click += new System.EventHandler(this.gunaCircleButton2_Click);
+            this.editContactNum.AnimationHoverSpeed = 0.07F;
+            this.editContactNum.AnimationSpeed = 0.03F;
+            this.editContactNum.BackColor = System.Drawing.Color.Transparent;
+            this.editContactNum.BaseColor = System.Drawing.Color.Transparent;
+            this.editContactNum.BorderColor = System.Drawing.Color.Black;
+            this.editContactNum.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.editContactNum.ForeColor = System.Drawing.Color.White;
+            this.editContactNum.Image = global::WindowsFormsApp1.Properties.Resources.editing;
+            this.editContactNum.ImageSize = new System.Drawing.Size(20, 20);
+            this.editContactNum.Location = new System.Drawing.Point(467, 137);
+            this.editContactNum.Name = "editContactNum";
+            this.editContactNum.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.editContactNum.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.editContactNum.OnHoverForeColor = System.Drawing.Color.White;
+            this.editContactNum.OnHoverImage = null;
+            this.editContactNum.OnPressedColor = System.Drawing.Color.Black;
+            this.editContactNum.Size = new System.Drawing.Size(25, 25);
+            this.editContactNum.TabIndex = 30;
+            this.editContactNum.Click += new System.EventHandler(this.gunaCircleButton2_Click);
             // 
-            // gunaCircleButton1
+            // editEmail
             // 
-            this.gunaCircleButton1.AnimationHoverSpeed = 0.07F;
-            this.gunaCircleButton1.AnimationSpeed = 0.03F;
-            this.gunaCircleButton1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton1.BaseColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton1.BorderColor = System.Drawing.Color.Black;
-            this.gunaCircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.gunaCircleButton1.ForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton1.Image = global::WindowsFormsApp1.Properties.Resources.editing;
-            this.gunaCircleButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaCircleButton1.Location = new System.Drawing.Point(467, 31);
-            this.gunaCircleButton1.Name = "gunaCircleButton1";
-            this.gunaCircleButton1.OnHoverBaseColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton1.OnHoverBorderColor = System.Drawing.Color.Transparent;
-            this.gunaCircleButton1.OnHoverForeColor = System.Drawing.Color.White;
-            this.gunaCircleButton1.OnHoverImage = null;
-            this.gunaCircleButton1.OnPressedColor = System.Drawing.Color.Black;
-            this.gunaCircleButton1.Size = new System.Drawing.Size(25, 25);
-            this.gunaCircleButton1.TabIndex = 29;
-            this.gunaCircleButton1.Click += new System.EventHandler(this.gunaCircleButton1_Click);
+            this.editEmail.AnimationHoverSpeed = 0.07F;
+            this.editEmail.AnimationSpeed = 0.03F;
+            this.editEmail.BackColor = System.Drawing.Color.Transparent;
+            this.editEmail.BaseColor = System.Drawing.Color.Transparent;
+            this.editEmail.BorderColor = System.Drawing.Color.Black;
+            this.editEmail.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.editEmail.ForeColor = System.Drawing.Color.White;
+            this.editEmail.Image = global::WindowsFormsApp1.Properties.Resources.editing;
+            this.editEmail.ImageSize = new System.Drawing.Size(20, 20);
+            this.editEmail.Location = new System.Drawing.Point(467, 31);
+            this.editEmail.Name = "editEmail";
+            this.editEmail.OnHoverBaseColor = System.Drawing.Color.Transparent;
+            this.editEmail.OnHoverBorderColor = System.Drawing.Color.Transparent;
+            this.editEmail.OnHoverForeColor = System.Drawing.Color.White;
+            this.editEmail.OnHoverImage = null;
+            this.editEmail.OnPressedColor = System.Drawing.Color.Black;
+            this.editEmail.Size = new System.Drawing.Size(25, 25);
+            this.editEmail.TabIndex = 29;
+            this.editEmail.Click += new System.EventHandler(this.gunaCircleButton1_Click);
             // 
             // label4
             // 
@@ -654,21 +654,21 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private Guna.UI.WinForms.GunaGradiantButton assignBtn;
-        private Guna.UI.WinForms.GunaCircleButton gunaCircleButton1;
-        private Guna.UI.WinForms.GunaCircleButton gunaCircleButton2;
-        private Guna.UI.WinForms.GunaCircleButton gunaCircleButton3;
+        private Guna.UI.WinForms.GunaCircleButton editEmail;
+        private Guna.UI.WinForms.GunaCircleButton editContactNum;
+        private Guna.UI.WinForms.GunaCircleButton editStatus;
         private Guna.UI.WinForms.GunaElipsePanel statuspnl;
         private Guna.UI.WinForms.GunaGradiantButton AVbtn;
         private Guna.UI.WinForms.GunaGradiantButton busybtn;
         private Guna.UI.WinForms.GunaGradiantButton onleavebtn;
-        private Guna.UI.WinForms.GunaCircleButton gunaCircleButton4;
+        private Guna.UI.WinForms.GunaCircleButton editUsername;
         private Guna.UI.WinForms.GunaGradientPanel numpanel;
         private Guna.UI.WinForms.GunaCircleButton confirm;
         private Guna.UI.WinForms.GunaTextBox numtxtbx;
         private Guna.UI.WinForms.GunaTextBox usernametxtbx;
         private Guna.UI.WinForms.GunaGradientPanel userpanel;
         private Guna.UI.WinForms.GunaCircleButton confirmUsername;
-        private Guna.UI.WinForms.GunaCircleButton gunaCircleButton5;
+        private Guna.UI.WinForms.GunaCircleButton editPassword;
         private System.Windows.Forms.Label label1;
         private Guna.UI.WinForms.GunaTextBox currpass;
     }

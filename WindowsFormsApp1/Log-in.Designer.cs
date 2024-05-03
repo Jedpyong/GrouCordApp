@@ -39,13 +39,15 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaGradientPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // passwordTextBox
             // 
             this.passwordTextBox.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold);
-            this.passwordTextBox.Location = new System.Drawing.Point(169, 113);
+            this.passwordTextBox.Location = new System.Drawing.Point(169, 124);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = 'O';
             this.passwordTextBox.Size = new System.Drawing.Size(186, 23);
@@ -55,7 +57,7 @@
             // usernameTextBox
             // 
             this.usernameTextBox.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Bold);
-            this.usernameTextBox.Location = new System.Drawing.Point(169, 67);
+            this.usernameTextBox.Location = new System.Drawing.Point(169, 81);
             this.usernameTextBox.Name = "usernameTextBox";
             this.usernameTextBox.Size = new System.Drawing.Size(186, 23);
             this.usernameTextBox.TabIndex = 16;
@@ -77,6 +79,7 @@
             // 
             this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
             this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel1.Controls.Add(this.gunaPictureBox1);
             this.gunaGradientPanel1.Controls.Add(this.createAcc);
             this.gunaGradientPanel1.Controls.Add(this.forgotpass);
             this.gunaGradientPanel1.Controls.Add(this.loginButton);
@@ -118,7 +121,7 @@
             this.forgotpass.Font = new System.Drawing.Font("Segoe UI Variable Small", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.forgotpass.ForeColor = System.Drawing.Color.White;
             this.forgotpass.LinkColor = System.Drawing.Color.White;
-            this.forgotpass.Location = new System.Drawing.Point(159, 191);
+            this.forgotpass.Location = new System.Drawing.Point(159, 203);
             this.forgotpass.Name = "forgotpass";
             this.forgotpass.Size = new System.Drawing.Size(99, 16);
             this.forgotpass.TabIndex = 19;
@@ -144,7 +147,7 @@
             this.loginButton.Image = null;
             this.loginButton.ImageSize = new System.Drawing.Size(20, 20);
             this.loginButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.loginButton.Location = new System.Drawing.Point(136, 148);
+            this.loginButton.Location = new System.Drawing.Point(136, 166);
             this.loginButton.Name = "loginButton";
             this.loginButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.loginButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -164,7 +167,7 @@
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Bold);
-            this.label3.Location = new System.Drawing.Point(76, 113);
+            this.label3.Location = new System.Drawing.Point(76, 125);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 17);
             this.label3.TabIndex = 19;
@@ -175,7 +178,7 @@
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(48, 67);
+            this.label1.Location = new System.Drawing.Point(48, 83);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 17);
             this.label1.TabIndex = 19;
@@ -186,11 +189,24 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(154, 9);
+            this.label2.Location = new System.Drawing.Point(163, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(144, 37);
             this.label2.TabIndex = 2;
             this.label2.Text = "GrouCord";
+            // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.GrouCord_Logo;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(101, 4);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Radius = 10;
+            this.gunaPictureBox1.Size = new System.Drawing.Size(69, 60);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox1.TabIndex = 22;
+            this.gunaPictureBox1.TabStop = false;
             // 
             // LoginForm
             // 
@@ -211,6 +227,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gunaGradientPanel1.ResumeLayout(false);
             this.gunaGradientPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -227,6 +244,7 @@
         private Guna.UI.WinForms.GunaAdvenceButton loginButton;
         private System.Windows.Forms.LinkLabel forgotpass;
         private Guna.UI.WinForms.GunaLinkLabel createAcc;
+        private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
     }
 }
 

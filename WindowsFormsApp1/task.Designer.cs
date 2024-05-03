@@ -86,7 +86,7 @@
             this.Remarks.Name = "Remarks";
             this.Remarks.Size = new System.Drawing.Size(100, 23);
             this.Remarks.TabIndex = 3;
-            this.Remarks.Text = "Remarks";
+            this.Remarks.Text = "Progress";
             this.Remarks.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Remarks.Click += new System.EventHandler(this.Remarks_Click);
             this.Remarks.Leave += new System.EventHandler(this.Remarks_Leave);
@@ -139,6 +139,7 @@
             this.assigned.OnHoverItemForeColor = System.Drawing.Color.White;
             this.assigned.Size = new System.Drawing.Size(121, 26);
             this.assigned.TabIndex = 1;
+            this.assigned.SelectedIndexChanged += new System.EventHandler(this.assigned_SelectedIndexChanged);
             // 
             // taskName
             // 

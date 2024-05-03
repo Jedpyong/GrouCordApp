@@ -142,5 +142,10 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        private void back_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

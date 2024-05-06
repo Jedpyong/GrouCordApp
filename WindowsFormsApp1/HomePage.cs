@@ -19,6 +19,16 @@ namespace WindowsFormsApp1
     public partial class HomePage : Form
     {
 
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle = cp.ExStyle | 0x2000000;
+                return cp;
+            }
+        }
+
         public static DBManager manage = new DBManager();
         public List<groupz> allGroups = new List<groupz>();
         public HomePage()

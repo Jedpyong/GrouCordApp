@@ -16,6 +16,17 @@ namespace WindowsFormsApp1
 {
     public partial class Members : UserControl
     {
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle = cp.ExStyle | 0x2000000;
+                return cp;
+            }
+        }
+
+
         public Group group;
         public GroupPage page;
         public int memberID;
@@ -254,6 +265,11 @@ namespace WindowsFormsApp1
                 gunaGradientPanel1.GradiantColor3 = Color.Black;
                 gunaGradientPanel1.GradiantColor4 = Color.Red;
             }
+        }
+
+        private void emailLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

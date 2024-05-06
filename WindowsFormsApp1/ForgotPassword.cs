@@ -18,7 +18,17 @@ namespace WindowsFormsApp1
 
     public partial class ForgotPassword : Form
     {
-       
+
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle = cp.ExStyle | 0x2000000;
+                return cp;
+            }
+        }
+
         string randomCode;
         public static string to;
 

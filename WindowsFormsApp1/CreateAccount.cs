@@ -17,6 +17,16 @@ namespace WindowsFormsApp1
     public partial class CreateAccount : Form
     {
 
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle = cp.ExStyle | 0x2000000;
+                return cp;
+            }
+        }
+
         public static string email;
         public static string password;
         public static string name;

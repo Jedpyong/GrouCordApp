@@ -16,7 +16,7 @@ namespace WindowsFormsApp1
 {
     public partial class UpdatePassword : Form
     {
-       
+
         string email = ForgotPassword.to;
 
         public UpdatePassword()

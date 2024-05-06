@@ -16,7 +16,15 @@ namespace WindowsFormsApp1
 {
     public partial class GroupPage : UserControl
     {
-        
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle = cp.ExStyle | 0x2000000;
+                return cp;
+            }
+        }
 
         public Group group;
         public NotifAnnouncement notif ;

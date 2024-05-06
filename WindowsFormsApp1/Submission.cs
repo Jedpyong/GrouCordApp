@@ -19,6 +19,16 @@ namespace WindowsFormsApp1
 {
     public partial class Submission : UserControl
     {
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams cp = base.CreateParams;
+                cp.ExStyle = cp.ExStyle | 0x2000000;
+                return cp;
+            }
+        }
+
         public task panel;
         public Taskc thisTask;
         public bool isResubmit = false;

@@ -205,6 +205,7 @@
             this.emailLabel.Size = new System.Drawing.Size(161, 21);
             this.emailLabel.TabIndex = 14;
             this.emailLabel.Text = "jadejaballa@gmail.com";
+            this.emailLabel.Click += new System.EventHandler(this.emailLabel_Click);
             // 
             // gunaGradientPanel1
             // 

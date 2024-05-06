@@ -83,7 +83,6 @@ namespace WindowsFormsApp1
                 
 
                  LoginForm.hp.ReloadHomeFLP();
-                LoginForm.hp.addToFPL(groupdisp);
                 
                 this.Hide();
                 accs.Clear();

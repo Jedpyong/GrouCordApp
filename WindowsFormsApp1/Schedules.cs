@@ -89,7 +89,7 @@ namespace WindowsFormsApp1
             else
                  try
                  {
-                    gunaGradientPanel2.Size = new Size(378, 5);
+                    gunaGradientPanel2.Size = new Size(378, 6);
                         DataTable dt = manage.LoadData(groupID);
                         data.DataSource = dt;
 

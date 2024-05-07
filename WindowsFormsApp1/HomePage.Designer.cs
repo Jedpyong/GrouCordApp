@@ -30,6 +30,10 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomePage));
             this.MainPnl = new Guna.UI.WinForms.GunaGradientPanel();
+            this.statuspnl = new Guna.UI.WinForms.GunaElipsePanel();
+            this.busybtn = new Guna.UI.WinForms.GunaGradiantButton();
+            this.onleavebtn = new Guna.UI.WinForms.GunaGradiantButton();
+            this.AVbtn = new Guna.UI.WinForms.GunaGradiantButton();
             this.CombPnl = new Guna.UI.WinForms.GunaPanel();
             this.FLPPnl = new System.Windows.Forms.FlowLayoutPanel();
             this.AddSearchPnl = new Guna.UI.WinForms.GunaPanel();
@@ -44,17 +48,13 @@
             this.close = new Guna.UI.WinForms.GunaImageButton();
             this.statlabel = new System.Windows.Forms.Label();
             this.accName = new Guna.UI.WinForms.GunaLabel();
-            this.statuspnl = new Guna.UI.WinForms.GunaElipsePanel();
-            this.busybtn = new Guna.UI.WinForms.GunaGradiantButton();
-            this.onleavebtn = new Guna.UI.WinForms.GunaGradiantButton();
-            this.AVbtn = new Guna.UI.WinForms.GunaGradiantButton();
             this.MainPnl.SuspendLayout();
+            this.statuspnl.SuspendLayout();
             this.CombPnl.SuspendLayout();
             this.AddSearchPnl.SuspendLayout();
             this.DemoPnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profileButton)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.statuspic)).BeginInit();
-            this.statuspnl.SuspendLayout();
             this.SuspendLayout();
             // 
             // MainPnl
@@ -76,6 +76,91 @@
             this.MainPnl.TabIndex = 0;
             this.MainPnl.Text = "gunaGradientPanel1";
             this.MainPnl.Click += new System.EventHandler(this.MainPnl_Click);
+            // 
+            // statuspnl
+            // 
+            this.statuspnl.BackColor = System.Drawing.Color.Black;
+            this.statuspnl.BaseColor = System.Drawing.Color.Black;
+            this.statuspnl.Controls.Add(this.busybtn);
+            this.statuspnl.Controls.Add(this.onleavebtn);
+            this.statuspnl.Controls.Add(this.AVbtn);
+            this.statuspnl.Location = new System.Drawing.Point(330, 86);
+            this.statuspnl.Margin = new System.Windows.Forms.Padding(0);
+            this.statuspnl.Name = "statuspnl";
+            this.statuspnl.Size = new System.Drawing.Size(189, 132);
+            this.statuspnl.TabIndex = 33;
+            this.statuspnl.Visible = false;
+            // 
+            // busybtn
+            // 
+            this.busybtn.AnimationHoverSpeed = 0.07F;
+            this.busybtn.AnimationSpeed = 0.03F;
+            this.busybtn.BaseColor1 = System.Drawing.Color.MediumBlue;
+            this.busybtn.BaseColor2 = System.Drawing.Color.Black;
+            this.busybtn.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.busybtn.ForeColor = System.Drawing.Color.White;
+            this.busybtn.Image = null;
+            this.busybtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.busybtn.Location = new System.Drawing.Point(1, 44);
+            this.busybtn.Margin = new System.Windows.Forms.Padding(0);
+            this.busybtn.Name = "busybtn";
+            this.busybtn.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.busybtn.OnHoverBaseColor2 = System.Drawing.Color.Black;
+            this.busybtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.busybtn.OnHoverImage = null;
+            this.busybtn.OnPressedColor = System.Drawing.Color.Black;
+            this.busybtn.Size = new System.Drawing.Size(160, 42);
+            this.busybtn.TabIndex = 3;
+            this.busybtn.Text = "BUSY";
+            this.busybtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.busybtn.Click += new System.EventHandler(this.busybtn_Click);
+            // 
+            // onleavebtn
+            // 
+            this.onleavebtn.AnimationHoverSpeed = 0.07F;
+            this.onleavebtn.AnimationSpeed = 0.03F;
+            this.onleavebtn.BaseColor1 = System.Drawing.Color.MediumBlue;
+            this.onleavebtn.BaseColor2 = System.Drawing.Color.Black;
+            this.onleavebtn.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.onleavebtn.ForeColor = System.Drawing.Color.White;
+            this.onleavebtn.Image = null;
+            this.onleavebtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.onleavebtn.Location = new System.Drawing.Point(1, 87);
+            this.onleavebtn.Margin = new System.Windows.Forms.Padding(0);
+            this.onleavebtn.Name = "onleavebtn";
+            this.onleavebtn.OnHoverBaseColor1 = System.Drawing.Color.Yellow;
+            this.onleavebtn.OnHoverBaseColor2 = System.Drawing.Color.Black;
+            this.onleavebtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.onleavebtn.OnHoverImage = null;
+            this.onleavebtn.OnPressedColor = System.Drawing.Color.Black;
+            this.onleavebtn.Size = new System.Drawing.Size(159, 42);
+            this.onleavebtn.TabIndex = 4;
+            this.onleavebtn.Text = "ON_LEAVE";
+            this.onleavebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.onleavebtn.Click += new System.EventHandler(this.onleavebtn_Click);
+            // 
+            // AVbtn
+            // 
+            this.AVbtn.AnimationHoverSpeed = 0.07F;
+            this.AVbtn.AnimationSpeed = 0.03F;
+            this.AVbtn.BaseColor1 = System.Drawing.Color.MediumBlue;
+            this.AVbtn.BaseColor2 = System.Drawing.Color.Black;
+            this.AVbtn.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
+            this.AVbtn.ForeColor = System.Drawing.Color.White;
+            this.AVbtn.Image = null;
+            this.AVbtn.ImageSize = new System.Drawing.Size(20, 20);
+            this.AVbtn.Location = new System.Drawing.Point(1, 1);
+            this.AVbtn.Name = "AVbtn";
+            this.AVbtn.OnHoverBaseColor1 = System.Drawing.Color.Green;
+            this.AVbtn.OnHoverBaseColor2 = System.Drawing.Color.Black;
+            this.AVbtn.OnHoverForeColor = System.Drawing.Color.White;
+            this.AVbtn.OnHoverImage = null;
+            this.AVbtn.OnPressedColor = System.Drawing.Color.Black;
+            this.AVbtn.Size = new System.Drawing.Size(160, 42);
+            this.AVbtn.TabIndex = 0;
+            this.AVbtn.Text = "AVAILABLE";
+            this.AVbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.AVbtn.Click += new System.EventHandler(this.AVbtn_Click);
             // 
             // CombPnl
             // 
@@ -241,7 +326,7 @@
             // 
             this.profileButton.BackColor = System.Drawing.Color.Transparent;
             this.profileButton.BaseColor = System.Drawing.Color.White;
-            this.profileButton.Location = new System.Drawing.Point(1, 2);
+            this.profileButton.Location = new System.Drawing.Point(12, 0);
             this.profileButton.Name = "profileButton";
             this.profileButton.Size = new System.Drawing.Size(83, 86);
             this.profileButton.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -295,97 +380,12 @@
             this.accName.BackColor = System.Drawing.Color.Transparent;
             this.accName.Font = new System.Drawing.Font("Segoe UI Black", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.accName.ForeColor = System.Drawing.Color.Transparent;
-            this.accName.Location = new System.Drawing.Point(89, 20);
+            this.accName.Location = new System.Drawing.Point(108, 26);
             this.accName.Name = "accName";
             this.accName.Size = new System.Drawing.Size(185, 37);
             this.accName.TabIndex = 1;
             this.accName.Text = "Jade Jaballa";
             this.accName.Click += new System.EventHandler(this.accName_Click_1);
-            // 
-            // statuspnl
-            // 
-            this.statuspnl.BackColor = System.Drawing.Color.Black;
-            this.statuspnl.BaseColor = System.Drawing.Color.Black;
-            this.statuspnl.Controls.Add(this.busybtn);
-            this.statuspnl.Controls.Add(this.onleavebtn);
-            this.statuspnl.Controls.Add(this.AVbtn);
-            this.statuspnl.Location = new System.Drawing.Point(330, 86);
-            this.statuspnl.Margin = new System.Windows.Forms.Padding(0);
-            this.statuspnl.Name = "statuspnl";
-            this.statuspnl.Size = new System.Drawing.Size(189, 132);
-            this.statuspnl.TabIndex = 33;
-            this.statuspnl.Visible = false;
-            // 
-            // busybtn
-            // 
-            this.busybtn.AnimationHoverSpeed = 0.07F;
-            this.busybtn.AnimationSpeed = 0.03F;
-            this.busybtn.BaseColor1 = System.Drawing.Color.MediumBlue;
-            this.busybtn.BaseColor2 = System.Drawing.Color.Black;
-            this.busybtn.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.busybtn.ForeColor = System.Drawing.Color.White;
-            this.busybtn.Image = null;
-            this.busybtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.busybtn.Location = new System.Drawing.Point(1, 44);
-            this.busybtn.Margin = new System.Windows.Forms.Padding(0);
-            this.busybtn.Name = "busybtn";
-            this.busybtn.OnHoverBaseColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.busybtn.OnHoverBaseColor2 = System.Drawing.Color.Black;
-            this.busybtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.busybtn.OnHoverImage = null;
-            this.busybtn.OnPressedColor = System.Drawing.Color.Black;
-            this.busybtn.Size = new System.Drawing.Size(160, 42);
-            this.busybtn.TabIndex = 3;
-            this.busybtn.Text = "BUSY";
-            this.busybtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.busybtn.Click += new System.EventHandler(this.busybtn_Click);
-            // 
-            // onleavebtn
-            // 
-            this.onleavebtn.AnimationHoverSpeed = 0.07F;
-            this.onleavebtn.AnimationSpeed = 0.03F;
-            this.onleavebtn.BaseColor1 = System.Drawing.Color.MediumBlue;
-            this.onleavebtn.BaseColor2 = System.Drawing.Color.Black;
-            this.onleavebtn.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.onleavebtn.ForeColor = System.Drawing.Color.White;
-            this.onleavebtn.Image = null;
-            this.onleavebtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.onleavebtn.Location = new System.Drawing.Point(1, 87);
-            this.onleavebtn.Margin = new System.Windows.Forms.Padding(0);
-            this.onleavebtn.Name = "onleavebtn";
-            this.onleavebtn.OnHoverBaseColor1 = System.Drawing.Color.Yellow;
-            this.onleavebtn.OnHoverBaseColor2 = System.Drawing.Color.Black;
-            this.onleavebtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.onleavebtn.OnHoverImage = null;
-            this.onleavebtn.OnPressedColor = System.Drawing.Color.Black;
-            this.onleavebtn.Size = new System.Drawing.Size(159, 42);
-            this.onleavebtn.TabIndex = 4;
-            this.onleavebtn.Text = "ON_LEAVE";
-            this.onleavebtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.onleavebtn.Click += new System.EventHandler(this.onleavebtn_Click);
-            // 
-            // AVbtn
-            // 
-            this.AVbtn.AnimationHoverSpeed = 0.07F;
-            this.AVbtn.AnimationSpeed = 0.03F;
-            this.AVbtn.BaseColor1 = System.Drawing.Color.MediumBlue;
-            this.AVbtn.BaseColor2 = System.Drawing.Color.Black;
-            this.AVbtn.Font = new System.Drawing.Font("Segoe UI Black", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.AVbtn.ForeColor = System.Drawing.Color.White;
-            this.AVbtn.Image = null;
-            this.AVbtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.AVbtn.Location = new System.Drawing.Point(1, 1);
-            this.AVbtn.Name = "AVbtn";
-            this.AVbtn.OnHoverBaseColor1 = System.Drawing.Color.Green;
-            this.AVbtn.OnHoverBaseColor2 = System.Drawing.Color.Black;
-            this.AVbtn.OnHoverForeColor = System.Drawing.Color.White;
-            this.AVbtn.OnHoverImage = null;
-            this.AVbtn.OnPressedColor = System.Drawing.Color.Black;
-            this.AVbtn.Size = new System.Drawing.Size(160, 42);
-            this.AVbtn.TabIndex = 0;
-            this.AVbtn.Text = "AVAILABLE";
-            this.AVbtn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.AVbtn.Click += new System.EventHandler(this.AVbtn_Click);
             // 
             // HomePage
             // 
@@ -400,13 +400,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.HomePage_Load);
             this.MainPnl.ResumeLayout(false);
+            this.statuspnl.ResumeLayout(false);
             this.CombPnl.ResumeLayout(false);
             this.AddSearchPnl.ResumeLayout(false);
             this.DemoPnl.ResumeLayout(false);
             this.DemoPnl.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.profileButton)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.statuspic)).EndInit();
-            this.statuspnl.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

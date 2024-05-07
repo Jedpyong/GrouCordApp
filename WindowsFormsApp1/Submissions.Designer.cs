@@ -52,7 +52,7 @@
             this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(378, 41);
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(394, 41);
             this.gunaGradientPanel1.TabIndex = 4;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
@@ -95,7 +95,7 @@
             this.gunaGradientPanel2.Location = new System.Drawing.Point(0, 41);
             this.gunaGradientPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.gunaGradientPanel2.Name = "gunaGradientPanel2";
-            this.gunaGradientPanel2.Size = new System.Drawing.Size(378, 289);
+            this.gunaGradientPanel2.Size = new System.Drawing.Size(394, 289);
             this.gunaGradientPanel2.TabIndex = 5;
             this.gunaGradientPanel2.Text = "gunaGradientPanel2";
             // 
@@ -111,7 +111,7 @@
             this.edit.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.edit.Image = null;
             this.edit.ImageSize = new System.Drawing.Size(20, 20);
-            this.edit.Location = new System.Drawing.Point(201, 232);
+            this.edit.Location = new System.Drawing.Point(231, 232);
             this.edit.Name = "edit";
             this.edit.OnHoverBaseColor1 = System.Drawing.Color.Black;
             this.edit.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
@@ -132,7 +132,7 @@
             this.descriptiontxtbx.Location = new System.Drawing.Point(18, 3);
             this.descriptiontxtbx.Name = "descriptiontxtbx";
             this.descriptiontxtbx.ReadOnly = true;
-            this.descriptiontxtbx.Size = new System.Drawing.Size(342, 223);
+            this.descriptiontxtbx.Size = new System.Drawing.Size(357, 223);
             this.descriptiontxtbx.TabIndex = 7;
             this.descriptiontxtbx.Text = "";
             // 
@@ -143,7 +143,7 @@
             this.Controls.Add(this.gunaGradientPanel2);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Name = "Submissions";
-            this.Size = new System.Drawing.Size(378, 330);
+            this.Size = new System.Drawing.Size(394, 323);
             this.Load += new System.EventHandler(this.Submissions_Load);
             this.gunaGradientPanel1.ResumeLayout(false);
             this.gunaGradientPanel1.PerformLayout();

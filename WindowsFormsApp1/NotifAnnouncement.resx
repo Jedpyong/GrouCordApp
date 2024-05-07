@@ -121,11 +121,8 @@
   <data name="gunaGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADjSURBVChTDcPLSgIBGIbhH0QXA8IsFGFAcOPGjbfQphZR
-        EZ0QMRFNE1OTSWUYpkEsSzqKVEREtOk6v94HHjPbkNkWd3nIKhvscMArhrJEclOJ5A4PWGGdbfbpM2As
-        SznbSjn7PGGNLfY44pQRb2SOuyfHPWaNTXY55IQR51zK0tkjpbNVNtjhgGOGnPGOzzLXq8j16mzzgj4D
-        xlzwkWtZpnCqTOGMPY445TVv+cAVP2S5YlO5YpeXnDDinEu+8p3fMq90Lq805JghZ7znC9/4xV9ZvtxX
-        vuwzYMwFn7jmJ3/4p3+8tZ9LlyBoHwAAAABJRU5ErkJggg==
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAYSURBVChTY3jw4MF/YvCoQryY2gof/AcA+MtqLMyhCLgA
+        AAAASUVORK5CYII=
 </value>
   </data>
   <data name="mainPanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -50,7 +50,7 @@
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
             this.data.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.data.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.data.BackgroundColor = System.Drawing.Color.White;
+            this.data.BackgroundColor = System.Drawing.Color.Blue;
             this.data.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.data.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.data.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -73,13 +73,13 @@
             this.data.DefaultCellStyle = dataGridViewCellStyle3;
             this.data.Dock = System.Windows.Forms.DockStyle.Fill;
             this.data.EnableHeadersVisualStyles = false;
-            this.data.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.data.GridColor = System.Drawing.Color.Black;
             this.data.Location = new System.Drawing.Point(0, 158);
             this.data.Name = "data";
             this.data.ReadOnly = true;
             this.data.RowHeadersVisible = false;
             this.data.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.data.Size = new System.Drawing.Size(378, 164);
+            this.data.Size = new System.Drawing.Size(394, 165);
             this.data.TabIndex = 4;
             this.data.Theme = Guna.UI.WinForms.GunaDataGridViewPresetThemes.Guna;
             this.data.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -87,8 +87,8 @@
             this.data.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
             this.data.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
             this.data.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
-            this.data.ThemeStyle.BackColor = System.Drawing.Color.White;
-            this.data.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.data.ThemeStyle.BackColor = System.Drawing.Color.Blue;
+            this.data.ThemeStyle.GridColor = System.Drawing.Color.Black;
             this.data.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.data.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.data.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
@@ -117,7 +117,7 @@
             this.addDB.ForeColor = System.Drawing.Color.White;
             this.addDB.Image = null;
             this.addDB.ImageSize = new System.Drawing.Size(20, 20);
-            this.addDB.Location = new System.Drawing.Point(245, 35);
+            this.addDB.Location = new System.Drawing.Point(260, 35);
             this.addDB.Name = "addDB";
             this.addDB.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.addDB.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -139,7 +139,7 @@
             this.dateTimePicker1.Font = new System.Drawing.Font("Segoe UI Variable Text Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePicker1.Location = new System.Drawing.Point(19, 6);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 23);
+            this.dateTimePicker1.Size = new System.Drawing.Size(232, 23);
             this.dateTimePicker1.TabIndex = 0;
             this.dateTimePicker1.Value = new System.DateTime(2024, 4, 23, 18, 40, 4, 0);
             // 
@@ -150,13 +150,13 @@
             this.gunaGradientPanel1.Controls.Add(this.gunaLabel1);
             this.gunaGradientPanel1.Controls.Add(this.back);
             this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.DarkBlue;
-            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Navy;
-            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.RoyalBlue;
-            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
+            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(378, 41);
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(394, 41);
             this.gunaGradientPanel1.TabIndex = 5;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
@@ -166,8 +166,8 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(119, 8);
+            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel1.Location = new System.Drawing.Point(127, 8);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(136, 21);
             this.gunaLabel1.TabIndex = 1;
@@ -202,7 +202,7 @@
             this.gunaGradientPanel2.Location = new System.Drawing.Point(0, 41);
             this.gunaGradientPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.gunaGradientPanel2.Name = "gunaGradientPanel2";
-            this.gunaGradientPanel2.Size = new System.Drawing.Size(378, 117);
+            this.gunaGradientPanel2.Size = new System.Drawing.Size(394, 117);
             this.gunaGradientPanel2.TabIndex = 6;
             this.gunaGradientPanel2.Text = "gunaGradientPanel2";
             // 
@@ -210,7 +210,7 @@
             // 
             this.description.Location = new System.Drawing.Point(19, 35);
             this.description.Name = "description";
-            this.description.Size = new System.Drawing.Size(200, 78);
+            this.description.Size = new System.Drawing.Size(232, 76);
             this.description.TabIndex = 2;
             this.description.Text = "Description...";
             this.description.TextChanged += new System.EventHandler(this.description_TextChanged);
@@ -226,7 +226,7 @@
             this.Controls.Add(this.gunaGradientPanel2);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Name = "Schedules";
-            this.Size = new System.Drawing.Size(378, 322);
+            this.Size = new System.Drawing.Size(394, 323);
             this.Load += new System.EventHandler(this.Schedules_Load);
             ((System.ComponentModel.ISupportInitialize)(this.data)).EndInit();
             this.gunaGradientPanel1.ResumeLayout(false);

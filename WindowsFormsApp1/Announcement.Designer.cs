@@ -61,7 +61,7 @@
             this.mainPanel.GradiantColor4 = System.Drawing.Color.Black;
             this.mainPanel.Location = new System.Drawing.Point(0, 41);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(378, 281);
+            this.mainPanel.Size = new System.Drawing.Size(394, 282);
             this.mainPanel.TabIndex = 5;
             this.mainPanel.Text = "gunaGradientPanel2";
             // 
@@ -162,7 +162,7 @@
             this.Atitle.FocusedBaseColor = System.Drawing.Color.White;
             this.Atitle.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.Atitle.FocusedForeColor = System.Drawing.Color.Black;
-            this.Atitle.Font = new System.Drawing.Font("Segoe UI Variable Display Light", 9F);
+            this.Atitle.Font = new System.Drawing.Font("Segoe UI Variable Text Semiligh", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Atitle.ForeColor = System.Drawing.Color.Black;
             this.Atitle.Location = new System.Drawing.Point(149, 19);
             this.Atitle.Name = "Atitle";
@@ -177,7 +177,7 @@
             // Bodytxtbx
             // 
             this.Bodytxtbx.AcceptsTab = true;
-            this.Bodytxtbx.Font = new System.Drawing.Font("Segoe UI Variable Display Light", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bodytxtbx.Font = new System.Drawing.Font("Segoe UI Variable Text Semiligh", 9F);
             this.Bodytxtbx.ForeColor = System.Drawing.Color.Black;
             this.Bodytxtbx.Location = new System.Drawing.Point(149, 55);
             this.Bodytxtbx.Name = "Bodytxtbx";
@@ -198,7 +198,7 @@
             this.PostButton.ForeColor = System.Drawing.Color.White;
             this.PostButton.Image = null;
             this.PostButton.ImageSize = new System.Drawing.Size(20, 20);
-            this.PostButton.Location = new System.Drawing.Point(239, 223);
+            this.PostButton.Location = new System.Drawing.Point(251, 224);
             this.PostButton.Name = "PostButton";
             this.PostButton.OnHoverBaseColor = System.Drawing.Color.Black;
             this.PostButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -219,13 +219,13 @@
             this.gunaGradientPanel1.Controls.Add(this.annLabel);
             this.gunaGradientPanel1.Controls.Add(this.back);
             this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.DarkBlue;
-            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Navy;
-            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.RoyalBlue;
-            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
+            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(378, 41);
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(394, 41);
             this.gunaGradientPanel1.TabIndex = 4;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
@@ -234,7 +234,7 @@
             this.annLabel.AutoSize = true;
             this.annLabel.BackColor = System.Drawing.Color.Transparent;
             this.annLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.annLabel.ForeColor = System.Drawing.Color.White;
+            this.annLabel.ForeColor = System.Drawing.Color.Black;
             this.annLabel.Location = new System.Drawing.Point(114, 10);
             this.annLabel.Name = "annLabel";
             this.annLabel.Size = new System.Drawing.Size(149, 21);
@@ -264,7 +264,7 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Name = "Announcement";
-            this.Size = new System.Drawing.Size(378, 322);
+            this.Size = new System.Drawing.Size(394, 323);
             this.Load += new System.EventHandler(this.Announcement_Load);
             this.mainPanel.ResumeLayout(false);
             this.gunaGradientPanel2.ResumeLayout(false);

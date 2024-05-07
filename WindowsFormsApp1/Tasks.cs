@@ -66,5 +66,10 @@ namespace WindowsFormsApp1
             this.SendToBack();
             this.Hide();
         }
+
+        private void Tasks_Leave(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
     }
 }

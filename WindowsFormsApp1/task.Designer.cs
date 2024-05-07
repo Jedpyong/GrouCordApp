@@ -166,6 +166,7 @@
             this.buttonTask.Image = null;
             this.buttonTask.ImageSize = new System.Drawing.Size(20, 20);
             this.buttonTask.Location = new System.Drawing.Point(0, 0);
+            this.buttonTask.Margin = new System.Windows.Forms.Padding(10);
             this.buttonTask.Name = "buttonTask";
             this.buttonTask.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.buttonTask.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -236,7 +237,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.gunaGradientPanel1);
-            this.Margin = new System.Windows.Forms.Padding(0);
+            this.Margin = new System.Windows.Forms.Padding(15, 5, 0, 5);
             this.Name = "task";
             this.Size = new System.Drawing.Size(357, 89);
             this.gunaGradientPanel1.ResumeLayout(false);

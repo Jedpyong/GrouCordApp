@@ -57,10 +57,10 @@
             this.outpnl.GradiantColor2 = System.Drawing.Color.Black;
             this.outpnl.GradiantColor3 = System.Drawing.Color.Blue;
             this.outpnl.GradiantColor4 = System.Drawing.Color.Black;
-            this.outpnl.Location = new System.Drawing.Point(142, 62);
-            this.outpnl.Margin = new System.Windows.Forms.Padding(0, 1, 0, 0);
+            this.outpnl.Location = new System.Drawing.Point(126, 63);
+            this.outpnl.Margin = new System.Windows.Forms.Padding(20, 1, 0, 0);
             this.outpnl.Name = "outpnl";
-            this.outpnl.Size = new System.Drawing.Size(378, 322);
+            this.outpnl.Size = new System.Drawing.Size(394, 321);
             this.outpnl.TabIndex = 0;
             this.outpnl.Text = "gunaGradientPanel2";
             this.outpnl.Click += new System.EventHandler(this.outpnl_Click);
@@ -70,10 +70,10 @@
             this.FLPGroupPage.AutoScroll = true;
             this.FLPGroupPage.BackColor = System.Drawing.Color.Transparent;
             this.FLPGroupPage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.FLPGroupPage.Location = new System.Drawing.Point(-1, 0);
+            this.FLPGroupPage.Location = new System.Drawing.Point(0, 0);
             this.FLPGroupPage.Margin = new System.Windows.Forms.Padding(0);
             this.FLPGroupPage.Name = "FLPGroupPage";
-            this.FLPGroupPage.Size = new System.Drawing.Size(378, 323);
+            this.FLPGroupPage.Size = new System.Drawing.Size(394, 323);
             this.FLPGroupPage.TabIndex = 2;
             this.FLPGroupPage.Paint += new System.Windows.Forms.PaintEventHandler(this.FLPGroupPage_Paint_1);
             // 
@@ -87,13 +87,13 @@
             this.gunaGradientPanel1.Controls.Add(this.Tasks);
             this.gunaGradientPanel1.Controls.Add(this.addMember);
             this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.Black;
-            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Black;
-            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.Blue;
+            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Navy;
+            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 56);
             this.gunaGradientPanel1.Margin = new System.Windows.Forms.Padding(0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(141, 327);
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(126, 329);
             this.gunaGradientPanel1.TabIndex = 0;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             this.gunaGradientPanel1.Click += new System.EventHandler(this.gunaGradientPanel1_Click);
@@ -116,7 +116,7 @@
             this.Schedules.OnHoverImage = null;
             this.Schedules.OnPressedColor = System.Drawing.Color.Black;
             this.Schedules.Radius = 1;
-            this.Schedules.Size = new System.Drawing.Size(141, 42);
+            this.Schedules.Size = new System.Drawing.Size(126, 42);
             this.Schedules.TabIndex = 8;
             this.Schedules.Text = " Schedules  ";
             this.Schedules.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -130,10 +130,10 @@
             this.mainPanel.GradiantColor2 = System.Drawing.Color.White;
             this.mainPanel.GradiantColor3 = System.Drawing.Color.Black;
             this.mainPanel.GradiantColor4 = System.Drawing.Color.Black;
-            this.mainPanel.Location = new System.Drawing.Point(141, 0);
+            this.mainPanel.Location = new System.Drawing.Point(141, 6);
             this.mainPanel.Margin = new System.Windows.Forms.Padding(0);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(378, 327);
+            this.mainPanel.Size = new System.Drawing.Size(378, 321);
             this.mainPanel.TabIndex = 1;
             this.mainPanel.Text = "gunaGradientPanel2";
             // 
@@ -155,7 +155,7 @@
             this.Announcements.OnHoverImage = null;
             this.Announcements.OnPressedColor = System.Drawing.Color.Black;
             this.Announcements.Radius = 1;
-            this.Announcements.Size = new System.Drawing.Size(141, 42);
+            this.Announcements.Size = new System.Drawing.Size(126, 42);
             this.Announcements.TabIndex = 6;
             this.Announcements.Text = "   Announcements";
             this.Announcements.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -179,11 +179,12 @@
             this.Tasks.OnHoverImage = null;
             this.Tasks.OnPressedColor = System.Drawing.Color.Black;
             this.Tasks.Radius = 1;
-            this.Tasks.Size = new System.Drawing.Size(141, 42);
+            this.Tasks.Size = new System.Drawing.Size(126, 42);
             this.Tasks.TabIndex = 4;
             this.Tasks.Text = "Tasks";
             this.Tasks.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Tasks.Click += new System.EventHandler(this.Tasks_Click);
+            this.Tasks.Leave += new System.EventHandler(this.Tasks_Leave);
             // 
             // addMember
             // 
@@ -203,7 +204,7 @@
             this.addMember.OnHoverImage = null;
             this.addMember.OnPressedColor = System.Drawing.Color.Black;
             this.addMember.Radius = 1;
-            this.addMember.Size = new System.Drawing.Size(141, 42);
+            this.addMember.Size = new System.Drawing.Size(126, 42);
             this.addMember.TabIndex = 0;
             this.addMember.Text = "Add Member";
             this.addMember.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -217,13 +218,14 @@
             this.upperPanel.Controls.Add(this.groupPic);
             this.upperPanel.Controls.Add(this.groupName);
             this.upperPanel.Controls.Add(this.HomeBtn);
-            this.upperPanel.GradiantColor1 = System.Drawing.Color.Blue;
+            this.upperPanel.GradiantColor1 = System.Drawing.Color.Black;
             this.upperPanel.GradiantColor2 = System.Drawing.Color.Black;
             this.upperPanel.GradiantColor3 = System.Drawing.Color.Blue;
             this.upperPanel.GradiantColor4 = System.Drawing.Color.Black;
             this.upperPanel.Location = new System.Drawing.Point(0, 0);
+            this.upperPanel.Margin = new System.Windows.Forms.Padding(0);
             this.upperPanel.Name = "upperPanel";
-            this.upperPanel.Size = new System.Drawing.Size(519, 56);
+            this.upperPanel.Size = new System.Drawing.Size(519, 62);
             this.upperPanel.TabIndex = 0;
             this.upperPanel.Text = "gunaGradientPanel1";
             this.upperPanel.Click += new System.EventHandler(this.upperPanel_Click);
@@ -262,6 +264,7 @@
             this.groupName.Font = new System.Drawing.Font("Segoe UI Black", 17F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.groupName.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.groupName.Location = new System.Drawing.Point(144, 3);
+            this.groupName.Margin = new System.Windows.Forms.Padding(0);
             this.groupName.Name = "groupName";
             this.groupName.Size = new System.Drawing.Size(321, 48);
             this.groupName.TabIndex = 2;
@@ -289,9 +292,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Navy;
-            this.Controls.Add(this.outpnl);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Controls.Add(this.upperPanel);
+            this.Controls.Add(this.outpnl);
             this.DoubleBuffered = true;
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "GroupPage";

@@ -54,7 +54,7 @@
             this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 41);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(378, 289);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(394, 282);
             this.flowLayoutPanel1.TabIndex = 3;
             // 
             // gunaGradientPanel2
@@ -77,7 +77,7 @@
             this.gunaGradientPanel2.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.gunaGradientPanel2.Name = "gunaGradientPanel2";
-            this.gunaGradientPanel2.Size = new System.Drawing.Size(378, 289);
+            this.gunaGradientPanel2.Size = new System.Drawing.Size(394, 289);
             this.gunaGradientPanel2.TabIndex = 0;
             this.gunaGradientPanel2.Text = "gunaGradientPanel2";
             this.gunaGradientPanel2.Click += new System.EventHandler(this.gunaGradientPanel2_Click);
@@ -116,17 +116,17 @@
             this.assignBtn.AnimationHoverSpeed = 0.07F;
             this.assignBtn.AnimationSpeed = 0.03F;
             this.assignBtn.BackColor = System.Drawing.Color.Transparent;
-            this.assignBtn.BaseColor1 = System.Drawing.Color.Navy;
-            this.assignBtn.BaseColor2 = System.Drawing.Color.Black;
-            this.assignBtn.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.assignBtn.ForeColor = System.Drawing.Color.White;
+            this.assignBtn.BaseColor1 = System.Drawing.Color.White;
+            this.assignBtn.BaseColor2 = System.Drawing.Color.DodgerBlue;
+            this.assignBtn.Font = new System.Drawing.Font("Segoe UI Variable Text", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.assignBtn.ForeColor = System.Drawing.Color.Black;
             this.assignBtn.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Vertical;
             this.assignBtn.Image = null;
             this.assignBtn.ImageSize = new System.Drawing.Size(20, 20);
-            this.assignBtn.Location = new System.Drawing.Point(138, 230);
+            this.assignBtn.Location = new System.Drawing.Point(150, 231);
             this.assignBtn.Name = "assignBtn";
             this.assignBtn.OnHoverBaseColor1 = System.Drawing.Color.Black;
-            this.assignBtn.OnHoverBaseColor2 = System.Drawing.Color.Blue;
+            this.assignBtn.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.assignBtn.OnHoverForeColor = System.Drawing.Color.White;
             this.assignBtn.OnHoverImage = null;
             this.assignBtn.OnPressedColor = System.Drawing.Color.Black;
@@ -207,13 +207,13 @@
             this.gunaGradientPanel1.Controls.Add(this.gunaLabel1);
             this.gunaGradientPanel1.Controls.Add(this.back);
             this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.Black;
-            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Navy;
-            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.Blue;
-            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
+            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(378, 41);
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(394, 41);
             this.gunaGradientPanel1.TabIndex = 2;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
@@ -222,8 +222,8 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(137, 9);
+            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel1.Location = new System.Drawing.Point(158, 9);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(90, 21);
             this.gunaLabel1.TabIndex = 1;
@@ -251,7 +251,7 @@
             this.Controls.Add(this.gunaGradientPanel1);
             this.Margin = new System.Windows.Forms.Padding(0);
             this.Name = "NewTask";
-            this.Size = new System.Drawing.Size(378, 330);
+            this.Size = new System.Drawing.Size(394, 323);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.gunaGradientPanel2.ResumeLayout(false);
             this.gunaGradientPanel2.PerformLayout();

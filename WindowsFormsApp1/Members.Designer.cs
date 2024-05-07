@@ -63,10 +63,10 @@
             this.Member.Controls.Add(this.emailLabel);
             this.Member.Controls.Add(this.gunaGradientPanel1);
             this.Member.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Member.GradiantColor1 = System.Drawing.Color.Black;
-            this.Member.GradiantColor2 = System.Drawing.Color.DarkBlue;
-            this.Member.GradiantColor3 = System.Drawing.Color.Black;
-            this.Member.GradiantColor4 = System.Drawing.Color.Black;
+            this.Member.GradiantColor1 = System.Drawing.Color.Navy;
+            this.Member.GradiantColor2 = System.Drawing.Color.DodgerBlue;
+            this.Member.GradiantColor3 = System.Drawing.Color.Navy;
+            this.Member.GradiantColor4 = System.Drawing.Color.DodgerBlue;
             this.Member.Location = new System.Drawing.Point(0, 0);
             this.Member.Name = "Member";
             this.Member.Size = new System.Drawing.Size(352, 70);
@@ -187,7 +187,7 @@
             // 
             this.memberName.BackColor = System.Drawing.Color.Transparent;
             this.memberName.Font = new System.Drawing.Font("Segoe UI Variable Text", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.memberName.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.memberName.ForeColor = System.Drawing.Color.Black;
             this.memberName.Location = new System.Drawing.Point(65, 8);
             this.memberName.Name = "memberName";
             this.memberName.Size = new System.Drawing.Size(164, 32);
@@ -199,7 +199,7 @@
             // 
             this.emailLabel.BackColor = System.Drawing.Color.Transparent;
             this.emailLabel.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.emailLabel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.emailLabel.ForeColor = System.Drawing.Color.Black;
             this.emailLabel.Location = new System.Drawing.Point(68, 37);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(161, 21);
@@ -213,7 +213,7 @@
             this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.gunaGradientPanel1.Controls.Add(this.status);
             this.gunaGradientPanel1.Controls.Add(this.Role);
-            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.MidnightBlue;
+            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.Blue;
             this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.Black;
             this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Blue;
@@ -260,6 +260,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.Member);
+            this.Margin = new System.Windows.Forms.Padding(20, 3, 3, 3);
             this.Name = "Members";
             this.Size = new System.Drawing.Size(352, 70);
             this.Load += new System.EventHandler(this.Members_Load);

@@ -295,7 +295,7 @@
             this.assignBtn.Location = new System.Drawing.Point(306, 259);
             this.assignBtn.Name = "assignBtn";
             this.assignBtn.OnHoverBaseColor1 = System.Drawing.Color.Blue;
-            this.assignBtn.OnHoverBaseColor2 = System.Drawing.Color.Red;
+            this.assignBtn.OnHoverBaseColor2 = System.Drawing.Color.Black;
             this.assignBtn.OnHoverForeColor = System.Drawing.Color.White;
             this.assignBtn.OnHoverImage = null;
             this.assignBtn.OnPressedColor = System.Drawing.Color.Black;
@@ -594,7 +594,7 @@
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Segoe UI Black", 22F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label2.ForeColor = System.Drawing.Color.DeepSkyBlue;
+            this.label2.ForeColor = System.Drawing.Color.Blue;
             this.label2.Location = new System.Drawing.Point(210, 3);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(116, 41);

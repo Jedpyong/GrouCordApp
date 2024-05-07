@@ -40,11 +40,10 @@
             // 
             this.TaskFlowchart.AutoScroll = true;
             this.TaskFlowchart.BackColor = System.Drawing.Color.Transparent;
-            this.TaskFlowchart.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.TaskFlowchart.Location = new System.Drawing.Point(0, 41);
-            this.TaskFlowchart.Margin = new System.Windows.Forms.Padding(0);
+            this.TaskFlowchart.Location = new System.Drawing.Point(0, 54);
+            this.TaskFlowchart.Margin = new System.Windows.Forms.Padding(0, 10, 0, 0);
             this.TaskFlowchart.Name = "TaskFlowchart";
-            this.TaskFlowchart.Size = new System.Drawing.Size(378, 281);
+            this.TaskFlowchart.Size = new System.Drawing.Size(394, 268);
             this.TaskFlowchart.TabIndex = 4;
             this.TaskFlowchart.Paint += new System.Windows.Forms.PaintEventHandler(this.TaskFlowchart_Paint);
             // 
@@ -55,13 +54,13 @@
             this.gunaGradientPanel1.Controls.Add(this.gunaLabel1);
             this.gunaGradientPanel1.Controls.Add(this.back);
             this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.DarkBlue;
-            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Navy;
-            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.RoyalBlue;
-            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
+            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(378, 41);
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(394, 41);
             this.gunaGradientPanel1.TabIndex = 3;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
@@ -70,7 +69,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel1.Location = new System.Drawing.Point(156, 9);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(61, 21);
@@ -99,8 +98,9 @@
             this.Controls.Add(this.TaskFlowchart);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Name = "Tasks";
-            this.Size = new System.Drawing.Size(378, 322);
+            this.Size = new System.Drawing.Size(394, 323);
             this.Load += new System.EventHandler(this.Tasks_Load);
+            this.Leave += new System.EventHandler(this.Tasks_Leave);
             this.gunaGradientPanel1.ResumeLayout(false);
             this.gunaGradientPanel1.PerformLayout();
             this.ResumeLayout(false);

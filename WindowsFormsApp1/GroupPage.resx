@@ -128,8 +128,8 @@
   <data name="gunaGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA8SURBVChTjcTBAIBAAADBFTiBABJIIIAETiCBBDK/1qB9
-        zADvanis4LaCaQWXFZxWcFjBbgWbFQz7M9YHsv9/CTSi914AAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVChTjcShEYAwAMDAKByqrgqFQ+G6/14lG5DcfbAd
+        Ha7gdAXDFUxXcLmC2xU8ruB1Bcv9WfsD4NRu3XG+lIMAAAAASUVORK5CYII=
 </value>
   </data>
   <data name="mainPanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -144,9 +144,8 @@
   <data name="upperPanel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAB5SURBVChTdc5BFUBQEEbhySGAAgoIQAACCEAAAiiggAAE
-        IIAAFBBAgee+xXOGYxbf7p6ZX0ScE7lwYseGFRNGDOjxRAdCNENHHV7Rgu8lHzV43v1FLWpUMDf5SyEq
-        YW7y70KUw9zkowIZUpibdJTA3KSjGOYmHUXuBjdEmmorgs9XAAAAAElFTkSuQmCC
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA8SURBVChTjcTBAIBAAADBFTiBABJIIIAETiCBBDK/1qB9
+        zADvanis4LaCaQWXFZxWcFjBbgWbFQz7M9YHsv9/CTSi914AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="groupPic.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

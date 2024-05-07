@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ConfirmEmail));
             this.close = new Guna.UI.WinForms.GunaImageButton();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.OTPTxtbx = new Guna.UI.WinForms.GunaTextBox();
             this.confirmbutn = new Guna.UI.WinForms.GunaAdvenceButton();
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -72,6 +72,19 @@
             this.gunaGradientPanel1.Size = new System.Drawing.Size(447, 285);
             this.gunaGradientPanel1.TabIndex = 19;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
+            // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.GrouCord_Logo;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(116, 12);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Radius = 10;
+            this.gunaPictureBox1.Size = new System.Drawing.Size(69, 60);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox1.TabIndex = 22;
+            this.gunaPictureBox1.TabStop = false;
             // 
             // label1
             // 
@@ -124,7 +137,7 @@
             this.confirmbutn.CheckedForeColor = System.Drawing.Color.White;
             this.confirmbutn.CheckedImage = ((System.Drawing.Image)(resources.GetObject("confirmbutn.CheckedImage")));
             this.confirmbutn.CheckedLineColor = System.Drawing.Color.DimGray;
-            this.confirmbutn.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.confirmbutn.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Bold);
             this.confirmbutn.ForeColor = System.Drawing.Color.White;
             this.confirmbutn.Image = null;
             this.confirmbutn.ImageSize = new System.Drawing.Size(20, 20);
@@ -143,19 +156,6 @@
             this.confirmbutn.Text = "Confirm";
             this.confirmbutn.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.confirmbutn.Click += new System.EventHandler(this.confirmbutn_Click);
-            // 
-            // gunaPictureBox1
-            // 
-            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.GrouCord_Logo;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(116, 12);
-            this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Radius = 10;
-            this.gunaPictureBox1.Size = new System.Drawing.Size(69, 60);
-            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaPictureBox1.TabIndex = 22;
-            this.gunaPictureBox1.TabStop = false;
             // 
             // ConfirmEmail
             // 

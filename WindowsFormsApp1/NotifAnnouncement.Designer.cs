@@ -45,13 +45,13 @@
             this.gunaGradientPanel1.Controls.Add(this.annLabel);
             this.gunaGradientPanel1.Controls.Add(this.back);
             this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.Black;
-            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.RoyalBlue;
-            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.Navy;
-            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Navy;
+            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(378, 41);
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(394, 41);
             this.gunaGradientPanel1.TabIndex = 5;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
@@ -60,7 +60,7 @@
             this.annLabel.AutoSize = true;
             this.annLabel.BackColor = System.Drawing.Color.Transparent;
             this.annLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.annLabel.ForeColor = System.Drawing.Color.White;
+            this.annLabel.ForeColor = System.Drawing.Color.Black;
             this.annLabel.Location = new System.Drawing.Point(114, 10);
             this.annLabel.Name = "annLabel";
             this.annLabel.Size = new System.Drawing.Size(149, 21);
@@ -93,13 +93,16 @@
             this.mainPanel.GradiantColor4 = System.Drawing.Color.Black;
             this.mainPanel.Location = new System.Drawing.Point(0, 41);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(378, 289);
+            this.mainPanel.Size = new System.Drawing.Size(394, 282);
             this.mainPanel.TabIndex = 6;
             this.mainPanel.Text = "gunaGradientPanel2";
             // 
             // Announcement
             // 
             this.Announcement.AcceptsTab = true;
+            this.Announcement.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.Announcement.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Announcement.Font = new System.Drawing.Font("Segoe UI Variable Display Semib", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Announcement.ForeColor = System.Drawing.Color.White;
@@ -107,7 +110,7 @@
             this.Announcement.Name = "Announcement";
             this.Announcement.ReadOnly = true;
             this.Announcement.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.Announcement.Size = new System.Drawing.Size(346, 273);
+            this.Announcement.Size = new System.Drawing.Size(362, 266);
             this.Announcement.TabIndex = 26;
             this.Announcement.Text = "";
             this.Announcement.TextChanged += new System.EventHandler(this.Announcement_TextChanged);
@@ -119,7 +122,7 @@
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Name = "NotifAnnouncement";
-            this.Size = new System.Drawing.Size(378, 330);
+            this.Size = new System.Drawing.Size(394, 323);
             this.gunaGradientPanel1.ResumeLayout(false);
             this.gunaGradientPanel1.PerformLayout();
             this.mainPanel.ResumeLayout(false);

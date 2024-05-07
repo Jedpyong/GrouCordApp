@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.confirmTxtbx = new Guna.UI.WinForms.GunaLineTextBox();
+            this.conpass = new Guna.UI.WinForms.GunaLabel();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.pass = new Guna.UI.WinForms.GunaLabel();
             this.EmailAdd = new Guna.UI.WinForms.GunaLabel();
@@ -42,8 +44,6 @@
             this.close = new Guna.UI.WinForms.GunaImageButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.username = new Guna.UI.WinForms.GunaLabel();
-            this.conpass = new Guna.UI.WinForms.GunaLabel();
-            this.confirmTxtbx = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -77,6 +77,31 @@
             this.gunaGradientPanel1.TabIndex = 12;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
+            // confirmTxtbx
+            // 
+            this.confirmTxtbx.BackColor = System.Drawing.Color.White;
+            this.confirmTxtbx.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.confirmTxtbx.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.confirmTxtbx.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
+            this.confirmTxtbx.LineColor = System.Drawing.Color.Gainsboro;
+            this.confirmTxtbx.Location = new System.Drawing.Point(133, 186);
+            this.confirmTxtbx.Name = "confirmTxtbx";
+            this.confirmTxtbx.PasswordChar = 'O';
+            this.confirmTxtbx.Size = new System.Drawing.Size(242, 27);
+            this.confirmTxtbx.TabIndex = 23;
+            // 
+            // conpass
+            // 
+            this.conpass.AutoSize = true;
+            this.conpass.BackColor = System.Drawing.Color.Transparent;
+            this.conpass.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
+            this.conpass.ForeColor = System.Drawing.Color.SlateBlue;
+            this.conpass.Location = new System.Drawing.Point(3, 190);
+            this.conpass.Name = "conpass";
+            this.conpass.Size = new System.Drawing.Size(125, 17);
+            this.conpass.TabIndex = 22;
+            this.conpass.Text = "Confirm Password:";
+            // 
             // gunaPictureBox1
             // 
             this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -96,7 +121,7 @@
             this.pass.BackColor = System.Drawing.Color.Transparent;
             this.pass.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
             this.pass.ForeColor = System.Drawing.Color.SlateBlue;
-            this.pass.Location = new System.Drawing.Point(56, 156);
+            this.pass.Location = new System.Drawing.Point(56, 158);
             this.pass.Name = "pass";
             this.pass.Size = new System.Drawing.Size(71, 17);
             this.pass.TabIndex = 16;
@@ -250,31 +275,6 @@
             this.username.Size = new System.Drawing.Size(73, 17);
             this.username.TabIndex = 1;
             this.username.Text = "Username:";
-            // 
-            // conpass
-            // 
-            this.conpass.AutoSize = true;
-            this.conpass.BackColor = System.Drawing.Color.Transparent;
-            this.conpass.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
-            this.conpass.ForeColor = System.Drawing.Color.SlateBlue;
-            this.conpass.Location = new System.Drawing.Point(2, 189);
-            this.conpass.Name = "conpass";
-            this.conpass.Size = new System.Drawing.Size(125, 17);
-            this.conpass.TabIndex = 22;
-            this.conpass.Text = "Confirm Password:";
-            // 
-            // confirmTxtbx
-            // 
-            this.confirmTxtbx.BackColor = System.Drawing.Color.White;
-            this.confirmTxtbx.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.confirmTxtbx.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.confirmTxtbx.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
-            this.confirmTxtbx.LineColor = System.Drawing.Color.Gainsboro;
-            this.confirmTxtbx.Location = new System.Drawing.Point(133, 186);
-            this.confirmTxtbx.Name = "confirmTxtbx";
-            this.confirmTxtbx.PasswordChar = 'O';
-            this.confirmTxtbx.Size = new System.Drawing.Size(242, 27);
-            this.confirmTxtbx.TabIndex = 23;
             // 
             // CreateAccount
             // 

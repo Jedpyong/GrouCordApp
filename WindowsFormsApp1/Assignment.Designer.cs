@@ -87,7 +87,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
+            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
             this.gunaLabel1.Location = new System.Drawing.Point(137, 9);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(114, 21);
@@ -102,13 +102,13 @@
             this.gunaGradientPanel1.Controls.Add(this.gunaLabel1);
             this.gunaGradientPanel1.Controls.Add(this.back);
             this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.Black;
-            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Navy;
-            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.Blue;
-            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
+            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(378, 41);
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(394, 41);
             this.gunaGradientPanel1.TabIndex = 3;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
@@ -119,7 +119,7 @@
             this.Controls.Add(this.gunaGradientPanel2);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Name = "Assignment";
-            this.Size = new System.Drawing.Size(378, 330);
+            this.Size = new System.Drawing.Size(394, 323);
             this.Load += new System.EventHandler(this.Assignment_Load);
             this.gunaGradientPanel2.ResumeLayout(false);
             this.gunaGradientPanel1.ResumeLayout(false);

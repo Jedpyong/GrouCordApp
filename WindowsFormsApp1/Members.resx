@@ -121,8 +121,11 @@
   <data name="Member.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVChTjcShEYAwAMDAOByurg6HQqK6/1YlG5DcfbAd
-        Ha7gdAXDFUxXcLmC2xU8ruB1Bcv9WfsDZ7tv16IGsk0AAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADISURBVChTY2BgaPjPxN72n5mv5z+L2OT/bLKz/nOoLPjP
+        qb3sP5fRmv88Vpv/8znu/M8AUdQLUSSDRZHDrv/8Hgf+MyBMmglRpANTtAlsEkiRQMCx/wy4TYIq8j/2
+        XyjszH8GuJvgJoHcBLEOZBJIkUjcpf8MmA6HKoKaJBJ3+b9o6s3/DAhFQDehWQcySTTl5n+xnPv/GRAm
+        IRwOVwQ0SSznwX+Jkmf/GZCDAMU6sElARcXP/ktVvfnPgNuk+2CTQIqkmz79BwANHMqMQRunTAAAAABJ
+        RU5ErkJggg==
 </value>
   </data>
   <data name="assignBtn.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -148,8 +151,8 @@
   <data name="gunaGradientPanel1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA5SURBVChTY+DhsfjPzW3/n4vL7T8np99/Do6Q/2xsMf9Z
-        WZP/s7Bk/WdiKvzPyFjxf1QhXRVW/AcAvteLV3fHSHsAAAAASUVORK5CYII=
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAApSURBVChTjcihDQAACAOwnb7PwZMKRE2TdH6YwhSmMIUp
+        TGEKU5hXZwEoFZWdPYH0SgAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="gunaElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

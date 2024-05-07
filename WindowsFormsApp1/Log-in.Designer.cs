@@ -33,13 +33,13 @@
             this.usernameTextBox = new System.Windows.Forms.TextBox();
             this.close = new Guna.UI.WinForms.GunaImageButton();
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.createAcc = new Guna.UI.WinForms.GunaLinkLabel();
             this.forgotpass = new System.Windows.Forms.LinkLabel();
             this.loginButton = new Guna.UI.WinForms.GunaAdvenceButton();
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.gunaGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -97,6 +97,19 @@
             this.gunaGradientPanel1.TabIndex = 18;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             this.gunaGradientPanel1.Click += new System.EventHandler(this.gunaGradientPanel1_Click);
+            // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.GrouCord_Logo;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(101, 4);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Radius = 10;
+            this.gunaPictureBox1.Size = new System.Drawing.Size(69, 60);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox1.TabIndex = 22;
+            this.gunaPictureBox1.TabStop = false;
             // 
             // createAcc
             // 
@@ -194,19 +207,6 @@
             this.label2.Size = new System.Drawing.Size(144, 37);
             this.label2.TabIndex = 2;
             this.label2.Text = "GrouCord";
-            // 
-            // gunaPictureBox1
-            // 
-            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.GrouCord_Logo;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(101, 4);
-            this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Radius = 10;
-            this.gunaPictureBox1.Size = new System.Drawing.Size(69, 60);
-            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaPictureBox1.TabIndex = 22;
-            this.gunaPictureBox1.TabStop = false;
             // 
             // LoginForm
             // 

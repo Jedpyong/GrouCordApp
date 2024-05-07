@@ -60,7 +60,7 @@ namespace WindowsFormsApp1
             this.mainPanel.GradiantColor4 = System.Drawing.Color.Black;
             this.mainPanel.Location = new System.Drawing.Point(0, 41);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(378, 281);
+            this.mainPanel.Size = new System.Drawing.Size(394, 282);
             this.mainPanel.TabIndex = 2;
             this.mainPanel.Text = "gunaGradientPanel2";
             this.mainPanel.Click += new System.EventHandler(this.mainPanel_Click);
@@ -95,7 +95,7 @@ namespace WindowsFormsApp1
             this.AddMemFLP.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.AddMemFLP.AutoScroll = true;
             this.AddMemFLP.BackColor = System.Drawing.Color.Transparent;
-            this.AddMemFLP.Location = new System.Drawing.Point(91, 94);
+            this.AddMemFLP.Location = new System.Drawing.Point(133, 94);
             this.AddMemFLP.Name = "AddMemFLP";
             this.AddMemFLP.Size = new System.Drawing.Size(199, 100);
             this.AddMemFLP.TabIndex = 23;
@@ -110,9 +110,8 @@ namespace WindowsFormsApp1
             this.add.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.add.ForeColor = System.Drawing.Color.White;
             this.add.Image = global::WindowsFormsApp1.Properties.Resources.add;
-          
             this.add.ImageSize = new System.Drawing.Size(37, 37);
-            this.add.Location = new System.Drawing.Point(299, 45);
+            this.add.Location = new System.Drawing.Point(310, 45);
             this.add.Name = "add";
             this.add.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.add.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -133,7 +132,7 @@ namespace WindowsFormsApp1
             this.EmailTxtbx.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.EmailTxtbx.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.EmailTxtbx.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.EmailTxtbx.Location = new System.Drawing.Point(121, 48);
+            this.EmailTxtbx.Location = new System.Drawing.Point(131, 48);
             this.EmailTxtbx.Name = "EmailTxtbx";
             this.EmailTxtbx.PasswordChar = '\0';
             this.EmailTxtbx.Radius = 7;
@@ -145,8 +144,8 @@ namespace WindowsFormsApp1
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.RoyalBlue;
-            this.label1.Location = new System.Drawing.Point(16, 53);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(29, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(99, 17);
             this.label1.TabIndex = 20;
@@ -159,13 +158,13 @@ namespace WindowsFormsApp1
             this.gunaGradientPanel1.Controls.Add(this.gunaLabel1);
             this.gunaGradientPanel1.Controls.Add(this.back);
             this.gunaGradientPanel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.DarkBlue;
-            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.Navy;
-            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.RoyalBlue;
-            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.Black;
+            this.gunaGradientPanel1.GradiantColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor3 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.gunaGradientPanel1.GradiantColor4 = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.gunaGradientPanel1.Location = new System.Drawing.Point(0, 0);
             this.gunaGradientPanel1.Name = "gunaGradientPanel1";
-            this.gunaGradientPanel1.Size = new System.Drawing.Size(378, 41);
+            this.gunaGradientPanel1.Size = new System.Drawing.Size(394, 41);
             this.gunaGradientPanel1.TabIndex = 1;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
@@ -175,8 +174,8 @@ namespace WindowsFormsApp1
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
-            this.gunaLabel1.Location = new System.Drawing.Point(110, 8);
+            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel1.Location = new System.Drawing.Point(118, 8);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(159, 21);
             this.gunaLabel1.TabIndex = 1;
@@ -187,7 +186,6 @@ namespace WindowsFormsApp1
             // 
             this.back.BackColor = System.Drawing.Color.Transparent;
             this.back.Image = global::WindowsFormsApp1.Properties.Resources.turn_back;
-                
             this.back.ImageSize = new System.Drawing.Size(30, 30);
             this.back.Location = new System.Drawing.Point(0, 0);
             this.back.Name = "back";
@@ -206,7 +204,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.gunaGradientPanel1);
             this.Name = "AddMember";
-            this.Size = new System.Drawing.Size(378, 322);
+            this.Size = new System.Drawing.Size(394, 323);
             this.mainPanel.ResumeLayout(false);
             this.mainPanel.PerformLayout();
             this.gunaGradientPanel1.ResumeLayout(false);

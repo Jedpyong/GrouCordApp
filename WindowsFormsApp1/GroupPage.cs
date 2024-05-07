@@ -73,8 +73,8 @@ namespace WindowsFormsApp1
       
 
         private void Schedules_Click(object sender, EventArgs e)
-        {
-          
+        { 
+            
             Schedules sched = new Schedules();
             sched.groupID = this.group.group_ID;
             sched.group = this.group;
@@ -259,6 +259,11 @@ namespace WindowsFormsApp1
             LoginForm.hp.Show();
             this.Hide();
             Cursor.Current = Cursors.Default;
+        }
+
+        private void Tasks_Leave(object sender, EventArgs e)
+        {
+            this.Hide();
         }
     }
 }

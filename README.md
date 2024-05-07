@@ -67,25 +67,31 @@ Here you can also see the bell icon where the announcements of the leader will b
 
 ### Schedules Page
 
-![Payments](https://github.com/VSUrhuel/Mabolo-Dormitory-System/assets/114915612/fafd583c-655f-42e2-b570-db0a11a57786)
 - Schedules page just focuses on the busy schedules of each members of the group and all those schedules will be reflected to this page in the leader's POV.
 
-![Payments](https://github.com/VSUrhuel/Mabolo-Dormitory-System/assets/114915612/fafd583c-655f-42e2-b570-db0a11a57786)
+![Screenshot 2024-05-06 220929](https://github.com/Jedpyong/GrouCordApp/assets/126632651/0dfe9332-2550-4303-a129-d4b603ee11af)
+
 - In each member's POV, this page only shows all of their own busy schedules which are all provided by themselves through the 'Add Busy Sched' button on this page which is only for the members.
 
+![Screenshot 2024-05-06 221822](https://github.com/Jedpyong/GrouCordApp/assets/126632651/b88fa203-534d-42cd-9fa9-4b2292318239)
+
 ### Announcement Page
-![Settings](https://github.com/VSUrhuel/Mabolo-Dormitory-System/assets/114915612/ac227445-a2e4-48e0-ae20-b1743b885bd5)
-- This Page just lets the leader write and post an announcement to the group that will be reflected on the bell icon on the opper-right corner.
-- 
+
+This Page just lets the leader write and post an announcement to the group that will be reflected on the bell icon on the opper-right corner.
+
+  
 ### Add Member Page
-![Settings](https://github.com/VSUrhuel/Mabolo-Dormitory-System/assets/114915612/ac227445-a2e4-48e0-ae20-b1743b885bd5)
+
 - This Page just lets the leader add some more members to the group.
 
+![Screenshot 2024-05-06 220831](https://github.com/Jedpyong/GrouCordApp/assets/126632651/615fcdc5-80a5-4bfb-9af6-4f5f812c79de)
 
 ### Profile Page
-![Settings](https://github.com/VSUrhuel/Mabolo-Dormitory-System/assets/114915612/ac227445-a2e4-48e0-ae20-b1743b885bd5)
 - The Profile page shows the relevant information of the user but it also serves as settings that allows the user to modify their account and password. It also supports changing profile pictures and relevant information.
 - This page also contains the Logout button.
+
+  ![Uploading Screenshot 2024-05-06 214925.png…]()
+
 ## Use Case Diagram
 ![Use Case Diagram](Resources/usecase1.png "Use Case Diagram")
 ![Use Case Diagram](Resources/usecase2.png "Use Case Diagram")

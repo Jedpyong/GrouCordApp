@@ -150,11 +150,9 @@ This Page just lets the leader write and post an announcement to the group that 
 
 
 ## Events Documentation
-![Events Documentation](Resources/events_doc.png "Events Documentation")
-- This the first page of the events documentation embedded on this repository. To view the complete copy of the documentation, the PDF copy can be accessed in this [link](GrouCord-Events-Documentation.pdf).
+- To view for the events documentation, the PDF copy can be accessed in this [link](GrouCord-Events-Documentation.pdf).
 
 ## Presentation
-![Presentation](Resources/Presentation.png)
 - The presentation of this project can be viewed [here](https://www.canva.com/design/DAF_1gZZkSQ/s0HsceOxAE-ILXeM-Qkqbg/edit?utm_content=DAF_1gZZkSQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
 
 ## System Design

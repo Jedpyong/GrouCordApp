@@ -91,7 +91,7 @@ This Page just lets the leader write and post an announcement to the group that 
 - The Profile page shows the relevant information of the user but it also serves as settings that allows the user to modify their account and password. It also supports changing profile pictures and relevant information.
 - This page also contains the Logout button.
 
-  ![Uploading Screenshot 2024-05-06 214925.png…]()
+![Screenshot 2024-05-06 214925](https://github.com/Jedpyong/GrouCordApp/assets/126632651/10ab1600-4e32-4776-89ba-95fb222fa6ef)
 
 ## Use Case Diagram
 
@@ -162,101 +162,10 @@ This Page just lets the leader write and post an announcement to the group that 
 
 - These were the classes used on developing this app. I have created a class named `DBManager` and `GroupHandler` that will execute all the queries from my GUI forms, where `GroupHandler` is for queries related to a group while `DBManager` is for the rest, for an effecient and easy debugging.  
 
-## How to Use the App?
-
-### Prerequisite
-
-#### MySql Server
-![MySql Server](Resources/MySql_Download.png "MySql Server")
-- You should have a **MySql community server**. If you don't have it, you can download it from the [official website](https://dev.mysql.com/downloads/mysql/). Follow the setup process and install it.
-
-#### Download Resources
-![Release Download](Resources/Reslease_Download.png "Release Download")
-- Visit [this link](https://github.com/VSUrhuel/Mabolo-Dormitory-System/releases) to download the latest release version of this app. Click the **latest** `.msi` file to download it. 
-
-![Database Download](Resources/Database_Download.png "Database Download")
-- Navigate to the `Resources` folder in this repository and download the SQL file `SystemDatabase`.
-
-### Set Up MySql
-![SQL](Resources/sql2.png "SQL")
-- Open the MySql Workbench application. Click the plus icon next to the application's text logo.
-
-![SQL](Resources/sql1.png "SQL")
-- Enter the connection name and note the `hostname` and `username`.
-
-![SQL](Resources/sql3.png "SQL")
-- Click the database you created. Go to the `server` section, click `Data Import`, select `Import from Self-Contained file`, then choose the directory where the downloaded `SystemDatabase` is located. Finally, click `Start Import`.
-
-- Congratulations! You have finished setting up MySql! Scroll down for more!
-
-### Set Up Environment Variables
-![Environment Variables](Resources/EnvironmentVariables.png "Environment Variables")
-- In Windows search, look for `environment variables` settings. In `system variables`, click `add`.
-
-- Add these three `variable names` individually: `MYSQL_PASSWORD`, `MYSQL_SERVER`, `MYSQL_USERNAME` (follow these names strictly), and set their values to the corresponding values you entered when setting up your database.
-
-![Information](Resources/Info.png "Information")
-- If you forgot your server and username, you can view them by opening your database in workbench, clicking `server`, and going to `Manage Access Settings` > `Connection`.
-
-- The variable value for `MYSQL_PASSWORD` is the password you entered when you first used MySql. You can view or change it by opening your database in workbench and navigating to `server` > `User and Privileges`.
-
-### Install
-- Run the installation process downloaded from [this GitHub link](https://github.com/VSUrhuel/Mabolo-Dormitory-System/releases/tag/System). **You can now use the app!**
-
-## How to Open Using Visual Studio?
-![VS](Resources/vs.png "VS")
-- Click `code` at the top and select `Open with Visual Studio`.
-
-- To fully utilize this, download various NutGet extensions, including but not limited to `MySql`, `Xunit`, and `MySql Connector`. These can be easily downloaded in NutGet Packages.
-
-- For `GunaUI`, **DO NOT** download it from NutGet package. Manually download the `dll` file and add it to the project's references. You can download the `GunaUI.dll` from this repository.
-
-## License Information
-
-This project is licensed under the [MIT License](LICENSE), which means you are free to use, modify, and distribute the code as long as you include the original copyright notice and disclaimer. See the [LICENSE](LICENSE) file for more details.
-
-## Contributing
-
-Thank you for considering contributing to this project! Your contributions are greatly appreciated. Here are some ways you can contribute:
-
-1. **Report Bugs**: If you encounter any bugs or issues, please [open an issue](https://github.com/yourusername/yourproject/issues) on GitHub.
-
-2. **Suggest Features**: Have an idea for a new feature? [Open an issue](https://github.com/yourusername/yourproject/issues) and share your thoughts.
-
-3. **Submit Pull Requests**: Fork the repository, make your changes, and submit a pull request for review.
-
-4. **Provide Feedback**: Share your thoughts and suggestions in the project's [issues section](https://github.com/yourusername/yourproject/issues).
-
-5. **Spread the Word**: Help others discover this project by sharing it on social media or with your peers.
-
-Thank you for your interest and support! 🚀
-
-## Demo
 
 
-https://github.com/VSUrhuel/Mabolo-Dormitory-System/assets/114915612/cd5246cb-fec2-463d-8106-1e34f6c0089d
 
-Here is the demo on how the application funcions. Additionally, screenshots showcasing the user interface and functionality are available in the [Screenshots](InterfaceDesigns) directory.
-
-## Contact Information
-
-For any questions, feedback, or support inquiries, feel free to contact me at:
-
-- [![Facebook](https://img.shields.io/badge/Facebook-1877F2?style=flat-square&logo=facebook&logoColor=white)](https://www.facebook.com/johnrhuel.laurente)
-- [![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/rhuelski29/)
-- [![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/john-rhuel-laurente-181357248/)
-
-## Acknowledgements
-
-I would like to acknowledge the following individuals for their contributions to this project:
-
-- Sir [Jomari Barera](https://github.com/infinityweaver) and Ma'am Jonah Maaghop for their guidance and tips to become this project sucessfull.
-
-## Developer Credits
-
-This project is developed and maintained by:
-
-**John Rhuel Laurente**  
+**Jade Jaballa**  
 *BS in Computer Science, 2nd Year*  
 Visayas State University
 

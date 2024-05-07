@@ -39,7 +39,10 @@ namespace WindowsFormsApp1
                 if (MessageBox.Show("Are you sure you want to leave and delete this group?", "Confirmation", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
                 LoginForm.hp.FLPPnl.Controls.Remove(this);
-                handler.removeGroup(group.group_ID);
+                if(LoginForm.account.email == group.groupLeader)
+                    handler.removeGroup(group.group_ID);
+                else 
+                    handler.deleteGroupMember(LoginForm.account.email, group.group_ID);
                 }
 
         }

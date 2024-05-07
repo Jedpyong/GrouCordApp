@@ -50,6 +50,10 @@ namespace WindowsFormsApp1
             {
                 DataTable dt = manager.LoadMemberData(id);
                 data.DataSource = dt;
+                data.Columns["NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                data.Columns["DATE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                data.Columns["DESCRIPTION"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                data.Columns["DESCRIPTION"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 description.Text = "Description...";
 
             }
@@ -78,6 +82,10 @@ namespace WindowsFormsApp1
                 {
                     DataTable dt = manage.LoadMemberData(id);
                     data.DataSource = dt;
+                    data.Columns["NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    data.Columns["DATE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    data.Columns["DESCRIPTION"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    data.Columns["DESCRIPTION"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
                 }
                 catch (Exception ex)
                 {
@@ -90,10 +98,14 @@ namespace WindowsFormsApp1
                  try
                  {
                     gunaGradientPanel2.Size = new Size(378, 6);
-                        DataTable dt = manage.LoadData(groupID);
-                        data.DataSource = dt;
+                    DataTable dt = manage.LoadData(groupID);
+                    data.DataSource = dt;
+                    data.Columns["NAME"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    data.Columns["DATE"].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    data.Columns["DESCRIPTION"].HeaderCell.Style.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                    data.Columns["DESCRIPTION"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
 
-                 }
+                }
                 catch (Exception ex)
                  {
                          MessageBox.Show(ex.Message.ToString());

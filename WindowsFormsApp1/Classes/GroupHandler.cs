@@ -449,5 +449,20 @@ namespace WindowsFormsApp1.Classes
         }
 
 
+
+        public void deleteGroupMember(string email, int id)
+        {
+            using (MySqlConnection connection = new MySqlConnection(connect))
+            {
+                string query = "DELETE FROM `groucord`.`groupmember` WHERE (`groupMemberEmail` = @email AND `group_ID`=@id);";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(query, connection);
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@id", id);
+                command.ExecuteNonQuery();
+                connection.Close();
+            }
+        }
+
     }
 }

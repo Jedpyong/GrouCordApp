@@ -13,24 +13,29 @@
 ### Login Page
 This page manages the *login feature* of the system. It serves as the initial interface upon opening the application. Here you can also find the create account and forgot password features.
 
-- Login. 
+- Login.
+  
 ![Screenshot 2024-05-06 210744](https://github.com/Jedpyong/GrouCordApp/assets/126632651/83aef3e5-4d7a-4391-8a3d-e2274456224d)
 
 - Forgot Password.
-![Screenshot 2024-05-06 210813](https://github.com/Jedpyong/GrouCordApp/assets/126632651/dc015e36-f64c-45af-ba47-f42101dd4d8a)  ![Screenshot 2024-05-07 091837](https://github.com/Jedpyong/GrouCordApp/assets/126632651/b75430c7-82d7-4ed2-acd3-958a9975f548)
+  
+![Screenshot 2024-05-06 210813](https://github.com/Jedpyong/GrouCordApp/assets/126632651/dc015e36-f64c-45af-ba47-f42101dd4d8a) ![Screenshot 2024-05-07 091837](https://github.com/Jedpyong/GrouCordApp/assets/126632651/b75430c7-82d7-4ed2-acd3-958a9975f548)
 
 - Create Account.
+  
 ![Screenshot 2024-05-06 210836](https://github.com/Jedpyong/GrouCordApp/assets/126632651/195125df-d194-4af4-af78-157e3ca315e4)
 
 
 ### Home Page
-- This page shows all the groups a user is involved in and also the status of the user which will be reflected on all of his/her group.
+This page shows all the groups a user is involved in and also the status of the user which will be reflected on all of his/her group.
 
-![Dashboard](https://github.com/VSUrhuel/Mabolo-Dormitory-System/assets/114915612/78d9eb58-c61c-4e54-b59b-c7c182b792af)
 -Initial Home Page (without groups).
 
-![Dashboard](https://github.com/VSUrhuel/Mabolo-Dormitory-System/assets/114915612/78d9eb58-c61c-4e54-b59b-c7c182b792af)
+![Screenshot 2024-05-06 210930](https://github.com/Jedpyong/GrouCordApp/assets/126632651/fd04e3c4-a6ba-4032-9fcc-c4ab082c6aaa)
+
 -Home Page (with groups).
+
+![Screenshot 2024-05-06 213113](https://github.com/Jedpyong/GrouCordApp/assets/126632651/a12ada42-33ad-4127-9571-dfc345625d95)
 
 
 ### Create Group Page

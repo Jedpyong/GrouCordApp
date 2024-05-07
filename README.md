@@ -29,36 +29,41 @@ This page manages the *login feature* of the system. It serves as the initial in
 ### Home Page
 This page shows all the groups a user is involved in and also the status of the user which will be reflected on all of his/her group.
 
--Initial Home Page (without groups).
+- Initial Home Page (without groups).
 
 ![Screenshot 2024-05-06 210930](https://github.com/Jedpyong/GrouCordApp/assets/126632651/fd04e3c4-a6ba-4032-9fcc-c4ab082c6aaa)
 
--Home Page (with groups).
+- Home Page (with groups).
 
 ![Screenshot 2024-05-06 213113](https://github.com/Jedpyong/GrouCordApp/assets/126632651/a12ada42-33ad-4127-9571-dfc345625d95)
 
 
 ### Create Group Page
-- This Page will be the first thing to do for a user if he/she was not added in a group. It lets the user create his/her own group with group picture, group name and initial members.
-![Settings](https://github.com/VSUrhuel/Mabolo-Dormitory-System/assets/114915612/ac227445-a2e4-48e0-ae20-b1743b885bd5)
+This Page will be the first thing to do for a user if he/she was not added in a group. It lets the user create his/her own group with group picture, group name and initial members.
+
+![Screenshot 2024-05-06 210956](https://github.com/Jedpyong/GrouCordApp/assets/126632651/a4eeefd4-fd15-478d-90ab-eb23645a9b58)
 
 
 ### Group Page
-- This page displays all the members of the group and also the leader of the group if the user is not the leader. This also shows the **four** buttons for navigation (Tasks, Schedules,Announcements and Add member) if the user is the leader of the team while only **two** (Tasks and Schedules) if not.
-- Here you can also see the bell icon where the announcements of the leader will be reflected.
+This page displays all the members of the group and also the leader of the group if the user is not the leader. This also shows the **four** buttons for navigation (Tasks, Schedules,Announcements and Add member) if the user is the leader of the team while only **two** (Tasks and Schedules) if not.
 
-![Rooms](https://github.com/VSUrhuel/Mabolo-Dormitory-System/assets/114915612/951c5aba-5199-4c99-972c-a72fbb9c93c6)
+Here you can also see the bell icon where the announcements of the leader will be reflected.
 - (Leader's POV).
 
-![Rooms](https://github.com/VSUrhuel/Mabolo-Dormitory-System/assets/114915612/951c5aba-5199-4c99-972c-a72fbb9c93c6)
+![Screenshot 2024-05-06 214956](https://github.com/Jedpyong/GrouCordApp/assets/126632651/320c8229-7ad5-4521-8300-46277328d4ba)
+
 - (Member's POV).
 
+![Screenshot 2024-05-06 215604](https://github.com/Jedpyong/GrouCordApp/assets/126632651/e4935447-c2ad-47e1-a2a5-ca44c9a32182)
+
 ### Tasks Page
-![Events](https://github.com/VSUrhuel/Mabolo-Dormitory-System/assets/114915612/fe03c35c-99ca-4964-b3a4-de13ec205499)
 - In leader's POV, this page shows all tasks made within the group, assigned member(s) on a certain task and the progress of each task.
 
-![Events](https://github.com/VSUrhuel/Mabolo-Dormitory-System/assets/114915612/fe03c35c-99ca-4964-b3a4-de13ec205499)
+![Screenshot 2024-05-06 215501](https://github.com/Jedpyong/GrouCordApp/assets/126632651/39894b16-5b17-463b-b244-6559ee72250c)
+
 - In member's POV, this also shows all tasks but only those assign to the member.
+
+![Screenshot 2024-05-06 221636](https://github.com/Jedpyong/GrouCordApp/assets/126632651/3c0a612e-0185-48ee-9896-9f92474875f7)
 
 ### Schedules Page
 

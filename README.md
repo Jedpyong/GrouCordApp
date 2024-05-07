@@ -1,4 +1,4 @@
-![Screenshot 2024-05-03 143941](https://github.com/Jedpyong/GrouCordApp/assets/126632651/60069b16-fe03-4375-a240-0f35ce730a69)![Screenshot 2024-05-06 220913](https://github.com/Jedpyong/GrouCordApp/assets/126632651/a2cae360-b00a-4afc-8fda-a690db92264b)# GrouCord (Group Coordinator App)
+# GrouCord (Group Coordinator App)
 
 - **GrouCord** is an application developed to enhance planning, management, and coordination within a group, facilitating the creation of group projects and streamlining other collaborative activities.
 - This app offers a **straightforward** and **intuitive** approach, simplifying group creation, communication, and collaboration. 

@@ -1,4 +1,4 @@
-# GrouCord (Group Coordinator App)
+![Screenshot 2024-05-03 143941](https://github.com/Jedpyong/GrouCordApp/assets/126632651/60069b16-fe03-4375-a240-0f35ce730a69)![Screenshot 2024-05-06 220913](https://github.com/Jedpyong/GrouCordApp/assets/126632651/a2cae360-b00a-4afc-8fda-a690db92264b)# GrouCord (Group Coordinator App)
 
 - **GrouCord** is an application developed to enhance planning, management, and coordination within a group, facilitating the creation of group projects and streamlining other collaborative activities.
 - This app offers a **straightforward** and **intuitive** approach, simplifying group creation, communication, and collaboration. 
@@ -79,7 +79,8 @@ Here you can also see the bell icon where the announcements of the leader will b
 
 This Page just lets the leader write and post an announcement to the group that will be reflected on the bell icon on the opper-right corner.
 
-  
+  ![Screenshot 2024-05-06 220913](https://github.com/Jedpyong/GrouCordApp/assets/126632651/0555178d-e43e-4244-966d-24667d428560)
+
 ### Add Member Page
 
 - This Page just lets the leader add some more members to the group.
@@ -93,12 +94,14 @@ This Page just lets the leader write and post an announcement to the group that 
   ![Uploading Screenshot 2024-05-06 214925.png…]()
 
 ## Use Case Diagram
-![Use Case Diagram](Resources/usecase1.png "Use Case Diagram")
-![Use Case Diagram](Resources/usecase2.png "Use Case Diagram")
+
+![Screenshot 2024-05-03 170856](https://github.com/Jedpyong/GrouCordApp/assets/126632651/2c32d5b1-1b32-4e1b-96b0-66d88fe6c229)
+
 - This use case diagram represent the **GrouCord**.
 
 ## Database Model
-![ERD Model](Resources/erd_final_1.png "ERD Model")
+![Screenshot 2024-05-03 153718](https://github.com/Jedpyong/GrouCordApp/assets/126632651/2533e12e-8372-4864-b8e2-46413951f34f)
+
 - This ERD presents a model for **GrouCord** which I used to offer a comprehensive view of its entities and relationships. Below is a breakdown of the entities and their attributes:
 
 ### Entities:
@@ -155,7 +158,8 @@ This Page just lets the leader write and post an announcement to the group that 
 - The presentation of this project can be viewed [here](https://www.canva.com/design/DAF_1gZZkSQ/s0HsceOxAE-ILXeM-Qkqbg/edit?utm_content=DAF_1gZZkSQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton).
 
 ## System Design
-![System Design](Resources/SystemDesign.png "System Design")
+![Screenshot 2024-05-03 143941](https://github.com/Jedpyong/GrouCordApp/assets/126632651/0345f5e6-e8ff-409e-8af8-cfcc94411b76)
+
 - These were the classes used on developing this app. I have created a class named `DBManager` and `GroupHandler` that will execute all the queries from my GUI forms, where `GroupHandler` is for queries related to a group while `DBManager` is for the rest, for an effecient and easy debugging.  
 
 ## How to Use the App?

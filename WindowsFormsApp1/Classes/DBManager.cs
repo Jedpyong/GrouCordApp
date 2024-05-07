@@ -334,6 +334,8 @@ namespace WindowsFormsApp1.Classes
                     {
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
+                        //try
+                        dt.DefaultView.Sort = "DATE ASC";
                         return dt;
                     }
                 }
@@ -363,6 +365,8 @@ namespace WindowsFormsApp1.Classes
                     {
                         DataTable dt = new DataTable();
                         adapter.Fill(dt);
+                        //try
+                        dt.DefaultView.Sort = "DATE ASC";
                         return dt;
                     }
                 }

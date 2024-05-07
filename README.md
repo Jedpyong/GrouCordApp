@@ -151,7 +151,7 @@ This Page just lets the leader write and post an announcement to the group that 
 
 ## Events Documentation
 ![Events Documentation](Resources/events_doc.png "Events Documentation")
-- This the first page of the events documentation embedded on this repository. To view the complete copy of the documentation, the PDF copy can be accessed in this [link]([Resources/Documentation-of-Events.pdf](https://github.com/Jedpyong/GrouCordApp/blob/master/GrouCord%20Events%20Documentation.pdf)).
+- This the first page of the events documentation embedded on this repository. To view the complete copy of the documentation, the PDF copy can be accessed in this [link](GrouCord-Events-Documentation.pdf).
 
 ## Presentation
 ![Presentation](Resources/Presentation.png)

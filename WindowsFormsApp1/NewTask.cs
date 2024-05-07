@@ -55,7 +55,7 @@ namespace WindowsFormsApp1
                 if (dueDate > DateTime.Now)
                 {
                     DBManager manage = new DBManager();
-                    manage.insertTask(memberID, description, name, link, dueDate);
+                   
 
 
                     //email or message
@@ -83,7 +83,7 @@ namespace WindowsFormsApp1
                     {
                         smtp.Send(message);
                         MessageBox.Show("ASSIGNMENT SENT!");
-
+                        manage.insertTask(memberID, description, name, link, dueDate);
                     }
                     catch (Exception ex)
                     {

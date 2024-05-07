@@ -93,8 +93,14 @@ namespace WindowsFormsApp1
                     MessageBox.Show("Username already taken");
                     usernameTxtbx.Text = "";
                 }
+                if(confirmTxtbx.Text != PasswordTxtbx.Text)
+                {
+                    MessageBox.Show("Passwords doesn't match");
+                    PasswordTxtbx.Text = "";
+                    confirmTxtbx.Text = "";
+                }
                
-                else if(dt1.Rows.Count < 1 && dt2.Rows.Count < 1 ) 
+                else if(dt1.Rows.Count < 1 && dt2.Rows.Count < 1 && confirmTxtbx.Text == PasswordTxtbx.Text ) 
                 {
                     string from, pass, messageBody;
                     Random rand = new Random();

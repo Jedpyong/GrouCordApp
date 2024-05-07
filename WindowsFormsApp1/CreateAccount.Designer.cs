@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CreateAccount));
             this.gunaGradientPanel1 = new Guna.UI.WinForms.GunaGradientPanel();
+            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
             this.pass = new Guna.UI.WinForms.GunaLabel();
             this.EmailAdd = new Guna.UI.WinForms.GunaLabel();
             this.back = new Guna.UI.WinForms.GunaImageButton();
@@ -41,7 +42,8 @@
             this.close = new Guna.UI.WinForms.GunaImageButton();
             this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.username = new Guna.UI.WinForms.GunaLabel();
-            this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
+            this.conpass = new Guna.UI.WinForms.GunaLabel();
+            this.confirmTxtbx = new Guna.UI.WinForms.GunaLineTextBox();
             this.gunaGradientPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -50,6 +52,8 @@
             // 
             this.gunaGradientPanel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("gunaGradientPanel1.BackgroundImage")));
             this.gunaGradientPanel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.gunaGradientPanel1.Controls.Add(this.confirmTxtbx);
+            this.gunaGradientPanel1.Controls.Add(this.conpass);
             this.gunaGradientPanel1.Controls.Add(this.gunaPictureBox1);
             this.gunaGradientPanel1.Controls.Add(this.pass);
             this.gunaGradientPanel1.Controls.Add(this.EmailAdd);
@@ -73,13 +77,26 @@
             this.gunaGradientPanel1.TabIndex = 12;
             this.gunaGradientPanel1.Text = "gunaGradientPanel1";
             // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.GrouCord_Logo;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(109, 3);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Radius = 10;
+            this.gunaPictureBox1.Size = new System.Drawing.Size(69, 60);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.gunaPictureBox1.TabIndex = 21;
+            this.gunaPictureBox1.TabStop = false;
+            // 
             // pass
             // 
             this.pass.AutoSize = true;
             this.pass.BackColor = System.Drawing.Color.Transparent;
             this.pass.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
             this.pass.ForeColor = System.Drawing.Color.SlateBlue;
-            this.pass.Location = new System.Drawing.Point(28, 177);
+            this.pass.Location = new System.Drawing.Point(56, 156);
             this.pass.Name = "pass";
             this.pass.Size = new System.Drawing.Size(71, 17);
             this.pass.TabIndex = 16;
@@ -91,7 +108,7 @@
             this.EmailAdd.BackColor = System.Drawing.Color.Transparent;
             this.EmailAdd.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
             this.EmailAdd.ForeColor = System.Drawing.Color.SlateBlue;
-            this.EmailAdd.Location = new System.Drawing.Point(53, 133);
+            this.EmailAdd.Location = new System.Drawing.Point(81, 125);
             this.EmailAdd.Name = "EmailAdd";
             this.EmailAdd.Size = new System.Drawing.Size(46, 17);
             this.EmailAdd.TabIndex = 15;
@@ -129,10 +146,10 @@
             this.usernameTxtbx.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.usernameTxtbx.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
             this.usernameTxtbx.LineColor = System.Drawing.Color.Gainsboro;
-            this.usernameTxtbx.Location = new System.Drawing.Point(113, 90);
+            this.usernameTxtbx.Location = new System.Drawing.Point(133, 86);
             this.usernameTxtbx.Name = "usernameTxtbx";
             this.usernameTxtbx.PasswordChar = '\0';
-            this.usernameTxtbx.Size = new System.Drawing.Size(255, 27);
+            this.usernameTxtbx.Size = new System.Drawing.Size(242, 27);
             this.usernameTxtbx.TabIndex = 4;
             this.usernameTxtbx.Click += new System.EventHandler(this.usernameTxtbx_Click);
             // 
@@ -143,10 +160,10 @@
             this.EmailTxtbx.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.EmailTxtbx.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
             this.EmailTxtbx.LineColor = System.Drawing.Color.Gainsboro;
-            this.EmailTxtbx.Location = new System.Drawing.Point(113, 131);
+            this.EmailTxtbx.Location = new System.Drawing.Point(133, 119);
             this.EmailTxtbx.Name = "EmailTxtbx";
             this.EmailTxtbx.PasswordChar = '\0';
-            this.EmailTxtbx.Size = new System.Drawing.Size(255, 27);
+            this.EmailTxtbx.Size = new System.Drawing.Size(242, 27);
             this.EmailTxtbx.TabIndex = 5;
             this.EmailTxtbx.Click += new System.EventHandler(this.EmailTxtbx_Click);
             // 
@@ -157,10 +174,10 @@
             this.PasswordTxtbx.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.PasswordTxtbx.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
             this.PasswordTxtbx.LineColor = System.Drawing.Color.Gainsboro;
-            this.PasswordTxtbx.Location = new System.Drawing.Point(113, 174);
+            this.PasswordTxtbx.Location = new System.Drawing.Point(133, 152);
             this.PasswordTxtbx.Name = "PasswordTxtbx";
-            this.PasswordTxtbx.PasswordChar = '\0';
-            this.PasswordTxtbx.Size = new System.Drawing.Size(255, 27);
+            this.PasswordTxtbx.PasswordChar = 'O';
+            this.PasswordTxtbx.Size = new System.Drawing.Size(242, 27);
             this.PasswordTxtbx.TabIndex = 6;
             // 
             // createAccountButton
@@ -181,7 +198,7 @@
             this.createAccountButton.Image = null;
             this.createAccountButton.ImageSize = new System.Drawing.Size(20, 20);
             this.createAccountButton.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(58)))), ((int)(((byte)(170)))));
-            this.createAccountButton.Location = new System.Drawing.Point(150, 218);
+            this.createAccountButton.Location = new System.Drawing.Point(150, 226);
             this.createAccountButton.Name = "createAccountButton";
             this.createAccountButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.createAccountButton.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -228,24 +245,36 @@
             this.username.BackColor = System.Drawing.Color.Transparent;
             this.username.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
             this.username.ForeColor = System.Drawing.Color.SlateBlue;
-            this.username.Location = new System.Drawing.Point(26, 94);
+            this.username.Location = new System.Drawing.Point(54, 92);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(73, 17);
             this.username.TabIndex = 1;
             this.username.Text = "Username:";
             // 
-            // gunaPictureBox1
+            // conpass
             // 
-            this.gunaPictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Image = global::WindowsFormsApp1.Properties.Resources.GrouCord_Logo;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(109, 3);
-            this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Radius = 10;
-            this.gunaPictureBox1.Size = new System.Drawing.Size(69, 60);
-            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.gunaPictureBox1.TabIndex = 21;
-            this.gunaPictureBox1.TabStop = false;
+            this.conpass.AutoSize = true;
+            this.conpass.BackColor = System.Drawing.Color.Transparent;
+            this.conpass.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
+            this.conpass.ForeColor = System.Drawing.Color.SlateBlue;
+            this.conpass.Location = new System.Drawing.Point(2, 189);
+            this.conpass.Name = "conpass";
+            this.conpass.Size = new System.Drawing.Size(125, 17);
+            this.conpass.TabIndex = 22;
+            this.conpass.Text = "Confirm Password:";
+            // 
+            // confirmTxtbx
+            // 
+            this.confirmTxtbx.BackColor = System.Drawing.Color.White;
+            this.confirmTxtbx.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.confirmTxtbx.FocusedLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.confirmTxtbx.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
+            this.confirmTxtbx.LineColor = System.Drawing.Color.Gainsboro;
+            this.confirmTxtbx.Location = new System.Drawing.Point(133, 186);
+            this.confirmTxtbx.Name = "confirmTxtbx";
+            this.confirmTxtbx.PasswordChar = 'O';
+            this.confirmTxtbx.Size = new System.Drawing.Size(242, 27);
+            this.confirmTxtbx.TabIndex = 23;
             // 
             // CreateAccount
             // 
@@ -280,5 +309,7 @@
         private Guna.UI.WinForms.GunaLabel pass;
         private Guna.UI.WinForms.GunaLabel EmailAdd;
         private Guna.UI.WinForms.GunaPictureBox gunaPictureBox1;
+        private Guna.UI.WinForms.GunaLineTextBox confirmTxtbx;
+        private Guna.UI.WinForms.GunaLabel conpass;
     }
 }

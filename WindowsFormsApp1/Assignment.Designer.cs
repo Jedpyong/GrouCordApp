@@ -50,7 +50,7 @@
             this.gunaGradientPanel2.Location = new System.Drawing.Point(0, 41);
             this.gunaGradientPanel2.Margin = new System.Windows.Forms.Padding(0);
             this.gunaGradientPanel2.Name = "gunaGradientPanel2";
-            this.gunaGradientPanel2.Size = new System.Drawing.Size(378, 289);
+            this.gunaGradientPanel2.Size = new System.Drawing.Size(394, 289);
             this.gunaGradientPanel2.TabIndex = 4;
             this.gunaGradientPanel2.Text = "gunaGradientPanel2";
             this.gunaGradientPanel2.Click += new System.EventHandler(this.gunaGradientPanel2_Click);
@@ -62,7 +62,7 @@
             this.descriptiontxtbx.Location = new System.Drawing.Point(18, 3);
             this.descriptiontxtbx.Name = "descriptiontxtbx";
             this.descriptiontxtbx.ReadOnly = true;
-            this.descriptiontxtbx.Size = new System.Drawing.Size(342, 273);
+            this.descriptiontxtbx.Size = new System.Drawing.Size(358, 273);
             this.descriptiontxtbx.TabIndex = 7;
             this.descriptiontxtbx.Text = "";
             this.descriptiontxtbx.TextChanged += new System.EventHandler(this.descriptiontxtbx_TextChanged);

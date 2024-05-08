@@ -157,7 +157,7 @@
             this.Announcements.Radius = 1;
             this.Announcements.Size = new System.Drawing.Size(126, 42);
             this.Announcements.TabIndex = 6;
-            this.Announcements.Text = "   Announcements";
+            this.Announcements.Text = "       Announcements";
             this.Announcements.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Announcements.Click += new System.EventHandler(this.Announcements_Click);
             // 
@@ -206,7 +206,7 @@
             this.addMember.Radius = 1;
             this.addMember.Size = new System.Drawing.Size(126, 42);
             this.addMember.TabIndex = 0;
-            this.addMember.Text = "Add Member";
+            this.addMember.Text = "    Add Member";
             this.addMember.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.addMember.Click += new System.EventHandler(this.addMember_Click);
             // 

@@ -129,7 +129,7 @@
             this.assignBtn.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.assignBtn.OnHoverForeColor = System.Drawing.Color.White;
             this.assignBtn.OnHoverImage = null;
-            this.assignBtn.OnPressedColor = System.Drawing.Color.Black;
+            this.assignBtn.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.assignBtn.Radius = 10;
             this.assignBtn.Size = new System.Drawing.Size(98, 38);
             this.assignBtn.TabIndex = 6;

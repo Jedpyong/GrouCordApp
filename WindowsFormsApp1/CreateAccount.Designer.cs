@@ -95,7 +95,7 @@
             this.conpass.AutoSize = true;
             this.conpass.BackColor = System.Drawing.Color.Transparent;
             this.conpass.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
-            this.conpass.ForeColor = System.Drawing.Color.SlateBlue;
+            this.conpass.ForeColor = System.Drawing.Color.White;
             this.conpass.Location = new System.Drawing.Point(3, 190);
             this.conpass.Name = "conpass";
             this.conpass.Size = new System.Drawing.Size(125, 17);
@@ -120,7 +120,7 @@
             this.pass.AutoSize = true;
             this.pass.BackColor = System.Drawing.Color.Transparent;
             this.pass.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
-            this.pass.ForeColor = System.Drawing.Color.SlateBlue;
+            this.pass.ForeColor = System.Drawing.Color.White;
             this.pass.Location = new System.Drawing.Point(56, 158);
             this.pass.Name = "pass";
             this.pass.Size = new System.Drawing.Size(71, 17);
@@ -132,7 +132,7 @@
             this.EmailAdd.AutoSize = true;
             this.EmailAdd.BackColor = System.Drawing.Color.Transparent;
             this.EmailAdd.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
-            this.EmailAdd.ForeColor = System.Drawing.Color.SlateBlue;
+            this.EmailAdd.ForeColor = System.Drawing.Color.White;
             this.EmailAdd.Location = new System.Drawing.Point(81, 125);
             this.EmailAdd.Name = "EmailAdd";
             this.EmailAdd.Size = new System.Drawing.Size(46, 17);
@@ -256,7 +256,7 @@
             this.gunaLabel1.AutoSize = true;
             this.gunaLabel1.BackColor = System.Drawing.Color.Transparent;
             this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.75F, System.Drawing.FontStyle.Bold);
-            this.gunaLabel1.ForeColor = System.Drawing.Color.SlateBlue;
+            this.gunaLabel1.ForeColor = System.Drawing.Color.White;
             this.gunaLabel1.Location = new System.Drawing.Point(159, 60);
             this.gunaLabel1.Name = "gunaLabel1";
             this.gunaLabel1.Size = new System.Drawing.Size(135, 17);
@@ -269,7 +269,7 @@
             this.username.AutoSize = true;
             this.username.BackColor = System.Drawing.Color.Transparent;
             this.username.Font = new System.Drawing.Font("Segoe UI Variable Small", 9.5F, System.Drawing.FontStyle.Bold);
-            this.username.ForeColor = System.Drawing.Color.SlateBlue;
+            this.username.ForeColor = System.Drawing.Color.White;
             this.username.Location = new System.Drawing.Point(54, 92);
             this.username.Name = "username";
             this.username.Size = new System.Drawing.Size(73, 17);

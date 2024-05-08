@@ -126,7 +126,7 @@
             this.assignBtn.Location = new System.Drawing.Point(150, 231);
             this.assignBtn.Name = "assignBtn";
             this.assignBtn.OnHoverBaseColor1 = System.Drawing.Color.Black;
-            this.assignBtn.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.assignBtn.OnHoverBaseColor2 = System.Drawing.Color.White;
             this.assignBtn.OnHoverForeColor = System.Drawing.Color.White;
             this.assignBtn.OnHoverImage = null;
             this.assignBtn.OnPressedColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));

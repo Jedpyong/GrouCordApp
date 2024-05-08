@@ -74,7 +74,7 @@
             this.existingtask.Location = new System.Drawing.Point(118, 151);
             this.existingtask.Name = "existingtask";
             this.existingtask.OnHoverBaseColor1 = System.Drawing.Color.Black;
-            this.existingtask.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.existingtask.OnHoverBaseColor2 = System.Drawing.Color.White;
             this.existingtask.OnHoverForeColor = System.Drawing.Color.White;
             this.existingtask.OnHoverImage = null;
             this.existingtask.OnPressedColor = System.Drawing.Color.Black;
@@ -100,7 +100,7 @@
             this.newtask.Location = new System.Drawing.Point(118, 62);
             this.newtask.Name = "newtask";
             this.newtask.OnHoverBaseColor1 = System.Drawing.Color.Black;
-            this.newtask.OnHoverBaseColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.newtask.OnHoverBaseColor2 = System.Drawing.Color.White;
             this.newtask.OnHoverForeColor = System.Drawing.Color.White;
             this.newtask.OnHoverImage = null;
             this.newtask.OnPressedColor = System.Drawing.Color.Black;

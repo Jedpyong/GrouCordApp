@@ -63,7 +63,7 @@
             this.Member.Controls.Add(this.emailLabel);
             this.Member.Controls.Add(this.gunaGradientPanel1);
             this.Member.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.Member.GradiantColor1 = System.Drawing.Color.Navy;
+            this.Member.GradiantColor1 = System.Drawing.Color.Blue;
             this.Member.GradiantColor2 = System.Drawing.Color.DodgerBlue;
             this.Member.GradiantColor3 = System.Drawing.Color.Navy;
             this.Member.GradiantColor4 = System.Drawing.Color.DodgerBlue;
